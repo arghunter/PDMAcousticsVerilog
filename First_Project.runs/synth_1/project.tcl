@@ -79,19 +79,7 @@ set_property ip_output_repo c:/Users/arg/Documents/GitHub/FPGA/First_Project/Fir
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib {
-  C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/adder.v
-  C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/cic.v
-  C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/clock_divider.v
-  C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ddr_to_sdr.v
-  C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/i2s_bus.v
-  C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/incrementor.v
-  C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/integrator.v
-  C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/mux.v
-  C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/mux_shift.v
-  C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/op_differentiator.v
-  C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/project.v
-}
+read_verilog -library xil_defaultlib C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/project.v
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
