@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1737871546">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1738129152">
   <File Type="ROUTE-PWR" Name="project_power_routed.rpt"/>
   <File Type="PA-TCL" Name="project.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="project_power_summary_routed.pb"/>
@@ -249,4 +249,5 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
 </GenRun>

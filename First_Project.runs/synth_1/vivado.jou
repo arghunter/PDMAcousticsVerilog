@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Sat Jan 25 22:05:49 2025
-# Process ID: 78900
+# Start of session at: Tue Jan 28 21:38:25 2025
+# Process ID: 98076
 # Current directory: C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1
 # Command line: vivado.exe -log project.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source project.tcl
 # Log file: C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/project.vds
@@ -17,8 +17,8 @@
 # CPU Physical cores:16
 # CPU Logical cores :32
 # Host memory       :67804 MB
-# Swap memory       :84115 MB
-# Total Virtual     :151919 MB
-# Available Virtual :28163 MB
+# Swap memory       :73014 MB
+# Total Virtual     :140818 MB
+# Available Virtual :32944 MB
 #-----------------------------------------------------------
 source project.tcl -notrace
