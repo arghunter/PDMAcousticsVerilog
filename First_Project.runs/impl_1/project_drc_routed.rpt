@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Tue Jan 28 21:39:55 2025
+| Date         : Wed Jan 29 19:01:12 2025
 | Host         : DEKTOP-MOV670 running 64-bit major release  (build 9200)
 | Command      : report_drc -file project_drc_routed.rpt -pb project_drc_routed.pb -rpx project_drc_routed.rpx
 | Design       : project
@@ -84,57 +84,57 @@ Related violations: <none>
 
 RPBF-3#8 Warning
 IO port buffering is incomplete  
-Device port JB[3] expects both input and output buffering but the buffers are incomplete.
+Device port JB[2] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#9 Warning
 IO port buffering is incomplete  
-Device port JB[4] expects both input and output buffering but the buffers are incomplete.
+Device port JB[3] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#10 Warning
 IO port buffering is incomplete  
-Device port JB[5] expects both input and output buffering but the buffers are incomplete.
+Device port JB[4] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#11 Warning
 IO port buffering is incomplete  
-Device port JC[0] expects both input and output buffering but the buffers are incomplete.
+Device port JB[5] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#12 Warning
 IO port buffering is incomplete  
-Device port JC[1] expects both input and output buffering but the buffers are incomplete.
+Device port JB[6] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#13 Warning
 IO port buffering is incomplete  
-Device port JC[2] expects both input and output buffering but the buffers are incomplete.
+Device port JB[7] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#14 Warning
 IO port buffering is incomplete  
-Device port JC[3] expects both input and output buffering but the buffers are incomplete.
+Device port JC[0] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#15 Warning
 IO port buffering is incomplete  
-Device port JC[4] expects both input and output buffering but the buffers are incomplete.
+Device port JC[1] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#16 Warning
 IO port buffering is incomplete  
-Device port JC[5] expects both input and output buffering but the buffers are incomplete.
+Device port JC[3] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#17 Warning
 IO port buffering is incomplete  
-Device port JC[6] expects both input and output buffering but the buffers are incomplete.
+Device port JC[4] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 RPBF-3#18 Warning
 IO port buffering is incomplete  
-Device port JC[7] expects both input and output buffering but the buffers are incomplete.
+Device port JC[5] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 

@@ -50,16 +50,16 @@ module project(
 
 //    assign JB[7]=JA[0];
     
-    assign JC[4]= ddr_clk;
-    assign JB[3]=mic_clk;
-    assign JC[0]=JB[1];
-    assign JC[1]=JB[5];
-    assign JC[2]=JB[0];
-    assign JC[3]=JB[4];
-    assign JC[5]=JA[1];
-//    assign JC[5]=mic_clk;
-    assign JC[6]=JA[5];
-    assign JC[7]=JA[0];
+    assign JB[4]= ddr_clk;
+    assign JC[3]=mic_clk;
+    assign JB[0]=JC[1];
+    assign JB[1]=JC[5];
+    assign JB[2]=JC[0];
+    assign JB[3]=JC[4];
+    assign JB[5]=JA[1];
+//    assign JB[5]=mic_clk;
+    assign JB[6]=JA[5];
+    assign JB[7]=JA[0];
     assign vauxp6=JA[4];
     assign JA[3]=mic_clk;
     assign vauxp14 = clock;
