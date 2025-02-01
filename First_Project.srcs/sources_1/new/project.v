@@ -76,23 +76,42 @@ module project(
     end
 
 //    assign JB[7]=JA[0];
-    
+    wire [7:0] mic_in;
     assign JB[4]= ddr_clk;
     assign JC[3]=mic_clk;
-    assign JB[0]=JC[1];
-    assign JB[1]=JC[5];
-    assign JB[2]=JC[0];
-    assign JB[3]=JC[4];
-    assign JB[5]=JA[1];
+    assign mic_in[0]=JC[1];
+    assign mic_in[1]=JC[5];
+    assign mic_in[2]=JC[0];
+    assign mic_in[3]=JC[4];
+    assign mic_in[4]=JA[1];
 //    assign JB[5]=mic_clk;
-    assign JB[6]=JA[5];
-    assign JB[7]=JA[0];
-    assign vauxp6=JA[4];
+    assign mic_in[5]=JA[5];
+    assign mic_in[6]=JA[0];
+    assign mic_in[7]=JA[4];
     assign JA[3]=mic_clk;
     assign vauxp14 = clock;
     assign vauxp7 = lr_clk;
     
+    top_module u_top_module(
+    .clk(mic_clk),
+    .dec_clk(lr_clk),
+    .rst(0),
+    .in(mic_in),
+    .out(JB[1])
+    );
     
-
+//  assign JB[0]=JC[1];
+//    assign JB[1]=JC[5];
+//    assign JB[2]=JC[0];
+//    assign JB[3]=JC[4];
+//    assign JB[5]=JA[1];
+////    assign JB[5]=mic_clk;
+//    assign JB[6]=JA[5];
+//    assign JB[7]=JA[0];
+//    assign vauxp6=JA[4];
+//    assign JA[3]=mic_clk;
+//    assign vauxp14 = clock;
+//    assign vauxp7 = lr_clk;
+    
  
 endmodule
