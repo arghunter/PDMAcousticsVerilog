@@ -38,15 +38,42 @@ module project(
     .clk_in1(CLK100MHZ)
     );
     
+    
     reg ddr_clk;
     reg mic_clk;
+    reg lr_clk;
     always @(posedge clock) begin
         ddr_clk <= ~ddr_clk;  // Toggle the output on every rising edge
     end
     always @(posedge ddr_clk) begin
         mic_clk <= ~mic_clk;  // Toggle the output on every rising edge
     end
+    reg clk1;
+    reg clk2;
+    reg clk3;
+    reg clk4;
+    reg clk5;
+
     
+    
+    always @(posedge mic_clk) begin
+        clk1 <= ~clk1;
+    end  
+    always @(posedge clk1) begin
+        clk2 <= ~clk2;
+    end
+    always @(posedge clk2) begin
+        clk3 <= ~clk3;
+    end  
+    always @(posedge clk3) begin
+        clk4 <= ~clk4;            
+    end
+    always @(posedge clk4) begin
+        clk5 <= ~clk5;            
+    end
+    always @(posedge clk5) begin
+        lr_clk <= ~lr_clk;            
+    end
 
 //    assign JB[7]=JA[0];
     
@@ -63,7 +90,7 @@ module project(
     assign vauxp6=JA[4];
     assign JA[3]=mic_clk;
     assign vauxp14 = clock;
-    assign vauxp7 = JA[1];
+    assign vauxp7 = lr_clk;
     
     
 

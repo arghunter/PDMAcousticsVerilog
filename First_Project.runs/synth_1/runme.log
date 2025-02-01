@@ -8,12 +8,11 @@
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Wed Jan 29 18:59:58 2025
+  **** Start of session at: Sat Feb  1 00:37:44 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source project.tcl -notrace
-create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 594.977 ; gain = 240.469
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/arg/Documents/GitHub/FPGA/First_Project'.
 WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/Users/arg/Documents/GitHub/FPGA/First_Project' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1'.)
@@ -31,13 +30,13 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 110380
+INFO: [Synth 8-7075] Helper process launched with PID 20144
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1454.461 ; gain = 448.828
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1454.746 ; gain = 449.246
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'project' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/project.v:23]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-106768-DEKTOP-MOV670/realtime/clk_wiz_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-106768-DEKTOP-MOV670/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-16208-DEKTOP-MOV670/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-16208-DEKTOP-MOV670/realtime/clk_wiz_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'project' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/project.v:23]
 WARNING: [Synth 8-7129] Port JA[7] in module project is either unconnected or has no load
 WARNING: [Synth 8-7129] Port JA[6] in module project is either unconnected or has no load
@@ -46,18 +45,18 @@ WARNING: [Synth 8-7129] Port JC[7] in module project is either unconnected or ha
 WARNING: [Synth 8-7129] Port JC[6] in module project is either unconnected or has no load
 WARNING: [Synth 8-7129] Port JC[2] in module project is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1564.988 ; gain = 559.355
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1565.242 ; gain = 559.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1564.988 ; gain = 559.355
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1565.242 ; gain = 559.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1564.988 ; gain = 559.355
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1565.242 ; gain = 559.742
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1564.988 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1565.242 ; gain = 0.000
 WARNING: [Netlist 29-1115] Found multi-term driver net: JA[0].
 WARNING: [Netlist 29-1115] Found multi-term driver net: JA[1].
 WARNING: [Netlist 29-1115] Found multi-term driver net: JA[5].
@@ -83,22 +82,22 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/project_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1599.262 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1622.363 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1599.262 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1622.363 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1599.262 ; gain = 593.629
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1622.363 ; gain = 616.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1599.262 ; gain = 593.629
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1622.363 ; gain = 616.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -107,17 +106,17 @@ Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  c:/U
 Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
 Applied set_property KEEP_HIERARCHY = SOFT for clock_wiz_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1599.262 ; gain = 593.629
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1622.363 ; gain = 616.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1599.262 ; gain = 593.629
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1622.363 ; gain = 616.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Registers : 
-	                1 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -141,25 +140,25 @@ WARNING: [Synth 8-7129] Port JC[7] in module project is either unconnected or ha
 WARNING: [Synth 8-7129] Port JC[6] in module project is either unconnected or has no load
 WARNING: [Synth 8-7129] Port JC[2] in module project is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1599.262 ; gain = 593.629
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1622.363 ; gain = 616.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1599.262 ; gain = 593.629
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1622.363 ; gain = 616.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1599.262 ; gain = 593.629
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1622.363 ; gain = 616.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1599.262 ; gain = 593.629
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1622.363 ; gain = 616.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -185,37 +184,37 @@ CRITICAL WARNING: [Synth 8-6030] Inout pin 'JC[4]' is read and/or written withou
 CRITICAL WARNING: [Synth 8-6030] Inout pin 'JC[1]' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/project.v:23]
 CRITICAL WARNING: [Synth 8-6030] Inout pin 'JC[0]' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/project.v:23]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1599.262 ; gain = 593.629
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1622.363 ; gain = 616.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1599.262 ; gain = 593.629
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1622.363 ; gain = 616.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1599.262 ; gain = 593.629
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1622.363 ; gain = 616.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1599.262 ; gain = 593.629
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1622.363 ; gain = 616.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1599.262 ; gain = 593.629
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1622.363 ; gain = 616.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1599.262 ; gain = 593.629
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1622.363 ; gain = 616.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -233,32 +232,32 @@ Report Cell Usage:
 |      |Cell    |Count |
 +------+--------+------+
 |1     |clk_wiz |     1|
-|2     |LUT1    |     2|
-|3     |FDRE    |     2|
+|2     |LUT1    |     8|
+|3     |FDRE    |     8|
 |4     |IBUF    |     8|
 |5     |OBUF    |    13|
 +------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1599.262 ; gain = 593.629
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1622.363 ; gain = 616.863
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 8 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 1599.262 ; gain = 559.355
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1599.262 ; gain = 593.629
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1622.363 ; gain = 559.742
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1622.363 ; gain = 616.863
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1599.262 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1622.363 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1599.262 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1622.363 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 30440109
+Synth Design complete | Checksum: 3a69d808
 INFO: [Common 17-83] Releasing license: Synthesis
 27 Infos, 27 Warnings, 8 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1599.262 ; gain = 991.625
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1622.363 ; gain = 1015.703
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1599.262 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1622.363 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/project.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file project_utilization_synth.rpt -pb project_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Jan 29 19:00:35 2025...
+INFO: [Common 17-206] Exiting Vivado at Sat Feb  1 00:38:11 2025...
