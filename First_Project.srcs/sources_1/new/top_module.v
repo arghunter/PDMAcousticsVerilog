@@ -29,7 +29,7 @@ module top_module(
     input wire dec_clk,
     input wire rst,
     input wire [7:0] in,
-    output wire out
+    output wire [7:0] out
 
 );
  
@@ -70,6 +70,7 @@ assign extended_cic_out = {{8{cic_out[23]}}, cic_out};
         .in(mic_data),
         .out(adder_out)
     );
+
     cic u_cic(
         .clk(clk),
         .dec_clk(dec_clk),
