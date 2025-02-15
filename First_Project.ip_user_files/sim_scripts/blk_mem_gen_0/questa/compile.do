@@ -11,6 +11,7 @@ vmap xil_defaultlib questa_lib/msim/xil_defaultlib
 
 vlog -work xpm  -incr -mfcu  -sv \
 "C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+"C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 
 vcom -work xpm  -93  \
 "C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_VCOMP.vhd" \
@@ -20,7 +21,6 @@ vlog -work blk_mem_gen_v8_4_8  -incr -mfcu  \
 
 vlog -work xil_defaultlib  -incr -mfcu  \
 "../../../../First_Project.gen/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
-
 
 vlog -work xil_defaultlib \
 "glbl.v"

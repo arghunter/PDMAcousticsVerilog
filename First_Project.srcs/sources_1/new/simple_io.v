@@ -27,6 +27,7 @@ module simple_io(
     output wire vauxp6,
     output wire vauxp14,
     output wire vauxp7,
+    output wire vauxp15,
     input wire CLK100MHZ
     );
     wire clock;// 0 deg
@@ -39,7 +40,7 @@ module simple_io(
     .locked(locked),
     .clk_in1(CLK100MHZ)
     );
-    
+
     
     reg ddr_clk;
     reg ext_clk;
@@ -62,9 +63,7 @@ module simple_io(
     reg clk3;
     reg clk4;
     reg clk5;
-
-    
-    
+        
     always @(posedge mic_clk) begin
         clk1 <= ~clk1;
     end  
@@ -84,6 +83,84 @@ module simple_io(
         lr_clk <= ~lr_clk;            
     end
 
+
+
+    reg [11:0] addra=0;
+    
+    wire [0:0] dina=0;
+    wire [0:0] douta;
+    wire [0:0] wea=1;
+    reg [11:0] addrb=1;
+    wire [0:0] dinb;
+    wire [0:0] doutb;
+    wire [0:0] web;
+    
+    always @(posedge(ddr_clk)) begin
+        addra <= addra+1;
+        addrb <= addrb+1;
+    end
+        
+    blk_mem_gen_0 bram1(
+    .addra(addra),
+    .clka(ddr_clk),
+    .dina(JA[1]),
+    .douta(douta),
+    .wea(wea),
+    .addrb(addrb),
+    .clkb(ddr_clk),
+    .dinb(dinb),
+    .doutb(doutb),
+    .web(web)
+    );
+
+//reg [11:0] addra[0:7];  
+//reg [11:0] addrb[0:7];  // Declare addrb array
+
+//// Initialize addrb[i] to 1 using an initial block
+//initial begin : pointer_init
+//    integer i;
+//    for (i = 0; i < 8; i = i + 1) begin
+//        addra[i] = 0;
+//        addrb[i] = 1;  // Start addrb at 1
+//    end
+//end
+//wire [0:0] dina[0:7];
+//wire [0:0] douta[0:7];
+//wire [0:0] wea[0:7];
+
+//wire [0:0] dinb[0:7];
+//wire [0:0] doutb[0:7];
+//wire [0:0] web[0:7];
+
+//genvar i;
+//generate
+//    for (i = 0; i < 8; i = i + 1) begin : bram_block
+//        always @(posedge ddr_clk) begin
+//            addra[i] <= addra[i] + 1;
+//            addrb[i] <= addrb[i] + 1;
+//        end
+//        assign wea[i]=1;
+
+//        blk_mem_gen_0 bram_inst (
+//            .addra(addra[i]),
+//            .clka(ddr_clk),
+//            .dina(dina[i]),
+//            .douta(douta[i]),
+//            .wea(wea[i]),
+//            .addrb(addrb[i]),
+//            .clkb(ddr_clk),
+//            .dinb(dinb[i]),
+//            .doutb(doutb[i]),
+//            .web(web[i])
+//        );
+//    end
+//endgenerate
+
+
+
+
+
+
 //    assign JB[7]=JA[0];
     
     assign JB[4]= ext_clk;
@@ -95,13 +172,12 @@ module simple_io(
     assign JB[3]=JC[4];
     assign JB[5]=JA[1];
 //    assign JB[5]=mic_clk;
-    assign JB[6]=JA[5];
+    assign JB[6]=doutb;
     assign JB[7]=JA[0];
     assign vauxp6=JA[4];
     assign JA[3]=mic_clk;
     assign vauxp14 = mic_clk;
     assign vauxp7 = lr_clk;
-    
     
 
  
