@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Sun Feb  9 14:34:57 2025
+| Date             : Wed Feb 12 21:35:49 2025
 | Host             : DEKTOP-MOV670 running 64-bit major release  (build 9200)
 | Command          : report_power -file simple_io_power_routed.rpt -pb simple_io_power_summary_routed.pb -rpx simple_io_power_routed.rpx
 | Design           : simple_io
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.204        |
+| Total On-Chip Power (W)  | 0.208        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.132        |
+| Dynamic (W)              | 0.136        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.0         |
@@ -59,9 +59,9 @@ Table of Contents
 |   Others       |     0.000 |        4 |       --- |             --- |
 | Signals        |    <0.001 |       17 |       --- |             --- |
 | PLL            |     0.106 |        1 |         5 |           20.00 |
-| I/O            |     0.025 |       22 |       106 |           20.75 |
+| I/O            |     0.030 |       22 |       106 |           20.75 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.204 |          |           |                 |
+| Total          |     0.208 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,8 +72,8 @@ Table of Contents
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Vccint    |       1.000 |     0.019 |       0.009 |      0.010 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.067 |       0.055 |      0.013 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.008 |       0.007 |      0.001 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.068 |       0.055 |      0.013 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.009 |       0.008 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -147,7 +147,7 @@ Table of Contents
 +---------------+-----------+
 | Name          | Power (W) |
 +---------------+-----------+
-| simple_io     |     0.132 |
+| simple_io     |     0.136 |
 |   clock_wiz_0 |     0.106 |
 |     inst      |     0.106 |
 +---------------+-----------+

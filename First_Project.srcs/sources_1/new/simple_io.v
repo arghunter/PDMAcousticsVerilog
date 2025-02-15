@@ -86,20 +86,20 @@ module simple_io(
 
 //    assign JB[7]=JA[0];
     
-    assign JA[4]= ext_clk;
+    assign JB[4]= ext_clk;
 //    assign JC[3]=mic_clk;
     assign JC[3]=mic_clk;
-    assign JA[0]=JC[1];
-    assign JA[1]=JC[5];
-    assign JA[2]=JC[0];
-    assign JA[3]=JC[4];
-    assign JA[5]=JB[1];
+    assign JB[0]=JC[1];
+    assign JB[1]=JC[5];
+    assign JB[2]=JC[0];
+    assign JB[3]=JC[4];
+    assign JB[5]=JA[1];
 //    assign JB[5]=mic_clk;
-    assign JA[6]=JB[5];
-    assign JA[7]=JB[0];
-    assign vauxp6=JB[4];
-    assign JB[3]=mic_clk;
-    assign vauxp14 = clock;
+    assign JB[6]=JA[5];
+    assign JB[7]=JA[0];
+    assign vauxp6=JA[4];
+    assign JA[3]=mic_clk;
+    assign vauxp14 = mic_clk;
     assign vauxp7 = lr_clk;
     
     
