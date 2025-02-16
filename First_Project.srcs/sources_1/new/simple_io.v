@@ -83,8 +83,9 @@ module simple_io(
         lr_clk <= ~lr_clk;            
     end
     wire [15:0] ram_out;
-    wire [15:0] ram_out2;
+   
     wire [15:0] ram_in;
+
     assign ram_in[0]=JC[1];
     assign ram_in[1]=JC[5];
     assign ram_in[2]=JC[0];
@@ -93,79 +94,31 @@ module simple_io(
     assign ram_in[5]=JA[5];
     assign ram_in[6]=JA[0];
     assign ram_in[7]=JA[4];
-    assign ram_out=ram_in;
-//    ram ram1(
-//    .mic_in(ram_in),
-//    .mic_clk(ext_clk),
-//    .read_clk(ddr_clk),
-//    .read_addr0(1),
-//    .read_addr1(1),// the offset need to do addrb+read addr
-//    .read_addr2(1),
-//    .read_addr3(1),
-//    .read_addr4(1),
-//    .read_addr5(1),
-//    .read_addr6(1),
-//    .read_addr7(1),
-//    .read_addr8(1),
-//    .read_addr9(1),
-//    .read_addr10(1),
-//    .read_addr11(1),
-//    .read_addr12(1),
-//    .read_addr13(1),
-//    .read_addr14(1),
-//    .read_addr15(1),    
-//    .mic_out(ram_out2));
+//    assign ram_out=ram_in;
 
-    
+    ram ram1(
+    .mic_in(ram_in),
+    .mic_clk(ext_clk),
+    .read_clk(ext_clk),
+    .read_addr0(0),
+    .read_addr1(0),// the offset need to do addrb+read addr
+    .read_addr2(0),
+    .read_addr3(0),
+    .read_addr4(0),
+    .read_addr5(0),
+    .read_addr6(0),
+    .read_addr7(0),
+    .read_addr8(0),
+    .read_addr9(0),
+    .read_addr10(0),
+    .read_addr11(0),
+    .read_addr12(0),
+    .read_addr13(0),
+    .read_addr14(0),
+    .read_addr15(0),    
+    .mic_out(ram_out));
 
-//reg [11:0] addra[0:7];  
-//reg [11:0] addrb[0:7];  // Declare addrb array
-
-//// Initialize addrb[i] to 1 using an initial block
-//initial begin : pointer_init
-//    integer i;
-//    for (i = 0; i < 8; i = i + 1) begin
-//        addra[i] = 0;
-//        addrb[i] = 1;  // Start addrb at 1
-//    end
-//end
-//wire [0:0] dina[0:7];
-//wire [0:0] douta[0:7];
-//wire [0:0] wea[0:7];
-
-//wire [0:0] dinb[0:7];
-//wire [0:0] doutb[0:7];
-//wire [0:0] web[0:7];
-
-//genvar i;
-//generate
-//    for (i = 0; i < 8; i = i + 1) begin : bram_block
-//        always @(posedge ddr_clk) begin
-//            addra[i] <= addra[i] + 1;
-//            addrb[i] <= addrb[i] + 1;
-//        end
-//        assign wea[i]=1;
-
-//        blk_mem_gen_0 bram_inst (
-//            .addra(addra[i]),
-//            .clka(ddr_clk),
-//            .dina(dina[i]),
-//            .douta(douta[i]),
-//            .wea(wea[i]),
-//            .addrb(addrb[i]),
-//            .clkb(ddr_clk),
-//            .dinb(dinb[i]),
-//            .doutb(doutb[i]),
-//            .web(web[i])
-//        );
-//    end
-//endgenerate
-
-
-
-
-
-
+   
 //    assign JB[7]=JA[0];
     
     assign JB[4]= ext_clk;
