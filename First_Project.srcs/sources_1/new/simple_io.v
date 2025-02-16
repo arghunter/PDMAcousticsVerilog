@@ -83,28 +83,38 @@ module simple_io(
         lr_clk <= ~lr_clk;            
     end
     wire [15:0] ram_out;
-    ram ram1(
-    .mic_in(0),
-    .mic_clk(0),
-    .read_clk(0),
-    .read_addr0(0),
-    .read_addr1(0),// the offset need to do addra+read addr+1
-    .read_addr2(0),
-    .read_addr3(0),
-    .read_addr4(0),
-    .read_addr5(0),
-    .read_addr6(0),
-    .read_addr7(0),
-    .read_addr8(0),
-    .read_addr9(0),
-    .read_addr10(0),
-    .read_addr11(0),
-    .read_addr12(0),
-    .read_addr13(0),
-    .read_addr14(0),
-    .read_addr15(0),    
-    .mic_out(ram_out))
-    ;
+    wire [15:0] ram_out2;
+    wire [15:0] ram_in;
+    assign ram_in[0]=JC[1];
+    assign ram_in[1]=JC[5];
+    assign ram_in[2]=JC[0];
+    assign ram_in[3]=JC[4];
+    assign ram_in[4]=JA[1];
+    assign ram_in[5]=JA[5];
+    assign ram_in[6]=JA[0];
+    assign ram_in[7]=JA[4];
+    assign ram_out=ram_in;
+//    ram ram1(
+//    .mic_in(ram_in),
+//    .mic_clk(ext_clk),
+//    .read_clk(ddr_clk),
+//    .read_addr0(1),
+//    .read_addr1(1),// the offset need to do addrb+read addr
+//    .read_addr2(1),
+//    .read_addr3(1),
+//    .read_addr4(1),
+//    .read_addr5(1),
+//    .read_addr6(1),
+//    .read_addr7(1),
+//    .read_addr8(1),
+//    .read_addr9(1),
+//    .read_addr10(1),
+//    .read_addr11(1),
+//    .read_addr12(1),
+//    .read_addr13(1),
+//    .read_addr14(1),
+//    .read_addr15(1),    
+//    .mic_out(ram_out2));
 
     
 
@@ -161,17 +171,17 @@ module simple_io(
     assign JB[4]= ext_clk;
 //    assign JC[3]=mic_clk;
     assign JC[3]=mic_clk;
-    assign JB[0]=JC[1];
-    assign JB[1]=JC[5];
-    assign JB[2]=JC[0];
-    assign JB[3]=JC[4];
-    assign JB[5]=JA[1];
+    assign JB[0]=ram_out[0];
+    assign JB[1]=ram_out[1];
+    assign JB[2]=ram_out[2];
+    assign JB[3]=ram_out[3];
+    assign JB[5]=ram_out[4];
 //    assign JB[5]=mic_clk;
-    assign JB[6]=ram_out[0];
-    assign JB[7]=JA[0];
-    assign vauxp6=JA[4];
+    assign JB[6]=ram_out[5];
+    assign JB[7]=ram_out[6];
+    assign vauxp6=ram_out[7];
     assign JA[3]=mic_clk;
-    assign vauxp14 = mic_clk;
+    assign vauxp14 = JA[1];
     assign vauxp7 = lr_clk;
     
 

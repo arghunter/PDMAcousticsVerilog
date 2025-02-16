@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Sat Feb 15 16:18:54 2025
+| Date         : Sat Feb 15 18:58:45 2025
 | Host         : DEKTOP-MOV670 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file simple_io_utilization_synth.rpt -pb simple_io_utilization_synth.pb
 | Design       : simple_io
@@ -93,7 +93,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   21 |     0 |          0 |       106 | 19.81 |
+| Bonded IOB                  |   22 |     0 |          0 |       106 | 20.75 |
 | Bonded IPADs                |    0 |     0 |          0 |        10 |  0.00 |
 | Bonded OPADs                |    0 |     0 |          0 |         4 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         5 |  0.00 |
@@ -155,7 +155,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | OBUF     |   13 |                  IO |
 | LUT1     |    9 |                 LUT |
 | FDRE     |    9 |        Flop & Latch |
-| IBUF     |    7 |                  IO |
+| IBUF     |    8 |                  IO |
 | OBUFT    |    1 |                  IO |
 +----------+------+---------------------+
 
@@ -163,12 +163,11 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 8. Black Boxes
 --------------
 
-+---------------+------+
-|    Ref Name   | Used |
-+---------------+------+
-| blk_mem_gen_0 |   16 |
-| clk_wiz_0     |    1 |
-+---------------+------+
++-----------+------+
+|  Ref Name | Used |
++-----------+------+
+| clk_wiz_0 |    1 |
++-----------+------+
 
 
 9. Instantiated Netlists
