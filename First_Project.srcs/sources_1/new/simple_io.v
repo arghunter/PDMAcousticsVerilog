@@ -82,36 +82,31 @@ module simple_io(
     always @(posedge clk5) begin
         lr_clk <= ~lr_clk;            
     end
+    wire [15:0] ram_out;
+    ram ram1(
+    .mic_in(0),
+    .mic_clk(0),
+    .read_clk(0),
+    .read_addr0(0),
+    .read_addr1(0),// the offset need to do addra+read addr+1
+    .read_addr2(0),
+    .read_addr3(0),
+    .read_addr4(0),
+    .read_addr5(0),
+    .read_addr6(0),
+    .read_addr7(0),
+    .read_addr8(0),
+    .read_addr9(0),
+    .read_addr10(0),
+    .read_addr11(0),
+    .read_addr12(0),
+    .read_addr13(0),
+    .read_addr14(0),
+    .read_addr15(0),    
+    .mic_out(ram_out))
+    ;
 
-
-
-    reg [11:0] addra=0;
     
-    wire [0:0] dina=0;
-    wire [0:0] douta;
-    wire [0:0] wea=1;
-    reg [11:0] addrb=1;
-    wire [0:0] dinb;
-    wire [0:0] doutb;
-    wire [0:0] web;
-    
-    always @(posedge(ddr_clk)) begin
-        addra <= addra+1;
-        addrb <= addrb+1;
-    end
-        
-    blk_mem_gen_0 bram1(
-    .addra(addra),
-    .clka(ddr_clk),
-    .dina(JA[1]),
-    .douta(douta),
-    .wea(wea),
-    .addrb(addrb),
-    .clkb(ddr_clk),
-    .dinb(dinb),
-    .doutb(doutb),
-    .web(web)
-    );
 
 //reg [11:0] addra[0:7];  
 //reg [11:0] addrb[0:7];  // Declare addrb array
@@ -172,7 +167,7 @@ module simple_io(
     assign JB[3]=JC[4];
     assign JB[5]=JA[1];
 //    assign JB[5]=mic_clk;
-    assign JB[6]=doutb;
+    assign JB[6]=ram_out[0];
     assign JB[7]=JA[0];
     assign vauxp6=JA[4];
     assign JA[3]=mic_clk;

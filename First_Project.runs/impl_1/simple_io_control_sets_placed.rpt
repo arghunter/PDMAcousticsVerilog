@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Sat Feb 15 00:04:39 2025
+| Date         : Sat Feb 15 16:19:30 2025
 | Host         : DEKTOP-MOV670 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file simple_io_control_sets_placed.rpt
 | Design       : simple_io
@@ -40,14 +40,14 @@ Table of Contents
 |       Fanout       | Count |
 +--------------------+-------+
 | Total control sets |     9 |
-| >= 0 to < 4        |     8 |
+| >= 0 to < 4        |     9 |
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     1 |
+| >= 16              |     0 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,7 +58,7 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              33 |           15 |
+| No           | No                    | No                     |               9 |            9 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
@@ -73,15 +73,15 @@ Table of Contents
 +----------------------------+---------------+------------------+------------------+----------------+--------------+
 |        Clock Signal        | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
 +----------------------------+---------------+------------------+------------------+----------------+--------------+
-|  clk1                      |               |                  |                1 |              1 |         1.00 |
-|  clk2                      |               |                  |                1 |              1 |         1.00 |
-|  clk5                      |               |                  |                1 |              1 |         1.00 |
+|  clock_wiz_0/inst/clk_out2 |               |                  |                1 |              1 |         1.00 |
+|  clock_wiz_0/inst/clk_out1 |               |                  |                1 |              1 |         1.00 |
 |  clk3                      |               |                  |                1 |              1 |         1.00 |
 |  clk4                      |               |                  |                1 |              1 |         1.00 |
 |  JC_IBUF[3]                |               |                  |                1 |              1 |         1.00 |
-|  clock_wiz_0/inst/clk_out1 |               |                  |                1 |              1 |         1.00 |
-|  clock_wiz_0/inst/clk_out2 |               |                  |                1 |              1 |         1.00 |
-|  ddr_clk                   |               |                  |                7 |             25 |         3.57 |
+|  clk5                      |               |                  |                1 |              1 |         1.00 |
+|  clk2                      |               |                  |                1 |              1 |         1.00 |
+|  clk1                      |               |                  |                1 |              1 |         1.00 |
+|  ddr_clk                   |               |                  |                1 |              1 |         1.00 |
 +----------------------------+---------------+------------------+------------------+----------------+--------------+
 
 
