@@ -94,7 +94,7 @@ module simple_io(
     wire output_fifo_full;
     wire dmic_fifo_rd_en;
     reg output_fifo_wr_en;
-    assign dmic_fifo_rd_en =  (!output_fifo_full);
+    assign dmic_fifo_rd_en =  (!dmic_fifo_empty) & (!output_fifo_full);
     assign dmic_fifo_in[0]=JC[1];
     assign dmic_fifo_in[1]=JC[5];
     assign dmic_fifo_in[2]=JC[0];
@@ -109,11 +109,11 @@ module simple_io(
     wire output_fifo_rd_rst_busy;
     wire [7:0] output_fifo_wr_data_count;
     wire [7:0] dmic_fifo_wr_data_count;
-    always @ (negedge CLK100MHZ) begin
+    always @ (negedge ddr_clk) begin
         if (btnC) begin 
             counter<=0;
         end
-        else if (output_fifo_wr_en) begin
+        else  begin
             counter<= counter +1;
         end
         
@@ -122,8 +122,9 @@ module simple_io(
         output_fifo_wr_en<=dmic_fifo_rd_en;
     end
      fifo_generator_0 dmic_fifo (
-      .rst(btnC),                  // input wire rst
-      .wr_clk(~ddr_clk),            // input wire wr_clk
+      .wr_rst(btnC),                  // input wire rst
+      .rd_rst(btnC),
+      .wr_clk(ddr_clk),            // input wire wr_clk
       .rd_clk(CLK100MHZ),            // input wire rd_clk
       .din(dmic_fifo_in),                  // input wire [7 : 0] din
       .wr_en(!dmic_fifo_full),              // input wire wr_en
@@ -132,24 +133,25 @@ module simple_io(
       .full(dmic_fifo_full),                // output wire full
       .empty(dmic_fifo_empty),              // output wire empty
       .almost_empty(dmic_fifo_almost_empty),
-      .wr_data_count(dmic_fifo_wr_data_count),  // output wire [7 : 0] wr_data_count
-      .wr_rst_busy(dmic_fifo_wr_rst_busy),  // output wire wr_rst_busy
-      .rd_rst_busy(dmic_fifo_rd_rst_busy)  // output wire rd_rst_busy
+      .wr_data_count(dmic_fifo_wr_data_count)  // output wire [7 : 0] wr_data_count
+//      .wr_rst_busy(dmic_fifo_wr_rst_busy),  // output wire wr_rst_busy
+//      .rd_rst_busy(dmic_fifo_rd_rst_busy)  // output wire rd_rst_busy
     );
     fifo_generator_0 output_fifo (
-      .rst(btnC),                  // input wire rst
+      .wr_rst(btnC),                  // input wire rst
+      .rd_rst(btnC),                  // input wire rst
       .wr_clk(CLK100MHZ),            // input wire wr_clk
       .rd_clk(ddr_clk),            // input wire rd_clk
-      .din(counter),                  // input wire [7 : 0] din
+      .din(dmic_fifo_out),                  // input wire [7 : 0] din
       .wr_en(output_fifo_wr_en),              // input wire wr_en
       .rd_en(!output_fifo_almost_empty),              // input wire rd_en
       .dout(output_fifo_out),                // output wire [7 : 0] dout
       .full(output_fifo_full),                // output wire full
       .empty(output_fifo_empty),              // output wire empty
       .almost_empty(output_fifo_almost_empty),
-      .wr_data_count(output_fifo_wr_data_count),  // output wire [7 : 0] wr_data_count
-      .wr_rst_busy(output_fifo_wr_rst_busy),  // output wire wr_rst_busy
-      .rd_rst_busy(output_fifo_rd_rst_busy)  // output wire rd_rst_busy
+      .wr_data_count(output_fifo_wr_data_count)  // output wire [7 : 0] wr_data_count
+//      .wr_rst_busy(output_fifo_wr_rst_busy),  // output wire wr_rst_busy
+//      .rd_rst_busy(output_fifo_rd_rst_busy)  // output wire rd_rst_busy
     );
     
     

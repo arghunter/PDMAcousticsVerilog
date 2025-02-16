@@ -58,7 +58,6 @@ if {$::dispatch::connected} {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 8
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -84,7 +83,7 @@ set_property used_in_implementation false [get_files -all c:/Users/arg/Documents
 set_property used_in_implementation false [get_files -all c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 
-read_ip -quiet c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci
+read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/fifo_generator_0/fifo_generator_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/fifo_generator_0/fifo_generator_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/fifo_generator_0/fifo_generator_0_ooc.xdc]

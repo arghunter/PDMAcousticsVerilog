@@ -52,7 +52,7 @@ module testbench_top_level;
         // Initialize clock and reset
         CLK100MHZ = 0;
         btnC = 1;  // Reset active (assuming active-low)
-        #500;
+        #4000;
         btnC = 0;  // Release reset
         #500;
 
