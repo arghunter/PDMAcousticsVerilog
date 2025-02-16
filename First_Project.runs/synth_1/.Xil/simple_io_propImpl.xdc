@@ -9,6 +9,8 @@ set_property src_info {type:XDC file:1 line:14 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN V16 [get_ports {sw[1]}]
 set_property src_info {type:XDC file:1 line:15 export:INPUT save:INPUT read:READ} [current_design]
 set_property IOSTANDARD LVCMOS33 [get_ports {sw[1]}]
+set_property src_info {type:XDC file:1 line:111 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN U18 [get_ports btnC]
 set_property src_info {type:XDC file:1 line:126 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN J1 [get_ports {JA[0]}]
 set_property src_info {type:XDC file:1 line:129 export:INPUT save:INPUT read:READ} [current_design]
@@ -35,8 +37,6 @@ set_property src_info {type:XDC file:1 line:165 export:INPUT save:INPUT read:REA
 set_property PACKAGE_PIN B16 [get_ports {JB[3]}]
 set_property src_info {type:XDC file:1 line:169 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN A15 [get_ports {JB[4]}]
-set_property src_info {type:XDC file:1 line:171 export:INPUT save:INPUT read:READ} [current_design]
-set_property DRIVE 24 [get_ports {JB[3]}];
 set_property src_info {type:XDC file:1 line:173 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN A17 [get_ports {JB[5]}]
 set_property src_info {type:XDC file:1 line:176 export:INPUT save:INPUT read:READ} [current_design]
@@ -63,8 +63,6 @@ set_property src_info {type:XDC file:1 line:214 export:INPUT save:INPUT read:REA
 set_property PACKAGE_PIN J3 [get_ports {vauxp6}]
 set_property src_info {type:XDC file:1 line:217 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN L3 [get_ports {vauxp14}]
-set_property src_info {type:XDC file:1 line:219 export:INPUT save:INPUT read:READ} [current_design]
-set_property DRIVE 24 [get_ports {vauxp14}];
 set_property src_info {type:XDC file:1 line:221 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN M2 [get_ports {vauxp7}]
 set_property src_info {type:XDC file:1 line:224 export:INPUT save:INPUT read:READ} [current_design]

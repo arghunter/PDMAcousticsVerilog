@@ -58,6 +58,7 @@ if {$::dispatch::connected} {
 OPTRACE "clk_wiz_0_synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 8
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -69,7 +70,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.cache/wt [current_project]
 set_property parent.project_path C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.xpr [current_project]
-set_property XPM_LIBRARIES XPM_CDC [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]

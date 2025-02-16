@@ -21,7 +21,7 @@
 
 // # not scuffed
 module ram(
-    input wire [15:0] mic_in,
+    input wire [7:0] mic_in,
     input wire mic_clk,
     input wire read_clk,
     input wire [11:0]read_addr0,
@@ -32,15 +32,15 @@ module ram(
     input wire [11:0]read_addr5,
     input wire [11:0]read_addr6,
     input wire [11:0]read_addr7,
-    input wire [11:0]read_addr8,
-    input wire [11:0]read_addr9,
-    input wire [11:0]read_addr10,
-    input wire [11:0]read_addr11,
-    input wire [11:0]read_addr12,
-    input wire [11:0]read_addr13,
-    input wire [11:0]read_addr14,
-    input wire [11:0]read_addr15,    
-    output wire [15:0] mic_out
+//    input wire [11:0]read_addr8,
+//    input wire [11:0]read_addr9,
+//    input wire [11:0]read_addr10,
+//    input wire [11:0]read_addr11,
+//    input wire [11:0]read_addr12,
+//    input wire [11:0]read_addr13,
+//    input wire [11:0]read_addr14,
+//    input wire [11:0]read_addr15,    
+    output wire [7:0] mic_out
     
     );
     reg [11:0] addra=0;
@@ -63,7 +63,7 @@ module ram(
     .dina(mic_in[0]),
     .douta(douta[0]),
     .wea(wea),
-    .addrb(addrb+read_addr0),
+    .addrb(addrb),
     .clkb(read_clk),
     .dinb(dinb),
     .doutb(mic_out[0]),
@@ -76,7 +76,7 @@ module ram(
     .dina(mic_in[1]),
     .douta(douta[1]),
     .wea(wea),
-    .addrb(addrb+read_addr1),
+    .addrb(addrb),
     .clkb(read_clk),
     .dinb(dinb),
     .doutb(mic_out[1]),
@@ -88,7 +88,7 @@ module ram(
     .dina(mic_in[2]),
     .douta(douta[2]),
     .wea(wea),
-    .addrb(addrb+read_addr2),
+    .addrb(addrb),
     .clkb(read_clk),
     .dinb(dinb),
     .doutb(mic_out[2]),
@@ -100,7 +100,7 @@ module ram(
     .dina(mic_in[3]),
     .douta(douta[3]),
     .wea(wea),
-    .addrb(addrb+read_addr3),
+    .addrb(addrb),
     .clkb(read_clk),
     .dinb(dinb),
     .doutb(mic_out[3]),
@@ -112,7 +112,7 @@ module ram(
     .dina(mic_in[4]),
     .douta(douta[4]),
     .wea(wea),
-    .addrb(addrb+read_addr4),
+    .addrb(addrb),
     .clkb(read_clk),
     .dinb(dinb),
     .doutb(mic_out[4]),
@@ -124,7 +124,7 @@ module ram(
     .dina(mic_in[5]),
     .douta(douta[5]),
     .wea(wea),
-    .addrb(addrb+read_addr5),
+    .addrb(addrb),
     .clkb(read_clk),
     .dinb(dinb),
     .doutb(mic_out[5]),
@@ -136,7 +136,7 @@ module ram(
     .dina(mic_in[6]),
     .douta(douta[6]),
     .wea(wea),
-    .addrb(addrb+read_addr6),
+    .addrb(addrb),
     .clkb(read_clk),
     .dinb(dinb),
     .doutb(mic_out[6]),
@@ -148,106 +148,106 @@ module ram(
     .dina(mic_in[7]),
     .douta(douta[7]),
     .wea(wea),
-    .addrb(addrb+read_addr7),
+    .addrb(addrb),
     .clkb(read_clk),
     .dinb(dinb),
     .doutb(mic_out[7]),
     .web(web)
     );
-    blk_mem_gen_0 bram8(
-    .addra(addra),
-    .clka(mic_clk),
-    .dina(mic_in[8]),
-    .douta(douta[8]),
-    .wea(wea),
-    .addrb(addrb+read_addr8),
-    .clkb(read_clk),
-    .dinb(dinb),
-    .doutb(mic_out[8]),
-    .web(web)
-    );
-    blk_mem_gen_0 bram9(
-    .addra(addra),
-    .clka(mic_clk),
-    .dina(mic_in[9]),
-    .douta(douta[9]),
-    .wea(wea),
-    .addrb(addrb+read_addr9),
-    .clkb(read_clk),
-    .dinb(dinb),
-    .doutb(mic_out[9]),
-    .web(web)
-    );
-    blk_mem_gen_0 bram10(
-    .addra(addra),
-    .clka(mic_clk),
-    .dina(mic_in[10]),
-    .douta(douta[10]),
-    .wea(wea),
-    .addrb(addrb+read_addr10),
-    .clkb(read_clk),
-    .dinb(dinb),
-    .doutb(mic_out[10]),
-    .web(web)
-    );
-   blk_mem_gen_0 bram11(
-    .addra(addra),
-    .clka(mic_clk),
-    .dina(mic_in[11]),
-    .douta(douta[11]),
-    .wea(wea),
-    .addrb(addrb+read_addr11),
-    .clkb(read_clk),
-    .dinb(dinb),
-    .doutb(mic_out[11]),
-    .web(web)
-    );
-    blk_mem_gen_0 bram12(
-    .addra(addra),
-    .clka(mic_clk),
-    .dina(mic_in[12]),
-    .douta(douta[12]),
-    .wea(wea),
-    .addrb(addrb+read_addr12),
-    .clkb(read_clk),
-    .dinb(dinb),
-    .doutb(mic_out[12]),
-    .web(web)
-    );
-    blk_mem_gen_0 bram13(
-    .addra(addra),
-    .clka(mic_clk),
-    .dina(mic_in[13]),
-    .douta(douta[13]),
-    .wea(wea),
-    .addrb(addrb+read_addr13),
-    .clkb(read_clk),
-    .dinb(dinb),
-    .doutb(mic_out[13]),
-    .web(web)
-    );
-   blk_mem_gen_0 bram14(
-    .addra(addra),
-    .clka(mic_clk),
-    .dina(mic_in[14]),
-    .douta(douta[14]),
-    .wea(wea),
-    .addrb(addrb+read_addr14),
-    .clkb(read_clk),
-    .dinb(dinb),
-    .doutb(mic_out[14]),
-    .web(web)
-    );
-   blk_mem_gen_0 bram15(
-    .addra(addra),
-    .clka(mic_clk),
-    .dina(mic_in[15]),
-    .douta(douta[15]),
-    .wea(wea),
-    .addrb(addrb+read_addr15),
-    .clkb(read_clk),
-    .dinb(dinb),
-    .doutb(mic_out[15]),
-    .web(web)
-    );
+//    blk_mem_gen_0 bram8(
+//    .addra(addra),
+//    .clka(mic_clk),
+//    .dina(mic_in[8]),
+//    .douta(douta[8]),
+//    .wea(wea),
+//    .addrb(addrb),
+//    .clkb(read_clk),
+//    .dinb(dinb),
+//    .doutb(mic_out[8]),
+//    .web(web)
+//    );
+//    blk_mem_gen_0 bram9(
+//    .addra(addra),
+//    .clka(mic_clk),
+//    .dina(mic_in[9]),
+//    .douta(douta[9]),
+//    .wea(wea),
+//    .addrb(addrb),
+//    .clkb(read_clk),
+//    .dinb(dinb),
+//    .doutb(mic_out[9]),
+//    .web(web)
+//    );
+//    blk_mem_gen_0 bram10(
+//    .addra(addra),
+//    .clka(mic_clk),
+//    .dina(mic_in[10]),
+//    .douta(douta[10]),
+//    .wea(wea),
+//    .addrb(addrb),
+//    .clkb(read_clk),
+//    .dinb(dinb),
+//    .doutb(mic_out[10]),
+//    .web(web)
+//    );
+//   blk_mem_gen_0 bram11(
+//    .addra(addra),
+//    .clka(mic_clk),
+//    .dina(mic_in[11]),
+//    .douta(douta[11]),
+//    .wea(wea),
+//    .addrb(addrb),
+//    .clkb(read_clk),
+//    .dinb(dinb),
+//    .doutb(mic_out[11]),
+//    .web(web)
+//    );
+//    blk_mem_gen_0 bram12(
+//    .addra(addra),
+//    .clka(mic_clk),
+//    .dina(mic_in[12]),
+//    .douta(douta[12]),
+//    .wea(wea),
+//    .addrb(addrb),
+//    .clkb(read_clk),
+//    .dinb(dinb),
+//    .doutb(mic_out[12]),
+//    .web(web)
+//    );
+//    blk_mem_gen_0 bram13(
+//    .addra(addra),
+//    .clka(mic_clk),
+//    .dina(mic_in[13]),
+//    .douta(douta[13]),
+//    .wea(wea),
+//    .addrb(addrb),
+//    .clkb(read_clk),
+//    .dinb(dinb),
+//    .doutb(mic_out[13]),
+//    .web(web)
+//    );
+//   blk_mem_gen_0 bram14(
+//    .addra(addra),
+//    .clka(mic_clk),
+//    .dina(mic_in[14]),
+//    .douta(douta[14]),
+//    .wea(wea),
+//    .addrb(addrb),
+//    .clkb(read_clk),
+//    .dinb(dinb),
+//    .doutb(mic_out[14]),
+//    .web(web)
+//    );
+//   blk_mem_gen_0 bram15(
+//    .addra(addra),
+//    .clka(mic_clk),
+//    .dina(mic_in[15]),
+//    .douta(douta[15]),
+//    .wea(wea),
+//    .addrb(addrb),
+//    .clkb(read_clk),
+//    .dinb(dinb),
+//    .doutb(mic_out[15]),
+//    .web(web)
+//    );
 endmodule

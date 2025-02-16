@@ -1,0 +1,25 @@
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_10 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_top_level_behav xil_defaultlib.testbench_top_level xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=51,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module fifo_generator_v13_2_10.fifo_generator_v13_2_10_sync_sta...
+Compiling module fifo_generator_v13_2_10.fifo_generator_v13_2_10_bhv_ver_...
+Compiling module fifo_generator_v13_2_10.fifo_generator_v13_2_10_CONV_VER...
+Compiling module fifo_generator_v13_2_10.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.simple_io
+Compiling module xil_defaultlib.testbench_top_level
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_top_level_behav
