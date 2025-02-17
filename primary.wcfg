@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="5,719.167 ns"></ZoomStartTime>
-      <ZoomEndTime time="12,234.168 ns"></ZoomEndTime>
-      <Cursor1Time time="7,054.167 ns"></Cursor1Time>
+      <ZoomStartTime time="635.911320 us"></ZoomStartTime>
+      <ZoomEndTime time="643.387270 us"></ZoomEndTime>
+      <Cursor1Time time="642.141278 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="276"></NameColumnWidth>
-      <ValueColumnWidth column_width="92"></ValueColumnWidth>
+      <ValueColumnWidth column_width="88"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="24" />
+   <WVObjectSize size="64" />
    <wvobject fp_name="/testbench_top_level/CLK100MHZ" type="logic">
       <obj_property name="ElementShortName">CLK100MHZ</obj_property>
       <obj_property name="ObjectShortName">CLK100MHZ</obj_property>
@@ -116,6 +116,165 @@
    <wvobject fp_name="/testbench_top_level/dut/output_fifo_out" type="array">
       <obj_property name="ElementShortName">output_fifo_out[7:0]</obj_property>
       <obj_property name="ObjectShortName">output_fifo_out[7:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/mic_in" type="array">
+      <obj_property name="ElementShortName">mic_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mic_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/mic_clk" type="logic">
+      <obj_property name="ElementShortName">mic_clk</obj_property>
+      <obj_property name="ObjectShortName">mic_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/read_clk" type="logic">
+      <obj_property name="ElementShortName">read_clk</obj_property>
+      <obj_property name="ObjectShortName">read_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/read_addr0" type="array">
+      <obj_property name="ElementShortName">read_addr0[11:0]</obj_property>
+      <obj_property name="ObjectShortName">read_addr0[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/read_addr1" type="array">
+      <obj_property name="ElementShortName">read_addr1[11:0]</obj_property>
+      <obj_property name="ObjectShortName">read_addr1[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/read_addr2" type="array">
+      <obj_property name="ElementShortName">read_addr2[11:0]</obj_property>
+      <obj_property name="ObjectShortName">read_addr2[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/read_addr3" type="array">
+      <obj_property name="ElementShortName">read_addr3[11:0]</obj_property>
+      <obj_property name="ObjectShortName">read_addr3[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/read_addr4" type="array">
+      <obj_property name="ElementShortName">read_addr4[11:0]</obj_property>
+      <obj_property name="ObjectShortName">read_addr4[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/read_addr5" type="array">
+      <obj_property name="ElementShortName">read_addr5[11:0]</obj_property>
+      <obj_property name="ObjectShortName">read_addr5[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/read_addr6" type="array">
+      <obj_property name="ElementShortName">read_addr6[11:0]</obj_property>
+      <obj_property name="ObjectShortName">read_addr6[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/read_addr7" type="array">
+      <obj_property name="ElementShortName">read_addr7[11:0]</obj_property>
+      <obj_property name="ObjectShortName">read_addr7[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/mic_out" type="array">
+      <obj_property name="ElementShortName">mic_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mic_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/addra" type="array">
+      <obj_property name="ElementShortName">addra[11:0]</obj_property>
+      <obj_property name="ObjectShortName">addra[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/dina" type="array">
+      <obj_property name="ElementShortName">dina[0:0]</obj_property>
+      <obj_property name="ObjectShortName">dina[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/douta" type="array">
+      <obj_property name="ElementShortName">douta[15:0]</obj_property>
+      <obj_property name="ObjectShortName">douta[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/wea" type="array">
+      <obj_property name="ElementShortName">wea[0:0]</obj_property>
+      <obj_property name="ObjectShortName">wea[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/addrb" type="array">
+      <obj_property name="ElementShortName">addrb[11:0]</obj_property>
+      <obj_property name="ObjectShortName">addrb[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/dinb" type="array">
+      <obj_property name="ElementShortName">dinb[0:0]</obj_property>
+      <obj_property name="ObjectShortName">dinb[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/doutb" type="array">
+      <obj_property name="ElementShortName">doutb[0:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/web" type="array">
+      <obj_property name="ElementShortName">web[0:0]</obj_property>
+      <obj_property name="ObjectShortName">web[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/bram0/clka" type="logic">
+      <obj_property name="ElementShortName">clka</obj_property>
+      <obj_property name="ObjectShortName">clka</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/bram0/wea" type="array">
+      <obj_property name="ElementShortName">wea[0:0]</obj_property>
+      <obj_property name="ObjectShortName">wea[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/bram0/addra" type="array">
+      <obj_property name="ElementShortName">addra[11:0]</obj_property>
+      <obj_property name="ObjectShortName">addra[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/bram0/dina" type="array">
+      <obj_property name="ElementShortName">dina[0:0]</obj_property>
+      <obj_property name="ObjectShortName">dina[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/bram0/douta" type="array">
+      <obj_property name="ElementShortName">douta[0:0]</obj_property>
+      <obj_property name="ObjectShortName">douta[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/bram0/clkb" type="logic">
+      <obj_property name="ElementShortName">clkb</obj_property>
+      <obj_property name="ObjectShortName">clkb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/bram0/web" type="array">
+      <obj_property name="ElementShortName">web[0:0]</obj_property>
+      <obj_property name="ObjectShortName">web[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/bram0/addrb" type="array">
+      <obj_property name="ElementShortName">addrb[11:0]</obj_property>
+      <obj_property name="ObjectShortName">addrb[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/bram0/dinb" type="array">
+      <obj_property name="ElementShortName">dinb[0:0]</obj_property>
+      <obj_property name="ObjectShortName">dinb[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/bram0/doutb" type="array">
+      <obj_property name="ElementShortName">doutb[0:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/bram4/clka" type="logic">
+      <obj_property name="ElementShortName">clka</obj_property>
+      <obj_property name="ObjectShortName">clka</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/bram4/wea" type="array">
+      <obj_property name="ElementShortName">wea[0:0]</obj_property>
+      <obj_property name="ObjectShortName">wea[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/bram4/addra" type="array">
+      <obj_property name="ElementShortName">addra[11:0]</obj_property>
+      <obj_property name="ObjectShortName">addra[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/bram4/dina" type="array">
+      <obj_property name="ElementShortName">dina[0:0]</obj_property>
+      <obj_property name="ObjectShortName">dina[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/bram4/douta" type="array">
+      <obj_property name="ElementShortName">douta[0:0]</obj_property>
+      <obj_property name="ObjectShortName">douta[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/bram4/clkb" type="logic">
+      <obj_property name="ElementShortName">clkb</obj_property>
+      <obj_property name="ObjectShortName">clkb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/bram4/web" type="array">
+      <obj_property name="ElementShortName">web[0:0]</obj_property>
+      <obj_property name="ObjectShortName">web[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/bram4/addrb" type="array">
+      <obj_property name="ElementShortName">addrb[11:0]</obj_property>
+      <obj_property name="ObjectShortName">addrb[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/bram4/dinb" type="array">
+      <obj_property name="ElementShortName">dinb[0:0]</obj_property>
+      <obj_property name="ObjectShortName">dinb[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ram1/bram4/doutb" type="array">
+      <obj_property name="ElementShortName">doutb[0:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb[0:0]</obj_property>
    </wvobject>
 </wave_config>

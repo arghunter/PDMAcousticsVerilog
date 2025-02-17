@@ -95,14 +95,16 @@ module simple_io(
     wire dmic_fifo_rd_en;
     reg output_fifo_wr_en;
     assign dmic_fifo_rd_en =  (!dmic_fifo_empty) & (!output_fifo_full);
-    assign dmic_fifo_in[0]=JC[1];
-    assign dmic_fifo_in[1]=JC[5];
-    assign dmic_fifo_in[2]=JC[0];
-    assign dmic_fifo_in[3]=JC[4];
-    assign dmic_fifo_in[4]=JA[1];
-    assign dmic_fifo_in[5]=JA[5];
-    assign dmic_fifo_in[6]=JA[0];
-    assign dmic_fifo_in[7]=JA[4];
+//    assign dmic_fifo_in[0]=JC[1];
+//    assign dmic_fifo_in[1]=JC[5];
+//    assign dmic_fifo_in[2]=JC[0];
+//    assign dmic_fifo_in[3]=JC[4];
+//    assign dmic_fifo_in[4]=JC[1]; // rmember to change these back to ja
+//    assign dmic_fifo_in[5]=JC[5];
+//    assign dmic_fifo_in[6]=JC[0];
+//    assign dmic_fifo_in[7]=JC[4];
+    assign dmic_fifo_in[3:0]=counter[7:4];
+    assign dmic_fifo_in[7:4]=counter[7:4];
     wire dmic_fifo_wr_rst_busy;
     wire dmic_fifo_rd_rst_busy;
     wire output_fifo_wr_rst_busy;
@@ -137,12 +139,71 @@ module simple_io(
 //      .wr_rst_busy(dmic_fifo_wr_rst_busy),  // output wire wr_rst_busy
 //      .rd_rst_busy(dmic_fifo_rd_rst_busy)  // output wire rd_rst_busy
     );
+    
+    
+    
+    wire [7:0] ram_out;
+//    assign ram_out=ram_in;
+
+    ram ram1(
+    .mic_in(dmic_fifo_out),
+    .mic_clk(CLK100MHZ),
+    .read_clk(CLK100MHZ),
+    .read_addr0(0),
+    .read_addr1(0),// the offset need to do addrb+read addr
+    .read_addr2(0),
+    .read_addr3(0),
+    .read_addr4(99),
+    .read_addr5(99),
+    .read_addr6(99),
+    .read_addr7(99),
+//    .read_addr8(0),
+//    .read_addr9(0),
+//    .read_addr10(0),
+//    .read_addr11(0),
+//    .read_addr12(0),
+//    .read_addr13(0),
+//    .read_addr14(0),
+//    .read_addr15(0),    
+    .mic_out(ram_out));
+    
+    
+    
+    
+//    wire [7:0] bram_out;
+//        reg [13:0] addra=0;
+    
+//    wire [0:0] dina=0;
+   
+//    wire [0:0] wea=1;
+//    reg [13:0] addrb=1;
+//    wire [0:0] dinb;
+//    wire [0:0] doutb;
+//    wire [0:0] web;
+    
+//    always @(posedge(CLK100MHZ)) begin
+//        addra <= addra+1;
+//        addrb <= addrb+1;
+//    end
+//    assign bram_out[7:1]=  dmic_fifo_out[7:1];  
+//    blk_mem_gen_0 bram0(
+//    .addra(addra),
+//    .clka(CLK100MHZ),
+//    .dina(dmic_fifo_out[0]),
+//    .douta(bram_out[0]),
+//    .wea(wea),
+//    .addrb(addrb),
+//    .clkb(CLK100MHZ),
+//    .dinb(dinb),
+//    .doutb(ram_out[0]),
+//    .web(web)
+//    );
     fifo_generator_0 output_fifo (
       .wr_rst(btnC),                  // input wire rst
       .rd_rst(btnC),                  // input wire rst
       .wr_clk(CLK100MHZ),            // input wire wr_clk
       .rd_clk(ddr_clk),            // input wire rd_clk
-      .din(dmic_fifo_out),                  // input wire [7 : 0] din
+      .din(ram_out),                  // input wire [7 : 0] din
       .wr_en(output_fifo_wr_en),              // input wire wr_en
       .rd_en(!output_fifo_almost_empty),              // input wire rd_en
       .dout(output_fifo_out),                // output wire [7 : 0] dout
@@ -182,7 +243,7 @@ module simple_io(
 //    reg [11:0] addra=0;
     
 //    wire [0:0] dina=0;
-//    wire [0:0] douta[0:7];
+   
 //    wire [0:0] wea=1;
 //    reg [11:0] addrb=1;
 //    wire [0:0] dinb;
@@ -193,19 +254,7 @@ module simple_io(
 //        addra <= addra+1;
 //        addrb <= addrb+1;
 //    end
-        
-//    blk_mem_gen_0 bram0(
-//    .addra(addra),
-//    .clka(ddr_clk),
-//    .dina(ram_in[0]),
-//    .douta(douta[0]),
-//    .wea(wea),
-//    .addrb(addrb),
-//    .clkb(ddr_clk),
-//    .dinb(dinb),
-//    .doutb(ram_out[0]),
-//    .web(web)
-//    );
+
 //    blk_mem_gen_0 bram1(
 //    .addra(addra),
 //    .clka(ddr_clk),

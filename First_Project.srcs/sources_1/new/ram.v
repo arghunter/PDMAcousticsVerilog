@@ -48,13 +48,15 @@ module ram(
     wire [15:0] douta;
     wire [0:0] wea=1;
     reg [11:0] addrb=1;
+    
     wire [0:0] dinb;
     wire [0:0] doutb;
     wire [0:0] web;
     
     always @(posedge(mic_clk)) begin
         addra <= addra+1;
-        addrb <= addra+1;
+        addrb <= addrb+1;
+        
     end
         
     blk_mem_gen_0 bram0(
@@ -63,7 +65,7 @@ module ram(
     .dina(mic_in[0]),
     .douta(douta[0]),
     .wea(wea),
-    .addrb(addrb),
+    .addrb(addrb+read_addr0),
     .clkb(read_clk),
     .dinb(dinb),
     .doutb(mic_out[0]),
@@ -76,7 +78,7 @@ module ram(
     .dina(mic_in[1]),
     .douta(douta[1]),
     .wea(wea),
-    .addrb(addrb),
+    .addrb(addrb+read_addr1),
     .clkb(read_clk),
     .dinb(dinb),
     .doutb(mic_out[1]),
@@ -88,7 +90,7 @@ module ram(
     .dina(mic_in[2]),
     .douta(douta[2]),
     .wea(wea),
-    .addrb(addrb),
+    .addrb(addrb+read_addr2),
     .clkb(read_clk),
     .dinb(dinb),
     .doutb(mic_out[2]),
@@ -100,7 +102,7 @@ module ram(
     .dina(mic_in[3]),
     .douta(douta[3]),
     .wea(wea),
-    .addrb(addrb),
+    .addrb(addrb+read_addr3),
     .clkb(read_clk),
     .dinb(dinb),
     .doutb(mic_out[3]),
@@ -112,7 +114,7 @@ module ram(
     .dina(mic_in[4]),
     .douta(douta[4]),
     .wea(wea),
-    .addrb(addrb),
+    .addrb(addrb+read_addr4),
     .clkb(read_clk),
     .dinb(dinb),
     .doutb(mic_out[4]),
@@ -124,7 +126,7 @@ module ram(
     .dina(mic_in[5]),
     .douta(douta[5]),
     .wea(wea),
-    .addrb(addrb),
+    .addrb(addrb+read_addr5),
     .clkb(read_clk),
     .dinb(dinb),
     .doutb(mic_out[5]),
@@ -136,7 +138,7 @@ module ram(
     .dina(mic_in[6]),
     .douta(douta[6]),
     .wea(wea),
-    .addrb(addrb),
+    .addrb(addrb+read_addr6),
     .clkb(read_clk),
     .dinb(dinb),
     .doutb(mic_out[6]),
@@ -148,7 +150,7 @@ module ram(
     .dina(mic_in[7]),
     .douta(douta[7]),
     .wea(wea),
-    .addrb(addrb),
+    .addrb(addrb+read_addr7),
     .clkb(read_clk),
     .dinb(dinb),
     .doutb(mic_out[7]),
