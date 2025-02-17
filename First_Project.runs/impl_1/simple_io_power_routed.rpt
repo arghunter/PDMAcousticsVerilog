@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Sun Feb 16 23:33:47 2025
+| Date             : Sun Feb 16 23:54:29 2025
 | Host             : DEKTOP-MOV670 running 64-bit major release  (build 9200)
 | Command          : report_power -file simple_io_power_routed.rpt -pb simple_io_power_summary_routed.pb -rpx simple_io_power_routed.rpx
 | Design           : simple_io
@@ -53,13 +53,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.002 |        6 |       --- |             --- |
-| Slice Logic    |    <0.001 |      527 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      121 |     20800 |            0.58 |
-|   Register     |    <0.001 |      290 |     41600 |            0.70 |
-|   CARRY4       |    <0.001 |        9 |      8150 |            0.11 |
+| Slice Logic    |    <0.001 |      514 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      122 |     20800 |            0.59 |
+|   Register     |    <0.001 |      278 |     41600 |            0.67 |
+|   CARRY4       |    <0.001 |        7 |      8150 |            0.09 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |       82 |       --- |             --- |
-| Signals        |     0.003 |      415 |       --- |             --- |
+| Signals        |     0.003 |      404 |       --- |             --- |
 | Block RAM      |     0.038 |        9 |        50 |           18.00 |
 | PLL            |     0.109 |        1 |         5 |           20.00 |
 | I/O            |     0.022 |       24 |       106 |           22.64 |

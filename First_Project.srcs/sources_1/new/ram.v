@@ -50,7 +50,7 @@ module ram(
     wire [15:0] douta;
     wire [0:0] wea=1;
     reg [11:0] addrb=1;
-    reg [11:0] addrc=3073;
+//    reg [11:0] addrc=3073;
     wire [0:0] dinb;
     wire [0:0] doutb;
     wire [0:0] web;
@@ -61,7 +61,7 @@ module ram(
         end
         if(wr_en) begin
         addrb <= addrb+1;
-        addrc <= addrc+1;
+//        addrc <= addrc+1;
         end
 
         
@@ -86,7 +86,7 @@ module ram(
     .dina(mic_in[1]),
     .douta(douta[1]),
     .wea(wea),
-    .addrb(addrc),
+    .addrb(addrb+read_addr1),
     .clkb(read_clk),
     .dinb(dinb),
     .doutb(mic_out[1]),
