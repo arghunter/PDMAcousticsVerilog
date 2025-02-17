@@ -39,7 +39,9 @@ module ram(
     input wire [11:0]read_addr12,
     input wire [11:0]read_addr13,
     input wire [11:0]read_addr14,
-    input wire [11:0]read_addr15,    
+    input wire [11:0]read_addr15,
+    input wire rd_en,
+    input wire wr_en,    
     output wire [15:0] mic_out
     
     );
@@ -48,14 +50,20 @@ module ram(
     wire [15:0] douta;
     wire [0:0] wea=1;
     reg [11:0] addrb=1;
-    
+    reg [11:0] addrc=3073;
     wire [0:0] dinb;
     wire [0:0] doutb;
     wire [0:0] web;
     
     always @(posedge(mic_clk)) begin
-        addra <= addra+1;
+        if(rd_en) begin
+            addra <= addra+1;
+        end
+        if(wr_en) begin
         addrb <= addrb+1;
+        addrc <= addrc+1;
+        end
+
         
     end
         
@@ -78,7 +86,7 @@ module ram(
     .dina(mic_in[1]),
     .douta(douta[1]),
     .wea(wea),
-    .addrb(addrb+read_addr1),
+    .addrb(addrc),
     .clkb(read_clk),
     .dinb(dinb),
     .doutb(mic_out[1]),

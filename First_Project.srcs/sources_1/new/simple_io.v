@@ -119,8 +119,24 @@ module simple_io(
         .sdr_data_1(sdr_data_1)
 
     );
+//    assign dmic_fifo_in[0] = sdr_data_0[0];
+//    assign dmic_fifo_in[1] = sdr_data_1[0];
+//    assign dmic_fifo_in[2] = sdr_data_0[1];
+//    assign dmic_fifo_in[3] = sdr_data_1[1];
+//    assign dmic_fifo_in[4] = sdr_data_0[2];
+//    assign dmic_fifo_in[5] = sdr_data_1[2];
+//    assign dmic_fifo_in[6] = sdr_data_0[3];
+//    assign dmic_fifo_in[7] = sdr_data_1[3];
+//    assign dmic_fifo_in[8] = sdr_data_0[4];
+//    assign dmic_fifo_in[9] = sdr_data_1[4];
+//    assign dmic_fifo_in[10] = sdr_data_0[5];
+//    assign dmic_fifo_in[11] = sdr_data_1[5];
+//    assign dmic_fifo_in[12] = sdr_data_0[6];
+//    assign dmic_fifo_in[13] = sdr_data_1[6];
+//    assign dmic_fifo_in[14] = sdr_data_0[7];
+//    assign dmic_fifo_in[15] = sdr_data_1[7];
     assign dmic_fifo_in[0] = sdr_data_0[0];
-    assign dmic_fifo_in[1] = sdr_data_1[0];
+    assign dmic_fifo_in[1] = sdr_data_0[0];
     assign dmic_fifo_in[2] = sdr_data_0[1];
     assign dmic_fifo_in[3] = sdr_data_1[1];
     assign dmic_fifo_in[4] = sdr_data_0[2];
@@ -178,7 +194,7 @@ module simple_io(
     .mic_clk(CLK100MHZ),
     .read_clk(CLK100MHZ),
     .read_addr0(0),
-    .read_addr1(0),// the offset need to do addrb+read addr
+    .read_addr1(3072),// the offset need to do addrb+read addr
     .read_addr2(0),
     .read_addr3(0),
     .read_addr4(0),
@@ -192,7 +208,9 @@ module simple_io(
     .read_addr12(0),
     .read_addr13(0),
     .read_addr14(0),
-    .read_addr15(0),    
+    .read_addr15(0),
+    .rd_en(output_fifo_wr_en),
+    .wr_en(output_fifo_wr_en),    
     .mic_out(ram_out));
     
     

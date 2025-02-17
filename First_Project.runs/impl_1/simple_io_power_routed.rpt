@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Sun Feb 16 22:33:31 2025
+| Date             : Sun Feb 16 23:33:47 2025
 | Host             : DEKTOP-MOV670 running 64-bit major release  (build 9200)
 | Command          : report_power -file simple_io_power_routed.rpt -pb simple_io_power_summary_routed.pb -rpx simple_io_power_routed.rpx
 | Design           : simple_io
@@ -53,13 +53,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.002 |        6 |       --- |             --- |
-| Slice Logic    |    <0.001 |      512 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      120 |     20800 |            0.58 |
-|   Register     |    <0.001 |      278 |     41600 |            0.67 |
-|   CARRY4       |    <0.001 |        6 |      8150 |            0.07 |
+| Slice Logic    |    <0.001 |      527 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      121 |     20800 |            0.58 |
+|   Register     |    <0.001 |      290 |     41600 |            0.70 |
+|   CARRY4       |    <0.001 |        9 |      8150 |            0.11 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |       83 |       --- |             --- |
-| Signals        |     0.003 |      403 |       --- |             --- |
+|   Others       |     0.000 |       82 |       --- |             --- |
+| Signals        |     0.003 |      415 |       --- |             --- |
 | Block RAM      |     0.038 |        9 |        50 |           18.00 |
 | PLL            |     0.109 |        1 |         5 |           20.00 |
 | I/O            |     0.022 |       24 |       106 |           22.64 |
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.063 |       0.052 |      0.010 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.062 |       0.052 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.068 |       0.055 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.007 |       0.006 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -188,7 +188,7 @@ Table of Contents
 |       U0             |     0.002 |
 |     bram9            |     0.002 |
 |       U0             |     0.002 |
-|   u_multi_ddr_to_sdr |     0.002 |
+|   u_multi_ddr_to_sdr |     0.001 |
 +----------------------+-----------+
 
 
