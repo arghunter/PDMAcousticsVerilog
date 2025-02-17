@@ -29,7 +29,7 @@ module simple_io(
     output wire vauxp7,
     output wire vauxp15,
     input wire CLK100MHZ,
-    input wire btnC
+    input wire btnC//rst
     );
     wire clock;// 0 deg
 
@@ -83,9 +83,9 @@ module simple_io(
 //    end
     reg [7:0] counter;
 
-    wire [7:0] dmic_fifo_in;
-    wire [7:0] dmic_fifo_out;
-    wire [7:0] output_fifo_out;
+    wire [15:0] dmic_fifo_in;
+    wire [15:0] dmic_fifo_out;
+    wire [15:0] output_fifo_out;
     wire dmic_fifo_full;
     wire dmic_fifo_empty;
     wire dmic_fifo_almost_empty;
@@ -94,23 +94,51 @@ module simple_io(
     wire output_fifo_full;
     wire dmic_fifo_rd_en;
     reg output_fifo_wr_en;
-    assign dmic_fifo_rd_en =  (!dmic_fifo_empty) & (!output_fifo_full);
-//    assign dmic_fifo_in[0]=JC[1];
-//    assign dmic_fifo_in[1]=JC[5];
-//    assign dmic_fifo_in[2]=JC[0];
-//    assign dmic_fifo_in[3]=JC[4];
-//    assign dmic_fifo_in[4]=JC[1]; // rmember to change these back to ja
-//    assign dmic_fifo_in[5]=JC[5];
-//    assign dmic_fifo_in[6]=JC[0];
-//    assign dmic_fifo_in[7]=JC[4];
-    assign dmic_fifo_in[3:0]=counter[7:4];
-    assign dmic_fifo_in[7:4]=counter[7:4];
     wire dmic_fifo_wr_rst_busy;
     wire dmic_fifo_rd_rst_busy;
     wire output_fifo_wr_rst_busy;
     wire output_fifo_rd_rst_busy;
     wire [7:0] output_fifo_wr_data_count;
     wire [7:0] dmic_fifo_wr_data_count;
+    wire [7:0] ddr_to_sdr_in;
+    wire [7:0] sdr_data_0;
+    wire [7:0] sdr_data_1;
+    assign ddr_to_sdr_in[0]=JC[1];
+    assign ddr_to_sdr_in[1]=JC[5];
+    assign ddr_to_sdr_in[2]=JC[0];
+    assign ddr_to_sdr_in[3]=JC[4];
+    assign ddr_to_sdr_in[4]=JA[1]; // rmember to change these back to ja
+    assign ddr_to_sdr_in[5]=JA[5];
+    assign ddr_to_sdr_in[6]=JA[0];
+    assign ddr_to_sdr_in[7]=JA[4];
+    multi_ddr_to_sdr u_multi_ddr_to_sdr(
+        .clk(mic_clk),
+        .rst(btnC),
+        .ddr_data(ddr_to_sdr_in),
+        .sdr_data_0(sdr_data_0),
+        .sdr_data_1(sdr_data_1)
+
+    );
+    assign dmic_fifo_in[0] = sdr_data_0[0];
+    assign dmic_fifo_in[1] = sdr_data_1[0];
+    assign dmic_fifo_in[2] = sdr_data_0[1];
+    assign dmic_fifo_in[3] = sdr_data_1[1];
+    assign dmic_fifo_in[4] = sdr_data_0[2];
+    assign dmic_fifo_in[5] = sdr_data_1[2];
+    assign dmic_fifo_in[6] = sdr_data_0[3];
+    assign dmic_fifo_in[7] = sdr_data_1[3];
+    assign dmic_fifo_in[8] = sdr_data_0[4];
+    assign dmic_fifo_in[9] = sdr_data_1[4];
+    assign dmic_fifo_in[10] = sdr_data_0[5];
+    assign dmic_fifo_in[11] = sdr_data_1[5];
+    assign dmic_fifo_in[12] = sdr_data_0[6];
+    assign dmic_fifo_in[13] = sdr_data_1[6];
+    assign dmic_fifo_in[14] = sdr_data_0[7];
+    assign dmic_fifo_in[15] = sdr_data_1[7];
+    assign dmic_fifo_rd_en =  (!dmic_fifo_empty) & (!output_fifo_full);
+    
+
+   
     always @ (negedge ddr_clk) begin
         if (btnC) begin 
             counter<=0;
@@ -126,7 +154,7 @@ module simple_io(
      fifo_generator_0 dmic_fifo (
       .wr_rst(btnC),                  // input wire rst
       .rd_rst(btnC),
-      .wr_clk(ddr_clk),            // input wire wr_clk
+      .wr_clk(mic_clk),            // input wire wr_clk
       .rd_clk(CLK100MHZ),            // input wire rd_clk
       .din(dmic_fifo_in),                  // input wire [7 : 0] din
       .wr_en(!dmic_fifo_full),              // input wire wr_en
@@ -142,7 +170,7 @@ module simple_io(
     
     
     
-    wire [7:0] ram_out;
+    wire [15:0] ram_out;
 //    assign ram_out=ram_in;
 
     ram ram1(
@@ -153,18 +181,18 @@ module simple_io(
     .read_addr1(0),// the offset need to do addrb+read addr
     .read_addr2(0),
     .read_addr3(0),
-    .read_addr4(99),
-    .read_addr5(99),
-    .read_addr6(99),
-    .read_addr7(99),
-//    .read_addr8(0),
-//    .read_addr9(0),
-//    .read_addr10(0),
-//    .read_addr11(0),
-//    .read_addr12(0),
-//    .read_addr13(0),
-//    .read_addr14(0),
-//    .read_addr15(0),    
+    .read_addr4(0),
+    .read_addr5(0),
+    .read_addr6(0),
+    .read_addr7(0),
+    .read_addr8(0),
+    .read_addr9(0),
+    .read_addr10(0),
+    .read_addr11(0),
+    .read_addr12(0),
+    .read_addr13(0),
+    .read_addr14(0),
+    .read_addr15(0),    
     .mic_out(ram_out));
     
     
@@ -202,7 +230,7 @@ module simple_io(
       .wr_rst(btnC),                  // input wire rst
       .rd_rst(btnC),                  // input wire rst
       .wr_clk(CLK100MHZ),            // input wire wr_clk
-      .rd_clk(ddr_clk),            // input wire rd_clk
+      .rd_clk(mic_clk),            // input wire rd_clk
       .din(ram_out),                  // input wire [7 : 0] din
       .wr_en(output_fifo_wr_en),              // input wire wr_en
       .rd_en(!output_fifo_almost_empty),              // input wire rd_en
