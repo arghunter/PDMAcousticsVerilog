@@ -37,7 +37,9 @@ module cic (
     wire [23:0] int_1_out;
     wire [23:0] int_2_out;
 	wire [23:0] extended_in;
-	reg [5:0] counter;
+	wire [23:0] diff_0_out;
+	wire [23:0] diff_1_out;
+	reg [4:0] counter;
 	reg lr_clk;
 	assign extended_in = {{18{in[5]}}, in}; 
 	
@@ -77,13 +79,32 @@ module cic (
 			.in(int_1_out),
 			.out(int_2_out)
 		);
-		op_differentiator u_differentiator(
-			.clk(clk&ena),
-			.rst(rst),
-			.lr_clk(lr_clk),
-			.in(int_2_out),
-			.out(out)
+		differentiator differentiator_0(
+		.clk(lr_clk),
+		.rst(rst),
+		.in(int_2_out),
+		.out(diff_0_out)
 		);
+		differentiator differentiator_1(
+		.clk(lr_clk),
+		.rst(rst),
+		.in(diff_0_out),
+		.out(diff_1_out)
+		);
+		differentiator differentiator_2(
+		.clk(lr_clk),
+		.rst(rst),
+		.in(diff_1_out),
+		.out(out)
+		);
+		
+//		op_differentiator u_differentiator(
+//			.clk(clk&ena),
+//			.rst(rst),
+//			.lr_clk(lr_clk),
+//			.in(int_2_out),
+//			.out(out)
+//		);
     endgenerate
 
 endmodule

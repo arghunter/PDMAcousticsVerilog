@@ -162,13 +162,13 @@ module simple_io(
     assign dmic_fifo_in[6] = 1;
     assign dmic_fifo_in[7] = 1;
     assign dmic_fifo_in[8] = 1;
-    assign dmic_fifo_in[9] = 1;
-    assign dmic_fifo_in[10] = 1;
-    assign dmic_fifo_in[11] = 1;
-    assign dmic_fifo_in[12] = 1;
-    assign dmic_fifo_in[13] = 1;
-    assign dmic_fifo_in[14] = 1;
-    assign dmic_fifo_in[15] = 1;
+    assign dmic_fifo_in[9] = 0;
+    assign dmic_fifo_in[10] = 0;
+    assign dmic_fifo_in[11] = 0;
+    assign dmic_fifo_in[12] = 0;
+    assign dmic_fifo_in[13] = 0;
+    assign dmic_fifo_in[14] = 0;
+    assign dmic_fifo_in[15] = 0;
     assign dmic_fifo_rd_en =  (!dmic_fifo_empty) & (!output_fifo_full);
     
 
@@ -244,30 +244,53 @@ module simple_io(
     wire [15:0] ram_out;
 //    assign ram_out=ram_in;
 
-    ram ram1(
+//    ram ram1(
+//    .mic_in(dmic_fifo_out),
+//    .mic_clk(CLK100MHZ),
+//    .read_clk(CLK100MHZ),
+//    .read_addr0(rom_out0),
+//    .read_addr1(rom_out1),// the offset need to do addrb+read addr
+//    .read_addr2(rom_out2),
+//    .read_addr3(rom_out3),
+//    .read_addr4(rom_out4),
+//    .read_addr5(rom_out5),
+//    .read_addr6(rom_out6),
+//    .read_addr7(rom_out7),
+//    .read_addr8(rom_out8),
+//    .read_addr9(rom_out9),
+//    .read_addr10(rom_out10),
+//    .read_addr11(rom_out11),
+//    .read_addr12(rom_out12),
+//    .read_addr13(rom_out13),
+//    .read_addr14(rom_out14),
+//    .read_addr15(rom_out15),
+//    .rd_en(output_fifo_wr_en),
+//    .wr_en(output_fifo_wr_en),    
+//    .mic_out(ram_out));
+    
+        ram ram1(
     .mic_in(dmic_fifo_out),
     .mic_clk(CLK100MHZ),
     .read_clk(CLK100MHZ),
-    .read_addr0(rom_out0),
-    .read_addr1(rom_out1),// the offset need to do addrb+read addr
-    .read_addr2(rom_out2),
-    .read_addr3(rom_out3),
-    .read_addr4(rom_out4),
-    .read_addr5(rom_out5),
-    .read_addr6(rom_out6),
-    .read_addr7(rom_out7),
-    .read_addr8(rom_out8),
-    .read_addr9(rom_out9),
-    .read_addr10(rom_out10),
-    .read_addr11(rom_out11),
-    .read_addr12(rom_out12),
-    .read_addr13(rom_out13),
-    .read_addr14(rom_out14),
-    .read_addr15(rom_out15),
+    .read_addr0(0),
+    .read_addr1(0),// the offset need to do addrb+read addr
+    .read_addr2(0),
+    .read_addr3(0),
+    .read_addr4(0),
+    .read_addr5(0),
+    .read_addr6(0),
+    .read_addr7(0),
+    .read_addr8(0),
+    .read_addr9(0),
+    .read_addr10(0),
+    .read_addr11(0),
+    .read_addr12(0),
+    .read_addr13(0),
+    .read_addr14(0),
+    .read_addr15(0),
     .rd_en(output_fifo_wr_en),
     .wr_en(output_fifo_wr_en),    
     .mic_out(ram_out));
-    
     adder5bit16way adder16(
     .in(ram_out),
     .out(adder16_out)
@@ -277,10 +300,15 @@ module simple_io(
     .clk(CLK100MHZ),
     .rst(btnC),
     .in(adder16_out),
+    .ena(output_fifo_wr_en),
     .out(cic_out)
     
     );
-    wire extended_cic_out  = {{9{cic_out[23]}}, cic_out};
+    wire [31:0] extended_cic_out  = {{8{cic_out[23]}}, cic_out}; // this is messed up in some way nvnmmd fixed that
+//    wire [31:0] extended_cic_out = 42;
+//      wire [31:0] extended_cic_out = 32'b00000010000000000000000000000001;
+
+
     wire i2s_out;
     wire lr_clk;
     i2s_bus i2s(
@@ -288,6 +316,7 @@ module simple_io(
     .rst(btnC),
     .bit_data(extended_cic_out),
     .out(i2s_out),
+    .ena(output_fifo_wr_en),
     .lr_clk(lr_clk)
     );
 //    wire [7:0] bram_out;
@@ -483,7 +512,7 @@ module simple_io(
    
 //    assign JB[7]=JA[0];
     
-    assign JB[4]=~ddr_clk;
+    assign JB[4]=~mic_clk;
 //    assign JC[3]=mic_clk;
     assign JC[3]=mic_clk;
     assign JB[0]=output_fifo_out[0];
@@ -496,8 +525,8 @@ module simple_io(
     assign JB[7]=output_fifo_out[6];
     assign vauxp6=output_fifo_out[7];
     assign JA[3]=mic_clk;
-    assign vauxp14 = JA[1];
-    assign vauxp7 = ddr_clk;
+    assign vauxp14 = mic_clk;
+    assign vauxp7 = output_fifo_out[6];
     
 
  

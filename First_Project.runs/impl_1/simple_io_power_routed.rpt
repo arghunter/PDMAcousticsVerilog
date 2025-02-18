@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Mon Feb 17 22:59:50 2025
+| Date             : Tue Feb 18 14:13:23 2025
 | Host             : DEKTOP-MOV670 running 64-bit major release  (build 9200)
 | Command          : report_power -file simple_io_power_routed.rpt -pb simple_io_power_summary_routed.pb -rpx simple_io_power_routed.rpx
 | Design           : simple_io
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.250        |
+| Total On-Chip Power (W)  | 0.260        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.177        |
+| Dynamic (W)              | 0.187        |
 | Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 83.7         |
@@ -52,19 +52,19 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.002 |        6 |       --- |             --- |
-| Slice Logic    |     0.002 |      678 |       --- |             --- |
-|   LUT as Logic |     0.002 |      236 |     20800 |            1.13 |
-|   Register     |    <0.001 |      279 |     41600 |            0.67 |
-|   CARRY4       |    <0.001 |       30 |      8150 |            0.37 |
-|   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |      103 |       --- |             --- |
-| Signals        |     0.005 |      637 |       --- |             --- |
+| Clocks         |     0.003 |        6 |       --- |             --- |
+| Slice Logic    |     0.004 |     1246 |       --- |             --- |
+|   LUT as Logic |     0.003 |      406 |     20800 |            1.95 |
+|   Register     |    <0.001 |      555 |     41600 |            1.33 |
+|   CARRY4       |    <0.001 |       66 |      8150 |            0.81 |
+|   BUFG         |    <0.001 |        2 |        32 |            6.25 |
+|   Others       |     0.000 |      180 |       --- |             --- |
+| Signals        |     0.009 |      946 |       --- |             --- |
 | Block RAM      |     0.038 |       13 |        50 |           26.00 |
 | PLL            |     0.109 |        1 |         5 |           20.00 |
-| I/O            |     0.022 |       24 |       106 |           22.64 |
+| I/O            |     0.024 |       24 |       106 |           22.64 |
 | Static Power   |     0.073 |          |           |                 |
-| Total          |     0.250 |          |           |                 |
+| Total          |     0.260 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.065 |       0.055 |      0.010 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.068 |       0.055 |      0.013 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.007 |       0.006 |      0.001 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.073 |       0.063 |      0.010 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.068 |       0.056 |      0.013 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.008 |       0.007 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -146,16 +146,18 @@ Table of Contents
 +----------------------+-----------+
 | Name                 | Power (W) |
 +----------------------+-----------+
-| simple_io            |     0.177 |
+| simple_io            |     0.187 |
+|   cic                |     0.004 |
 |   clock_wiz_0        |     0.109 |
 |     inst             |     0.109 |
 |   dmic_fifo          |     0.003 |
 |     U0               |     0.003 |
 |       inst_fifo_gen  |     0.003 |
-|   output_fifo        |     0.003 |
-|     U0               |     0.003 |
-|       inst_fifo_gen  |     0.003 |
-|   ram1               |     0.038 |
+|   i2s                |     0.001 |
+|   output_fifo        |     0.004 |
+|     U0               |     0.004 |
+|       inst_fifo_gen  |     0.004 |
+|   ram1               |     0.040 |
 |     bram0            |     0.002 |
 |       U0             |     0.002 |
 |     bram1            |     0.002 |

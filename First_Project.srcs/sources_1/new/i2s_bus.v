@@ -31,7 +31,7 @@ module i2s_bus(
 ); 
 
     wire [31:0] mux_outputs; 
-    reg [5:0] counter;
+    reg [4:0] counter;
     
 
     // Counter to generate lr_clk (64x slower than clk)
