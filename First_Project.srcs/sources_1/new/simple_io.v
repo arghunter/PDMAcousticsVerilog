@@ -46,7 +46,7 @@ module simple_io(
     
     reg ddr_clk=0;
     reg mic_clk=0;
-    reg lr_clk=0;
+    
     always @(posedge clock) begin
         ddr_clk <= ~ddr_clk;  // Toggle the output on every rising edge
     end
@@ -137,38 +137,38 @@ module simple_io(
 //    assign dmic_fifo_in[13] = sdr_data_1[6];
 //    assign dmic_fifo_in[14] = sdr_data_0[7];
 //    assign dmic_fifo_in[15] = sdr_data_1[7];
-    assign dmic_fifo_in[0] = sdr_data_0[0];
-    assign dmic_fifo_in[1] = sdr_data_0[0];
-    assign dmic_fifo_in[2] = sdr_data_0[0];
-    assign dmic_fifo_in[3] = sdr_data_0[0];
-    assign dmic_fifo_in[4] = sdr_data_0[0];
-    assign dmic_fifo_in[5] = sdr_data_0[0];
-    assign dmic_fifo_in[6] = sdr_data_0[0];
-    assign dmic_fifo_in[7] = sdr_data_0[0];
-    assign dmic_fifo_in[8] = sdr_data_0[0];
-    assign dmic_fifo_in[9] = sdr_data_0[0];
-    assign dmic_fifo_in[10] = sdr_data_0[0];
-    assign dmic_fifo_in[11] = sdr_data_0[0];
-    assign dmic_fifo_in[12] = sdr_data_0[0];
-    assign dmic_fifo_in[13] = sdr_data_0[0];
-    assign dmic_fifo_in[14] = sdr_data_0[0];
-    assign dmic_fifo_in[15] = sdr_data_0[0];
-//    assign dmic_fifo_in[0] = 1;
-//    assign dmic_fifo_in[1] = 1;
-//    assign dmic_fifo_in[2] = 1;
-//    assign dmic_fifo_in[3] = 1;
-//    assign dmic_fifo_in[4] = 1;
-//    assign dmic_fifo_in[5] = 0;
-//    assign dmic_fifo_in[6] = 1;
-//    assign dmic_fifo_in[7] = 1;
-//    assign dmic_fifo_in[8] = 1;
-//    assign dmic_fifo_in[9] = 1;
-//    assign dmic_fifo_in[10] = 1;
-//    assign dmic_fifo_in[11] = 1;
-//    assign dmic_fifo_in[12] = 1;
-//    assign dmic_fifo_in[13] = 1;
-//    assign dmic_fifo_in[14] = 1;
-//    assign dmic_fifo_in[15] = 1;
+//    assign dmic_fifo_in[0] = sdr_data_0[0];
+//    assign dmic_fifo_in[1] = sdr_data_0[0];
+//    assign dmic_fifo_in[2] = sdr_data_0[0];
+//    assign dmic_fifo_in[3] = sdr_data_0[0];
+//    assign dmic_fifo_in[4] = sdr_data_0[0];
+//    assign dmic_fifo_in[5] = sdr_data_0[0];
+//    assign dmic_fifo_in[6] = sdr_data_0[0];
+//    assign dmic_fifo_in[7] = sdr_data_0[0];
+//    assign dmic_fifo_in[8] = sdr_data_0[0];
+//    assign dmic_fifo_in[9] = sdr_data_0[0];
+//    assign dmic_fifo_in[10] = sdr_data_0[0];
+//    assign dmic_fifo_in[11] = sdr_data_0[0];
+//    assign dmic_fifo_in[12] = sdr_data_0[0];
+//    assign dmic_fifo_in[13] = sdr_data_0[0];
+//    assign dmic_fifo_in[14] = sdr_data_0[0];
+//    assign dmic_fifo_in[15] = sdr_data_0[0];
+    assign dmic_fifo_in[0] = 1;
+    assign dmic_fifo_in[1] = 1;
+    assign dmic_fifo_in[2] = 1;
+    assign dmic_fifo_in[3] = 1;
+    assign dmic_fifo_in[4] = 1;
+    assign dmic_fifo_in[5] = 1;
+    assign dmic_fifo_in[6] = 1;
+    assign dmic_fifo_in[7] = 1;
+    assign dmic_fifo_in[8] = 1;
+    assign dmic_fifo_in[9] = 1;
+    assign dmic_fifo_in[10] = 1;
+    assign dmic_fifo_in[11] = 1;
+    assign dmic_fifo_in[12] = 1;
+    assign dmic_fifo_in[13] = 1;
+    assign dmic_fifo_in[14] = 1;
+    assign dmic_fifo_in[15] = 1;
     assign dmic_fifo_rd_en =  (!dmic_fifo_empty) & (!output_fifo_full);
     
 
@@ -272,9 +272,24 @@ module simple_io(
     .in(ram_out),
     .out(adder16_out)
     );
+    wire [23:0] cic_out;
+    cic cic(
+    .clk(CLK100MHZ),
+    .rst(btnC),
+    .in(adder16_out),
+    .out(cic_out)
     
-    
-    
+    );
+    wire extended_cic_out  = {{9{cic_out[23]}}, cic_out};
+    wire i2s_out;
+    wire lr_clk;
+    i2s_bus i2s(
+    .clk(CLK100MHZ),
+    .rst(btnC),
+    .bit_data(extended_cic_out),
+    .out(i2s_out),
+    .lr_clk(lr_clk)
+    );
 //    wire [7:0] bram_out;
 //        reg [13:0] addra=0;
     
@@ -304,8 +319,9 @@ module simple_io(
 //    .web(web)
 //    );
     wire [15:0] output_fifo_in;
-//    assign output_fifo_in = {ram_out[15:6], adder16_out};  
-    assign output_fifo_in = ram_out;
+//    assign output_fifo_in = {ram_out[15:6], adder16_out}; 
+      assign output_fifo_in = {ram_out[15:8],i2s_out,lr_clk, adder16_out};  
+//    assign output_fifo_in = ram_out;
     
     fifo_generator_0 output_fifo (
       .wr_rst(btnC),                  // input wire rst
@@ -462,6 +478,7 @@ module simple_io(
 ////    .read_addr14(0),
 ////    .read_addr15(0),    
 //    .mic_out(ram_out));
+// need enables
 
    
 //    assign JB[7]=JA[0];

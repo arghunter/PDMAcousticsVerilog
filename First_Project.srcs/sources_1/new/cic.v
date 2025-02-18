@@ -27,9 +27,9 @@
 
 module cic (
     input wire clk,
-    input wire dec_clk,
     input wire rst,
-    input wire  in,
+    input wire [5:0] in,
+    input wire ena,
     output [23:0] out 
 );
 
@@ -37,30 +37,50 @@ module cic (
     wire [23:0] int_1_out;
     wire [23:0] int_2_out;
 	wire [23:0] extended_in;
-	 
+	reg [5:0] counter;
+	reg lr_clk;
+	assign extended_in = {{18{in[5]}}, in}; 
+	
+    always @(posedge clk or posedge rst) begin
+        if (rst)
+            counter <= 0;
+        else if (ena) 
+            counter <= counter + 1;
+    end
+
+    // Generate lr_clk (64x slower than clk)
+    always @(posedge clk or posedge rst) begin
+        if (rst)
+            lr_clk <= 0;
+        else if (ena)
+            lr_clk <= (counter == 0) ? ~lr_clk : lr_clk;
+    end
+    
+    
+    
     generate 
-		incrementor u_incrementor_0(
-			.clk(clk),
+		integrator u_integrator_0(
+			.clk(clk&ena),
 			.rst(rst),
-			.in(in),  // Pass the sign-extended input
+			.in(extended_in),  // Pass the sign-extended input
 			.out(inc_out)
 		);
 		integrator u_integrator_1(
-			.clk(clk),
+			.clk(clk&ena),
 			.rst(rst),
 			.in(inc_out),
 			.out(int_1_out)
 		);
 		integrator u_integrator_2(
-			.clk(clk),
+			.clk(clk&ena),
 			.rst(rst),
 			.in(int_1_out),
 			.out(int_2_out)
 		);
 		op_differentiator u_differentiator(
-			.clk(clk),
+			.clk(clk&ena),
 			.rst(rst),
-			.lr_clk(dec_clk),
+			.lr_clk(lr_clk),
 			.in(int_2_out),
 			.out(out)
 		);

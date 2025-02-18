@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="635.911320 us"></ZoomStartTime>
-      <ZoomEndTime time="643.387270 us"></ZoomEndTime>
-      <Cursor1Time time="642.141278 us"></Cursor1Time>
+      <ZoomStartTime time="1,514.449946 us"></ZoomStartTime>
+      <ZoomEndTime time="1,523.054837 us"></ZoomEndTime>
+      <Cursor1Time time="1,521.620688 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="276"></NameColumnWidth>
-      <ValueColumnWidth column_width="88"></ValueColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="64" />
+   <WVObjectSize size="66" />
    <wvobject fp_name="/testbench_top_level/CLK100MHZ" type="logic">
       <obj_property name="ElementShortName">CLK100MHZ</obj_property>
       <obj_property name="ObjectShortName">CLK100MHZ</obj_property>
@@ -81,8 +81,8 @@
       <obj_property name="ObjectShortName">rd_clk</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/dmic_fifo/din" type="array">
-      <obj_property name="ElementShortName">din[7:0]</obj_property>
-      <obj_property name="ObjectShortName">din[7:0]</obj_property>
+      <obj_property name="ElementShortName">din[15:0]</obj_property>
+      <obj_property name="ObjectShortName">din[15:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/dmic_fifo/wr_en" type="logic">
       <obj_property name="ElementShortName">wr_en</obj_property>
@@ -93,9 +93,8 @@
       <obj_property name="ObjectShortName">rd_en</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/dmic_fifo/dout" type="array">
-      <obj_property name="ElementShortName">dout[7:0]</obj_property>
-      <obj_property name="ObjectShortName">dout[7:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+      <obj_property name="ElementShortName">dout[15:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[15:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/dmic_fifo/full" type="logic">
       <obj_property name="ElementShortName">full</obj_property>
@@ -114,12 +113,12 @@
       <obj_property name="ObjectShortName">wr_data_count[7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/output_fifo_out" type="array">
-      <obj_property name="ElementShortName">output_fifo_out[7:0]</obj_property>
-      <obj_property name="ObjectShortName">output_fifo_out[7:0]</obj_property>
+      <obj_property name="ElementShortName">output_fifo_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">output_fifo_out[15:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/ram1/mic_in" type="array">
-      <obj_property name="ElementShortName">mic_in[7:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_in[7:0]</obj_property>
+      <obj_property name="ElementShortName">mic_in[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mic_in[15:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/ram1/mic_clk" type="logic">
       <obj_property name="ElementShortName">mic_clk</obj_property>
@@ -162,8 +161,8 @@
       <obj_property name="ObjectShortName">read_addr7[11:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/ram1/mic_out" type="array">
-      <obj_property name="ElementShortName">mic_out[7:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out[7:0]</obj_property>
+      <obj_property name="ElementShortName">mic_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mic_out[15:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/ram1/addra" type="array">
       <obj_property name="ElementShortName">addra[11:0]</obj_property>
@@ -276,5 +275,13 @@
    <wvobject fp_name="/testbench_top_level/dut/ram1/bram4/doutb" type="array">
       <obj_property name="ElementShortName">doutb[0:0]</obj_property>
       <obj_property name="ObjectShortName">doutb[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/cic/extended_in" type="array">
+      <obj_property name="ElementShortName">extended_in[23:0]</obj_property>
+      <obj_property name="ObjectShortName">extended_in[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/cic/out" type="array">
+      <obj_property name="ElementShortName">out[23:0]</obj_property>
+      <obj_property name="ObjectShortName">out[23:0]</obj_property>
    </wvobject>
 </wave_config>

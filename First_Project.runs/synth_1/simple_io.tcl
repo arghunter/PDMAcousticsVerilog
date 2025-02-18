@@ -57,6 +57,11 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 8
+set_param checkpoint.writeSynthRtdsInDcp 1
+set_param synth.incrementalSynthesisCache C:/Users/arg/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-9000-DEKTOP-MOV670/incrSyn
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -83,19 +88,26 @@ add_files C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/so
 add_files C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/shifts4.coe
 add_files C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/shifts5.coe
 add_files C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/shifts6.coe
-add_files c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/shifts7.coe
-add_files c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/shifts8.coe
-add_files c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/shifts9.coe
-add_files c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/shifts10.coe
-add_files c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/shifts11.coe
-add_files c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/shifts12.coe
-add_files c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/shifts13.coe
-add_files c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/shifts14.coe
-add_files c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/shifts15.coe
+add_files C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/shifts7.coe
+add_files C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/shifts8.coe
+add_files C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/shifts9.coe
+add_files C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/shifts10.coe
+add_files C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/shifts11.coe
+add_files C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/shifts12.coe
+add_files C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/shifts13.coe
+add_files C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/shifts14.coe
+add_files C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/shifts15.coe
 read_verilog -library xil_defaultlib {
+  C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/adder.v
   C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/adder5bit16way.v
+  C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/cic.v
   C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ddr_to_sdr.v
+  C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/i2s_bus.v
+  C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/integrator.v
   C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/multi_ddr_to_sdr.v
+  C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/mux.v
+  C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/mux_shift.v
+  C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/op_differentiator.v
   C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ram.v
   C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/rom.v
   C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v
@@ -103,7 +115,7 @@ read_verilog -library xil_defaultlib {
 read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
 
-read_ip -quiet c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_10/blk_mem_gen_10.xci
+read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_10/blk_mem_gen_10.xci
 set_property used_in_implementation false [get_files -all c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_10/blk_mem_gen_10_ooc.xdc]
 
 read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
@@ -131,34 +143,34 @@ set_property used_in_implementation false [get_files -all c:/Users/arg/Documents
 read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_7/blk_mem_gen_7.xci
 set_property used_in_implementation false [get_files -all c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_7/blk_mem_gen_7_ooc.xdc]
 
-read_ip -quiet c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_8/blk_mem_gen_8.xci
+read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_8/blk_mem_gen_8.xci
 set_property used_in_implementation false [get_files -all c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_8/blk_mem_gen_8_ooc.xdc]
 
-read_ip -quiet c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_11/blk_mem_gen_11.xci
+read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_11/blk_mem_gen_11.xci
 set_property used_in_implementation false [get_files -all c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_11/blk_mem_gen_11_ooc.xdc]
 
-read_ip -quiet c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_12/blk_mem_gen_12.xci
+read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_12/blk_mem_gen_12.xci
 set_property used_in_implementation false [get_files -all c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_12/blk_mem_gen_12_ooc.xdc]
 
-read_ip -quiet c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_14/blk_mem_gen_14.xci
+read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_14/blk_mem_gen_14.xci
 set_property used_in_implementation false [get_files -all c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_14/blk_mem_gen_14_ooc.xdc]
 
-read_ip -quiet c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_15/blk_mem_gen_15.xci
+read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_15/blk_mem_gen_15.xci
 set_property used_in_implementation false [get_files -all c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_15/blk_mem_gen_15_ooc.xdc]
 
-read_ip -quiet c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_16/blk_mem_gen_16.xci
+read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_16/blk_mem_gen_16.xci
 set_property used_in_implementation false [get_files -all c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_16/blk_mem_gen_16_ooc.xdc]
 
 read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4.xci
 set_property used_in_implementation false [get_files -all c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4_ooc.xdc]
 
-read_ip -quiet c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_13/blk_mem_gen_13.xci
+read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_13/blk_mem_gen_13.xci
 set_property used_in_implementation false [get_files -all c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_13/blk_mem_gen_13_ooc.xdc]
 
 read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_5/blk_mem_gen_5.xci
 set_property used_in_implementation false [get_files -all c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_5/blk_mem_gen_5_ooc.xdc]
 
-read_ip -quiet c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_9/blk_mem_gen_9.xci
+read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_9/blk_mem_gen_9.xci
 set_property used_in_implementation false [get_files -all c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_9/blk_mem_gen_9_ooc.xdc]
 
 OPTRACE "Adding files" END { }
