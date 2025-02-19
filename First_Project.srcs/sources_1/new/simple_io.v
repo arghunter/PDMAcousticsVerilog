@@ -121,22 +121,22 @@ module simple_io(
 
     );
 
-//    assign dmic_fifo_in[0] = sdr_data_0[0];
-//    assign dmic_fifo_in[1] = sdr_data_1[0];
-//    assign dmic_fifo_in[2] = sdr_data_0[1];
-//    assign dmic_fifo_in[3] = sdr_data_1[1];
-//    assign dmic_fifo_in[4] = sdr_data_0[2];
-//    assign dmic_fifo_in[5] = sdr_data_1[2];
-//    assign dmic_fifo_in[6] = sdr_data_0[3];
-//    assign dmic_fifo_in[7] = sdr_data_1[3];
-//    assign dmic_fifo_in[8] = sdr_data_0[4];
-//    assign dmic_fifo_in[9] = sdr_data_1[4];
-//    assign dmic_fifo_in[10] = sdr_data_0[5];
-//    assign dmic_fifo_in[11] = sdr_data_1[5];
-//    assign dmic_fifo_in[12] = sdr_data_0[6];
-//    assign dmic_fifo_in[13] = sdr_data_1[6];
-//    assign dmic_fifo_in[14] = sdr_data_0[7];
-//    assign dmic_fifo_in[15] = sdr_data_1[7];
+    assign dmic_fifo_in[0] = sdr_data_0[0];
+    assign dmic_fifo_in[1] = sdr_data_1[0];
+    assign dmic_fifo_in[2] = sdr_data_0[1];
+    assign dmic_fifo_in[3] = sdr_data_1[1];
+    assign dmic_fifo_in[4] = sdr_data_0[2];
+    assign dmic_fifo_in[5] = sdr_data_1[2];
+    assign dmic_fifo_in[6] = sdr_data_0[3];
+    assign dmic_fifo_in[7] = sdr_data_1[3];
+    assign dmic_fifo_in[8] = sdr_data_0[4];
+    assign dmic_fifo_in[9] = sdr_data_1[4];
+    assign dmic_fifo_in[10] = sdr_data_0[5];
+    assign dmic_fifo_in[11] = sdr_data_1[5];
+    assign dmic_fifo_in[12] = sdr_data_0[6];
+    assign dmic_fifo_in[13] = sdr_data_1[6];
+    assign dmic_fifo_in[14] = sdr_data_0[7];
+    assign dmic_fifo_in[15] = sdr_data_1[7];
 //    assign dmic_fifo_in[0] = sdr_data_0[0];
 //    assign dmic_fifo_in[1] = sdr_data_0[0];
 //    assign dmic_fifo_in[2] = sdr_data_0[0];
@@ -153,22 +153,22 @@ module simple_io(
 //    assign dmic_fifo_in[13] = sdr_data_0[0];
 //    assign dmic_fifo_in[14] = sdr_data_0[0];
 //    assign dmic_fifo_in[15] = sdr_data_0[0];
-    assign dmic_fifo_in[0] = 1;
-    assign dmic_fifo_in[1] = 1;
-    assign dmic_fifo_in[2] = 1;
-    assign dmic_fifo_in[3] = 1;
-    assign dmic_fifo_in[4] = 1;
-    assign dmic_fifo_in[5] = 1;
-    assign dmic_fifo_in[6] = 1;
-    assign dmic_fifo_in[7] = 1;
-    assign dmic_fifo_in[8] = 1;
-    assign dmic_fifo_in[9] = 0;
-    assign dmic_fifo_in[10] = 0;
-    assign dmic_fifo_in[11] = 0;
-    assign dmic_fifo_in[12] = 0;
-    assign dmic_fifo_in[13] = 0;
-    assign dmic_fifo_in[14] = 0;
-    assign dmic_fifo_in[15] = 0;
+//    assign dmic_fifo_in[0] = 1;
+//    assign dmic_fifo_in[1] = 1;
+//    assign dmic_fifo_in[2] = 1;
+//    assign dmic_fifo_in[3] = 1;
+//    assign dmic_fifo_in[4] = 1;
+//    assign dmic_fifo_in[5] = 1;
+//    assign dmic_fifo_in[6] = 1;
+//    assign dmic_fifo_in[7] = 1;
+//    assign dmic_fifo_in[8] = 1;
+//    assign dmic_fifo_in[9] = 0;
+//    assign dmic_fifo_in[10] = 0;
+//    assign dmic_fifo_in[11] = 0;
+//    assign dmic_fifo_in[12] = 0;
+//    assign dmic_fifo_in[13] = 0;
+//    assign dmic_fifo_in[14] = 0;
+//    assign dmic_fifo_in[15] = 0;
     assign dmic_fifo_rd_en =  (!dmic_fifo_empty) & (!output_fifo_full);
     
 
@@ -272,25 +272,26 @@ module simple_io(
     .mic_in(dmic_fifo_out),
     .mic_clk(CLK100MHZ),
     .read_clk(CLK100MHZ),
-    .read_addr0(0),
-    .read_addr1(0),// the offset need to do addrb+read addr
-    .read_addr2(0),
-    .read_addr3(0),
-    .read_addr4(0),
-    .read_addr5(0),
-    .read_addr6(0),
-    .read_addr7(0),
-    .read_addr8(0),
-    .read_addr9(0),
-    .read_addr10(0),
-    .read_addr11(0),
-    .read_addr12(0),
-    .read_addr13(0),
-    .read_addr14(0),
-    .read_addr15(0),
+    .read_addr0(rom_out0),
+    .read_addr1(rom_out1),// the offset need to do addrb+read addr
+    .read_addr2(rom_out2),
+    .read_addr3(rom_out3),
+    .read_addr4(rom_out4),
+    .read_addr5(rom_out5),
+    .read_addr6(rom_out6),
+    .read_addr7(rom_out7),
+    .read_addr8(rom_out8),
+    .read_addr9(rom_out9),
+    .read_addr10(rom_out10),
+    .read_addr11(rom_out11),
+    .read_addr12(rom_out12),
+    .read_addr13(rom_out13),
+    .read_addr14(rom_out14),
+    .read_addr15(rom_out15),
     .rd_en(output_fifo_wr_en),
     .wr_en(output_fifo_wr_en),    
     .mic_out(ram_out));
+   
     adder5bit16way adder16(
     .in(ram_out),
     .out(adder16_out)

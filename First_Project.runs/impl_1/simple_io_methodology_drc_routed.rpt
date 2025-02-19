@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Tue Feb 18 14:13:23 2025
+| Date         : Tue Feb 18 22:50:30 2025
 | Host         : DEKTOP-MOV670 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file simple_io_methodology_drc_routed.rpt -pb simple_io_methodology_drc_routed.pb -rpx simple_io_methodology_drc_routed.rpx
 | Design       : simple_io
