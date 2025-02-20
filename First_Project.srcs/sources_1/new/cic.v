@@ -97,6 +97,7 @@ module cic (
 		.in(diff_1_out),
 		.out(out)
 		);
+
 		
 //		op_differentiator u_differentiator(
 //			.clk(clk&ena),

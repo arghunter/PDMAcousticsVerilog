@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Tue Feb 18 22:50:30 2025
+| Date         : Wed Feb 19 16:48:28 2025
 | Host         : DEKTOP-MOV670 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file simple_io_methodology_drc_routed.rpt -pb simple_io_methodology_drc_routed.pb -rpx simple_io_methodology_drc_routed.rpx
 | Design       : simple_io
@@ -23,15 +23,16 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 296
+             Violations found: 315
 +-----------+------------------+----------------------------------------------------+------------+
 | Rule      | Severity         | Description                                        | Violations |
 +-----------+------------------+----------------------------------------------------+------------+
 | TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 1          |
 | TIMING-14 | Critical Warning | LUT on the clock tree                              | 1          |
-| TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 282        |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 300        |
 | TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 1          |
 | HPDR-1    | Warning          | Port pin direction inconsistency                   | 10         |
+| LUTAR-1   | Warning          | LUT drives async reset alert                       | 1          |
 | TIMING-18 | Warning          | Missing input or output delay                      | 1          |
 +-----------+------------------+----------------------------------------------------+------------+
 
@@ -44,7 +45,7 @@ Related violations: <none>
 
 TIMING-14#1 Critical Warning
 LUT on the clock tree  
-The LUT prev_lr_clk_i_2 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+The LUT data_i_3 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
 TIMING-17#1 Critical Warning
@@ -739,720 +740,810 @@ Related violations: <none>
 
 TIMING-17#139 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C is not reached by a timing clock
+The clock pin counter_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#140 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C is not reached by a timing clock
+The clock pin counter_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#141 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C is not reached by a timing clock
+The clock pin counter_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#142 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C is not reached by a timing clock
+The clock pin counter_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#143 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/C is not reached by a timing clock
+The clock pin counter_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#144 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/C is not reached by a timing clock
+The clock pin counter_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#145 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/C is not reached by a timing clock
+The clock pin counter_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#146 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/C is not reached by a timing clock
+The clock pin counter_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#147 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[1][0]/C is not reached by a timing clock
+The clock pin counter_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#148 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[1][1]/C is not reached by a timing clock
+The clock pin counter_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#149 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[1][2]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#150 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[1][3]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#151 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[1][4]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#152 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[1][5]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#153 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[1][6]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#154 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[1][7]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#155 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_out_bin_ff_reg[0]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#156 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_out_bin_ff_reg[1]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#157 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_out_bin_ff_reg[2]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[1][0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#158 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_out_bin_ff_reg[3]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[1][1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#159 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_out_bin_ff_reg[4]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[1][2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#160 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_out_bin_ff_reg[5]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[1][3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#161 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_out_bin_ff_reg[6]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[1][4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#162 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_out_bin_ff_reg[7]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[1][5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#163 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[1][6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#164 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[1][7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#165 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_out_bin_ff_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#166 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_out_bin_ff_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#167 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_out_bin_ff_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#168 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[5]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_out_bin_ff_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#169 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[6]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_out_bin_ff_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#170 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_out_bin_ff_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#171 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i_reg/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_out_bin_ff_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#172 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_out_bin_ff_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#173 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_reg[0]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#174 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_reg[1]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#175 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_reg[2]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#176 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_reg[3]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#177 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_reg[4]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#178 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_reg[5]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#179 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_reg[6]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#180 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_reg[7]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#181 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_reg[0]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#182 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_reg[1]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#183 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_reg[2]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#184 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_reg[3]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#185 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_reg[4]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#186 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_reg[5]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#187 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_reg[6]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#188 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_reg[7]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#189 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_reg[0]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#190 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_reg[1]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#191 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_reg[2]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#192 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_reg[3]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#193 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_reg[4]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#194 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_reg[5]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#195 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_reg[6]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#196 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_reg[7]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#197 Critical Warning
 Non-clocked sequential cell  
-The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/CLKBWRCLK is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#198 Critical Warning
 Non-clocked sequential cell  
-The clock pin mic_clk_reg/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#199 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#200 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#201 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#202 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#203 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#204 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#205 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#206 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[7]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#207 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C is not reached by a timing clock
+The clock pin dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/CLKBWRCLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#208 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C is not reached by a timing clock
+The clock pin mic_clk_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#209 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#210 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#211 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#212 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#213 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#214 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#215 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[1][0]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#216 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[1][1]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#217 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[1][2]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#218 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[1][3]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#219 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[1][4]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#220 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[1][5]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#221 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[1][6]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#222 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[1][7]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#223 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_out_bin_ff_reg[0]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#224 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_out_bin_ff_reg[1]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#225 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_out_bin_ff_reg[2]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[1][0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#226 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_out_bin_ff_reg[3]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[1][1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#227 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_out_bin_ff_reg[4]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[1][2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#228 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_out_bin_ff_reg[5]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[1][3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#229 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_out_bin_ff_reg[6]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[1][4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#230 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_out_bin_ff_reg[7]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[1][5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#231 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.ram_almost_empty_i_reg/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[1][6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#232 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i_reg/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[1][7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#233 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i_reg/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_out_bin_ff_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#234 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d1_reg[0]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_out_bin_ff_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#235 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d1_reg[1]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_out_bin_ff_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#236 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d1_reg[2]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_out_bin_ff_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#237 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d1_reg[3]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_out_bin_ff_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#238 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d1_reg[4]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_out_bin_ff_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#239 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d1_reg[5]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_out_bin_ff_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#240 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d1_reg[6]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_out_bin_ff_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#241 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d1_reg[7]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/gae.ram_almost_empty_i_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#242 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d2_reg[0]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#243 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d2_reg[1]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#244 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d2_reg[2]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d1_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#245 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d2_reg[3]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d1_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#246 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d2_reg[4]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d1_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#247 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d2_reg[5]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d1_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#248 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d2_reg[6]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d1_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#249 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d2_reg[7]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d1_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#250 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_reg[0]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d1_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#251 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_reg[1]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d1_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#252 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_reg[2]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d2_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#253 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_reg[3]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d2_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#254 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_reg[4]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d2_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#255 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_reg[5]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d2_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#256 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_reg[6]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d2_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#257 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_reg[7]/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d2_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#258 Critical Warning
 Non-clocked sequential cell  
-The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/CLKARDCLK is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d2_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#259 Critical Warning
 Non-clocked sequential cell  
-The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[0].u_ddr_to_sdr/ddr_data_rising_regddr_data_falling_reg/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_d2_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#260 Critical Warning
 Non-clocked sequential cell  
-The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[0].u_ddr_to_sdr/sdr_data_0_reg/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#261 Critical Warning
 Non-clocked sequential cell  
-The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[0].u_ddr_to_sdr/sdr_data_1_reg/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#262 Critical Warning
 Non-clocked sequential cell  
-The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[1].u_ddr_to_sdr/ddr_data_rising_regddr_data_falling_reg/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#263 Critical Warning
 Non-clocked sequential cell  
-The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[1].u_ddr_to_sdr/sdr_data_0_reg/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#264 Critical Warning
 Non-clocked sequential cell  
-The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[1].u_ddr_to_sdr/sdr_data_1_reg/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#265 Critical Warning
 Non-clocked sequential cell  
-The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[2].u_ddr_to_sdr/ddr_data_rising_regddr_data_falling_reg/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#266 Critical Warning
 Non-clocked sequential cell  
-The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[2].u_ddr_to_sdr/sdr_data_0_reg/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#267 Critical Warning
 Non-clocked sequential cell  
-The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[2].u_ddr_to_sdr/sdr_data_1_reg/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc1.count_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#268 Critical Warning
 Non-clocked sequential cell  
-The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[3].u_ddr_to_sdr/ddr_data_rising_regddr_data_falling_reg/C is not reached by a timing clock
+The clock pin output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/CLKARDCLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#269 Critical Warning
 Non-clocked sequential cell  
-The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[3].u_ddr_to_sdr/sdr_data_0_reg/C is not reached by a timing clock
+The clock pin rom_addr_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#270 Critical Warning
 Non-clocked sequential cell  
-The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[3].u_ddr_to_sdr/sdr_data_1_reg/C is not reached by a timing clock
+The clock pin rom_addr_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#271 Critical Warning
 Non-clocked sequential cell  
-The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[4].u_ddr_to_sdr/ddr_data_rising_regddr_data_falling_reg/C is not reached by a timing clock
+The clock pin rom_addr_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#272 Critical Warning
 Non-clocked sequential cell  
-The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[4].u_ddr_to_sdr/sdr_data_0_reg/C is not reached by a timing clock
+The clock pin rom_addr_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#273 Critical Warning
 Non-clocked sequential cell  
-The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[4].u_ddr_to_sdr/sdr_data_1_reg/C is not reached by a timing clock
+The clock pin rom_addr_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#274 Critical Warning
 Non-clocked sequential cell  
-The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[5].u_ddr_to_sdr/ddr_data_rising_regddr_data_falling_reg/C is not reached by a timing clock
+The clock pin rom_addr_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#275 Critical Warning
 Non-clocked sequential cell  
-The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[5].u_ddr_to_sdr/sdr_data_0_reg/C is not reached by a timing clock
+The clock pin rom_addr_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#276 Critical Warning
 Non-clocked sequential cell  
-The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[5].u_ddr_to_sdr/sdr_data_1_reg/C is not reached by a timing clock
+The clock pin rom_addr_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#277 Critical Warning
 Non-clocked sequential cell  
-The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[6].u_ddr_to_sdr/ddr_data_rising_regddr_data_falling_reg/C is not reached by a timing clock
+The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[0].u_ddr_to_sdr/ddr_data_rising_regddr_data_falling_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#278 Critical Warning
 Non-clocked sequential cell  
-The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[6].u_ddr_to_sdr/sdr_data_0_reg/C is not reached by a timing clock
+The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[0].u_ddr_to_sdr/sdr_data_0_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#279 Critical Warning
 Non-clocked sequential cell  
-The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[6].u_ddr_to_sdr/sdr_data_1_reg/C is not reached by a timing clock
+The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[0].u_ddr_to_sdr/sdr_data_1_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#280 Critical Warning
 Non-clocked sequential cell  
-The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[7].u_ddr_to_sdr/ddr_data_rising_regddr_data_falling_reg/C is not reached by a timing clock
+The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[1].u_ddr_to_sdr/ddr_data_rising_regddr_data_falling_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#281 Critical Warning
 Non-clocked sequential cell  
-The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[7].u_ddr_to_sdr/sdr_data_0_reg/C is not reached by a timing clock
+The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[1].u_ddr_to_sdr/sdr_data_0_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#282 Critical Warning
+Non-clocked sequential cell  
+The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[1].u_ddr_to_sdr/sdr_data_1_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#283 Critical Warning
+Non-clocked sequential cell  
+The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[2].u_ddr_to_sdr/ddr_data_rising_regddr_data_falling_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#284 Critical Warning
+Non-clocked sequential cell  
+The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[2].u_ddr_to_sdr/sdr_data_0_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#285 Critical Warning
+Non-clocked sequential cell  
+The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[2].u_ddr_to_sdr/sdr_data_1_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#286 Critical Warning
+Non-clocked sequential cell  
+The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[3].u_ddr_to_sdr/ddr_data_rising_regddr_data_falling_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#287 Critical Warning
+Non-clocked sequential cell  
+The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[3].u_ddr_to_sdr/sdr_data_0_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#288 Critical Warning
+Non-clocked sequential cell  
+The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[3].u_ddr_to_sdr/sdr_data_1_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#289 Critical Warning
+Non-clocked sequential cell  
+The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[4].u_ddr_to_sdr/ddr_data_rising_regddr_data_falling_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#290 Critical Warning
+Non-clocked sequential cell  
+The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[4].u_ddr_to_sdr/sdr_data_0_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#291 Critical Warning
+Non-clocked sequential cell  
+The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[4].u_ddr_to_sdr/sdr_data_1_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#292 Critical Warning
+Non-clocked sequential cell  
+The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[5].u_ddr_to_sdr/ddr_data_rising_regddr_data_falling_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#293 Critical Warning
+Non-clocked sequential cell  
+The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[5].u_ddr_to_sdr/sdr_data_0_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#294 Critical Warning
+Non-clocked sequential cell  
+The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[5].u_ddr_to_sdr/sdr_data_1_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#295 Critical Warning
+Non-clocked sequential cell  
+The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[6].u_ddr_to_sdr/ddr_data_rising_regddr_data_falling_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#296 Critical Warning
+Non-clocked sequential cell  
+The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[6].u_ddr_to_sdr/sdr_data_0_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#297 Critical Warning
+Non-clocked sequential cell  
+The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[6].u_ddr_to_sdr/sdr_data_1_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#298 Critical Warning
+Non-clocked sequential cell  
+The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[7].u_ddr_to_sdr/ddr_data_rising_regddr_data_falling_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#299 Critical Warning
+Non-clocked sequential cell  
+The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[7].u_ddr_to_sdr/sdr_data_0_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#300 Critical Warning
 Non-clocked sequential cell  
 The clock pin u_multi_ddr_to_sdr/ddr_to_sdr_inst[7].u_ddr_to_sdr/sdr_data_1_reg/C is not reached by a timing clock
 Related violations: <none>
@@ -1510,6 +1601,17 @@ Related violations: <none>
 HPDR-1#10 Warning
 Port pin direction inconsistency  
 Hierarchical port(pin) JC[3] direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (JC[3]) connected to this Port, but both were not found.
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell cic/differentiator_2/data[23]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) cic/counter_reg[0]/CLR, cic/counter_reg[1]/CLR, cic/counter_reg[2]/CLR,
+cic/counter_reg[3]/CLR, cic/counter_reg[4]/CLR, cic/lr_clk_reg/CLR,
+cic/u_integrator_2/out_reg[23]/CLR, cic/u_integrator_2/out_reg[2]/CLR,
+cic/u_integrator_2/out_reg[3]/CLR, cic/u_integrator_2/out_reg[4]/CLR,
+cic/u_integrator_2/out_reg[5]/CLR, cic/u_integrator_2/out_reg[6]/CLR,
+cic/u_integrator_2/out_reg[7]/CLR, cic/u_integrator_2/out_reg[8]/CLR,
+cic/u_integrator_2/out_reg[9]/CLR (the first 15 of 213 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 TIMING-18#1 Warning

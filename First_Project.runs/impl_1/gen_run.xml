@@ -1,63 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1739947702">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1740012391">
   <File Type="ROUTE-PWR" Name="simple_io_power_routed.rpt"/>
   <File Type="PA-TCL" Name="simple_io.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="simple_io_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="simple_io_reports.tcl"/>
-  <File Type="BITSTR-MSK" Name="simple_io.msk"/>
-  <File Type="ROUTE-CLK" Name="simple_io_clock_utilization_routed.rpt"/>
-  <File Type="RDI-RDI" Name="simple_io.vdi"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="simple_io_bus_skew_postroute_physopted.pb"/>
-  <File Type="BG-BIT" Name="simple_io.bit"/>
-  <File Type="BG-DRC" Name="simple_io.drc"/>
-  <File Type="BG-BGN" Name="simple_io.bgn"/>
-  <File Type="BG-BIN" Name="simple_io.bin"/>
-  <File Type="BITSTR-RBT" Name="simple_io.rbt"/>
-  <File Type="BITSTR-NKY" Name="simple_io.nky"/>
-  <File Type="BITSTR-BMM" Name="simple_io_bd.bmm"/>
+  <File Type="OPT-RQA-PB" Name="simple_io_rqa_opted.pb"/>
   <File Type="BITSTR-MMI" Name="simple_io.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="simple_io_methodology_drc_routed.rpt"/>
-  <File Type="BITSTR-SYSDEF" Name="simple_io.sysdef"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="simple_io.ltx"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="simple_io_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="simple_io_timing_summary_init.rpt"/>
+  <File Type="OPT-TIMING" Name="simple_io_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="simple_io_opt.dcp"/>
   <File Type="OPT-DRC" Name="simple_io_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="simple_io.hwdef"/>
+  <File Type="PWROPT-DCP" Name="simple_io_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="simple_io_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="simple_io_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="simple_io_placed.dcp"/>
   <File Type="PLACE-IO" Name="simple_io_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="simple_io_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="simple_io_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="simple_io_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="simple_io_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="simple_io_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="simple_io_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="simple_io.bin"/>
+  <File Type="PLACE-TIMING" Name="simple_io_timing_summary_placed.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="simple_io_power_routed.rpx"/>
+  <File Type="PLACE-RQA-PB" Name="simple_io_rqa_placed.pb"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="simple_io_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="simple_io.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="simple_io_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="simple_io_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="simple_io_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="simple_io.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="simple_io_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="simple_io_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="simple_io_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="simple_io_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="simple_io_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="simple_io_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="simple_io_power_routed.rpx"/>
+  <File Type="ROUTE-DRC-RPX" Name="simple_io_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="simple_io_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="simple_io_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="simple_io_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-RQS-PB" Name="simple_io_rqs_routed.pb"/>
   <File Type="ROUTE-STATUS" Name="simple_io_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="simple_io_route_status.pb"/>
-  <File Type="ROUTE-DCP" Name="simple_io_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="simple_io_routed_error.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="simple_io_routed_bb.dcp"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="simple_io_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="simple_io_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="simple_io_timing_summary_routed.rpx"/>
   <File Type="ROUTE-SIMILARITY" Name="simple_io_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="simple_io_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="simple_io_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="simple_io_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="simple_io_bus_skew_routed.rpx"/>
-  <File Type="OPT-DCP" Name="simple_io_opt.dcp"/>
-  <File Type="PLACE-DCP" Name="simple_io_placed.dcp"/>
-  <File Type="PWROPT-DCP" Name="simple_io_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="simple_io_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="simple_io_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="simple_io_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="simple_io_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="simple_io_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="simple_io_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="simple_io_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="simple_io_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="simple_io_bus_skew_postroute_physopted.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="simple_io_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="simple_io_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="simple_io_methodology_drc_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="top_module_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="top_module_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="top_module_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="top_module_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="simple_io.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="top_module_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="top_module_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="simple_io.nky"/>
+  <File Type="BITSTR-BMM" Name="simple_io_bd.bmm"/>
   <File Type="PDI-FILE" Name="simple_io.pdi"/>
   <File Type="BOOT-PDI-FILE" Name="simple_io_boot.pdi"/>
   <File Type="PL-PDI-FILE" Name="simple_io_pld.pdi"/>
@@ -66,6 +73,13 @@
   <File Type="RNPI_FILE" Name="simple_io.rnpi"/>
   <File Type="NPI_FILE" Name="simple_io.npi"/>
   <File Type="RBD_FILE" Name="simple_io.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="simple_io.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="simple_io.sysdef"/>
+  <File Type="BG-BGN" Name="simple_io.bgn"/>
+  <File Type="BG-DRC" Name="simple_io.drc"/>
+  <File Type="RDI-RDI" Name="simple_io.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="ROUTE-RQS" Name="simple_io_routed.rqs"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="simple_io_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
@@ -163,6 +177,22 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/top_module.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/dc_elim.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/adder.v">
       <FileInfo>
         <Attr Name="UserDisabled" Val="1"/>
@@ -180,14 +210,6 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/op_differentiator.v">
-      <FileInfo>
-        <Attr Name="UserDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/top_module.v">
       <FileInfo>
         <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -360,13 +382,12 @@
     <Step Id="write_bitstream">
       <Option Id="BinFile">1</Option>
     </Step>
-    <Step Id="write_device_image"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_16"/>
   <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo_generator_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_8"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_generator_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_14"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_1"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_15"/>

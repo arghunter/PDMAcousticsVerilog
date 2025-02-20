@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="34.600398 us"></ZoomStartTime>
-      <ZoomEndTime time="79.122876 us"></ZoomEndTime>
-      <Cursor1Time time="52.665000 us"></Cursor1Time>
+      <ZoomStartTime time="2,048.400570 us"></ZoomStartTime>
+      <ZoomEndTime time="2,120.875644 us"></ZoomEndTime>
+      <Cursor1Time time="1,344.069130 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="276"></NameColumnWidth>
-      <ValueColumnWidth column_width="60"></ValueColumnWidth>
+      <NameColumnWidth column_width="266"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="90" />
+   <WVObjectSize size="94" />
    <wvobject fp_name="/testbench_top_level/CLK100MHZ" type="logic">
       <obj_property name="ElementShortName">CLK100MHZ</obj_property>
       <obj_property name="ObjectShortName">CLK100MHZ</obj_property>
@@ -57,8 +57,8 @@
       <obj_property name="ObjectShortName">vauxp15</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/counter" type="array">
-      <obj_property name="ElementShortName">counter[7:0]</obj_property>
-      <obj_property name="ObjectShortName">counter[7:0]</obj_property>
+      <obj_property name="ElementShortName">counter[11:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[11:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/ddr_clk" type="logic">
       <obj_property name="ElementShortName">ddr_clk</obj_property>
@@ -119,7 +119,6 @@
    <wvobject fp_name="/testbench_top_level/dut/ram1/mic_in" type="array">
       <obj_property name="ElementShortName">mic_in[15:0]</obj_property>
       <obj_property name="ObjectShortName">mic_in[15:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/ram1/mic_clk" type="logic">
       <obj_property name="ElementShortName">mic_clk</obj_property>
@@ -389,5 +388,23 @@
    <wvobject fp_name="/testbench_top_level/dut/cic/lr_clk" type="logic">
       <obj_property name="ElementShortName">lr_clk</obj_property>
       <obj_property name="ObjectShortName">lr_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/rom_addr" type="array">
+      <obj_property name="ElementShortName">rom_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/counter" type="array">
+      <obj_property name="ElementShortName">counter[11:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[11:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/cic/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/adder16/in" type="array">
+      <obj_property name="ElementShortName">in[15:0]</obj_property>
+      <obj_property name="ObjectShortName">in[15:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
 </wave_config>

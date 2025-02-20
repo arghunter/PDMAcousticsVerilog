@@ -81,7 +81,7 @@ module simple_io(
 //    always @(posedge clk5) begin
 //        lr_clk <= ~lr_clk;            
 //    end
-    reg [7:0] counter;
+    reg [9:0] counter;
 
     wire [15:0] dmic_fifo_in;
     wire [15:0] dmic_fifo_out;
@@ -170,15 +170,19 @@ module simple_io(
 //    assign dmic_fifo_in[14] = 0;
 //    assign dmic_fifo_in[15] = 0;
     assign dmic_fifo_rd_en =  (!dmic_fifo_empty) & (!output_fifo_full);
-    
+    reg [7:0] rom_addr=0;
 
    
     always @ (negedge ddr_clk) begin
         if (btnC) begin 
             counter<=0;
+            rom_addr<=0;
         end
         else  begin
             counter<= counter +1;
+            if(counter==0) begin
+                rom_addr<=rom_addr+1;
+            end
         end
         
     end
@@ -218,6 +222,8 @@ module simple_io(
     wire [11:0] rom_out13;
     wire [11:0] rom_out14;
     wire [11:0] rom_out15;
+    
+    
     
     
     rom rom(
@@ -299,7 +305,7 @@ module simple_io(
     wire [23:0] cic_out;
     cic cic(
     .clk(CLK100MHZ),
-    .rst(btnC),
+    .rst(btnC || counter==0),// || counter==0
     .in(adder16_out),
     .ena(output_fifo_wr_en),
     .out(cic_out)
@@ -312,11 +318,29 @@ module simple_io(
 
     wire i2s_out;
     wire lr_clk;
+//    wire [23:0] dc_elim_out;
+//    dc_elim dc_elim(
+//    .lr_clk(lr_clk),
+//    .rst(btnC),
+//    .in(cic_out),
+//    .out(dc_elim_out)
+//    );
+//    wire [31:0] extended_dc_elim_out  = {{8{dc_elim_out[23]}}, dc_elim_out};
+    wire [31:0] extended_counter_out  = {{24{rom_addr[7]}}, rom_addr};
     i2s_bus i2s(
     .clk(CLK100MHZ),
     .rst(btnC),
     .bit_data(extended_cic_out),
     .out(i2s_out),
+    .ena(output_fifo_wr_en),
+    .lr_clk(lr_clk)
+    );
+    wire counter_out;
+    i2s_bus i2s2(
+    .clk(CLK100MHZ),
+    .rst(btnC),
+    .bit_data(extended_counter_out),
+    .out(counter_out),
     .ena(output_fifo_wr_en),
     .lr_clk(lr_clk)
     );
@@ -350,7 +374,7 @@ module simple_io(
 //    );
     wire [15:0] output_fifo_in;
 //    assign output_fifo_in = {ram_out[15:6], adder16_out}; 
-      assign output_fifo_in = {ram_out[15:8],i2s_out,lr_clk, adder16_out};  
+      assign output_fifo_in = {ram_out[15:7],counter_out,i2s_out,lr_clk, adder16_out};  
 //    assign output_fifo_in = ram_out;
     
     fifo_generator_0 output_fifo (
@@ -526,7 +550,7 @@ module simple_io(
     assign JB[7]=output_fifo_out[6];
     assign vauxp6=output_fifo_out[7];
     assign JA[3]=mic_clk;
-    assign vauxp14 = mic_clk;
+    assign vauxp14 = output_fifo_out[8];
     assign vauxp7 = output_fifo_out[6];
     
 
