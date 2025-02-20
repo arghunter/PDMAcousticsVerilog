@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="2,048.400570 us"></ZoomStartTime>
-      <ZoomEndTime time="2,120.875644 us"></ZoomEndTime>
-      <Cursor1Time time="1,344.069130 us"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="187.023 ns"></ZoomEndTime>
+      <Cursor1Time time="52.686 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="266"></NameColumnWidth>
+      <NameColumnWidth column_width="230"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="94" />
+   <WVObjectSize size="92" />
    <wvobject fp_name="/testbench_top_level/CLK100MHZ" type="logic">
       <obj_property name="ElementShortName">CLK100MHZ</obj_property>
       <obj_property name="ObjectShortName">CLK100MHZ</obj_property>
@@ -57,8 +57,8 @@
       <obj_property name="ObjectShortName">vauxp15</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/counter" type="array">
-      <obj_property name="ElementShortName">counter[11:0]</obj_property>
-      <obj_property name="ObjectShortName">counter[11:0]</obj_property>
+      <obj_property name="ElementShortName">counter[9:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[9:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/ddr_clk" type="logic">
       <obj_property name="ElementShortName">ddr_clk</obj_property>
@@ -119,6 +119,7 @@
    <wvobject fp_name="/testbench_top_level/dut/ram1/mic_in" type="array">
       <obj_property name="ElementShortName">mic_in[15:0]</obj_property>
       <obj_property name="ObjectShortName">mic_in[15:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/ram1/mic_clk" type="logic">
       <obj_property name="ElementShortName">mic_clk</obj_property>
@@ -276,135 +277,125 @@
       <obj_property name="ElementShortName">doutb[0:0]</obj_property>
       <obj_property name="ObjectShortName">doutb[0:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic/extended_in" type="array">
-      <obj_property name="ElementShortName">extended_in[23:0]</obj_property>
-      <obj_property name="ObjectShortName">extended_in[23:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic/out" type="array">
-      <obj_property name="ElementShortName">out[23:0]</obj_property>
-      <obj_property name="ObjectShortName">out[23:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/adder16/in" type="array">
-      <obj_property name="ElementShortName">in[15:0]</obj_property>
-      <obj_property name="ObjectShortName">in[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/adder16/out" type="array">
-      <obj_property name="ElementShortName">out[5:0]</obj_property>
-      <obj_property name="ObjectShortName">out[5:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic/rst" type="logic">
-      <obj_property name="ElementShortName">rst</obj_property>
-      <obj_property name="ObjectShortName">rst</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic/in" type="array">
-      <obj_property name="ElementShortName">in[5:0]</obj_property>
-      <obj_property name="ObjectShortName">in[5:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic/ena" type="logic">
-      <obj_property name="ElementShortName">ena</obj_property>
-      <obj_property name="ObjectShortName">ena</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic/out" type="array">
-      <obj_property name="ElementShortName">out[23:0]</obj_property>
-      <obj_property name="ObjectShortName">out[23:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic/inc_out" type="array">
-      <obj_property name="ElementShortName">inc_out[23:0]</obj_property>
-      <obj_property name="ObjectShortName">inc_out[23:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic/int_1_out" type="array">
-      <obj_property name="ElementShortName">int_1_out[23:0]</obj_property>
-      <obj_property name="ObjectShortName">int_1_out[23:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic/int_2_out" type="array">
-      <obj_property name="ElementShortName">int_2_out[23:0]</obj_property>
-      <obj_property name="ObjectShortName">int_2_out[23:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic/extended_in" type="array">
-      <obj_property name="ElementShortName">extended_in[23:0]</obj_property>
-      <obj_property name="ObjectShortName">extended_in[23:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic/counter" type="array">
-      <obj_property name="ElementShortName">counter[4:0]</obj_property>
-      <obj_property name="ObjectShortName">counter[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic/lr_clk" type="logic">
-      <obj_property name="ElementShortName">lr_clk</obj_property>
-      <obj_property name="ObjectShortName">lr_clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/i2s/bit_data" type="array">
-      <obj_property name="ElementShortName">bit_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">bit_data[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/i2s/mux_outputs" type="array">
-      <obj_property name="ElementShortName">mux_outputs[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mux_outputs[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/i2s/counter" type="array">
-      <obj_property name="ElementShortName">counter[4:0]</obj_property>
-      <obj_property name="ObjectShortName">counter[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/extended_cic_out" type="array">
-      <obj_property name="ElementShortName">extended_cic_out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">extended_cic_out[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic/in" type="array">
-      <obj_property name="ElementShortName">in[5:0]</obj_property>
-      <obj_property name="ObjectShortName">in[5:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic/inc_out" type="array">
-      <obj_property name="ElementShortName">inc_out[23:0]</obj_property>
-      <obj_property name="ObjectShortName">inc_out[23:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic/int_1_out" type="array">
-      <obj_property name="ElementShortName">int_1_out[23:0]</obj_property>
-      <obj_property name="ObjectShortName">int_1_out[23:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic/int_2_out" type="array">
-      <obj_property name="ElementShortName">int_2_out[23:0]</obj_property>
-      <obj_property name="ObjectShortName">int_2_out[23:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic/diff_0_out" type="array">
-      <obj_property name="ElementShortName">diff_0_out[23:0]</obj_property>
-      <obj_property name="ObjectShortName">diff_0_out[23:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic/diff_1_out" type="array">
-      <obj_property name="ElementShortName">diff_1_out[23:0]</obj_property>
-      <obj_property name="ObjectShortName">diff_1_out[23:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic/lr_clk" type="logic">
-      <obj_property name="ElementShortName">lr_clk</obj_property>
-      <obj_property name="ObjectShortName">lr_clk</obj_property>
-   </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/rom_addr" type="array">
       <obj_property name="ElementShortName">rom_addr[7:0]</obj_property>
       <obj_property name="ObjectShortName">rom_addr[7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/counter" type="array">
-      <obj_property name="ElementShortName">counter[11:0]</obj_property>
-      <obj_property name="ObjectShortName">counter[11:0]</obj_property>
+      <obj_property name="ElementShortName">counter[9:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[9:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic/rst" type="logic">
+   <wvobject fp_name="/testbench_top_level/dut/rom_out0" type="array">
+      <obj_property name="ElementShortName">rom_out0[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out0[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/enaa" type="logic">
+      <obj_property name="ElementShortName">enaa</obj_property>
+      <obj_property name="ObjectShortName">enaa</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/enab" type="logic">
+      <obj_property name="ElementShortName">enab</obj_property>
+      <obj_property name="ObjectShortName">enab</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/lms_out0" type="array">
+      <obj_property name="ElementShortName">lms_out0[11:0]</obj_property>
+      <obj_property name="ObjectShortName">lms_out0[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/rom/rom_addr" type="array">
+      <obj_property name="ElementShortName">rom_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_addr[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/rom/rom/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/rom/addr_counter" type="logic">
+      <obj_property name="ElementShortName">addr_counter</obj_property>
+      <obj_property name="ObjectShortName">addr_counter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/rom/addra" type="array">
+      <obj_property name="ElementShortName">addra[7:0]</obj_property>
+      <obj_property name="ObjectShortName">addra[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/cu_router/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/cu_router/rst" type="logic">
       <obj_property name="ElementShortName">rst</obj_property>
       <obj_property name="ObjectShortName">rst</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/adder16/in" type="array">
-      <obj_property name="ElementShortName">in[15:0]</obj_property>
-      <obj_property name="ObjectShortName">in[15:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+   <wvobject fp_name="/testbench_top_level/dut/cu_router/ddr_data" type="array">
+      <obj_property name="ElementShortName">ddr_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ddr_data[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/cu_router/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/cu_router/sdr_data_0" type="array">
+      <obj_property name="ElementShortName">sdr_data_0[15:0]</obj_property>
+      <obj_property name="ObjectShortName">sdr_data_0[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/cu_router/sdr_data_1" type="array">
+      <obj_property name="ElementShortName">sdr_data_1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">sdr_data_1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/cu_router/ddr_data_rising" type="array">
+      <obj_property name="ElementShortName">ddr_data_rising[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ddr_data_rising[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/cu_router/ddr_data_falling" type="array">
+      <obj_property name="ElementShortName">ddr_data_falling[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ddr_data_falling[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/math_core_1/i2s/out" type="logic">
+      <obj_property name="ElementShortName">out</obj_property>
+      <obj_property name="ObjectShortName">out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/math_core_1/bit_data" type="array">
+      <obj_property name="ElementShortName">bit_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_data[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/math_core_1/adder16/out" type="array">
+      <obj_property name="ElementShortName">out[5:0]</obj_property>
+      <obj_property name="ObjectShortName">out[5:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/math_core_1/cic/in" type="array">
+      <obj_property name="ElementShortName">in[5:0]</obj_property>
+      <obj_property name="ObjectShortName">in[5:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/math_core_1/cic/extended_in" type="array">
+      <obj_property name="ElementShortName">extended_in[23:0]</obj_property>
+      <obj_property name="ObjectShortName">extended_in[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/math_core_1/cic/u_integrator_0/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/math_core_1/cic/counter" type="array">
+      <obj_property name="ElementShortName">counter[4:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/math_core_1/cic/lr_clk" type="logic">
+      <obj_property name="ElementShortName">lr_clk</obj_property>
+      <obj_property name="ObjectShortName">lr_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/math_core_1/cic/u_integrator_0/in" type="array">
+      <obj_property name="ElementShortName">in[23:0]</obj_property>
+      <obj_property name="ObjectShortName">in[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/math_core_1/cic/u_integrator_0/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
    </wvobject>
 </wave_config>

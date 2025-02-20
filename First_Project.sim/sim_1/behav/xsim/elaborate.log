@@ -5,6 +5,8 @@ Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'addra' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:217]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'addrb' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:218]
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ena' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/rom.v:48]
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'wea' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/rom.v:49]
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 12 for port 'dina' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/rom.v:51]
@@ -121,6 +123,10 @@ Compiling module blk_mem_gen_v8_4_8.blk_mem_gen_v8_4_8_mem_module(C_...
 Compiling module blk_mem_gen_v8_4_8.blk_mem_gen_v8_4_8(C_FAMILY="art...
 Compiling module xil_defaultlib.blk_mem_gen_16
 Compiling module xil_defaultlib.rom
+Compiling module xil_defaultlib.managed_rom
+Compiling module xil_defaultlib.loader
+Compiling module xil_defaultlib.mux_flip
+Compiling module xil_defaultlib.lms
 Compiling module blk_mem_gen_v8_4_8.blk_mem_gen_v8_4_8_output_stage(...
 Compiling module blk_mem_gen_v8_4_8.blk_mem_gen_v8_4_8_softecc_outpu...
 Compiling module blk_mem_gen_v8_4_8.blk_mem_gen_v8_4_8_mem_module(C_...
@@ -128,12 +134,14 @@ Compiling module blk_mem_gen_v8_4_8.blk_mem_axi_regs_fwd_v8_4(C_DATA...
 Compiling module blk_mem_gen_v8_4_8.blk_mem_gen_v8_4_8(C_FAMILY="art...
 Compiling module xil_defaultlib.blk_mem_gen_0
 Compiling module xil_defaultlib.ram
+Compiling module xil_defaultlib.cu_router
 Compiling module xil_defaultlib.adder5bit16way
 Compiling module xil_defaultlib.integrator
 Compiling module xil_defaultlib.differentiator
 Compiling module xil_defaultlib.cic_default
 Compiling module xil_defaultlib.mux_shift
 Compiling module xil_defaultlib.i2s_bus_default
+Compiling module xil_defaultlib.math_core
 Compiling module xil_defaultlib.simple_io
 Compiling module xil_defaultlib.testbench_top_level
 Compiling module xil_defaultlib.glbl

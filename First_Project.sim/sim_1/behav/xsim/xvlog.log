@@ -42,6 +42,8 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/arg/Documents/GitHub/FPGA/
 INFO: [VRFC 10-311] analyzing module adder5bit16way
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/cic.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cic
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/cu_router.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cu_router
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ddr_to_sdr.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ddr_to_sdr
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/differentiator.v" into library xil_defaultlib
@@ -50,8 +52,18 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/arg/Documents/GitHub/FPGA/
 INFO: [VRFC 10-311] analyzing module i2s_bus
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/integrator.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module integrator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/lms.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lms
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/loader.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module loader
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/managed_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module managed_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/math_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module math_core
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/multi_ddr_to_sdr.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module multi_ddr_to_sdr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/mux_flip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_flip
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/mux_shift.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module mux_shift
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ram.v" into library xil_defaultlib
@@ -60,5 +72,7 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/arg/Documents/GitHub/FPGA/
 INFO: [VRFC 10-311] analyzing module rom
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module simple_io
+WARNING: [VRFC 10-3248] data object 'lr_clk' is already declared [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:383]
+WARNING: [VRFC 10-9364] second declaration of 'lr_clk' is ignored [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:383]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sim_1/new/testbench_top_level.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module testbench_top_level

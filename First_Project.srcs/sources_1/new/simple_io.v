@@ -34,8 +34,10 @@ module simple_io(
     wire clock;// 0 deg
 
     wire locked;
+    wire CLK200MHZ;
     clk_wiz_0 clock_wiz_0(
      .clk_out1(clock),// 12.288 mhz
+     .clk_out2(CLK200MHZ),
     .reset(btnC),
     .locked(locked),
     .clk_in1(CLK100MHZ)
@@ -57,30 +59,7 @@ module simple_io(
     end
   
     
-//    reg clk1;
-//    reg clk2;
-//    reg clk3;
-//    reg clk4;
-//    reg clk5;
-        
-//    always @(posedge mic_clk) begin
-//        clk1 <= ~clk1;
-//    end  
-//    always @(posedge clk1) begin
-//        clk2 <= ~clk2;
-//    end
-//    always @(posedge clk2) begin
-//        clk3 <= ~clk3;
-//    end  
-//    always @(posedge clk3) begin
-//        clk4 <= ~clk4;            
-//    end
-//    always @(posedge clk4) begin
-//        clk5 <= ~clk5;            
-//    end
-//    always @(posedge clk5) begin
-//        lr_clk <= ~lr_clk;            
-//    end
+
     reg [9:0] counter;
 
     wire [15:0] dmic_fifo_in;
@@ -103,7 +82,7 @@ module simple_io(
     wire [7:0] ddr_to_sdr_in;
     wire [7:0] sdr_data_0;
     wire [7:0] sdr_data_1;
-    wire [5:0] adder16_out;
+    wire [5:0] adder16_out=0;
     assign ddr_to_sdr_in[0]=JC[1];
     assign ddr_to_sdr_in[1]=JC[5];
     assign ddr_to_sdr_in[2]=JC[0];
@@ -153,35 +132,40 @@ module simple_io(
 //    assign dmic_fifo_in[13] = sdr_data_0[0];
 //    assign dmic_fifo_in[14] = sdr_data_0[0];
 //    assign dmic_fifo_in[15] = sdr_data_0[0];
-//    assign dmic_fifo_in[0] = 1;
-//    assign dmic_fifo_in[1] = 1;
-//    assign dmic_fifo_in[2] = 1;
-//    assign dmic_fifo_in[3] = 1;
-//    assign dmic_fifo_in[4] = 1;
-//    assign dmic_fifo_in[5] = 1;
-//    assign dmic_fifo_in[6] = 1;
-//    assign dmic_fifo_in[7] = 1;
-//    assign dmic_fifo_in[8] = 1;
-//    assign dmic_fifo_in[9] = 0;
-//    assign dmic_fifo_in[10] = 0;
-//    assign dmic_fifo_in[11] = 0;
-//    assign dmic_fifo_in[12] = 0;
-//    assign dmic_fifo_in[13] = 0;
-//    assign dmic_fifo_in[14] = 0;
-//    assign dmic_fifo_in[15] = 0;
+    assign dmic_fifo_in[0] = 1;
+    assign dmic_fifo_in[1] = 1;
+    assign dmic_fifo_in[2] = 1;
+    assign dmic_fifo_in[3] = 1;
+    assign dmic_fifo_in[4] = 1;
+    assign dmic_fifo_in[5] = 1;
+    assign dmic_fifo_in[6] = 1;
+    assign dmic_fifo_in[7] = 1;
+    assign dmic_fifo_in[8] = 1;
+    assign dmic_fifo_in[9] = 0;
+    assign dmic_fifo_in[10] = 0;
+    assign dmic_fifo_in[11] = 0;
+    assign dmic_fifo_in[12] = 0;
+    assign dmic_fifo_in[13] = 0;
+    assign dmic_fifo_in[14] = 0;
+    assign dmic_fifo_in[15] = 0;
     assign dmic_fifo_rd_en =  (!dmic_fifo_empty) & (!output_fifo_full);
     reg [7:0] rom_addr=0;
+    reg [7:0] rom_addr1=1;
 
-   
+   // next goal use both ports and run two systems
+   // so if i run ram at 200 mhz and bram at 100mhz  i can toggle between two delaays for same piece of data
+   // i need a loader so when pos edge ena read the vals and a mux to switch between. well this is complex 
     always @ (negedge ddr_clk) begin
         if (btnC) begin 
             counter<=0;
             rom_addr<=0;
+            rom_addr1<=0;
         end
         else  begin
             counter<= counter +1;
             if(counter==0) begin
-                rom_addr<=rom_addr+1;
+                rom_addr<=rom_addr+2;
+                rom_addr1<=rom_addr1+2;
             end
         end
         
@@ -222,13 +206,18 @@ module simple_io(
     wire [11:0] rom_out13;
     wire [11:0] rom_out14;
     wire [11:0] rom_out15;
+    wire enaa;
+    wire enab;
     
     
     
-    
-    rom rom(
-    .clk(CLK100MHZ),
-    .addr(0),
+    managed_rom rom(
+    .clk(CLK200MHZ),
+    .rst(btnC),
+    .addra(0),
+    .addrb(1),
+    .enaa(enaa),
+    .enab(enab),
     .rom_out0(rom_out0),
     .rom_out1(rom_out1),
     .rom_out2(rom_out2),
@@ -273,33 +262,107 @@ module simple_io(
 //    .rd_en(output_fifo_wr_en),
 //    .wr_en(output_fifo_wr_en),    
 //    .mic_out(ram_out));
+    wire [11:0] lms_out0;
+    wire [11:0] lms_out1;
+    wire [11:0] lms_out2;
+    wire [11:0] lms_out3;
+    wire [11:0] lms_out4;
+    wire [11:0] lms_out5;
+    wire [11:0] lms_out6;
+    wire [11:0] lms_out7;
+    wire [11:0] lms_out8;
+    wire [11:0] lms_out9;
+    wire [11:0] lms_out10;
+    wire [11:0] lms_out11;
+    wire [11:0] lms_out12;
+    wire [11:0] lms_out13;
+    wire [11:0] lms_out14;
+    wire [11:0] lms_out15; 
+    lms lms(
+    .ab(CLK100MHZ),
+    .rst(btnC),
+    .enaa(enaa),
+    .enab(enab),
+    .in0(rom_out0),
+    .in1(rom_out1),
+    .in2(rom_out2),
+    .in3(rom_out3),
+    .in4(rom_out4),
+    .in5(rom_out5),
+    .in6(rom_out6),
+    .in7(rom_out7),
+    .in8(rom_out8),
+    .in9(rom_out9),
+    .in10(rom_out10),
+    .in11(rom_out11),
+    .in12(rom_out12),
+    .in13(rom_out13),
+    .in14(rom_out14),
+    .in15(rom_out15),
+    .out0(lms_out0),
+    .out1(lms_out1),
+    .out2(lms_out2),
+    .out3(lms_out3),
+    .out4(lms_out4),
+    .out5(lms_out5),
+    .out6(lms_out6),
+    .out7(lms_out7),
+    .out8(lms_out8),
+    .out9(lms_out9),
+    .out10(lms_out10),
+    .out11(lms_out11),
+    .out12(lms_out12),
+    .out13(lms_out13),
+    .out14(lms_out14),
+    .out15(lms_out15)
+    );
     
-        ram ram1(
+    ram ram1(
     .mic_in(dmic_fifo_out),
     .mic_clk(CLK100MHZ),
-    .read_clk(CLK100MHZ),
-    .read_addr0(rom_out0),
-    .read_addr1(rom_out1),// the offset need to do addrb+read addr
-    .read_addr2(rom_out2),
-    .read_addr3(rom_out3),
-    .read_addr4(rom_out4),
-    .read_addr5(rom_out5),
-    .read_addr6(rom_out6),
-    .read_addr7(rom_out7),
-    .read_addr8(rom_out8),
-    .read_addr9(rom_out9),
-    .read_addr10(rom_out10),
-    .read_addr11(rom_out11),
-    .read_addr12(rom_out12),
-    .read_addr13(rom_out13),
-    .read_addr14(rom_out14),
-    .read_addr15(rom_out15),
+    .read_clk(CLK200MHZ),//double check
+    .read_addr0(lms_out0),
+    .read_addr1(lms_out1),// the offset need to do addrb+read addr
+    .read_addr2(lms_out2),
+    .read_addr3(lms_out3),
+    .read_addr4(lms_out4),
+    .read_addr5(lms_out5),
+    .read_addr6(lms_out6),
+    .read_addr7(lms_out7),
+    .read_addr8(lms_out8),
+    .read_addr9(lms_out9),
+    .read_addr10(lms_out10),
+    .read_addr11(lms_out11),
+    .read_addr12(lms_out12),
+    .read_addr13(lms_out13),
+    .read_addr14(lms_out14),
+    .read_addr15(lms_out15),
     .rd_en(output_fifo_wr_en),
     .wr_en(output_fifo_wr_en),    
     .mic_out(ram_out));
    
+    wire [7:0] math_core_1_addr; 
+    wire [15:0] math_core_1_in;
+    wire math_core_1_dout;
+    wire math_core_1_cout;
+    wire lr_clk;
+    assign math_core_1_addr=rom_addr;
+    wire [7:0] math_core_2_addr; 
+    wire [15:0] math_core_2_in;
+    wire math_core_2_dout;
+    wire math_core_2_cout;
+    wire lr_clk2;
+    assign math_core_2_addr=rom_addr1;
+    cu_router cu_router(
+    .clk(CLK100MHZ),
+    .rst(btnC),
+    .ddr_data(ram_out),
+    .sdr_data_0(math_core_1_in),
+    .sdr_data_1(math_core_2_in)
+    );
+      
     adder5bit16way adder16(
-    .in(ram_out),
+    .in(math_core_1_in),
     .out(adder16_out)
     );
     wire [23:0] cic_out;
@@ -344,37 +407,42 @@ module simple_io(
     .ena(output_fifo_wr_en),
     .lr_clk(lr_clk)
     );
-//    wire [7:0] bram_out;
-//        reg [13:0] addra=0;
-    
-//    wire [0:0] dina=0;
-   
-//    wire [0:0] wea=1;
-//    reg [13:0] addrb=1;
-//    wire [0:0] dinb;
-//    wire [0:0] doutb;
-//    wire [0:0] web;
-    
-//    always @(posedge(CLK100MHZ)) begin
-//        addra <= addra+1;
-//        addrb <= addrb+1;
-//    end
-//    assign bram_out[7:1]=  dmic_fifo_out[7:1];  
-//    blk_mem_gen_0 bram0(
-//    .addra(addra),
-//    .clka(CLK100MHZ),
-//    .dina(dmic_fifo_out[0]),
-//    .douta(bram_out[0]),
-//    .wea(wea),
-//    .addrb(addrb),
-//    .clkb(CLK100MHZ),
-//    .dinb(dinb),
-//    .doutb(ram_out[0]),
-//    .web(web)
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+//    math_core math_core_1(
+//    .clk(CLK100MHZ),
+//    .rst(btnC),
+//    .output_fifo_wr_en(output_fifo_wr_en), 
+//    .rom_addr(math_core_1_addr),
+//    .bit_data(math_core_1_in), 
+//    .i2s_out(math_core_1_dout),
+//    .counter_out(math_core_1_cout),
+//    .lr_clk(lr_clk)
 //    );
+    math_core math_core_2(
+    .clk(CLK100MHZ),
+    .rst(btnC),
+    .output_fifo_wr_en(output_fifo_wr_en), 
+    .rom_addr(math_core_2_addr),
+    .bit_data(math_core_2_in), 
+    .i2s_out(math_core_2_dout),
+    .counter_out(math_core_2_cout),
+    .lr_clk(lr_clk2)
+    );  
+   
+    
+
     wire [15:0] output_fifo_in;
 //    assign output_fifo_in = {ram_out[15:6], adder16_out}; 
-      assign output_fifo_in = {ram_out[15:7],counter_out,i2s_out,lr_clk, adder16_out};  
+      assign output_fifo_in = {ram_out[15:7],counter_out,i2s_out,lr_clk, math_core_2_cout,math_core_2_dout,adder16_out[3:0]};  
 //    assign output_fifo_in = ram_out;
     
     fifo_generator_0 output_fifo (

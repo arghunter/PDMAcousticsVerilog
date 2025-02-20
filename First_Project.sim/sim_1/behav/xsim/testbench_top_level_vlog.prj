@@ -22,11 +22,17 @@ verilog xil_defaultlib  --include "../../../../First_Project.ip_user_files/ipsta
 "../../../../First_Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v" \
 "../../../../First_Project.srcs/sources_1/new/adder5bit16way.v" \
 "../../../../First_Project.srcs/sources_1/new/cic.v" \
+"../../../../First_Project.srcs/sources_1/new/cu_router.v" \
 "../../../../First_Project.srcs/sources_1/new/ddr_to_sdr.v" \
 "../../../../First_Project.srcs/sources_1/new/differentiator.v" \
 "../../../../First_Project.srcs/sources_1/new/i2s_bus.v" \
 "../../../../First_Project.srcs/sources_1/new/integrator.v" \
+"../../../../First_Project.srcs/sources_1/new/lms.v" \
+"../../../../First_Project.srcs/sources_1/new/loader.v" \
+"../../../../First_Project.srcs/sources_1/new/managed_rom.v" \
+"../../../../First_Project.srcs/sources_1/new/math_core.v" \
 "../../../../First_Project.srcs/sources_1/new/multi_ddr_to_sdr.v" \
+"../../../../First_Project.srcs/sources_1/new/mux_flip.v" \
 "../../../../First_Project.srcs/sources_1/new/mux_shift.v" \
 "../../../../First_Project.srcs/sources_1/new/ram.v" \
 "../../../../First_Project.srcs/sources_1/new/rom.v" \
