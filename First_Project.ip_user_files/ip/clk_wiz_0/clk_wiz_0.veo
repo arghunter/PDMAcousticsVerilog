@@ -53,7 +53,6 @@
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
 // clk_out1__12.28916______0.000______50.0______335.213____300.046
-// clk_out2__1020.00000____180.000______50.0______172.359____300.046
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -70,7 +69,6 @@
    (
     // Clock out ports
     .clk_out1(clk_out1),     // output clk_out1
-    .clk_out2(clk_out2),     // output clk_out2
     // Status and control signals
     .reset(reset), // input reset
     .locked(locked),       // output locked
