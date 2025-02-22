@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Fri Feb 21 20:33:16 2025
+| Date             : Sat Feb 22 01:21:59 2025
 | Host             : DEKTOP-MOV670 running 64-bit major release  (build 9200)
 | Command          : report_power -file simple_io_power_routed.rpt -pb simple_io_power_summary_routed.pb -rpx simple_io_power_routed.rpx
 | Design           : simple_io
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.469        |
+| Total On-Chip Power (W)  | 0.441        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.395        |
-| Device Static (W)        | 0.074        |
+| Dynamic (W)              | 0.366        |
+| Device Static (W)        | 0.075        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 82.7         |
-| Junction Temperature (C) | 27.3         |
+| Max Ambient (C)          | 82.8         |
+| Junction Temperature (C) | 27.2         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,20 +52,20 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.024 |        6 |       --- |             --- |
-| Slice Logic    |     0.049 |    16617 |       --- |             --- |
-|   LUT as Logic |     0.045 |     5254 |     20800 |           25.26 |
-|   F7/F8 Muxes  |     0.003 |     2411 |     32600 |            7.40 |
-|   Register     |    <0.001 |     8125 |     41600 |           19.53 |
-|   CARRY4       |    <0.001 |      173 |      8150 |            2.12 |
+| Clocks         |     0.016 |        6 |       --- |             --- |
+| Slice Logic    |     0.049 |     7668 |       --- |             --- |
+|   LUT as Logic |     0.045 |     3771 |     20800 |           18.13 |
+|   CARRY4       |     0.002 |      443 |      8150 |            5.44 |
+|   Register     |     0.002 |     2257 |     41600 |            5.43 |
+|   F7/F8 Muxes  |    <0.001 |       90 |     32600 |            0.28 |
 |   BUFG         |    <0.001 |        3 |        32 |            9.38 |
-|   Others       |     0.000 |      375 |       --- |             --- |
-| Signals        |     0.105 |    11275 |       --- |             --- |
-| Block RAM      |     0.084 |       33 |        50 |           66.00 |
+|   Others       |     0.000 |      394 |       --- |             --- |
+| Signals        |     0.070 |     7233 |       --- |             --- |
+| Block RAM      |     0.098 |       41 |        50 |           82.00 |
 | PLL            |     0.109 |        1 |         5 |           20.00 |
 | I/O            |     0.023 |       24 |       106 |           22.64 |
-| Static Power   |     0.074 |          |           |                 |
-| Total          |     0.469 |          |           |                 |
+| Static Power   |     0.075 |          |           |                 |
+| Total          |     0.441 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.278 |       0.267 |      0.011 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.248 |       0.237 |      0.011 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.068 |       0.055 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.007 |       0.006 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -84,7 +84,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.008 |       0.007 |      0.001 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.009 |       0.008 |      0.001 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
@@ -94,17 +94,17 @@ Table of Contents
 1.3 Confidence Level
 --------------------
 
-+-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
-| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
-+-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
-| Design implementation state | High       | Design is routed                                       |                                                                                                            |
-| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
-| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
-| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
-| Device models               | High       | Device models are Production                           |                                                                                                            |
-|                             |            |                                                        |                                                                                                            |
-| Overall confidence level    | Low        |                                                        |                                                                                                            |
-+-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Medium     | More than 5% of clocks are missing user specification  | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
 
 2. Settings
@@ -147,85 +147,84 @@ Table of Contents
 +----------------------+-----------+
 | Name                 | Power (W) |
 +----------------------+-----------+
-| simple_io            |     0.395 |
-|   big_ram_1          |     0.110 |
-|     msram_0          |     0.005 |
-|       bram           |     0.003 |
-|     msram_1          |     0.006 |
-|       bram           |     0.003 |
-|     msram_10         |     0.009 |
-|       bram           |     0.003 |
-|     msram_11         |     0.006 |
-|       bram           |     0.003 |
-|     msram_12         |     0.014 |
-|       bram           |     0.003 |
-|     msram_13         |     0.006 |
-|       bram           |     0.003 |
-|     msram_14         |     0.006 |
-|       bram           |     0.003 |
-|     msram_15         |     0.005 |
-|       bram           |     0.003 |
-|     msram_2          |     0.007 |
-|       bram           |     0.003 |
+| simple_io            |     0.366 |
+|   adder              |     0.024 |
+|   big_ram_1          |     0.120 |
+|     msram_0          |     0.007 |
+|       bram           |     0.002 |
+|     msram_1          |     0.008 |
+|       bram           |     0.002 |
+|     msram_10         |     0.007 |
+|       bram           |     0.002 |
+|     msram_11         |     0.007 |
+|       bram           |     0.002 |
+|     msram_12         |     0.008 |
+|       bram           |     0.002 |
+|     msram_13         |     0.007 |
+|       bram           |     0.002 |
+|     msram_14         |     0.007 |
+|       bram           |     0.002 |
+|     msram_15         |     0.007 |
+|       bram           |     0.002 |
+|     msram_2          |     0.008 |
+|       bram           |     0.002 |
 |     msram_3          |     0.007 |
-|       bram           |     0.003 |
-|     msram_4          |     0.009 |
-|       bram           |     0.003 |
-|     msram_5          |     0.006 |
-|       bram           |     0.003 |
+|       bram           |     0.002 |
+|     msram_4          |     0.007 |
+|       bram           |     0.002 |
+|     msram_5          |     0.008 |
+|       bram           |     0.002 |
+|     msram_6          |     0.008 |
+|       bram           |     0.002 |
+|     msram_7          |     0.008 |
+|       bram           |     0.002 |
+|     msram_8          |     0.008 |
+|       bram           |     0.002 |
+|     msram_9          |     0.008 |
+|       bram           |     0.002 |
+|   big_ram_2          |     0.073 |
+|     msram_0          |     0.005 |
+|       bram           |     0.004 |
+|     msram_1          |     0.005 |
+|       bram           |     0.004 |
+|     msram_10         |     0.005 |
+|       bram           |     0.004 |
+|     msram_11         |     0.005 |
+|       bram           |     0.004 |
+|     msram_12         |     0.005 |
+|       bram           |     0.004 |
+|     msram_13         |     0.005 |
+|       bram           |     0.004 |
+|     msram_14         |     0.005 |
+|       bram           |     0.004 |
+|     msram_15         |     0.005 |
+|       bram           |     0.004 |
+|     msram_2          |     0.005 |
+|       bram           |     0.004 |
+|     msram_3          |     0.005 |
+|       bram           |     0.004 |
+|     msram_4          |     0.005 |
+|       bram           |     0.004 |
+|     msram_5          |     0.005 |
+|       bram           |     0.004 |
 |     msram_6          |     0.005 |
-|       bram           |     0.003 |
-|     msram_7          |     0.007 |
-|       bram           |     0.003 |
-|     msram_8          |     0.006 |
-|       bram           |     0.003 |
-|     msram_9          |     0.007 |
-|       bram           |     0.003 |
-|   big_ram_2          |     0.041 |
-|     msram_0          |     0.003 |
-|       bram           |     0.002 |
-|     msram_1          |     0.003 |
-|       bram           |     0.002 |
-|     msram_10         |     0.003 |
-|       bram           |     0.002 |
-|     msram_11         |     0.003 |
-|       bram           |     0.002 |
-|     msram_12         |     0.003 |
-|       bram           |     0.002 |
-|     msram_13         |     0.003 |
-|       bram           |     0.002 |
-|     msram_14         |     0.003 |
-|       bram           |     0.002 |
-|     msram_15         |     0.003 |
-|       bram           |     0.002 |
-|     msram_2          |     0.003 |
-|       bram           |     0.002 |
-|     msram_3          |     0.003 |
-|       bram           |     0.002 |
-|     msram_4          |     0.003 |
-|       bram           |     0.002 |
-|     msram_5          |     0.003 |
-|       bram           |     0.002 |
-|     msram_6          |     0.003 |
-|       bram           |     0.002 |
-|     msram_7          |     0.003 |
-|       bram           |     0.002 |
-|     msram_8          |     0.003 |
-|       bram           |     0.002 |
-|     msram_9          |     0.003 |
-|       bram           |     0.002 |
+|       bram           |     0.004 |
+|     msram_7          |     0.005 |
+|       bram           |     0.004 |
+|     msram_8          |     0.005 |
+|       bram           |     0.004 |
+|     msram_9          |     0.005 |
+|       bram           |     0.004 |
 |   cic32b             |     0.002 |
 |   clock_wiz_0        |     0.109 |
 |     inst             |     0.109 |
-|   dmic_fifo          |     0.003 |
-|     U0               |     0.003 |
-|       inst_fifo_gen  |     0.003 |
-|   exp_avg            |     0.079 |
-|   i2s                |     0.003 |
-|   i2s2               |     0.002 |
-|   output_fifo        |     0.003 |
-|     U0               |     0.003 |
-|       inst_fifo_gen  |     0.003 |
+|   dmic_fifo          |     0.004 |
+|     U0               |     0.004 |
+|       inst_fifo_gen  |     0.004 |
+|   exp_avg            |     0.003 |
+|   output_fifo        |     0.004 |
+|     U0               |     0.004 |
+|       inst_fifo_gen  |     0.004 |
 |   u_multi_ddr_to_sdr |     0.002 |
 +----------------------+-----------+
 

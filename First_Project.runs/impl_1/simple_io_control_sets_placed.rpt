@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Fri Feb 21 20:31:30 2025
+| Date         : Sat Feb 22 01:21:04 2025
 | Host         : DEKTOP-MOV670 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file simple_io_control_sets_placed.rpt
 | Design       : simple_io
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |   279 |
-|    Minimum number of control sets                        |   279 |
+| Total control sets                                       |    33 |
+|    Minimum number of control sets                        |    33 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    55 |
+| Unused register locations in slices containing registers |   137 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |   279 |
+| Total control sets |    33 |
 | >= 0 to < 4        |     3 |
 | >= 4 to < 6        |     1 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     1 |
-| >= 10 to < 12      |     0 |
+| >= 10 to < 12      |    16 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |   274 |
+| >= 16              |    12 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             798 |          291 |
-| No           | No                    | Yes                    |             146 |           39 |
-| No           | Yes                   | No                     |              34 |           13 |
-| Yes          | No                    | No                     |             882 |          241 |
-| Yes          | No                    | Yes                    |            6245 |         3127 |
+| No           | No                    | No                     |            1560 |          548 |
+| No           | No                    | Yes                    |             171 |           52 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |             408 |          101 |
+| Yes          | No                    | Yes                    |             100 |           24 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,288 +70,42 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------------------+------------------------------------------------------------------------------------------+-------------------------------------------------------+------------------+----------------+--------------+
-|        Clock Signal        |                                       Enable Signal                                      |                    Set/Reset Signal                   | Slice Load Count | Bel Load Count | Bels / Slice |
-+----------------------------+------------------------------------------------------------------------------------------+-------------------------------------------------------+------------------+----------------+--------------+
-|  clock_wiz_0/inst/clk_out1 |                                                                                          |                                                       |                1 |              1 |         1.00 |
-|  ddr_clk                   |                                                                                          |                                                       |                1 |              1 |         1.00 |
-| ~CLK100MHZ_IBUF_BUFG       |                                                                                          |                                                       |                2 |              3 |         1.50 |
-|  CLK100MHZ_IBUF_BUFG       | output_fifo_wr_en                                                                        | btnC_IBUF                                             |                1 |              5 |         5.00 |
-|  clk0                      |                                                                                          | exp_avg/out_counter_reg[7]_0                          |                4 |              9 |         2.25 |
-|  JC_IBUF__0_BUFG[3]        |                                                                                          | btnC_IBUF                                             |                9 |             21 |         2.33 |
-|  CLK100MHZ_IBUF_BUFG       | output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/E[0] | btnC_IBUF                                             |                5 |             24 |         4.80 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[104]_147                                                             | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[114]_220                                                             | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[115]_244                                                             | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[116]_198                                                             | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[107]_238                                                             | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[102]_200                                                             | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[109]_84                                                              | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[111]_85                                                              | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[105]_202                                                             | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[106]_208                                                             | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[0]_21                                                                | btnC_IBUF                                             |                9 |             24 |         2.67 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[100]_149                                                             | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[108]_199                                                             | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[112]_191                                                             | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[101]_192                                                             | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[10]_45                                                               | btnC_IBUF                                             |                9 |             24 |         2.67 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[103]_154                                                             | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[113]_210                                                             | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[110]_111                                                             | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[12]_46                                                               | btnC_IBUF                                             |                9 |             24 |         2.67 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[15]_115                                                              | btnC_IBUF                                             |                8 |             24 |         3.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[161]_151                                                             | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[165]_227                                                             | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[141]_140                                                             | btnC_IBUF                                             |               15 |             24 |         1.60 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[129]_5                                                               | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[128]_10                                                              | btnC_IBUF                                             |               16 |             24 |         1.50 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[154]_175                                                             | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[123]_211                                                             | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[166]_232                                                             | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[139]_248                                                             | btnC_IBUF                                             |               16 |             24 |         1.50 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[127]_86                                                              | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[137]_34                                                              | btnC_IBUF                                             |               15 |             24 |         1.60 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[148]_118                                                             | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[156]_186                                                             | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[164]_146                                                             | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[167]_156                                                             | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[135]_247                                                             | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[162]_145                                                             | btnC_IBUF                                             |                9 |             24 |         2.67 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[153]_174                                                             | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[168]_144                                                             | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[169]_228                                                             | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[117]_129                                                             | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[120]_207                                                             | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[16]_19                                                               | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[152]_116                                                             | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[126]_108                                                             | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[144]_8                                                               | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[146]_117                                                             | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[151]_130                                                             | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[170]_231                                                             | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[171]_233                                                             | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[140]_31                                                              | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[134]_40                                                              | btnC_IBUF                                             |               15 |             24 |         1.60 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[160]_7                                                               | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[172]_237                                                             | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[173]_82                                                              | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[13]_48                                                               | btnC_IBUF                                             |                7 |             24 |         3.43 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[174]_109                                                             | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[155]_182                                                             | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[133]_32                                                              | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[150]_176                                                             | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[118]_135                                                             | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[147]_249                                                             | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[122]_188                                                             | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[125]_83                                                              | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[119]_155                                                             | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[11]_49                                                               | btnC_IBUF                                             |                9 |             24 |         2.67 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[124]_107                                                             | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[145]_123                                                             | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[149]_173                                                             | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[157]_75                                                              | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[159]_88                                                              | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[136]_30                                                              | btnC_IBUF                                             |               15 |             24 |         1.60 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[163]_250                                                             | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[143]_87                                                              | btnC_IBUF                                             |               15 |             24 |         1.60 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[158]_113                                                             | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[121]_181                                                             | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[131]_35                                                              | btnC_IBUF                                             |               15 |             24 |         1.60 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[130]_9                                                               | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[138]_33                                                              | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[142]_141                                                             | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[14]_47                                                               | btnC_IBUF                                             |                9 |             24 |         2.67 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[132]_29                                                              | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[181]_128                                                             | btnC_IBUF                                             |               15 |             24 |         1.60 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[199]_246                                                             | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[213]_131                                                             | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[18]_18                                                               | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[189]_81                                                              | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[176]_245                                                             | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[182]_134                                                             | btnC_IBUF                                             |               16 |             24 |         1.50 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[186]_187                                                             | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[20]_53                                                               | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[211]_253                                                             | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[216]_205                                                             | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[192]_6                                                               | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[218]_185                                                             | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[196]_37                                                              | btnC_IBUF                                             |               15 |             24 |         1.60 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[188]_106                                                             | btnC_IBUF                                             |               17 |             24 |         1.41 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[198]_197                                                             | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[1]_0                                                                 | btnC_IBUF                                             |                9 |             24 |         2.67 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[201]_203                                                             | btnC_IBUF                                             |               16 |             24 |         1.50 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[21]_56                                                               | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[212]_195                                                             | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[217]_183                                                             | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[194]_39                                                              | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[221]_93                                                              | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[179]_239                                                             | btnC_IBUF                                             |               15 |             24 |         1.60 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[209]_212                                                             | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[206]_105                                                             | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[214]_133                                                             | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[219]_214                                                             | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[215]_213                                                             | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[222]_102                                                             | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[223]_96                                                              | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[207]_95                                                              | btnC_IBUF                                             |               16 |             24 |         1.50 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[224]_152                                                             | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[220]_101                                                             | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[205]_94                                                              | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[204]_196                                                             | btnC_IBUF                                             |               16 |             24 |         1.50 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[17]_2                                                                | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[185]_180                                                             | btnC_IBUF                                             |               17 |             24 |         1.41 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[225]_222                                                             | btnC_IBUF                                             |               15 |             24 |         1.60 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[178]_230                                                             | btnC_IBUF                                             |               16 |             24 |         1.50 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[197]_193                                                             | btnC_IBUF                                             |               15 |             24 |         1.60 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[177]_229                                                             | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[183]_157                                                             | btnC_IBUF                                             |               16 |             24 |         1.50 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[180]_243                                                             | btnC_IBUF                                             |               15 |             24 |         1.60 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[184]_242                                                             | btnC_IBUF                                             |               16 |             24 |         1.50 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[191]_90                                                              | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[195]_251                                                             | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[200]_38                                                              | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[193]_36                                                              | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[190]_110                                                             | btnC_IBUF                                             |               16 |             24 |         1.50 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[19]_59                                                               | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[202]_206                                                             | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[187]_234                                                             | btnC_IBUF                                             |               16 |             24 |         1.50 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[208]_124                                                             | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[175]_89                                                              | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[210]_219                                                             | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[203]_252                                                             | btnC_IBUF                                             |               16 |             24 |         1.50 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[226]_225                                                             | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[229]_159                                                             | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[249]_216                                                             | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[246]_160                                                             | btnC_IBUF                                             |                9 |             24 |         2.67 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[251]_169                                                             | btnC_IBUF                                             |                9 |             24 |         2.67 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[252]_99                                                              | btnC_IBUF                                             |                8 |             24 |         3.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[238]_103                                                             | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[253]_91                                                              | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[228]_194                                                             | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[227]_254                                                             | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[22]_72                                                               | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[236]_100                                                             | btnC_IBUF                                             |               16 |             24 |         1.50 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[241]_240                                                             | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[240]_218                                                             | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[23]_137                                                              | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[242]_241                                                             | btnC_IBUF                                             |                9 |             24 |         2.67 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[248]_184                                                             | btnC_IBUF                                             |                9 |             24 |         2.67 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[235]_224                                                             | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[237]_92                                                              | btnC_IBUF                                             |               16 |             24 |         1.50 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[24]_54                                                               | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[250]_217                                                             | btnC_IBUF                                             |                8 |             24 |         3.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[247]_168                                                             | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[243]_215                                                             | btnC_IBUF                                             |                8 |             24 |         3.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[230]_161                                                             | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[231]_223                                                             | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[244]_132                                                             | btnC_IBUF                                             |                9 |             24 |         2.67 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[245]_158                                                             | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[233]_235                                                             | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[232]_204                                                             | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[239]_97                                                              | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[234]_236                                                             | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[43]_167                                                              | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[44]_62                                                               | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[45]_138                                                              | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[30]_136                                                              | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[2]_20                                                                | btnC_IBUF                                             |                9 |             24 |         2.67 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[38]_71                                                               | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[254]_104                                                             | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[29]_125                                                              | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[33]_3                                                                | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[35]_66                                                               | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[255]_98                                                              | btnC_IBUF                                             |                9 |             24 |         2.67 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[28]_55                                                               | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[31]_73                                                               | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[25]_58                                                               | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[32]_17                                                               | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[36]_60                                                               | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[26]_57                                                               | btnC_IBUF                                             |                9 |             24 |         2.67 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[27]_255                                                              | btnC_IBUF                                             |                8 |             24 |         3.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[37]_63                                                               | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[34]_16                                                               | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[39]_164                                                              | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[3]_1                                                                 | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[40]_61                                                               | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[41]_65                                                               | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[42]_64                                                               | btnC_IBUF                                             |               15 |             24 |         1.60 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[52]_68                                                               | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[71]_201                                                              | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[48]_15                                                               | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[72]_23                                                               | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[69]_25                                                               | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[86]_178                                                              | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[88]_119                                                              | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[8]_44                                                                | btnC_IBUF                                             |                9 |             24 |         2.67 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[61]_77                                                               | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[91]_179                                                              | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[64]_14                                                               | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[92]_189                                                              | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[93]_76                                                               | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[94]_112                                                              | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[95]_80                                                               | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[96]_11                                                               | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[51]_170                                                              | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[97]_150                                                              | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[98]_148                                                              | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[99]_226                                                              | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[90]_177                                                              | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[9]_50                                                                | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[66]_13                                                               | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[4]_42                                                                | btnC_IBUF                                             |                8 |             24 |         3.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[68]_22                                                               | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[60]_162                                                              | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[6]_43                                                                | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[74]_26                                                               | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[46]_143                                                              | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[59]_190                                                              | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[75]_209                                                              | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[57]_165                                                              | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[70]_41                                                               | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[82]_120                                                              | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[53]_153                                                              | btnC_IBUF                                             |               15 |             24 |         1.60 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[65]_4                                                                | btnC_IBUF                                             |                8 |             24 |         3.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[76]_24                                                               | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[78]_142                                                              | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[7]_51                                                                | btnC_IBUF                                             |                8 |             24 |         3.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[49]_67                                                               | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[73]_27                                                               | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[80]_12                                                               | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[62]_114                                                              | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[77]_139                                                              | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[50]_70                                                               | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[58]_166                                                              | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[54]_163                                                              | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[63]_78                                                               | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[47]_74                                                               | btnC_IBUF                                             |               15 |             24 |         1.60 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[5]_52                                                                | btnC_IBUF                                             |                9 |             24 |         2.67 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[55]_126                                                              | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[67]_28                                                               | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[79]_79                                                               | btnC_IBUF                                             |               13 |             24 |         1.85 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[81]_122                                                              | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[56]_69                                                               | btnC_IBUF                                             |               14 |             24 |         1.71 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[84]_121                                                              | btnC_IBUF                                             |               11 |             24 |         2.18 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[85]_171                                                              | btnC_IBUF                                             |               15 |             24 |         1.60 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[89]_172                                                              | btnC_IBUF                                             |               10 |             24 |         2.40 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[83]_221                                                              | btnC_IBUF                                             |               12 |             24 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG       | exp_avg/ema_reg_reg[87]_127                                                              | btnC_IBUF                                             |               15 |             24 |         1.60 |
-|  CLK100MHZ_IBUF_BUFG       | dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/E[0]   | btnC_IBUF                                             |                5 |             24 |         4.80 |
-|  JC_IBUF__0_BUFG[3]        | output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/E[0] | btnC_IBUF                                             |                6 |             24 |         4.00 |
-|  JC_IBUF__0_BUFG[3]        | dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/E[0]   | btnC_IBUF                                             |                5 |             24 |         4.80 |
-|  clk0                      |                                                                                          | i2s2/mux_shift_inst[1].u_mux_shift/out_counter_reg[7] |                9 |             25 |         2.78 |
-|  clk0                      |                                                                                          |                                                       |               14 |             32 |         2.29 |
-|  lr_clk_BUFG               |                                                                                          |                                                       |               20 |             46 |         2.30 |
-|  CLK100MHZ_IBUF_BUFG       |                                                                                          | btnC_IBUF                                             |               17 |             47 |         2.76 |
-|  CLK100MHZ_IBUF_BUFG       | big_ram_1/msram_0/rom_addr0                                                              |                                                       |               31 |             52 |         1.68 |
-|  JC_IBUF__0_BUFG[3]        |                                                                                          |                                                       |               16 |             64 |         4.00 |
-| ~clk0                      |                                                                                          |                                                       |               27 |             64 |         2.37 |
-|  lr_clk__0_BUFG            |                                                                                          | btnC_IBUF                                             |               13 |             78 |         6.00 |
-|  CLK100MHZ_IBUF_BUFG       | freeze2                                                                                  |                                                       |               38 |            175 |         4.61 |
-|  CLK100MHZ_IBUF_BUFG       | freeze1                                                                                  |                                                       |               44 |            175 |         3.98 |
-|  CLK100MHZ_IBUF_BUFG       | big_ram_1/msram_15/wea[0]                                                                |                                                       |               64 |            240 |         3.75 |
-|  CLK100MHZ_IBUF_BUFG       | big_ram_2/msram_15/wea[0]                                                                |                                                       |               64 |            240 |         3.75 |
-|  CLK100MHZ_IBUF_BUFG       |                                                                                          |                                                       |              210 |            587 |         2.80 |
-+----------------------------+------------------------------------------------------------------------------------------+-------------------------------------------------------+------------------+----------------+--------------+
++----------------------------+------------------------------------------------------------------------------------------+------------------+------------------+----------------+--------------+
+|        Clock Signal        |                                       Enable Signal                                      | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------------+------------------------------------------------------------------------------------------+------------------+------------------+----------------+--------------+
+|  ddr_clk                   |                                                                                          |                  |                1 |              1 |         1.00 |
+|  clock_wiz_0/inst/clk_out1 |                                                                                          |                  |                1 |              1 |         1.00 |
+| ~CLK100MHZ_IBUF_BUFG       |                                                                                          |                  |                3 |              3 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG       | output_fifo_wr_en                                                                        | btnC_IBUF        |                1 |              4 |         4.00 |
+|  lr_clk_BUFG               | output_fifo_wr_en                                                                        |                  |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG       | big_ram_2/msram_5/start_addr[9]_i_1__4_n_0                                               |                  |                2 |             10 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG       | big_ram_2/msram_6/start_addr[9]_i_1__5_n_0                                               |                  |                2 |             10 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG       | big_ram_2/msram_8/start_addr[9]_i_1__7_n_0                                               |                  |                2 |             10 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG       | big_ram_2/msram_9/start_addr[9]_i_1__8_n_0                                               |                  |                2 |             10 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG       | big_ram_2/msram_15/start_addr[9]_i_1__14_n_0                                             |                  |                2 |             10 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG       | big_ram_2/msram_0/start_addr[9]_i_1_n_0                                                  |                  |                2 |             10 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG       | big_ram_2/msram_1/start_addr[9]_i_1__0_n_0                                               |                  |                2 |             10 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG       | big_ram_2/msram_10/start_addr[9]_i_1__9_n_0                                              |                  |                3 |             10 |         3.33 |
+|  CLK100MHZ_IBUF_BUFG       | big_ram_2/msram_11/start_addr[9]_i_1__10_n_0                                             |                  |                2 |             10 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG       | big_ram_2/msram_12/start_addr[9]_i_1__11_n_0                                             |                  |                3 |             10 |         3.33 |
+|  CLK100MHZ_IBUF_BUFG       | big_ram_2/msram_13/start_addr[9]_i_1__12_n_0                                             |                  |                3 |             10 |         3.33 |
+|  CLK100MHZ_IBUF_BUFG       | big_ram_2/msram_14/start_addr[9]_i_1__13_n_0                                             |                  |                2 |             10 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG       | big_ram_2/msram_7/start_addr[9]_i_1__6_n_0                                               |                  |                2 |             10 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG       | big_ram_2/msram_2/start_addr[9]_i_1__1_n_0                                               |                  |                2 |             10 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG       | big_ram_2/msram_3/start_addr[9]_i_1__2_n_0                                               |                  |                2 |             10 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG       | big_ram_2/msram_4/start_addr[9]_i_1__3_n_0                                               |                  |                2 |             10 |         5.00 |
+|  JC_IBUF__0_BUFG[3]        |                                                                                          | btnC_IBUF        |                7 |             21 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG       | dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/E[0]   | btnC_IBUF        |                5 |             24 |         4.80 |
+|  CLK100MHZ_IBUF_BUFG       | output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/E[0] | btnC_IBUF        |                7 |             24 |         3.43 |
+|  JC_IBUF__0_BUFG[3]        | dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/E[0]   | btnC_IBUF        |                6 |             24 |         4.00 |
+|  JC_IBUF__0_BUFG[3]        | output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/E[0] | btnC_IBUF        |                5 |             24 |         4.80 |
+| ~clk0                      |                                                                                          |                  |               20 |             64 |         3.20 |
+|  JC_IBUF__0_BUFG[3]        |                                                                                          |                  |               16 |             64 |         4.00 |
+|  clk0                      |                                                                                          |                  |               20 |             66 |         3.30 |
+|  CLK100MHZ_IBUF_BUFG       |                                                                                          | btnC_IBUF        |               21 |             72 |         3.43 |
+|  data_reg[23]_i_1_n_0      |                                                                                          | btnC_IBUF        |               24 |             78 |         3.25 |
+|  CLK100MHZ_IBUF_BUFG       | output_fifo_wr_en                                                                        |                  |               64 |            240 |         3.75 |
+|  CLK100MHZ_IBUF_BUFG       |                                                                                          |                  |              487 |           1361 |         2.79 |
++----------------------------+------------------------------------------------------------------------------------------+------------------+------------------+----------------+--------------+
 
 
