@@ -38,7 +38,7 @@ module exponential_avg #(parameter ALPHA_SHIFT = 4) (  // ALPHA_SHIFT controls s
                 ema_reg[i] <= 0;
             end
         end else begin
-            ema_reg[addr] <= ema_reg[addr] - (ema_reg[addr] >> ALPHA_SHIFT) + (data_in >> ALPHA_SHIFT);
+            ema_reg[addr] <= (((data_in[23]) ? -data_in : data_in));
         end
     end
 

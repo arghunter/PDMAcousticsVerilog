@@ -121,22 +121,22 @@ module simple_io(
 
     );
 
-    assign dmic_fifo_in[0] = sdr_data_0[0];
-    assign dmic_fifo_in[1] = sdr_data_1[0];
-    assign dmic_fifo_in[2] = sdr_data_0[1];
-    assign dmic_fifo_in[3] = sdr_data_1[1];
-    assign dmic_fifo_in[4] = sdr_data_0[2];
-    assign dmic_fifo_in[5] = sdr_data_1[2];
-    assign dmic_fifo_in[6] = sdr_data_0[3];
-    assign dmic_fifo_in[7] = sdr_data_1[3];
-    assign dmic_fifo_in[8] = sdr_data_0[4];
-    assign dmic_fifo_in[9] = sdr_data_1[4];
-    assign dmic_fifo_in[10] = sdr_data_0[5];
-    assign dmic_fifo_in[11] = sdr_data_1[5];
-    assign dmic_fifo_in[12] = sdr_data_0[6];
-    assign dmic_fifo_in[13] = sdr_data_1[6];
-    assign dmic_fifo_in[14] = sdr_data_0[7];
-    assign dmic_fifo_in[15] = sdr_data_1[7];
+//    assign dmic_fifo_in[0] = sdr_data_0[0];
+//    assign dmic_fifo_in[1] = sdr_data_1[0];
+//    assign dmic_fifo_in[2] = sdr_data_0[1];
+//    assign dmic_fifo_in[3] = sdr_data_1[1];
+//    assign dmic_fifo_in[4] = sdr_data_0[2];
+//    assign dmic_fifo_in[5] = sdr_data_1[2];
+//    assign dmic_fifo_in[6] = sdr_data_0[3];
+//    assign dmic_fifo_in[7] = sdr_data_1[3];
+//    assign dmic_fifo_in[8] = sdr_data_0[4];
+//    assign dmic_fifo_in[9] = sdr_data_1[4];
+//    assign dmic_fifo_in[10] = sdr_data_0[5];
+//    assign dmic_fifo_in[11] = sdr_data_1[5];
+//    assign dmic_fifo_in[12] = sdr_data_0[6];
+//    assign dmic_fifo_in[13] = sdr_data_1[6];
+//    assign dmic_fifo_in[14] = sdr_data_0[7];
+//    assign dmic_fifo_in[15] = sdr_data_1[7];
 //    assign dmic_fifo_in[0] = sdr_data_0[0];
 //    assign dmic_fifo_in[1] = sdr_data_0[0];
 //    assign dmic_fifo_in[2] = sdr_data_0[0];
@@ -153,22 +153,22 @@ module simple_io(
 //    assign dmic_fifo_in[13] = sdr_data_0[0];
 //    assign dmic_fifo_in[14] = sdr_data_0[0];
 //    assign dmic_fifo_in[15] = sdr_data_0[0];
-//    assign dmic_fifo_in[0] = 1;
-//    assign dmic_fifo_in[1] = 1;
-//    assign dmic_fifo_in[2] = 1;
-//    assign dmic_fifo_in[3] = 1;
-//    assign dmic_fifo_in[4] = 1;
-//    assign dmic_fifo_in[5] = 1;
-//    assign dmic_fifo_in[6] = 1;
-//    assign dmic_fifo_in[7] = 1;
-//    assign dmic_fifo_in[8] = 1;
-//    assign dmic_fifo_in[9] = 0;
-//    assign dmic_fifo_in[10] = 0;
-//    assign dmic_fifo_in[11] = 0;
-//    assign dmic_fifo_in[12] = 0;
-//    assign dmic_fifo_in[13] = 0;
-//    assign dmic_fifo_in[14] = 0;
-//    assign dmic_fifo_in[15] = 0;
+    assign dmic_fifo_in[0] = 1;
+    assign dmic_fifo_in[1] = 1;
+    assign dmic_fifo_in[2] = 1;
+    assign dmic_fifo_in[3] = 1;
+    assign dmic_fifo_in[4] = 1;
+    assign dmic_fifo_in[5] = 1;
+    assign dmic_fifo_in[6] = 1;
+    assign dmic_fifo_in[7] = 1;
+    assign dmic_fifo_in[8] = 1;
+    assign dmic_fifo_in[9] = 0;
+    assign dmic_fifo_in[10] = 0;
+    assign dmic_fifo_in[11] = 0;
+    assign dmic_fifo_in[12] = 0;
+    assign dmic_fifo_in[13] = 0;
+    assign dmic_fifo_in[14] = 0;
+    assign dmic_fifo_in[15] = 0;
     assign dmic_fifo_rd_en =  (!dmic_fifo_empty) & (!output_fifo_full);
     
 
@@ -398,17 +398,17 @@ module simple_io(
     .out(cic_out)
     );
     
-    wire [23:0] exp_avg_out;
+    wire [23:0] exp_avg_out=158;
     reg [7:0]out_counter=0;
-    exponential_avg exp_avg(
-    .clk(CLK100MHZ),
-    .rst(btnC),
-    .data_in(cic_out),
-    .addr(rom_addr),
-    .addr_out(out_counter),
-    .avg_out(exp_avg_out)
+//    exponential_avg exp_avg(
+//    .clk(CLK100MHZ),
+//    .rst(btnC),
+//    .data_in(cic_out),
+//    .addr(rom_addr),
+//    .addr_out(out_counter),
+//    .avg_out(exp_avg_out)
 
-    );
+//    );
     wire [31:0] extended_cic_out  = {{8{exp_avg_out[23]}}, exp_avg_out}; // this is messed up in some way nvnmmd fixed that
     
     wire lr_clk2;

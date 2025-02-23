@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="serial_testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="serial_testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="15,819,362.329 ns"></ZoomStartTime>
+      <ZoomEndTime time="15,820,518.358 ns"></ZoomEndTime>
+      <Cursor1Time time="15,819,555.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="146"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="22" />
+   <wvobject fp_name="/serial_testbench/uut/CLK100MHZ" type="logic">
+      <obj_property name="ElementShortName">CLK100MHZ</obj_property>
+      <obj_property name="ObjectShortName">CLK100MHZ</obj_property>
+   </wvobject>
+   <wvobject fp_name="/serial_testbench/uut/btnC" type="logic">
+      <obj_property name="ElementShortName">btnC</obj_property>
+      <obj_property name="ObjectShortName">btnC</obj_property>
+   </wvobject>
+   <wvobject fp_name="/serial_testbench/uut/RsRx" type="logic">
+      <obj_property name="ElementShortName">RsRx</obj_property>
+      <obj_property name="ObjectShortName">RsRx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/serial_testbench/uut/RsTx" type="logic">
+      <obj_property name="ElementShortName">RsTx</obj_property>
+      <obj_property name="ObjectShortName">RsTx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/serial_testbench/uut/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/serial_testbench/uut/rx" type="logic">
+      <obj_property name="ElementShortName">rx</obj_property>
+      <obj_property name="ObjectShortName">rx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/serial_testbench/uut/tx" type="logic">
+      <obj_property name="ElementShortName">tx</obj_property>
+      <obj_property name="ObjectShortName">tx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/serial_testbench/uut/data_to_send" type="array">
+      <obj_property name="ElementShortName">data_to_send[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_to_send[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/serial_testbench/uut/send" type="logic">
+      <obj_property name="ElementShortName">send</obj_property>
+      <obj_property name="ObjectShortName">send</obj_property>
+   </wvobject>
+   <wvobject fp_name="/serial_testbench/uut/busy" type="logic">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/serial_testbench/uut/my_uart_tx/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/serial_testbench/uut/my_uart_tx/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/serial_testbench/uut/my_uart_tx/data" type="array">
+      <obj_property name="ElementShortName">data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/serial_testbench/uut/my_uart_tx/send" type="logic">
+      <obj_property name="ElementShortName">send</obj_property>
+      <obj_property name="ObjectShortName">send</obj_property>
+   </wvobject>
+   <wvobject fp_name="/serial_testbench/uut/my_uart_tx/tx" type="logic">
+      <obj_property name="ElementShortName">tx</obj_property>
+      <obj_property name="ObjectShortName">tx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/serial_testbench/uut/my_uart_tx/busy" type="logic">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/serial_testbench/uut/my_uart_tx/baud_counter" type="array">
+      <obj_property name="ElementShortName">baud_counter[15:0]</obj_property>
+      <obj_property name="ObjectShortName">baud_counter[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/serial_testbench/uut/my_uart_tx/shift_reg" type="array">
+      <obj_property name="ElementShortName">shift_reg[9:0]</obj_property>
+      <obj_property name="ObjectShortName">shift_reg[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/serial_testbench/uut/my_uart_tx/bit_index" type="array">
+      <obj_property name="ElementShortName">bit_index[3:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_index[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/serial_testbench/uut/my_uart_tx/CLK_FREQ" type="array">
+      <obj_property name="ElementShortName">CLK_FREQ[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_FREQ[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/serial_testbench/uut/my_uart_tx/BAUD_RATE" type="array">
+      <obj_property name="ElementShortName">BAUD_RATE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BAUD_RATE[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/serial_testbench/uut/my_uart_tx/BAUD_TICK" type="array">
+      <obj_property name="ElementShortName">BAUD_TICK[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BAUD_TICK[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>
