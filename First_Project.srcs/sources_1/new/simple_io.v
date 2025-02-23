@@ -29,7 +29,9 @@ module simple_io(
     output wire vauxp7,
     output wire vauxp15,
     input wire CLK100MHZ,
-    input wire btnC//rst
+    input wire btnC,//rst
+    output wire RsTx,
+    input wire [0:0] sw
     );
     wire clock;// 0 deg
 
@@ -121,22 +123,22 @@ module simple_io(
 
     );
 
-//    assign dmic_fifo_in[0] = sdr_data_0[0];
-//    assign dmic_fifo_in[1] = sdr_data_1[0];
-//    assign dmic_fifo_in[2] = sdr_data_0[1];
-//    assign dmic_fifo_in[3] = sdr_data_1[1];
-//    assign dmic_fifo_in[4] = sdr_data_0[2];
-//    assign dmic_fifo_in[5] = sdr_data_1[2];
-//    assign dmic_fifo_in[6] = sdr_data_0[3];
-//    assign dmic_fifo_in[7] = sdr_data_1[3];
-//    assign dmic_fifo_in[8] = sdr_data_0[4];
-//    assign dmic_fifo_in[9] = sdr_data_1[4];
-//    assign dmic_fifo_in[10] = sdr_data_0[5];
-//    assign dmic_fifo_in[11] = sdr_data_1[5];
-//    assign dmic_fifo_in[12] = sdr_data_0[6];
-//    assign dmic_fifo_in[13] = sdr_data_1[6];
-//    assign dmic_fifo_in[14] = sdr_data_0[7];
-//    assign dmic_fifo_in[15] = sdr_data_1[7];
+    assign dmic_fifo_in[0] = sdr_data_0[0];
+    assign dmic_fifo_in[1] = sdr_data_1[0];
+    assign dmic_fifo_in[2] = sdr_data_0[1];
+    assign dmic_fifo_in[3] = sdr_data_1[1];
+    assign dmic_fifo_in[4] = sdr_data_0[2];
+    assign dmic_fifo_in[5] = sdr_data_1[2];
+    assign dmic_fifo_in[6] = sdr_data_0[3];
+    assign dmic_fifo_in[7] = sdr_data_1[3];
+    assign dmic_fifo_in[8] = sdr_data_0[4];
+    assign dmic_fifo_in[9] = sdr_data_1[4];
+    assign dmic_fifo_in[10] = sdr_data_0[5];
+    assign dmic_fifo_in[11] = sdr_data_1[5];
+    assign dmic_fifo_in[12] = sdr_data_0[6];
+    assign dmic_fifo_in[13] = sdr_data_1[6];
+    assign dmic_fifo_in[14] = sdr_data_0[7];
+    assign dmic_fifo_in[15] = sdr_data_1[7];
 //    assign dmic_fifo_in[0] = sdr_data_0[0];
 //    assign dmic_fifo_in[1] = sdr_data_0[0];
 //    assign dmic_fifo_in[2] = sdr_data_0[0];
@@ -153,22 +155,22 @@ module simple_io(
 //    assign dmic_fifo_in[13] = sdr_data_0[0];
 //    assign dmic_fifo_in[14] = sdr_data_0[0];
 //    assign dmic_fifo_in[15] = sdr_data_0[0];
-    assign dmic_fifo_in[0] = 1;
-    assign dmic_fifo_in[1] = 1;
-    assign dmic_fifo_in[2] = 1;
-    assign dmic_fifo_in[3] = 1;
-    assign dmic_fifo_in[4] = 1;
-    assign dmic_fifo_in[5] = 1;
-    assign dmic_fifo_in[6] = 1;
-    assign dmic_fifo_in[7] = 1;
-    assign dmic_fifo_in[8] = 1;
-    assign dmic_fifo_in[9] = 0;
-    assign dmic_fifo_in[10] = 0;
-    assign dmic_fifo_in[11] = 0;
-    assign dmic_fifo_in[12] = 0;
-    assign dmic_fifo_in[13] = 0;
-    assign dmic_fifo_in[14] = 0;
-    assign dmic_fifo_in[15] = 0;
+//    assign dmic_fifo_in[0] = 1;
+//    assign dmic_fifo_in[1] = 1;
+//    assign dmic_fifo_in[2] = 1;
+//    assign dmic_fifo_in[3] = 1;
+//    assign dmic_fifo_in[4] = 1;
+//    assign dmic_fifo_in[5] = 1;
+//    assign dmic_fifo_in[6] = 1;
+//    assign dmic_fifo_in[7] = 1;
+//    assign dmic_fifo_in[8] = 1;
+//    assign dmic_fifo_in[9] = 0;
+//    assign dmic_fifo_in[10] = 0;
+//    assign dmic_fifo_in[11] = 0;
+//    assign dmic_fifo_in[12] = 0;
+//    assign dmic_fifo_in[13] = 0;
+//    assign dmic_fifo_in[14] = 0;
+//    assign dmic_fifo_in[15] = 0;
     assign dmic_fifo_rd_en =  (!dmic_fifo_empty) & (!output_fifo_full);
     
 
@@ -210,27 +212,38 @@ module simple_io(
 //    );
     
     
-    reg  [7:0] rom_addr;
+    reg  [7:0] rom_addr=0;
     wire [31:0] mic_out[15:0];
     wire [31:0] mic_out2[15:0];
     wire [31:0] ram_out[15:0];
     reg freeze1=1;
     reg freeze2=0;
     reg flip=0;
-    always @(posedge CLK100MHZ) begin
-        if(btnC) 
+    reg rom_chg=0;
+    
+    always @(negedge CLK100MHZ) begin
+        if(btnC) begin
             rom_addr<=1;
-    end
-    always @(posedge CLK100MHZ) begin
-        if (done1 || done2) begin
-            rom_addr <= rom_addr + 1;
-            if (rom_addr == 0) begin
-                flip = 1;
+            freeze1<=1;
+            freeze2<=0;
+            flip<=0;
+            
+        end else begin
+            if ((done1 || done2) && !flip) begin
+                rom_addr <= rom_addr + 1;
+                rom_chg<=1;
+                if (rom_addr == 255) begin
+                    flip = 1;
+                end
+            end else begin
+                rom_chg<=0;
             end
             if (flip && (full1 || full2)) begin
                 freeze1 <= !freeze1;
                 freeze2 <= !freeze2;
-                flip=0;
+                flip<=0;
+                rom_chg<=0;
+                rom_addr<=0;
             end
         end
     end
@@ -390,25 +403,43 @@ module simple_io(
         .out(adder_out)
     );
     wire [23:0] cic_out;
+    wire dec_clk;
     cic_32b cic32b(
     .clk(CLK100MHZ),
-    .rst(btnC ),// || counter==0
+    .rst(btnC||done1||done2 ),// || counter==0
     .in(adder_out),
     .ena(1),
-    .out(cic_out)
+    .out(cic_out),
+    .dec_clk(dec_clk)
     );
+    wire [7:0] out_addr;
+    wire [7:0] out_val;
+    avger averager(
+    .clk(dec_clk),
+    .rst(btnC),
+    .rom_addr(rom_addr),
+    .data_in(cic_out),
+    .out_addr(out_addr),
+    .out_val(out_val)
+    );
+    frame_buffer frame_buffer(
+    .clk(CLK100MHZ),
+    .rst(btnC),
+    .data_in(out_val),
+    .addr(out_addr),
+    .tx(RsTx),
+    .flip(flip)
+    );
+    
+    
+    
     
     wire [23:0] exp_avg_out=158;
     reg [7:0]out_counter=0;
-//    exponential_avg exp_avg(
-//    .clk(CLK100MHZ),
-//    .rst(btnC),
-//    .data_in(cic_out),
-//    .addr(rom_addr),
-//    .addr_out(out_counter),
-//    .avg_out(exp_avg_out)
 
-//    );
+
+
+
     wire [31:0] extended_cic_out  = {{8{exp_avg_out[23]}}, exp_avg_out}; // this is messed up in some way nvnmmd fixed that
     
     wire lr_clk2;
@@ -440,76 +471,7 @@ module simple_io(
     
     
     
-//    big_ram big_ram_(
-//    .mic_in(dmic_fifo_out),
-//    .clk(CLK100MHZ),
-//    .freeze(0),
-//    .read_offset_b_0(read_offset_b[0]),
-//    .read_offset_b_1(read_offset_b[1]),
-//    .read_offset_b_2(read_offset_b[2]),
-//    .read_offset_b_3(read_offset_b[3]),
-//    .read_offset_b_4(read_offset_b[4]),
-//    .read_offset_b_5(read_offset_b[5]),
-//    .read_offset_b_6(read_offset_b[6]),
-//    .read_offset_b_7(read_offset_b[7]),
-//    .read_offset_b_8(read_offset_b[8]),
-//    .read_offset_b_9(read_offset_b[9]),
-//    .read_offset_b_10(read_offset_b[10]),
-//    .read_offset_b_11(read_offset_b[11]),
-//    .read_offset_b_12(read_offset_b[12]),
-//    .read_offset_b_13(read_offset_b[13]),
-//    .read_offset_b_14(read_offset_b[14]),
-//    .read_offset_b_15(read_offset_b[15]),
-//    .rd_en(output_fifo_wr_en),
-//    .wr_en(1),    
-//    .mic_out_0(mic_out2[0]),
-//    .mic_out_1(mic_out2[1]),
-//    .mic_out_2(mic_out2[2]),
-//    .mic_out_3(mic_out2[3]),
-//    .mic_out_4(mic_out2[4]),
-//    .mic_out_5(mic_out2[5]),
-//    .mic_out_6(mic_out2[6]),
-//    .mic_out_7(mic_out2[7]),
-//    .mic_out_8(mic_out2[8]),
-//    .mic_out_9(mic_out2[9]),
-//    .mic_out_10(mic_out2[10]),
-//    .mic_out_11(mic_out2[11]),
-//    .mic_out_12(mic_out2[12]),
-//    .mic_out_13(mic_out2[13]),
-//    .mic_out_14(mic_out2[14]),
-//    .mic_out_15(mic_out2[15]),
-//    .done_out(done)
-    
-//    );
-  
-//    wire [7:0] bram_out;
-//        reg [13:0] addra=0;
-    
-//    wire [0:0] dina=0;
-   
-//    wire [0:0] wea=1;
-//    reg [13:0] addrb=1;
-//    wire [0:0] dinb;
-//    wire [0:0] doutb;
-//    wire [0:0] web;
-    
-//    always @(posedge(CLK100MHZ)) begin
-//        addra <= addra+1;
-//        addrb <= addrb+1;
-//    end
-//    assign bram_out[7:1]=  dmic_fifo_out[7:1];  
-//    blk_mem_gen_0 bram0(
-//    .addra(addra),
-//    .clka(CLK100MHZ),
-//    .dina(dmic_fifo_out[0]),
-//    .douta(bram_out[0]),
-//    .wea(wea),
-//    .addrb(addrb),
-//    .clkb(CLK100MHZ),
-//    .dinb(dinb),
-//    .doutb(ram_out[0]),
-//    .web(web)
-//    );
+
     wire [15:0] output_fifo_in;
 //    assign output_fifo_in = {ram_out[15:6], adder16_out}; 
       assign output_fifo_in = {dmic_fifo_out[15:7],core_cout,core_dout,lr_clk, adder16_out};  
@@ -538,153 +500,21 @@ module simple_io(
     
     
     
-    
-    
-    
-    
-    
-//    wire [7:0] ram_out;
-   
-//    wire [7:0] ram_in;
 
-//    assign ram_in[0]=JC[1];
-//    assign ram_in[1]=JC[5];
-//    assign ram_in[2]=JC[0];
-//    assign ram_in[3]=JC[4];
-//    assign ram_in[4]=JA[1];
-//    assign ram_in[5]=JA[5];
-//    assign ram_in[6]=JA[0];
-//    assign ram_in[7]=JA[4];
-    
-    
-//    reg [11:0] addra=0;
-    
-//    wire [0:0] dina=0;
-   
-//    wire [0:0] wea=1;
-//    reg [11:0] addrb=1;
-//    wire [0:0] dinb;
-//    wire [0:0] doutb;
-//    wire [0:0] web;
-    
-//    always @(posedge(ddr_clk)) begin
-//        addra <= addra+1;
-//        addrb <= addrb+1;
-//    end
-
-//    blk_mem_gen_0 bram1(
-//    .addra(addra),
-//    .clka(ddr_clk),
-//    .dina(ram_in[1]),
-//    .douta(douta[1]),
-//    .wea(wea),
-//    .addrb(addrb),
-//    .clkb(ddr_clk),
-//    .dinb(dinb),
-//    .doutb(ram_out[1]),
-//    .web(web)
-//    );
-//    blk_mem_gen_0 bram2(
-//    .addra(addra),
-//    .clka(ddr_clk),
-//    .dina(ram_in[2]),
-//    .douta(douta[2]),
-//    .wea(wea),
-//    .addrb(addrb),
-//    .clkb(ddr_clk),
-//    .dinb(dinb),
-//    .doutb(ram_out[2]),
-//    .web(web)
-//    );
-//    blk_mem_gen_0 bram3(
-//    .addra(addra),
-//    .clka(ddr_clk),
-//    .dina(ram_in[3]),
-//    .douta(douta[3]),
-//    .wea(wea),
-//    .addrb(addrb),
-//    .clkb(ddr_clk),
-//    .dinb(dinb),
-//    .doutb(ram_out[3]),
-//    .web(web)
-//    );
-//    blk_mem_gen_0 bram4(
-//    .addra(addra),
-//    .clka(ddr_clk),
-//    .dina(ram_in[4]),
-//    .douta(douta[4]),
-//    .wea(wea),
-//    .addrb(addrb),
-//    .clkb(ddr_clk),
-//    .dinb(dinb),
-//    .doutb(ram_out[4]),
-//    .web(web)
-//    );
-//    blk_mem_gen_0 bram5(
-//    .addra(addra),
-//    .clka(ddr_clk),
-//    .dina(ram_in[5]),
-//    .douta(douta[5]),
-//    .wea(wea),
-//    .addrb(addrb),
-//    .clkb(ddr_clk),
-//    .dinb(dinb),
-//    .doutb(ram_out[5]),
-//    .web(web)
-//    );
-//    blk_mem_gen_0 bram6(
-//    .addra(addra),
-//    .clka(ddr_clk),
-//    .dina(ram_in[6]),
-//    .douta(douta[6]),
-//    .wea(wea),
-//    .addrb(addrb),
-//    .clkb(ddr_clk),
-//    .dinb(dinb),
-//    .doutb(ram_out[6]),
-//    .web(web)
-//    );
-
-    
-    
-//    assign ram_out=ram_in;
-
-//    ram ram1(
-//    .mic_in(ram_in),
-//    .mic_clk(ram_clk),
-//    .read_clk(ram_clk),
-//    .read_addr0(0),
-//    .read_addr1(0),// the offset need to do addrb+read addr
-//    .read_addr2(0),
-//    .read_addr3(0),
-//    .read_addr4(0),
-//    .read_addr5(0),
-//    .read_addr6(0),
-//    .read_addr7(0),
-////    .read_addr8(0),
-////    .read_addr9(0),
-////    .read_addr10(0),
-////    .read_addr11(0),
-////    .read_addr12(0),
-////    .read_addr13(0),
-////    .read_addr14(0),
-////    .read_addr15(0),    
-//    .mic_out(ram_out));
-// need enables
 
    
 //    assign JB[7]=JA[0];
     
-    assign JB[4]=~mic_clk;
+    assign JB[4]=flip;
 //    assign JC[3]=mic_clk;
     assign JC[3]=mic_clk;
-    assign JB[0]=output_fifo_out[0];
-    assign JB[1]=output_fifo_out[1];
-    assign JB[2]=output_fifo_out[2];
-    assign JB[3]=output_fifo_out[3];
-    assign JB[5]=output_fifo_out[4];
+    assign JB[0]=full1;
+    assign JB[1]=full2;
+    assign JB[2]=freeze1;
+    assign JB[3]=rom_chg;
+    assign JB[5]=done1;
 //    assign JB[5]=mic_clk;
-    assign JB[6]=output_fifo_out[5];
+    assign JB[6]=done2;
     assign JB[7]=output_fifo_out[6];
     assign vauxp6=output_fifo_out[7];
     assign JA[3]=mic_clk;

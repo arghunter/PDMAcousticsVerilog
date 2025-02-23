@@ -25,7 +25,8 @@ module cic_32b (
     input wire rst,
     input wire [10:0] in,
     input wire ena,
-    output [23:0] out 
+    output wire [23:0] out,
+    output wire dec_clk
 );
 
     wire [23:0] inc_out;
@@ -36,6 +37,7 @@ module cic_32b (
 	wire [23:0] diff_1_out;
 	reg counter;
 	reg lr_clk;
+	assign dec_clk = lr_clk;
 	assign extended_in = {{13{in[5]}}, in}; 
 	
     always @(posedge clk or posedge rst) begin

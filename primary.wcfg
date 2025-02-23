@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="42,745,797.821 ns"></ZoomStartTime>
-      <ZoomEndTime time="42,747,270.424 ns"></ZoomEndTime>
-      <Cursor1Time time="42,745,979.002 ns"></Cursor1Time>
+      <ZoomStartTime time="696,273.400 ns"></ZoomStartTime>
+      <ZoomEndTime time="696,419.901 ns"></ZoomEndTime>
+      <Cursor1Time time="696,319.700 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="150"></NameColumnWidth>
-      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+      <NameColumnWidth column_width="144"></NameColumnWidth>
+      <ValueColumnWidth column_width="62"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="197" />
+   <WVObjectSize size="228" />
    <wvobject fp_name="/testbench_top_level/CLK100MHZ" type="logic">
       <obj_property name="ElementShortName">CLK100MHZ</obj_property>
       <obj_property name="ObjectShortName">CLK100MHZ</obj_property>
@@ -107,10 +107,6 @@
    <wvobject fp_name="/testbench_top_level/dut/dmic_fifo/wr_data_count" type="array">
       <obj_property name="ElementShortName">wr_data_count[7:0]</obj_property>
       <obj_property name="ObjectShortName">wr_data_count[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/output_fifo_out" type="array">
-      <obj_property name="ElementShortName">output_fifo_out[15:0]</obj_property>
-      <obj_property name="ObjectShortName">output_fifo_out[15:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/rom/rom_out0" type="array">
       <obj_property name="ElementShortName">rom_out0[11:0]</obj_property>
@@ -435,14 +431,6 @@
       <obj_property name="ElementShortName">full</obj_property>
       <obj_property name="ObjectShortName">full</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/done" type="array">
-      <obj_property name="ElementShortName">done[15:0]</obj_property>
-      <obj_property name="ObjectShortName">done[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/full_seg" type="array">
-      <obj_property name="ElementShortName">full_seg[15:0]</obj_property>
-      <obj_property name="ObjectShortName">full_seg[15:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/btnC" type="logic">
       <obj_property name="ElementShortName">btnC</obj_property>
       <obj_property name="ObjectShortName">btnC</obj_property>
@@ -607,14 +595,6 @@
       <obj_property name="ElementShortName">full</obj_property>
       <obj_property name="ObjectShortName">full</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/done" type="array">
-      <obj_property name="ElementShortName">done[15:0]</obj_property>
-      <obj_property name="ObjectShortName">done[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/full_seg" type="array">
-      <obj_property name="ElementShortName">full_seg[15:0]</obj_property>
-      <obj_property name="ObjectShortName">full_seg[15:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/start_addr" type="array">
       <obj_property name="ElementShortName">start_addr[9:0]</obj_property>
       <obj_property name="ObjectShortName">start_addr[9:0]</obj_property>
@@ -661,6 +641,7 @@
    <wvobject fp_name="/testbench_top_level/dut/cic32b/out" type="array">
       <obj_property name="ElementShortName">out[23:0]</obj_property>
       <obj_property name="ObjectShortName">out[23:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/cic32b/inc_out" type="array">
       <obj_property name="ElementShortName">inc_out[23:0]</obj_property>
@@ -693,2092 +674,6 @@
    <wvobject fp_name="/testbench_top_level/dut/cic32b/lr_clk" type="logic">
       <obj_property name="ElementShortName">lr_clk</obj_property>
       <obj_property name="ObjectShortName">lr_clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/exp_avg/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/exp_avg/rst" type="logic">
-      <obj_property name="ElementShortName">rst</obj_property>
-      <obj_property name="ObjectShortName">rst</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/exp_avg/data_in" type="array">
-      <obj_property name="ElementShortName">data_in[23:0]</obj_property>
-      <obj_property name="ObjectShortName">data_in[23:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/exp_avg/addr" type="array">
-      <obj_property name="ElementShortName">addr[7:0]</obj_property>
-      <obj_property name="ObjectShortName">addr[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/exp_avg/addr_out" type="array">
-      <obj_property name="ElementShortName">addr_out[7:0]</obj_property>
-      <obj_property name="ObjectShortName">addr_out[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/exp_avg/avg_out" type="array">
-      <obj_property name="ElementShortName">avg_out[23:0]</obj_property>
-      <obj_property name="ObjectShortName">avg_out[23:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg" type="array">
-      <obj_property name="ElementShortName">ema_reg[255:0][23:0]</obj_property>
-      <obj_property name="ObjectShortName">ema_reg[255:0][23:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[255]" type="array">
-         <obj_property name="ElementShortName">[255][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[255][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[254]" type="array">
-         <obj_property name="ElementShortName">[254][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[254][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[253]" type="array">
-         <obj_property name="ElementShortName">[253][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[253][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[252]" type="array">
-         <obj_property name="ElementShortName">[252][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[252][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[251]" type="array">
-         <obj_property name="ElementShortName">[251][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[251][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[250]" type="array">
-         <obj_property name="ElementShortName">[250][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[250][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[249]" type="array">
-         <obj_property name="ElementShortName">[249][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[249][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[248]" type="array">
-         <obj_property name="ElementShortName">[248][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[248][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[247]" type="array">
-         <obj_property name="ElementShortName">[247][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[247][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[246]" type="array">
-         <obj_property name="ElementShortName">[246][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[246][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[245]" type="array">
-         <obj_property name="ElementShortName">[245][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[245][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[244]" type="array">
-         <obj_property name="ElementShortName">[244][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[244][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[243]" type="array">
-         <obj_property name="ElementShortName">[243][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[243][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[242]" type="array">
-         <obj_property name="ElementShortName">[242][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[242][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[241]" type="array">
-         <obj_property name="ElementShortName">[241][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[241][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[240]" type="array">
-         <obj_property name="ElementShortName">[240][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[240][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[239]" type="array">
-         <obj_property name="ElementShortName">[239][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[239][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[238]" type="array">
-         <obj_property name="ElementShortName">[238][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[238][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[237]" type="array">
-         <obj_property name="ElementShortName">[237][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[237][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[236]" type="array">
-         <obj_property name="ElementShortName">[236][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[236][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[235]" type="array">
-         <obj_property name="ElementShortName">[235][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[235][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[234]" type="array">
-         <obj_property name="ElementShortName">[234][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[234][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[233]" type="array">
-         <obj_property name="ElementShortName">[233][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[233][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[232]" type="array">
-         <obj_property name="ElementShortName">[232][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[232][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[231]" type="array">
-         <obj_property name="ElementShortName">[231][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[231][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[230]" type="array">
-         <obj_property name="ElementShortName">[230][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[230][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[229]" type="array">
-         <obj_property name="ElementShortName">[229][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[229][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[228]" type="array">
-         <obj_property name="ElementShortName">[228][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[228][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[227]" type="array">
-         <obj_property name="ElementShortName">[227][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[227][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[226]" type="array">
-         <obj_property name="ElementShortName">[226][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[226][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[225]" type="array">
-         <obj_property name="ElementShortName">[225][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[225][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[224]" type="array">
-         <obj_property name="ElementShortName">[224][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[224][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[223]" type="array">
-         <obj_property name="ElementShortName">[223][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[223][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[222]" type="array">
-         <obj_property name="ElementShortName">[222][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[222][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[221]" type="array">
-         <obj_property name="ElementShortName">[221][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[221][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[220]" type="array">
-         <obj_property name="ElementShortName">[220][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[220][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[219]" type="array">
-         <obj_property name="ElementShortName">[219][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[219][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[218]" type="array">
-         <obj_property name="ElementShortName">[218][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[218][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[217]" type="array">
-         <obj_property name="ElementShortName">[217][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[217][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[216]" type="array">
-         <obj_property name="ElementShortName">[216][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[216][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[215]" type="array">
-         <obj_property name="ElementShortName">[215][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[215][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[214]" type="array">
-         <obj_property name="ElementShortName">[214][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[214][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[213]" type="array">
-         <obj_property name="ElementShortName">[213][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[213][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[212]" type="array">
-         <obj_property name="ElementShortName">[212][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[212][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[211]" type="array">
-         <obj_property name="ElementShortName">[211][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[211][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[210]" type="array">
-         <obj_property name="ElementShortName">[210][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[210][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[209]" type="array">
-         <obj_property name="ElementShortName">[209][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[209][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[208]" type="array">
-         <obj_property name="ElementShortName">[208][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[208][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[207]" type="array">
-         <obj_property name="ElementShortName">[207][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[207][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[206]" type="array">
-         <obj_property name="ElementShortName">[206][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[206][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[205]" type="array">
-         <obj_property name="ElementShortName">[205][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[205][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[204]" type="array">
-         <obj_property name="ElementShortName">[204][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[204][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[203]" type="array">
-         <obj_property name="ElementShortName">[203][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[203][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[202]" type="array">
-         <obj_property name="ElementShortName">[202][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[202][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[201]" type="array">
-         <obj_property name="ElementShortName">[201][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[201][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[200]" type="array">
-         <obj_property name="ElementShortName">[200][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[200][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[199]" type="array">
-         <obj_property name="ElementShortName">[199][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[199][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[198]" type="array">
-         <obj_property name="ElementShortName">[198][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[198][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[197]" type="array">
-         <obj_property name="ElementShortName">[197][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[197][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[196]" type="array">
-         <obj_property name="ElementShortName">[196][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[196][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[195]" type="array">
-         <obj_property name="ElementShortName">[195][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[195][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[194]" type="array">
-         <obj_property name="ElementShortName">[194][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[194][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[193]" type="array">
-         <obj_property name="ElementShortName">[193][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[193][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[192]" type="array">
-         <obj_property name="ElementShortName">[192][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[192][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[191]" type="array">
-         <obj_property name="ElementShortName">[191][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[191][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[190]" type="array">
-         <obj_property name="ElementShortName">[190][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[190][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[189]" type="array">
-         <obj_property name="ElementShortName">[189][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[189][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[188]" type="array">
-         <obj_property name="ElementShortName">[188][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[188][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[187]" type="array">
-         <obj_property name="ElementShortName">[187][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[187][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[186]" type="array">
-         <obj_property name="ElementShortName">[186][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[186][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[185]" type="array">
-         <obj_property name="ElementShortName">[185][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[185][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[184]" type="array">
-         <obj_property name="ElementShortName">[184][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[184][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[183]" type="array">
-         <obj_property name="ElementShortName">[183][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[183][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[182]" type="array">
-         <obj_property name="ElementShortName">[182][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[182][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[181]" type="array">
-         <obj_property name="ElementShortName">[181][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[181][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[180]" type="array">
-         <obj_property name="ElementShortName">[180][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[180][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[179]" type="array">
-         <obj_property name="ElementShortName">[179][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[179][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[178]" type="array">
-         <obj_property name="ElementShortName">[178][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[178][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[177]" type="array">
-         <obj_property name="ElementShortName">[177][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[177][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[176]" type="array">
-         <obj_property name="ElementShortName">[176][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[176][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[175]" type="array">
-         <obj_property name="ElementShortName">[175][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[175][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[174]" type="array">
-         <obj_property name="ElementShortName">[174][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[174][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[173]" type="array">
-         <obj_property name="ElementShortName">[173][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[173][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[172]" type="array">
-         <obj_property name="ElementShortName">[172][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[172][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[171]" type="array">
-         <obj_property name="ElementShortName">[171][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[171][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[170]" type="array">
-         <obj_property name="ElementShortName">[170][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[170][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[169]" type="array">
-         <obj_property name="ElementShortName">[169][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[169][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[168]" type="array">
-         <obj_property name="ElementShortName">[168][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[168][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[167]" type="array">
-         <obj_property name="ElementShortName">[167][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[167][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[166]" type="array">
-         <obj_property name="ElementShortName">[166][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[166][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[165]" type="array">
-         <obj_property name="ElementShortName">[165][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[165][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[164]" type="array">
-         <obj_property name="ElementShortName">[164][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[164][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[163]" type="array">
-         <obj_property name="ElementShortName">[163][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[163][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[162]" type="array">
-         <obj_property name="ElementShortName">[162][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[162][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[161]" type="array">
-         <obj_property name="ElementShortName">[161][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[161][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[160]" type="array">
-         <obj_property name="ElementShortName">[160][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[160][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[159]" type="array">
-         <obj_property name="ElementShortName">[159][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[159][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[158]" type="array">
-         <obj_property name="ElementShortName">[158][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[158][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[157]" type="array">
-         <obj_property name="ElementShortName">[157][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[157][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[156]" type="array">
-         <obj_property name="ElementShortName">[156][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[156][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[155]" type="array">
-         <obj_property name="ElementShortName">[155][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[155][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[154]" type="array">
-         <obj_property name="ElementShortName">[154][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[154][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[153]" type="array">
-         <obj_property name="ElementShortName">[153][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[153][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[152]" type="array">
-         <obj_property name="ElementShortName">[152][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[152][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[151]" type="array">
-         <obj_property name="ElementShortName">[151][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[151][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[150]" type="array">
-         <obj_property name="ElementShortName">[150][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[150][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[149]" type="array">
-         <obj_property name="ElementShortName">[149][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[149][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[148]" type="array">
-         <obj_property name="ElementShortName">[148][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[148][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[147]" type="array">
-         <obj_property name="ElementShortName">[147][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[147][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[146]" type="array">
-         <obj_property name="ElementShortName">[146][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[146][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[145]" type="array">
-         <obj_property name="ElementShortName">[145][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[145][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[144]" type="array">
-         <obj_property name="ElementShortName">[144][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[144][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[143]" type="array">
-         <obj_property name="ElementShortName">[143][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[143][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[142]" type="array">
-         <obj_property name="ElementShortName">[142][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[142][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[141]" type="array">
-         <obj_property name="ElementShortName">[141][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[141][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[140]" type="array">
-         <obj_property name="ElementShortName">[140][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[140][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[139]" type="array">
-         <obj_property name="ElementShortName">[139][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[139][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[138]" type="array">
-         <obj_property name="ElementShortName">[138][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[138][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[137]" type="array">
-         <obj_property name="ElementShortName">[137][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[137][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[136]" type="array">
-         <obj_property name="ElementShortName">[136][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[136][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[135]" type="array">
-         <obj_property name="ElementShortName">[135][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[135][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[134]" type="array">
-         <obj_property name="ElementShortName">[134][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[134][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[133]" type="array">
-         <obj_property name="ElementShortName">[133][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[133][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[132]" type="array">
-         <obj_property name="ElementShortName">[132][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[132][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[131]" type="array">
-         <obj_property name="ElementShortName">[131][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[131][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[130]" type="array">
-         <obj_property name="ElementShortName">[130][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[130][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[129]" type="array">
-         <obj_property name="ElementShortName">[129][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[129][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[128]" type="array">
-         <obj_property name="ElementShortName">[128][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[128][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[127]" type="array">
-         <obj_property name="ElementShortName">[127][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[127][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[126]" type="array">
-         <obj_property name="ElementShortName">[126][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[126][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[125]" type="array">
-         <obj_property name="ElementShortName">[125][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[125][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[124]" type="array">
-         <obj_property name="ElementShortName">[124][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[124][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[123]" type="array">
-         <obj_property name="ElementShortName">[123][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[123][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[122]" type="array">
-         <obj_property name="ElementShortName">[122][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[122][23:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[121]" type="array">
-         <obj_property name="ElementShortName">[121][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[121][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[120]" type="array">
-         <obj_property name="ElementShortName">[120][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[120][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[119]" type="array">
-         <obj_property name="ElementShortName">[119][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[119][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[118]" type="array">
-         <obj_property name="ElementShortName">[118][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[118][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[117]" type="array">
-         <obj_property name="ElementShortName">[117][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[117][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[116]" type="array">
-         <obj_property name="ElementShortName">[116][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[116][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[115]" type="array">
-         <obj_property name="ElementShortName">[115][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[115][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[114]" type="array">
-         <obj_property name="ElementShortName">[114][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[114][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[113]" type="array">
-         <obj_property name="ElementShortName">[113][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[113][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[112]" type="array">
-         <obj_property name="ElementShortName">[112][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[112][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[111]" type="array">
-         <obj_property name="ElementShortName">[111][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[111][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[110]" type="array">
-         <obj_property name="ElementShortName">[110][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[110][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[109]" type="array">
-         <obj_property name="ElementShortName">[109][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[109][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[108]" type="array">
-         <obj_property name="ElementShortName">[108][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[108][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[107]" type="array">
-         <obj_property name="ElementShortName">[107][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[107][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[106]" type="array">
-         <obj_property name="ElementShortName">[106][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[106][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[105]" type="array">
-         <obj_property name="ElementShortName">[105][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[105][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[104]" type="array">
-         <obj_property name="ElementShortName">[104][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[104][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[103]" type="array">
-         <obj_property name="ElementShortName">[103][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[103][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[102]" type="array">
-         <obj_property name="ElementShortName">[102][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[102][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[101]" type="array">
-         <obj_property name="ElementShortName">[101][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[101][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[100]" type="array">
-         <obj_property name="ElementShortName">[100][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[100][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[99]" type="array">
-         <obj_property name="ElementShortName">[99][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[99][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[98]" type="array">
-         <obj_property name="ElementShortName">[98][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[98][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[97]" type="array">
-         <obj_property name="ElementShortName">[97][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[97][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[96]" type="array">
-         <obj_property name="ElementShortName">[96][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[96][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[95]" type="array">
-         <obj_property name="ElementShortName">[95][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[95][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[94]" type="array">
-         <obj_property name="ElementShortName">[94][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[94][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[93]" type="array">
-         <obj_property name="ElementShortName">[93][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[93][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[92]" type="array">
-         <obj_property name="ElementShortName">[92][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[92][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[91]" type="array">
-         <obj_property name="ElementShortName">[91][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[91][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[90]" type="array">
-         <obj_property name="ElementShortName">[90][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[90][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[89]" type="array">
-         <obj_property name="ElementShortName">[89][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[89][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[88]" type="array">
-         <obj_property name="ElementShortName">[88][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[88][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[87]" type="array">
-         <obj_property name="ElementShortName">[87][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[87][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[86]" type="array">
-         <obj_property name="ElementShortName">[86][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[86][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[85]" type="array">
-         <obj_property name="ElementShortName">[85][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[85][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[84]" type="array">
-         <obj_property name="ElementShortName">[84][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[84][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[83]" type="array">
-         <obj_property name="ElementShortName">[83][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[83][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[82]" type="array">
-         <obj_property name="ElementShortName">[82][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[82][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[81]" type="array">
-         <obj_property name="ElementShortName">[81][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[81][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[80]" type="array">
-         <obj_property name="ElementShortName">[80][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[80][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[79]" type="array">
-         <obj_property name="ElementShortName">[79][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[79][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[78]" type="array">
-         <obj_property name="ElementShortName">[78][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[78][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[77]" type="array">
-         <obj_property name="ElementShortName">[77][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[77][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[76]" type="array">
-         <obj_property name="ElementShortName">[76][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[76][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[75]" type="array">
-         <obj_property name="ElementShortName">[75][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[75][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[74]" type="array">
-         <obj_property name="ElementShortName">[74][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[74][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[73]" type="array">
-         <obj_property name="ElementShortName">[73][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[73][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[72]" type="array">
-         <obj_property name="ElementShortName">[72][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[72][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[71]" type="array">
-         <obj_property name="ElementShortName">[71][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[71][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[70]" type="array">
-         <obj_property name="ElementShortName">[70][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[70][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[69]" type="array">
-         <obj_property name="ElementShortName">[69][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[69][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[68]" type="array">
-         <obj_property name="ElementShortName">[68][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[68][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[67]" type="array">
-         <obj_property name="ElementShortName">[67][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[67][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[66]" type="array">
-         <obj_property name="ElementShortName">[66][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[66][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[65]" type="array">
-         <obj_property name="ElementShortName">[65][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[65][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[64]" type="array">
-         <obj_property name="ElementShortName">[64][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[64][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[63]" type="array">
-         <obj_property name="ElementShortName">[63][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[63][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[62]" type="array">
-         <obj_property name="ElementShortName">[62][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[62][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[61]" type="array">
-         <obj_property name="ElementShortName">[61][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[61][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[60]" type="array">
-         <obj_property name="ElementShortName">[60][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[60][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[59]" type="array">
-         <obj_property name="ElementShortName">[59][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[59][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[58]" type="array">
-         <obj_property name="ElementShortName">[58][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[58][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[57]" type="array">
-         <obj_property name="ElementShortName">[57][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[57][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[56]" type="array">
-         <obj_property name="ElementShortName">[56][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[56][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[55]" type="array">
-         <obj_property name="ElementShortName">[55][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[55][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[54]" type="array">
-         <obj_property name="ElementShortName">[54][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[54][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[53]" type="array">
-         <obj_property name="ElementShortName">[53][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[53][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[52]" type="array">
-         <obj_property name="ElementShortName">[52][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[52][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[51]" type="array">
-         <obj_property name="ElementShortName">[51][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[51][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[50]" type="array">
-         <obj_property name="ElementShortName">[50][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[50][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[49]" type="array">
-         <obj_property name="ElementShortName">[49][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[49][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[48]" type="array">
-         <obj_property name="ElementShortName">[48][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[48][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[47]" type="array">
-         <obj_property name="ElementShortName">[47][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[47][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[46]" type="array">
-         <obj_property name="ElementShortName">[46][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[46][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[45]" type="array">
-         <obj_property name="ElementShortName">[45][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[45][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[44]" type="array">
-         <obj_property name="ElementShortName">[44][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[44][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[43]" type="array">
-         <obj_property name="ElementShortName">[43][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[43][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[42]" type="array">
-         <obj_property name="ElementShortName">[42][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[42][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[41]" type="array">
-         <obj_property name="ElementShortName">[41][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[41][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[40]" type="array">
-         <obj_property name="ElementShortName">[40][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[40][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[39]" type="array">
-         <obj_property name="ElementShortName">[39][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[39][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[38]" type="array">
-         <obj_property name="ElementShortName">[38][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[38][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[37]" type="array">
-         <obj_property name="ElementShortName">[37][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[37][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[36]" type="array">
-         <obj_property name="ElementShortName">[36][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[36][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[35]" type="array">
-         <obj_property name="ElementShortName">[35][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[35][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[34]" type="array">
-         <obj_property name="ElementShortName">[34][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[34][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[33]" type="array">
-         <obj_property name="ElementShortName">[33][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[33][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[32]" type="array">
-         <obj_property name="ElementShortName">[32][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[32][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[31]" type="array">
-         <obj_property name="ElementShortName">[31][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[31][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[30]" type="array">
-         <obj_property name="ElementShortName">[30][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[30][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[29]" type="array">
-         <obj_property name="ElementShortName">[29][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[29][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[28]" type="array">
-         <obj_property name="ElementShortName">[28][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[28][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[27]" type="array">
-         <obj_property name="ElementShortName">[27][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[27][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[26]" type="array">
-         <obj_property name="ElementShortName">[26][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[26][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[25]" type="array">
-         <obj_property name="ElementShortName">[25][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[25][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[24]" type="array">
-         <obj_property name="ElementShortName">[24][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[24][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[23]" type="array">
-         <obj_property name="ElementShortName">[23][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[23][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[22]" type="array">
-         <obj_property name="ElementShortName">[22][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[22][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[21]" type="array">
-         <obj_property name="ElementShortName">[21][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[21][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[20]" type="array">
-         <obj_property name="ElementShortName">[20][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[20][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[19]" type="array">
-         <obj_property name="ElementShortName">[19][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[19][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[18]" type="array">
-         <obj_property name="ElementShortName">[18][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[18][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[17]" type="array">
-         <obj_property name="ElementShortName">[17][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[17][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[16]" type="array">
-         <obj_property name="ElementShortName">[16][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[16][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[15]" type="array">
-         <obj_property name="ElementShortName">[15][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[15][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[14]" type="array">
-         <obj_property name="ElementShortName">[14][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[14][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[13]" type="array">
-         <obj_property name="ElementShortName">[13][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[13][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[12]" type="array">
-         <obj_property name="ElementShortName">[12][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[12][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[11]" type="array">
-         <obj_property name="ElementShortName">[11][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[11][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[10]" type="array">
-         <obj_property name="ElementShortName">[10][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[10][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[9]" type="array">
-         <obj_property name="ElementShortName">[9][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[9][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[8]" type="array">
-         <obj_property name="ElementShortName">[8][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[8][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[7]" type="array">
-         <obj_property name="ElementShortName">[7][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[7][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[6]" type="array">
-         <obj_property name="ElementShortName">[6][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[6][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[5]" type="array">
-         <obj_property name="ElementShortName">[5][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[5][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[4]" type="array">
-         <obj_property name="ElementShortName">[4][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[4][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[3]" type="array">
-         <obj_property name="ElementShortName">[3][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[3][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[2]" type="array">
-         <obj_property name="ElementShortName">[2][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[2][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[1]" type="array">
-         <obj_property name="ElementShortName">[1][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[1][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[0]" type="array">
-         <obj_property name="ElementShortName">[0][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[0][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[255]" type="array">
-         <obj_property name="ElementShortName">[255][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[255][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[254]" type="array">
-         <obj_property name="ElementShortName">[254][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[254][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[253]" type="array">
-         <obj_property name="ElementShortName">[253][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[253][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[252]" type="array">
-         <obj_property name="ElementShortName">[252][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[252][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[251]" type="array">
-         <obj_property name="ElementShortName">[251][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[251][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[250]" type="array">
-         <obj_property name="ElementShortName">[250][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[250][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[249]" type="array">
-         <obj_property name="ElementShortName">[249][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[249][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[248]" type="array">
-         <obj_property name="ElementShortName">[248][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[248][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[247]" type="array">
-         <obj_property name="ElementShortName">[247][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[247][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[246]" type="array">
-         <obj_property name="ElementShortName">[246][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[246][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[245]" type="array">
-         <obj_property name="ElementShortName">[245][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[245][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[244]" type="array">
-         <obj_property name="ElementShortName">[244][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[244][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[243]" type="array">
-         <obj_property name="ElementShortName">[243][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[243][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[242]" type="array">
-         <obj_property name="ElementShortName">[242][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[242][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[241]" type="array">
-         <obj_property name="ElementShortName">[241][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[241][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[240]" type="array">
-         <obj_property name="ElementShortName">[240][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[240][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[239]" type="array">
-         <obj_property name="ElementShortName">[239][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[239][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[238]" type="array">
-         <obj_property name="ElementShortName">[238][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[238][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[237]" type="array">
-         <obj_property name="ElementShortName">[237][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[237][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[236]" type="array">
-         <obj_property name="ElementShortName">[236][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[236][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[235]" type="array">
-         <obj_property name="ElementShortName">[235][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[235][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[234]" type="array">
-         <obj_property name="ElementShortName">[234][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[234][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[233]" type="array">
-         <obj_property name="ElementShortName">[233][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[233][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[232]" type="array">
-         <obj_property name="ElementShortName">[232][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[232][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[231]" type="array">
-         <obj_property name="ElementShortName">[231][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[231][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[230]" type="array">
-         <obj_property name="ElementShortName">[230][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[230][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[229]" type="array">
-         <obj_property name="ElementShortName">[229][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[229][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[228]" type="array">
-         <obj_property name="ElementShortName">[228][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[228][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[227]" type="array">
-         <obj_property name="ElementShortName">[227][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[227][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[226]" type="array">
-         <obj_property name="ElementShortName">[226][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[226][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[225]" type="array">
-         <obj_property name="ElementShortName">[225][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[225][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[224]" type="array">
-         <obj_property name="ElementShortName">[224][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[224][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[223]" type="array">
-         <obj_property name="ElementShortName">[223][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[223][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[222]" type="array">
-         <obj_property name="ElementShortName">[222][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[222][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[221]" type="array">
-         <obj_property name="ElementShortName">[221][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[221][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[220]" type="array">
-         <obj_property name="ElementShortName">[220][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[220][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[219]" type="array">
-         <obj_property name="ElementShortName">[219][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[219][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[218]" type="array">
-         <obj_property name="ElementShortName">[218][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[218][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[217]" type="array">
-         <obj_property name="ElementShortName">[217][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[217][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[216]" type="array">
-         <obj_property name="ElementShortName">[216][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[216][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[215]" type="array">
-         <obj_property name="ElementShortName">[215][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[215][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[214]" type="array">
-         <obj_property name="ElementShortName">[214][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[214][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[213]" type="array">
-         <obj_property name="ElementShortName">[213][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[213][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[212]" type="array">
-         <obj_property name="ElementShortName">[212][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[212][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[211]" type="array">
-         <obj_property name="ElementShortName">[211][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[211][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[210]" type="array">
-         <obj_property name="ElementShortName">[210][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[210][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[209]" type="array">
-         <obj_property name="ElementShortName">[209][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[209][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[208]" type="array">
-         <obj_property name="ElementShortName">[208][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[208][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[207]" type="array">
-         <obj_property name="ElementShortName">[207][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[207][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[206]" type="array">
-         <obj_property name="ElementShortName">[206][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[206][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[205]" type="array">
-         <obj_property name="ElementShortName">[205][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[205][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[204]" type="array">
-         <obj_property name="ElementShortName">[204][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[204][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[203]" type="array">
-         <obj_property name="ElementShortName">[203][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[203][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[202]" type="array">
-         <obj_property name="ElementShortName">[202][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[202][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[201]" type="array">
-         <obj_property name="ElementShortName">[201][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[201][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[200]" type="array">
-         <obj_property name="ElementShortName">[200][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[200][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[199]" type="array">
-         <obj_property name="ElementShortName">[199][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[199][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[198]" type="array">
-         <obj_property name="ElementShortName">[198][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[198][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[197]" type="array">
-         <obj_property name="ElementShortName">[197][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[197][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[196]" type="array">
-         <obj_property name="ElementShortName">[196][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[196][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[195]" type="array">
-         <obj_property name="ElementShortName">[195][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[195][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[194]" type="array">
-         <obj_property name="ElementShortName">[194][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[194][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[193]" type="array">
-         <obj_property name="ElementShortName">[193][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[193][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[192]" type="array">
-         <obj_property name="ElementShortName">[192][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[192][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[191]" type="array">
-         <obj_property name="ElementShortName">[191][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[191][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[190]" type="array">
-         <obj_property name="ElementShortName">[190][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[190][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[189]" type="array">
-         <obj_property name="ElementShortName">[189][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[189][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[188]" type="array">
-         <obj_property name="ElementShortName">[188][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[188][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[187]" type="array">
-         <obj_property name="ElementShortName">[187][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[187][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[186]" type="array">
-         <obj_property name="ElementShortName">[186][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[186][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[185]" type="array">
-         <obj_property name="ElementShortName">[185][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[185][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[184]" type="array">
-         <obj_property name="ElementShortName">[184][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[184][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[183]" type="array">
-         <obj_property name="ElementShortName">[183][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[183][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[182]" type="array">
-         <obj_property name="ElementShortName">[182][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[182][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[181]" type="array">
-         <obj_property name="ElementShortName">[181][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[181][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[180]" type="array">
-         <obj_property name="ElementShortName">[180][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[180][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[179]" type="array">
-         <obj_property name="ElementShortName">[179][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[179][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[178]" type="array">
-         <obj_property name="ElementShortName">[178][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[178][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[177]" type="array">
-         <obj_property name="ElementShortName">[177][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[177][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[176]" type="array">
-         <obj_property name="ElementShortName">[176][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[176][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[175]" type="array">
-         <obj_property name="ElementShortName">[175][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[175][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[174]" type="array">
-         <obj_property name="ElementShortName">[174][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[174][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[173]" type="array">
-         <obj_property name="ElementShortName">[173][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[173][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[172]" type="array">
-         <obj_property name="ElementShortName">[172][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[172][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[171]" type="array">
-         <obj_property name="ElementShortName">[171][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[171][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[170]" type="array">
-         <obj_property name="ElementShortName">[170][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[170][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[169]" type="array">
-         <obj_property name="ElementShortName">[169][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[169][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[168]" type="array">
-         <obj_property name="ElementShortName">[168][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[168][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[167]" type="array">
-         <obj_property name="ElementShortName">[167][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[167][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[166]" type="array">
-         <obj_property name="ElementShortName">[166][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[166][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[165]" type="array">
-         <obj_property name="ElementShortName">[165][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[165][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[164]" type="array">
-         <obj_property name="ElementShortName">[164][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[164][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[163]" type="array">
-         <obj_property name="ElementShortName">[163][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[163][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[162]" type="array">
-         <obj_property name="ElementShortName">[162][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[162][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[161]" type="array">
-         <obj_property name="ElementShortName">[161][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[161][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[160]" type="array">
-         <obj_property name="ElementShortName">[160][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[160][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[159]" type="array">
-         <obj_property name="ElementShortName">[159][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[159][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[158]" type="array">
-         <obj_property name="ElementShortName">[158][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[158][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[157]" type="array">
-         <obj_property name="ElementShortName">[157][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[157][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[156]" type="array">
-         <obj_property name="ElementShortName">[156][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[156][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[155]" type="array">
-         <obj_property name="ElementShortName">[155][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[155][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[154]" type="array">
-         <obj_property name="ElementShortName">[154][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[154][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[153]" type="array">
-         <obj_property name="ElementShortName">[153][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[153][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[152]" type="array">
-         <obj_property name="ElementShortName">[152][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[152][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[151]" type="array">
-         <obj_property name="ElementShortName">[151][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[151][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[150]" type="array">
-         <obj_property name="ElementShortName">[150][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[150][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[149]" type="array">
-         <obj_property name="ElementShortName">[149][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[149][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[148]" type="array">
-         <obj_property name="ElementShortName">[148][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[148][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[147]" type="array">
-         <obj_property name="ElementShortName">[147][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[147][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[146]" type="array">
-         <obj_property name="ElementShortName">[146][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[146][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[145]" type="array">
-         <obj_property name="ElementShortName">[145][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[145][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[144]" type="array">
-         <obj_property name="ElementShortName">[144][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[144][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[143]" type="array">
-         <obj_property name="ElementShortName">[143][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[143][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[142]" type="array">
-         <obj_property name="ElementShortName">[142][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[142][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[141]" type="array">
-         <obj_property name="ElementShortName">[141][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[141][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[140]" type="array">
-         <obj_property name="ElementShortName">[140][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[140][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[139]" type="array">
-         <obj_property name="ElementShortName">[139][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[139][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[138]" type="array">
-         <obj_property name="ElementShortName">[138][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[138][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[137]" type="array">
-         <obj_property name="ElementShortName">[137][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[137][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[136]" type="array">
-         <obj_property name="ElementShortName">[136][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[136][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[135]" type="array">
-         <obj_property name="ElementShortName">[135][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[135][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[134]" type="array">
-         <obj_property name="ElementShortName">[134][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[134][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[133]" type="array">
-         <obj_property name="ElementShortName">[133][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[133][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[132]" type="array">
-         <obj_property name="ElementShortName">[132][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[132][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[131]" type="array">
-         <obj_property name="ElementShortName">[131][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[131][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[130]" type="array">
-         <obj_property name="ElementShortName">[130][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[130][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[129]" type="array">
-         <obj_property name="ElementShortName">[129][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[129][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[128]" type="array">
-         <obj_property name="ElementShortName">[128][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[128][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[127]" type="array">
-         <obj_property name="ElementShortName">[127][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[127][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[126]" type="array">
-         <obj_property name="ElementShortName">[126][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[126][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[125]" type="array">
-         <obj_property name="ElementShortName">[125][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[125][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[124]" type="array">
-         <obj_property name="ElementShortName">[124][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[124][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[123]" type="array">
-         <obj_property name="ElementShortName">[123][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[123][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[122]" type="array">
-         <obj_property name="ElementShortName">[122][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[122][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[121]" type="array">
-         <obj_property name="ElementShortName">[121][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[121][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[120]" type="array">
-         <obj_property name="ElementShortName">[120][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[120][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[119]" type="array">
-         <obj_property name="ElementShortName">[119][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[119][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[118]" type="array">
-         <obj_property name="ElementShortName">[118][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[118][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[117]" type="array">
-         <obj_property name="ElementShortName">[117][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[117][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[116]" type="array">
-         <obj_property name="ElementShortName">[116][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[116][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[115]" type="array">
-         <obj_property name="ElementShortName">[115][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[115][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[114]" type="array">
-         <obj_property name="ElementShortName">[114][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[114][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[113]" type="array">
-         <obj_property name="ElementShortName">[113][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[113][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[112]" type="array">
-         <obj_property name="ElementShortName">[112][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[112][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[111]" type="array">
-         <obj_property name="ElementShortName">[111][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[111][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[110]" type="array">
-         <obj_property name="ElementShortName">[110][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[110][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[109]" type="array">
-         <obj_property name="ElementShortName">[109][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[109][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[108]" type="array">
-         <obj_property name="ElementShortName">[108][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[108][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[107]" type="array">
-         <obj_property name="ElementShortName">[107][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[107][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[106]" type="array">
-         <obj_property name="ElementShortName">[106][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[106][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[105]" type="array">
-         <obj_property name="ElementShortName">[105][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[105][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[104]" type="array">
-         <obj_property name="ElementShortName">[104][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[104][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[103]" type="array">
-         <obj_property name="ElementShortName">[103][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[103][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[102]" type="array">
-         <obj_property name="ElementShortName">[102][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[102][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[101]" type="array">
-         <obj_property name="ElementShortName">[101][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[101][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[100]" type="array">
-         <obj_property name="ElementShortName">[100][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[100][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[99]" type="array">
-         <obj_property name="ElementShortName">[99][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[99][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[98]" type="array">
-         <obj_property name="ElementShortName">[98][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[98][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[97]" type="array">
-         <obj_property name="ElementShortName">[97][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[97][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[96]" type="array">
-         <obj_property name="ElementShortName">[96][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[96][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[95]" type="array">
-         <obj_property name="ElementShortName">[95][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[95][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[94]" type="array">
-         <obj_property name="ElementShortName">[94][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[94][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[93]" type="array">
-         <obj_property name="ElementShortName">[93][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[93][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[92]" type="array">
-         <obj_property name="ElementShortName">[92][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[92][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[91]" type="array">
-         <obj_property name="ElementShortName">[91][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[91][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[90]" type="array">
-         <obj_property name="ElementShortName">[90][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[90][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[89]" type="array">
-         <obj_property name="ElementShortName">[89][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[89][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[88]" type="array">
-         <obj_property name="ElementShortName">[88][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[88][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[87]" type="array">
-         <obj_property name="ElementShortName">[87][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[87][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[86]" type="array">
-         <obj_property name="ElementShortName">[86][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[86][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[85]" type="array">
-         <obj_property name="ElementShortName">[85][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[85][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[84]" type="array">
-         <obj_property name="ElementShortName">[84][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[84][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[83]" type="array">
-         <obj_property name="ElementShortName">[83][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[83][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[82]" type="array">
-         <obj_property name="ElementShortName">[82][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[82][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[81]" type="array">
-         <obj_property name="ElementShortName">[81][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[81][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[80]" type="array">
-         <obj_property name="ElementShortName">[80][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[80][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[79]" type="array">
-         <obj_property name="ElementShortName">[79][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[79][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[78]" type="array">
-         <obj_property name="ElementShortName">[78][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[78][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[77]" type="array">
-         <obj_property name="ElementShortName">[77][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[77][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[76]" type="array">
-         <obj_property name="ElementShortName">[76][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[76][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[75]" type="array">
-         <obj_property name="ElementShortName">[75][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[75][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[74]" type="array">
-         <obj_property name="ElementShortName">[74][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[74][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[73]" type="array">
-         <obj_property name="ElementShortName">[73][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[73][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[72]" type="array">
-         <obj_property name="ElementShortName">[72][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[72][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[71]" type="array">
-         <obj_property name="ElementShortName">[71][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[71][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[70]" type="array">
-         <obj_property name="ElementShortName">[70][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[70][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[69]" type="array">
-         <obj_property name="ElementShortName">[69][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[69][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[68]" type="array">
-         <obj_property name="ElementShortName">[68][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[68][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[67]" type="array">
-         <obj_property name="ElementShortName">[67][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[67][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[66]" type="array">
-         <obj_property name="ElementShortName">[66][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[66][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[65]" type="array">
-         <obj_property name="ElementShortName">[65][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[65][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[64]" type="array">
-         <obj_property name="ElementShortName">[64][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[64][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[63]" type="array">
-         <obj_property name="ElementShortName">[63][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[63][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[62]" type="array">
-         <obj_property name="ElementShortName">[62][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[62][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[61]" type="array">
-         <obj_property name="ElementShortName">[61][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[61][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[60]" type="array">
-         <obj_property name="ElementShortName">[60][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[60][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[59]" type="array">
-         <obj_property name="ElementShortName">[59][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[59][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[58]" type="array">
-         <obj_property name="ElementShortName">[58][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[58][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[57]" type="array">
-         <obj_property name="ElementShortName">[57][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[57][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[56]" type="array">
-         <obj_property name="ElementShortName">[56][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[56][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[55]" type="array">
-         <obj_property name="ElementShortName">[55][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[55][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[54]" type="array">
-         <obj_property name="ElementShortName">[54][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[54][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[53]" type="array">
-         <obj_property name="ElementShortName">[53][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[53][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[52]" type="array">
-         <obj_property name="ElementShortName">[52][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[52][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[51]" type="array">
-         <obj_property name="ElementShortName">[51][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[51][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[50]" type="array">
-         <obj_property name="ElementShortName">[50][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[50][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[49]" type="array">
-         <obj_property name="ElementShortName">[49][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[49][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[48]" type="array">
-         <obj_property name="ElementShortName">[48][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[48][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[47]" type="array">
-         <obj_property name="ElementShortName">[47][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[47][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[46]" type="array">
-         <obj_property name="ElementShortName">[46][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[46][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[45]" type="array">
-         <obj_property name="ElementShortName">[45][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[45][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[44]" type="array">
-         <obj_property name="ElementShortName">[44][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[44][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[43]" type="array">
-         <obj_property name="ElementShortName">[43][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[43][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[42]" type="array">
-         <obj_property name="ElementShortName">[42][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[42][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[41]" type="array">
-         <obj_property name="ElementShortName">[41][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[41][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[40]" type="array">
-         <obj_property name="ElementShortName">[40][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[40][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[39]" type="array">
-         <obj_property name="ElementShortName">[39][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[39][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[38]" type="array">
-         <obj_property name="ElementShortName">[38][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[38][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[37]" type="array">
-         <obj_property name="ElementShortName">[37][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[37][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[36]" type="array">
-         <obj_property name="ElementShortName">[36][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[36][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[35]" type="array">
-         <obj_property name="ElementShortName">[35][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[35][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[34]" type="array">
-         <obj_property name="ElementShortName">[34][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[34][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[33]" type="array">
-         <obj_property name="ElementShortName">[33][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[33][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[32]" type="array">
-         <obj_property name="ElementShortName">[32][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[32][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[31]" type="array">
-         <obj_property name="ElementShortName">[31][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[31][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[30]" type="array">
-         <obj_property name="ElementShortName">[30][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[30][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[29]" type="array">
-         <obj_property name="ElementShortName">[29][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[29][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[28]" type="array">
-         <obj_property name="ElementShortName">[28][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[28][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[27]" type="array">
-         <obj_property name="ElementShortName">[27][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[27][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[26]" type="array">
-         <obj_property name="ElementShortName">[26][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[26][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[25]" type="array">
-         <obj_property name="ElementShortName">[25][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[25][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[24]" type="array">
-         <obj_property name="ElementShortName">[24][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[24][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[23]" type="array">
-         <obj_property name="ElementShortName">[23][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[23][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[22]" type="array">
-         <obj_property name="ElementShortName">[22][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[22][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[21]" type="array">
-         <obj_property name="ElementShortName">[21][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[21][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[20]" type="array">
-         <obj_property name="ElementShortName">[20][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[20][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[19]" type="array">
-         <obj_property name="ElementShortName">[19][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[19][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[18]" type="array">
-         <obj_property name="ElementShortName">[18][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[18][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[17]" type="array">
-         <obj_property name="ElementShortName">[17][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[17][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[16]" type="array">
-         <obj_property name="ElementShortName">[16][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[16][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[15]" type="array">
-         <obj_property name="ElementShortName">[15][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[15][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[14]" type="array">
-         <obj_property name="ElementShortName">[14][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[14][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[13]" type="array">
-         <obj_property name="ElementShortName">[13][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[13][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[12]" type="array">
-         <obj_property name="ElementShortName">[12][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[12][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[11]" type="array">
-         <obj_property name="ElementShortName">[11][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[11][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[10]" type="array">
-         <obj_property name="ElementShortName">[10][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[10][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[9]" type="array">
-         <obj_property name="ElementShortName">[9][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[9][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[8]" type="array">
-         <obj_property name="ElementShortName">[8][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[8][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[7]" type="array">
-         <obj_property name="ElementShortName">[7][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[7][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[6]" type="array">
-         <obj_property name="ElementShortName">[6][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[6][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[5]" type="array">
-         <obj_property name="ElementShortName">[5][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[5][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[4]" type="array">
-         <obj_property name="ElementShortName">[4][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[4][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[3]" type="array">
-         <obj_property name="ElementShortName">[3][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[3][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[2]" type="array">
-         <obj_property name="ElementShortName">[2][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[2][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[1]" type="array">
-         <obj_property name="ElementShortName">[1][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[1][23:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench_top_level/dut/exp_avg/ema_reg[0]" type="array">
-         <obj_property name="ElementShortName">[0][23:0]</obj_property>
-         <obj_property name="ObjectShortName">[0][23:0]</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/exp_avg/i" type="array">
-      <obj_property name="ElementShortName">i[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/exp_avg/ALPHA_SHIFT" type="array">
-      <obj_property name="ElementShortName">ALPHA_SHIFT[31:0]</obj_property>
-      <obj_property name="ObjectShortName">ALPHA_SHIFT[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
@@ -2868,5 +763,187 @@
    <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/ext_mem_addr" type="array">
       <obj_property name="ElementShortName">ext_mem_addr[14:0]</obj_property>
       <obj_property name="ObjectShortName">ext_mem_addr[14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/cic32b/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/cic32b/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/cic32b/in" type="array">
+      <obj_property name="ElementShortName">in[10:0]</obj_property>
+      <obj_property name="ObjectShortName">in[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/cic32b/ena" type="logic">
+      <obj_property name="ElementShortName">ena</obj_property>
+      <obj_property name="ObjectShortName">ena</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/cic32b/out" type="array">
+      <obj_property name="ElementShortName">out[23:0]</obj_property>
+      <obj_property name="ObjectShortName">out[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/cic32b/dec_clk" type="logic">
+      <obj_property name="ElementShortName">dec_clk</obj_property>
+      <obj_property name="ObjectShortName">dec_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/cic32b/inc_out" type="array">
+      <obj_property name="ElementShortName">inc_out[23:0]</obj_property>
+      <obj_property name="ObjectShortName">inc_out[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/cic32b/int_1_out" type="array">
+      <obj_property name="ElementShortName">int_1_out[23:0]</obj_property>
+      <obj_property name="ObjectShortName">int_1_out[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/cic32b/int_2_out" type="array">
+      <obj_property name="ElementShortName">int_2_out[23:0]</obj_property>
+      <obj_property name="ObjectShortName">int_2_out[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/cic32b/extended_in" type="array">
+      <obj_property name="ElementShortName">extended_in[23:0]</obj_property>
+      <obj_property name="ObjectShortName">extended_in[23:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/cic32b/diff_0_out" type="array">
+      <obj_property name="ElementShortName">diff_0_out[23:0]</obj_property>
+      <obj_property name="ObjectShortName">diff_0_out[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/cic32b/diff_1_out" type="array">
+      <obj_property name="ElementShortName">diff_1_out[23:0]</obj_property>
+      <obj_property name="ObjectShortName">diff_1_out[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/cic32b/counter" type="logic">
+      <obj_property name="ElementShortName">counter</obj_property>
+      <obj_property name="ObjectShortName">counter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/cic32b/lr_clk" type="logic">
+      <obj_property name="ElementShortName">lr_clk</obj_property>
+      <obj_property name="ObjectShortName">lr_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/averager/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/averager/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/averager/rom_addr" type="array">
+      <obj_property name="ElementShortName">rom_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/averager/data_in" type="array">
+      <obj_property name="ElementShortName">data_in[23:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/averager/out_addr" type="array">
+      <obj_property name="ElementShortName">out_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">out_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/averager/out_val" type="array">
+      <obj_property name="ElementShortName">out_val[7:0]</obj_property>
+      <obj_property name="ObjectShortName">out_val[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/averager/prev_rom_addr" type="array">
+      <obj_property name="ElementShortName">prev_rom_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">prev_rom_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/averager/curr_data" type="array">
+      <obj_property name="ElementShortName">curr_data[33:0]</obj_property>
+      <obj_property name="ObjectShortName">curr_data[33:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/averager/data" type="array">
+      <obj_property name="ElementShortName">data[23:0]</obj_property>
+      <obj_property name="ObjectShortName">data[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/data_in" type="array">
+      <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/addr" type="array">
+      <obj_property name="ElementShortName">addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/tx" type="logic">
+      <obj_property name="ElementShortName">tx</obj_property>
+      <obj_property name="ObjectShortName">tx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/data_array" type="array">
+      <obj_property name="ElementShortName">data_array[0:255][7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_array[0:255][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/data_to_send" type="array">
+      <obj_property name="ElementShortName">data_to_send[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_to_send[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/send" type="logic">
+      <obj_property name="ElementShortName">send</obj_property>
+      <obj_property name="ObjectShortName">send</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/busy" type="logic">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/index" type="array">
+      <obj_property name="ElementShortName">index[8:0]</obj_property>
+      <obj_property name="ObjectShortName">index[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/preamble_count" type="array">
+      <obj_property name="ElementShortName">preamble_count[2:0]</obj_property>
+      <obj_property name="ObjectShortName">preamble_count[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/clk_div" type="array">
+      <obj_property name="ElementShortName">clk_div[19:0]</obj_property>
+      <obj_property name="ObjectShortName">clk_div[19:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/tick" type="logic">
+      <obj_property name="ElementShortName">tick</obj_property>
+      <obj_property name="ObjectShortName">tick</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/freeze1" type="logic">
+      <obj_property name="ElementShortName">freeze1</obj_property>
+      <obj_property name="ObjectShortName">freeze1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/freeze2" type="logic">
+      <obj_property name="ElementShortName">freeze2</obj_property>
+      <obj_property name="ObjectShortName">freeze2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/rom_chg" type="logic">
+      <obj_property name="ElementShortName">rom_chg</obj_property>
+      <obj_property name="ObjectShortName">rom_chg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/flip" type="logic">
+      <obj_property name="ElementShortName">flip</obj_property>
+      <obj_property name="ObjectShortName">flip</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/done1" type="logic">
+      <obj_property name="ElementShortName">done1</obj_property>
+      <obj_property name="ObjectShortName">done1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/done2" type="logic">
+      <obj_property name="ElementShortName">done2</obj_property>
+      <obj_property name="ObjectShortName">done2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/rom_addr" type="array">
+      <obj_property name="ElementShortName">rom_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/CLK100MHZ" type="logic">
+      <obj_property name="ElementShortName">CLK100MHZ</obj_property>
+      <obj_property name="ObjectShortName">CLK100MHZ</obj_property>
    </wvobject>
 </wave_config>

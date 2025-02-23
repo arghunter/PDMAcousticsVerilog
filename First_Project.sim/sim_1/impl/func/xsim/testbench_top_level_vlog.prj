@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../First_Project.ip_user_files/ipstatic" \
+"testbench_top_level_func_impl.v" \
+"../../../../../First_Project.srcs/sim_1/new/testbench_top_level.v" \
+
+# Do not sort compile order
+nosort

@@ -31,7 +31,7 @@ module testbench_top_level;
     wire [7:0] JA;
     wire [7:0] JC;
     wire vauxp6, vauxp14, vauxp7, vauxp15;
-
+    wire tx;
     // Instantiate the DUT (Device Under Test)
     simple_io dut (
         .JB(JB),
@@ -42,7 +42,8 @@ module testbench_top_level;
         .vauxp7(vauxp7),
         .vauxp15(vauxp15),
         .CLK100MHZ(CLK100MHZ),
-        .btnC(btnC)
+        .btnC(btnC),
+        .RsTx(tx)
     );
 
     // Clock generation (100MHz -> 10ns period)
@@ -65,7 +66,7 @@ module testbench_top_level;
     // Monitor outputs
     initial begin
         $monitor("Time=%0t, btnC=%b, JB=%b, JA=%b, JC=%b, vauxp6=%b, vauxp14=%b, vauxp7=%b, vauxp15=%b", 
-                 $time, btnC, JB, JA, JC, vauxp6, vauxp14, vauxp7, vauxp15);
+                 $time, btnC, JB, JA, JC, vauxp6, vauxp14, vauxp7, vauxp15, tx);
     end
 
 endmodule

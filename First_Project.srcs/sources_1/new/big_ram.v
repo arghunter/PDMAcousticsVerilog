@@ -63,9 +63,9 @@ module big_ram(
     );
    
 
-    wire [15:0] done=0;
+    wire [15:0] done;
     
-    wire [15:0] full_seg=0;
+    wire [15:0] full_seg;
 //    assign done_out = done[0];
 //    assign full = full_seg[0];
     managed_stream_ram msram_0(
