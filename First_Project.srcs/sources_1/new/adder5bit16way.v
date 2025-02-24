@@ -23,7 +23,7 @@
 module adder5bit16way(
     input wire [15:0] in,
   
-    output wire signed [5:0] out // Changed to 6-bit and signed
+    output wire signed [4:0] out // Changed to 5-bit and signed
 );
 
 assign out = 

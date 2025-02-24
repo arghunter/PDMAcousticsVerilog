@@ -5,7 +5,7 @@ Algorithm                  :     Minimum_Area
 Memory Type                :     True_Dual_Port_RAM
 Port A Read Width          :     [1]
 Port A Write Width         :     [1]
-Memory Depth               :     [4096]
+Memory Depth               :     [16384]
 Port B Read Width          :     [1]
 Port B Write Width         :     [1]
 
@@ -18,5 +18,5 @@ Clock A Frequency          :         [100]
 Port A Enable Rate         :         [100]
 Port A Write Rate          :         [50]
 ----------------------------------------------------------------------------------
-Estimated Power for IP     :     2.4384 mW
+Estimated Power for IP     :     2.6062 mW
 ----------------------------------------------------------------------------------

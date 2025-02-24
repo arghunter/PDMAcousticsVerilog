@@ -65,6 +65,8 @@ set_property src_info {type:XDC file:1 line:221 export:INPUT save:INPUT read:REA
 set_property PACKAGE_PIN M2 [get_ports {vauxp7}]
 set_property src_info {type:XDC file:1 line:224 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN N2 [get_ports {vauxp15}]
+set_property src_info {type:XDC file:1 line:227 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN K3 [get_ports {vauxn6}]
 set_property src_info {type:XDC file:1 line:273 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN B18 [get_ports RsRx]
 set_property src_info {type:XDC file:1 line:274 export:INPUT save:INPUT read:READ} [current_design]

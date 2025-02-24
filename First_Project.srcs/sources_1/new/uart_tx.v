@@ -7,7 +7,7 @@ module uart_tx (
     output reg busy            // Indicates UART is transmitting
 );
     
-    parameter CLK_FREQ = 100000000; // 100MHz clock
+    parameter CLK_FREQ = 400000000; // 100MHz clock
     parameter BAUD_RATE = 921600;     
     localparam BAUD_TICK = CLK_FREQ / BAUD_RATE; 
 

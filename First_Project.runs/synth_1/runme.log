@@ -8,7 +8,7 @@
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Sun Feb 23 11:57:00 2025
+  **** Start of session at: Mon Feb 24 01:50:25 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -26,94 +26,90 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Device 21-9227] Part: xc7a35tcpg236-1 does not have CEAM library.
-INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 20016
+INFO: [Synth 8-7075] Helper process launched with PID 17516
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1465.211 ; gain = 450.367
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1462.359 ; gain = 448.492
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6901] identifier 'done1' is used before its declaration [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:232]
-WARNING: [Synth 8-6901] identifier 'done2' is used before its declaration [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:232]
-WARNING: [Synth 8-6901] identifier 'full1' is used before its declaration [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:241]
-WARNING: [Synth 8-6901] identifier 'full2' is used before its declaration [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:241]
 INFO: [Synth 8-6157] synthesizing module 'simple_io' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:23]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/clk_wiz_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/clk_wiz_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'multi_ddr_to_sdr' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/multi_ddr_to_sdr.v:24]
 INFO: [Synth 8-6157] synthesizing module 'ddr_to_sdr' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ddr_to_sdr.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'ddr_to_sdr' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ddr_to_sdr.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'multi_ddr_to_sdr' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/multi_ddr_to_sdr.v:24]
-INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/fifo_generator_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'core' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/core.v:23]
 INFO: [Synth 8-6157] synthesizing module 'rom' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/rom.v:23]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_2' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_2' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_3' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_3' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_4' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_4' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_4_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_5' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_5_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_5' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_5_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_6' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_6_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_6' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_6_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_7' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_7_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_7' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_7_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_8' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_8_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_8' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_8_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_9' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_9_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_9' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_9_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_10' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_10_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_10' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_10_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_11' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_11_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_11' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_11_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_12' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_12_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_12' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_12_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_13' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_13_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_13' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_13_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_14' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_14_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_14' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_14_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_15' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_15_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_15' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_15_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_16' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_16_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_16' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/blk_mem_gen_16_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_2' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_2' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_3' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_3' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_4' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_4' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_5' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_5' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_5_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_6' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_6_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_6' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_6_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_7' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_7_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_7' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_7_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_8' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_8_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_8' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_8_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_9' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_9_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_9' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_9_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_10' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_10_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_10' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_10_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_11' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_11_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_11' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_11_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_12' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_12_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_12' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_12_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_13' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_13_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_13' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_13_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_14' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_14_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_14' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_14_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_15' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_15_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_15' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_15_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_16' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_16_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_16' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_16_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'rom' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/rom.v:23]
-INFO: [Synth 8-6157] synthesizing module 'big_ram' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/big_ram.v:23]
-INFO: [Synth 8-6157] synthesizing module 'managed_stream_ram' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/managed_stream_ram.v:23]
-INFO: [Synth 8-6157] synthesizing module 'big_bram' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/big_bram_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'big_bram' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-53920-DEKTOP-MOV670/realtime/big_bram_stub.v:6]
-WARNING: [Synth 8-689] width (1) of port connection 'douta' does not match port width (32) of module 'big_bram' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/managed_stream_ram.v:94]
-INFO: [Synth 8-6155] done synthesizing module 'managed_stream_ram' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/managed_stream_ram.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'big_ram' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/big_ram.v:23]
-INFO: [Synth 8-6157] synthesizing module 'adder32b16way' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/adder32b16way.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'adder32b16way' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/adder32b16way.v:23]
-INFO: [Synth 8-6157] synthesizing module 'cic_32b' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/cic_32b.v:23]
+INFO: [Synth 8-6157] synthesizing module 'state_machine' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/state_machine.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/state_machine.v:74]
+INFO: [Synth 8-6155] done synthesizing module 'state_machine' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/state_machine.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ram' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ram.v:23]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ram' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ram.v:23]
+INFO: [Synth 8-6157] synthesizing module 'adder5bit16way' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/adder5bit16way.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'adder5bit16way' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/adder5bit16way.v:23]
+WARNING: [Synth 8-689] width (6) of port connection 'out' does not match port width (5) of module 'adder5bit16way' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/core.v:133]
+INFO: [Synth 8-6157] synthesizing module 'cic' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/cic.v:28]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_17' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_17_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_17' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-33640-DEKTOP-MOV670/realtime/blk_mem_gen_17_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'integrator' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/integrator.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'integrator' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/integrator.v:23]
-INFO: [Synth 8-6157] synthesizing module 'integrator32b' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/integrator32b.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'integrator32b' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/integrator32b.v:23]
 INFO: [Synth 8-6157] synthesizing module 'differentiator' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/differentiator.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'differentiator' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/differentiator.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'cic_32b' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/cic_32b.v:23]
-INFO: [Synth 8-6157] synthesizing module 'avger' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/avger.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'avger' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/avger.v:23]
-WARNING: [Synth 8-689] width (8) of port connection 'out_val' does not match port width (16) of module 'avger' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:423]
-INFO: [Synth 8-6157] synthesizing module 'frame_buffer' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/frame_buffer.v:23]
-INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/uart_tx.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/uart_tx.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'frame_buffer' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/frame_buffer.v:23]
-WARNING: [Synth 8-689] width (8) of port connection 'data_in' does not match port width (16) of module 'frame_buffer' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:428]
+INFO: [Synth 8-6155] done synthesizing module 'cic' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/cic.v:28]
+WARNING: [Synth 8-689] width (6) of port connection 'in' does not match port width (5) of module 'cic' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/core.v:143]
+WARNING: [Synth 8-7071] port 'lr_clk' of module 'cic' is unconnected for instance 'cic_inst' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/core.v:137]
+WARNING: [Synth 8-7023] instance 'cic_inst' of module 'cic' has 10 connections declared, but only 9 given [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/core.v:137]
 INFO: [Synth 8-6157] synthesizing module 'i2s_bus' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/i2s_bus.v:24]
 INFO: [Synth 8-6157] synthesizing module 'mux_shift' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/mux_shift.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'mux_shift' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/mux_shift.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'i2s_bus' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/i2s_bus.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'core' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/core.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'simple_io' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:23]
-WARNING: [Synth 8-3848] Net vauxp15 in module/entity simple_io does not have driver. [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:30]
+WARNING: [Synth 8-3848] Net web in module/entity ram does not have driver. [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ram.v:56]
+WARNING: [Synth 8-3848] Net dinb in module/entity ram does not have driver. [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ram.v:54]
+WARNING: [Synth 8-3848] Net lr_clk in module/entity cic does not have driver. [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/cic.v:38]
+WARNING: [Synth 8-3848] Net RsTx in module/entity simple_io does not have driver. [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:34]
 WARNING: [Synth 8-7129] Port rst in module mux_shift is either unconnected or has no load
-WARNING: [Synth 8-7129] Port vauxp15 in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port lr_clk in module cic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RsTx in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port JA[7] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port JA[6] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port JA[2] in module simple_io is either unconnected or has no load
@@ -122,125 +118,95 @@ WARNING: [Synth 8-7129] Port JC[6] in module simple_io is either unconnected or 
 WARNING: [Synth 8-7129] Port JC[2] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port sw[0] in module simple_io is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1620.004 ; gain = 605.160
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1579.055 ; gain = 565.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1620.004 ; gain = 605.160
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1579.055 ; gain = 565.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1620.004 ; gain = 605.160
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1579.055 ; gain = 565.188
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.135 . Memory (MB): peak = 1620.004 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1579.055 ; gain = 0.000
 WARNING: [Netlist 29-1115] Found multi-term driver net: JC[3].
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_10/blk_mem_gen_10/blk_mem_gen_10_in_context.xdc] for cell 'rom/channel_9'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_10/blk_mem_gen_10/blk_mem_gen_10_in_context.xdc] for cell 'rom/channel_9'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_10/blk_mem_gen_10/blk_mem_gen_10_in_context.xdc] for cell 'core_0/rom/channel_9'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_10/blk_mem_gen_10/blk_mem_gen_10_in_context.xdc] for cell 'core_0/rom/channel_9'
 Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clock_wiz_0'
 Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clock_wiz_0'
 Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'dmic_fifo'
 Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'dmic_fifo'
 Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'output_fifo'
 Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'output_fifo'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'rom/channel_0'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'rom/channel_0'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'rom/channel_1'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'rom/channel_1'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3/blk_mem_gen_3_in_context.xdc] for cell 'rom/channel_2'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3/blk_mem_gen_3_in_context.xdc] for cell 'rom/channel_2'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_6/blk_mem_gen_6/blk_mem_gen_6_in_context.xdc] for cell 'rom/channel_5'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_6/blk_mem_gen_6/blk_mem_gen_6_in_context.xdc] for cell 'rom/channel_5'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_7/blk_mem_gen_7/blk_mem_gen_7_in_context.xdc] for cell 'rom/channel_6'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_7/blk_mem_gen_7/blk_mem_gen_7_in_context.xdc] for cell 'rom/channel_6'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_8/blk_mem_gen_8/blk_mem_gen_8_in_context.xdc] for cell 'rom/channel_7'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_8/blk_mem_gen_8/blk_mem_gen_8_in_context.xdc] for cell 'rom/channel_7'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_11/blk_mem_gen_11/blk_mem_gen_11_in_context.xdc] for cell 'rom/channel_10'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_11/blk_mem_gen_11/blk_mem_gen_11_in_context.xdc] for cell 'rom/channel_10'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_12/blk_mem_gen_12/blk_mem_gen_12_in_context.xdc] for cell 'rom/channel_11'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_12/blk_mem_gen_12/blk_mem_gen_12_in_context.xdc] for cell 'rom/channel_11'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_14/blk_mem_gen_14/blk_mem_gen_14_in_context.xdc] for cell 'rom/channel_13'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_14/blk_mem_gen_14/blk_mem_gen_14_in_context.xdc] for cell 'rom/channel_13'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_15/blk_mem_gen_15/blk_mem_gen_15_in_context.xdc] for cell 'rom/channel_14'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_15/blk_mem_gen_15/blk_mem_gen_15_in_context.xdc] for cell 'rom/channel_14'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_16/blk_mem_gen_16/blk_mem_gen_16_in_context.xdc] for cell 'rom/channel_15'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_16/blk_mem_gen_16/blk_mem_gen_16_in_context.xdc] for cell 'rom/channel_15'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4/blk_mem_gen_4_in_context.xdc] for cell 'rom/channel_3'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4/blk_mem_gen_4_in_context.xdc] for cell 'rom/channel_3'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_13/blk_mem_gen_13/blk_mem_gen_13_in_context.xdc] for cell 'rom/channel_12'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_13/blk_mem_gen_13/blk_mem_gen_13_in_context.xdc] for cell 'rom/channel_12'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_5/blk_mem_gen_5/blk_mem_gen_5_in_context.xdc] for cell 'rom/channel_4'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_5/blk_mem_gen_5/blk_mem_gen_5_in_context.xdc] for cell 'rom/channel_4'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_9/blk_mem_gen_9/blk_mem_gen_9_in_context.xdc] for cell 'rom/channel_8'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_9/blk_mem_gen_9/blk_mem_gen_9_in_context.xdc] for cell 'rom/channel_8'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_0/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_0/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_1/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_1/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_2/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_2/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_3/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_3/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_4/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_4/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_5/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_5/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_6/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_6/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_7/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_7/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_8/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_8/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_9/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_9/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_10/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_10/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_11/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_11/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_12/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_12/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_13/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_13/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_14/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_14/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_15/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_1/msram_15/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_0/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_0/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_1/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_1/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_2/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_2/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_3/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_3/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_4/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_4/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_5/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_5/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_6/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_6/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_7/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_7/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_8/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_8/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_9/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_9/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_10/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_10/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_11/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_11/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_12/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_12/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_13/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_13/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_14/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_14/bram'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_15/bram'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/big_bram/big_bram/big_bram_in_context.xdc] for cell 'big_ram_2/msram_15/bram'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'core_0/rom/channel_0'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'core_0/rom/channel_0'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'core_0/rom/channel_1'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'core_0/rom/channel_1'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3/blk_mem_gen_3_in_context.xdc] for cell 'core_0/rom/channel_2'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3/blk_mem_gen_3_in_context.xdc] for cell 'core_0/rom/channel_2'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_6/blk_mem_gen_6/blk_mem_gen_6_in_context.xdc] for cell 'core_0/rom/channel_5'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_6/blk_mem_gen_6/blk_mem_gen_6_in_context.xdc] for cell 'core_0/rom/channel_5'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_7/blk_mem_gen_7/blk_mem_gen_7_in_context.xdc] for cell 'core_0/rom/channel_6'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_7/blk_mem_gen_7/blk_mem_gen_7_in_context.xdc] for cell 'core_0/rom/channel_6'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_8/blk_mem_gen_8/blk_mem_gen_8_in_context.xdc] for cell 'core_0/rom/channel_7'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_8/blk_mem_gen_8/blk_mem_gen_8_in_context.xdc] for cell 'core_0/rom/channel_7'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_11/blk_mem_gen_11/blk_mem_gen_11_in_context.xdc] for cell 'core_0/rom/channel_10'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_11/blk_mem_gen_11/blk_mem_gen_11_in_context.xdc] for cell 'core_0/rom/channel_10'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_12/blk_mem_gen_12/blk_mem_gen_12_in_context.xdc] for cell 'core_0/rom/channel_11'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_12/blk_mem_gen_12/blk_mem_gen_12_in_context.xdc] for cell 'core_0/rom/channel_11'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_14/blk_mem_gen_14/blk_mem_gen_14_in_context.xdc] for cell 'core_0/rom/channel_13'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_14/blk_mem_gen_14/blk_mem_gen_14_in_context.xdc] for cell 'core_0/rom/channel_13'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_15/blk_mem_gen_15/blk_mem_gen_15_in_context.xdc] for cell 'core_0/rom/channel_14'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_15/blk_mem_gen_15/blk_mem_gen_15_in_context.xdc] for cell 'core_0/rom/channel_14'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_16/blk_mem_gen_16/blk_mem_gen_16_in_context.xdc] for cell 'core_0/rom/channel_15'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_16/blk_mem_gen_16/blk_mem_gen_16_in_context.xdc] for cell 'core_0/rom/channel_15'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4/blk_mem_gen_4_in_context.xdc] for cell 'core_0/rom/channel_3'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4/blk_mem_gen_4_in_context.xdc] for cell 'core_0/rom/channel_3'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_13/blk_mem_gen_13/blk_mem_gen_13_in_context.xdc] for cell 'core_0/rom/channel_12'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_13/blk_mem_gen_13/blk_mem_gen_13_in_context.xdc] for cell 'core_0/rom/channel_12'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_5/blk_mem_gen_5/blk_mem_gen_5_in_context.xdc] for cell 'core_0/rom/channel_4'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_5/blk_mem_gen_5/blk_mem_gen_5_in_context.xdc] for cell 'core_0/rom/channel_4'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_9/blk_mem_gen_9/blk_mem_gen_9_in_context.xdc] for cell 'core_0/rom/channel_8'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_9/blk_mem_gen_9/blk_mem_gen_9_in_context.xdc] for cell 'core_0/rom/channel_8'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram0'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram0'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram1'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram1'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram2'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram2'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram3'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram3'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram4'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram4'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram5'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram5'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram6'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram6'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram7'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram7'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram8'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram8'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram9'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram9'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram10'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram10'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram11'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram11'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram12'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram12'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram13'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram13'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram14'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram14'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram15'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram15'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_17/blk_mem_gen_17/blk_mem_gen_17_in_context.xdc] for cell 'core_0/cic_inst/cic_states'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_17/blk_mem_gen_17/blk_mem_gen_17_in_context.xdc] for cell 'core_0/cic_inst/cic_states'
 Parsing XDC File [C:/Users/arg/Downloads/Basys3_Master.xdc]
 WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Users/arg/Downloads/Basys3_Master.xdc:14]
 WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Users/arg/Downloads/Basys3_Master.xdc:15]
@@ -254,175 +220,2285 @@ Parsing XDC File [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project
 Finished Parsing XDC File [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1719.297 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1680.098 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1719.297 ; gain = 0.000
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_1/msram_0/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_1/msram_1/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_1/msram_10/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_1/msram_11/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_1/msram_12/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_1/msram_13/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_1/msram_14/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_1/msram_15/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_1/msram_2/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_1/msram_3/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_1/msram_4/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_1/msram_5/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_1/msram_6/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_1/msram_7/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_1/msram_8/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_1/msram_9/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_2/msram_0/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_2/msram_1/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_2/msram_10/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_2/msram_11/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_2/msram_12/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_2/msram_13/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_2/msram_14/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_2/msram_15/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_2/msram_2/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_2/msram_3/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_2/msram_4/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_2/msram_5/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_2/msram_6/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_2/msram_7/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_2/msram_8/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'big_ram_2/msram_9/bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'rom/channel_0' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'rom/channel_1' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'rom/channel_10' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'rom/channel_11' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'rom/channel_12' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'rom/channel_13' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'rom/channel_14' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'rom/channel_15' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'rom/channel_2' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'rom/channel_3' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'rom/channel_4' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'rom/channel_5' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'rom/channel_6' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'rom/channel_7' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'rom/channel_8' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'rom/channel_9' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1680.098 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'dmic_fifo' at clock pin 'rd_clk' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'output_fifo' at clock pin 'wr_clk' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/cic_inst/cic_states' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram0' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram1' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram10' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram11' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram12' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram13' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram14' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram15' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram2' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram3' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram4' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram5' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram6' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram7' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram8' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram9' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_0' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_1' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_10' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_11' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_12' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_13' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_14' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_15' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_2' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_3' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_4' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_5' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_6' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_7' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_8' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_9' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1722.129 ; gain = 707.285
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1680.145 ; gain = 666.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1722.129 ; gain = 707.285
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1680.145 ; gain = 666.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
-Applied set_property KEEP_HIERARCHY = SOFT for rom/channel_9. (constraint file  auto generated constraint).
+Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_9. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for clock_wiz_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for dmic_fifo. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for output_fifo. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for rom/channel_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for rom/channel_1. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for rom/channel_2. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for rom/channel_5. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for rom/channel_6. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for rom/channel_7. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for rom/channel_10. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for rom/channel_11. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for rom/channel_13. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for rom/channel_14. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for rom/channel_15. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for rom/channel_3. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for rom/channel_12. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for rom/channel_4. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for rom/channel_8. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_1/msram_0/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_1/msram_1/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_1/msram_2/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_1/msram_3/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_1/msram_4/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_1/msram_5/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_1/msram_6/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_1/msram_7/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_1/msram_8/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_1/msram_9/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_1/msram_10/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_1/msram_11/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_1/msram_12/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_1/msram_13/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_1/msram_14/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_1/msram_15/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_2/msram_0/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_2/msram_1/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_2/msram_2/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_2/msram_3/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_2/msram_4/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_2/msram_5/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_2/msram_6/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_2/msram_7/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_2/msram_8/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_2/msram_9/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_2/msram_10/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_2/msram_11/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_2/msram_12/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_2/msram_13/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_2/msram_14/bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for big_ram_2/msram_15/bram. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_5. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_6. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_7. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_10. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_11. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_13. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_14. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_15. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_12. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_8. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram10. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram11. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram12. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram13. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram14. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram15. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram5. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram6. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram7. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram8. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram9. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/cic_inst/cic_states. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1722.129 ; gain = 707.285
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1680.145 ; gain = 666.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1722.129 ; gain = 707.285
+Start Preparing Guide Design
 ---------------------------------------------------------------------------------
+got a mismatch state_machine
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch cic
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch integrator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+got a mismatch differentiator
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1680.145 ; gain = 666.277
+---------------------------------------------------------------------------------
+cic_array__GB12cic_array__GB7cic_array__GB21cic_array__GB9cic_array__GB4cic_array__GB16cic_array__GB11cic_array__GB24cic_array__GB22cic_array__GB15cic_array__GB17cic_array__GB10cic_array__GB13cic_array__GB8cic_array__GB20cic_array__GB18cic_array__GB3cic_array__GB0cic_array__GB25cic_array__GB19cic_array__GB2simple_io__GC0cic_array__GB1cic_array__GB6cic_array__GB23core__GC0cic_array__GB5---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1680.145 ; gain = 666.277
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'state_machine'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                             0000
+              pixel_load |                              001 |                             0001
+                cic_load |                              010 |                             0101
+                 run_cic |                              011 |                             0010
+                   dummy |                              100 |                             0110
+                 pix_inc |                              101 |                             0011
+                task_cmp |                              110 |                             0100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'state_machine'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1680.145 ; gain = 666.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Mimic Skeleton from Reference
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Mimic Skeleton from Reference : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1680.145 ; gain = 666.277
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: yes
+
+   Stitch points used : changed
+
+
+2. Change Summary
+
+Report Incremental Modules: 
++------+----------------+------------+----------+----------+
+|      |Changed Modules |Replication |Instances |Changed % |
++------+----------------+------------+----------+----------+
+|1     |core            |           1|      3037|    0.9898|
++------+----------------+------------+----------+----------+
+
+
+   Full Design Size (number of cells) : 306823
+   Resynthesis Design Size (number of cells) : 14424
+   Resynth % : 4.7011,  Reuse % : 95.2989
+
+3. Reference Checkpoint Information
+
++----------------------------------------------------------------------------------------------------------------------------+
+| DCP Location:  | C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/utils_1/imports/synth_1/simple_io.dcp |
++----------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------+------------------------------+
+|         DCP Information        |             Value            |
++--------------------------------+------------------------------+
+| Vivado Version                 |                    v2024.1 |
+| DCP State                      |                              |
++--------------------------------+------------------------------+
+
+
+
+Report RTL Partitions: 
++------+------------------------+------------+----------+
+|      |RTL Partition           |Replication |Instances |
++------+------------------------+------------+----------+
+|1     |cic_array__GB14         |           1|     14424|
+|2     |cic_array__GB0_#REUSE#  |           1|         0|
+|3     |cic_array__GB1_#REUSE#  |           1|         0|
+|4     |cic_array__GB2_#REUSE#  |           1|         0|
+|5     |cic_array__GB3_#REUSE#  |           1|         0|
+|6     |cic_array__GB4_#REUSE#  |           1|         0|
+|7     |cic_array__GB5_#REUSE#  |           1|         0|
+|8     |cic_array__GB6_#REUSE#  |           1|         0|
+|9     |cic_array__GB7_#REUSE#  |           1|         0|
+|10    |cic_array__GB8_#REUSE#  |           1|         0|
+|11    |cic_array__GB9_#REUSE#  |           1|         0|
+|12    |cic_array__GB10_#REUSE# |           1|         0|
+|13    |cic_array__GB11_#REUSE# |           1|         0|
+|14    |cic_array__GB12_#REUSE# |           1|         0|
+|15    |cic_array__GB13_#REUSE# |           1|         0|
+|16    |cic_array__GB15_#REUSE# |           1|         0|
+|17    |cic_array__GB16_#REUSE# |           1|         0|
+|18    |cic_array__GB17_#REUSE# |           1|         0|
+|19    |cic_array__GB18_#REUSE# |           1|         0|
+|20    |cic_array__GB19_#REUSE# |           1|         0|
+|21    |cic_array__GB20_#REUSE# |           1|         0|
+|22    |cic_array__GB21_#REUSE# |           1|         0|
+|23    |cic_array__GB22_#REUSE# |           1|         0|
+|24    |cic_array__GB23_#REUSE# |           1|         0|
+|25    |cic_array__GB24_#REUSE# |           1|         0|
+|26    |cic_array__GB25_#REUSE# |           1|         0|
+|27    |core__GC0_#REUSE#       |           1|         0|
+|28    |simple_io__GC0_#REUSE#  |           1|         0|
++------+------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   3 Input   24 Bit       Adders := 3     
-	   2 Input   24 Bit       Adders := 1     
-	   2 Input   15 Bit       Adders := 32    
-	 512 Input   11 Bit       Adders := 1     
-	   2 Input   10 Bit       Adders := 32    
-	   3 Input   10 Bit       Adders := 32    
-	   2 Input    9 Bit       Adders := 1     
-	   2 Input    8 Bit       Adders := 2     
+	  16 Input   32 Bit       Adders := 1     
+	   3 Input   24 Bit       Adders := 40    
+	   4 Input   24 Bit       Adders := 10    
+	   3 Input   15 Bit       Adders := 1     
+	   2 Input   14 Bit       Adders := 17    
+	   2 Input   12 Bit       Adders := 1     
 	   2 Input    7 Bit       Adders := 1     
-	   2 Input    6 Bit       Adders := 32    
-	   2 Input    5 Bit       Adders := 2     
-	   2 Input    4 Bit       Adders := 1     
-	   2 Input    3 Bit       Adders := 1     
-	   2 Input    1 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 11    
 +---Registers : 
-	               32 Bit    Registers := 32    
-	               24 Bit    Registers := 6     
-	               16 Bit    Registers := 2     
-	               15 Bit    Registers := 32    
-	               10 Bit    Registers := 65    
-	                9 Bit    Registers := 1     
-	                8 Bit    Registers := 6     
-	                5 Bit    Registers := 2     
-	                4 Bit    Registers := 1     
-	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 337   
-+---RAMs : 
-	               4K Bit	(256 X 16 bit)          RAMs := 1     
+	               24 Bit    Registers := 90    
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 11    
+	                1 Bit    Registers := 211   
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 528   
-	   2 Input   24 Bit        Muxes := 1     
-	   2 Input   10 Bit        Muxes := 65    
-	   2 Input    8 Bit        Muxes := 1     
-	   3 Input    8 Bit        Muxes := 1     
-	   2 Input    7 Bit        Muxes := 2     
-	   2 Input    4 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 265   
+	   2 Input   24 Bit        Muxes := 5     
+	   3 Input   24 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 1     
+	   7 Input   12 Bit        Muxes := 1     
+	   7 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
+	   7 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 16    
+	   2 Input    1 Bit        Muxes := 85    
+	   7 Input    1 Bit        Muxes := 12    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -438,193 +2514,5 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-7129] Port vauxp15 in module simple_io is either unconnected or has no load
-WARNING: [Synth 8-7129] Port JA[7] in module simple_io is either unconnected or has no load
-WARNING: [Synth 8-7129] Port JA[6] in module simple_io is either unconnected or has no load
-WARNING: [Synth 8-7129] Port JA[2] in module simple_io is either unconnected or has no load
-WARNING: [Synth 8-7129] Port JC[7] in module simple_io is either unconnected or has no load
-WARNING: [Synth 8-7129] Port JC[6] in module simple_io is either unconnected or has no load
-WARNING: [Synth 8-7129] Port JC[2] in module simple_io is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sw[0] in module simple_io is either unconnected or has no load
----------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:00:56 . Memory (MB): peak = 1722.129 ; gain = 707.285
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-Distributed RAM: Preliminary Mapping Report (see note below)
-+-------------+----------------+-----------+----------------------+--------------+
-|Module Name  | RTL Object     | Inference | Size (Depth x Width) | Primitives   | 
-+-------------+----------------+-----------+----------------------+--------------+
-|frame_buffer | data_array_reg | Implied   | 256 x 16             | RAM64M x 24  | 
-+-------------+----------------+-----------+----------------------+--------------+
-
-Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Applying XDC Timing Constraints
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:59 ; elapsed = 00:00:59 . Memory (MB): peak = 1722.129 ; gain = 707.285
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Timing Optimization
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:00 . Memory (MB): peak = 1722.129 ; gain = 707.285
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-Distributed RAM: Final Mapping Report
-+-------------+----------------+-----------+----------------------+--------------+
-|Module Name  | RTL Object     | Inference | Size (Depth x Width) | Primitives   | 
-+-------------+----------------+-----------+----------------------+--------------+
-|frame_buffer | data_array_reg | Implied   | 256 x 16             | RAM64M x 24  | 
-+-------------+----------------+-----------+----------------------+--------------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Technology Mapping
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:02 ; elapsed = 00:01:03 . Memory (MB): peak = 1722.129 ; gain = 707.285
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Flattening Before IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Flattening Before IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Final Netlist Cleanup
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Final Netlist Cleanup
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:05 ; elapsed = 00:01:06 . Memory (MB): peak = 1722.129 ; gain = 707.285
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Instances
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:05 ; elapsed = 00:01:06 . Memory (MB): peak = 1722.129 ; gain = 707.285
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Rebuilding User Hierarchy
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:06 ; elapsed = 00:01:06 . Memory (MB): peak = 1722.129 ; gain = 707.285
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Ports
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:06 ; elapsed = 00:01:06 . Memory (MB): peak = 1722.129 ; gain = 707.285
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:06 ; elapsed = 00:01:06 . Memory (MB): peak = 1722.129 ; gain = 707.285
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Nets
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:06 ; elapsed = 00:01:06 . Memory (MB): peak = 1722.129 ; gain = 707.285
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Writing Synthesis Report
----------------------------------------------------------------------------------
-
-Report BlackBoxes: 
-+------+-----------------+----------+
-|      |BlackBox name    |Instances |
-+------+-----------------+----------+
-|1     |clk_wiz_0        |         1|
-|2     |fifo_generator_0 |         2|
-|3     |big_bram         |        32|
-|4     |blk_mem_gen_1    |         1|
-|5     |blk_mem_gen_2    |         1|
-|6     |blk_mem_gen_3    |         1|
-|7     |blk_mem_gen_4    |         1|
-|8     |blk_mem_gen_5    |         1|
-|9     |blk_mem_gen_6    |         1|
-|10    |blk_mem_gen_7    |         1|
-|11    |blk_mem_gen_8    |         1|
-|12    |blk_mem_gen_9    |         1|
-|13    |blk_mem_gen_10   |         1|
-|14    |blk_mem_gen_11   |         1|
-|15    |blk_mem_gen_12   |         1|
-|16    |blk_mem_gen_13   |         1|
-|17    |blk_mem_gen_14   |         1|
-|18    |blk_mem_gen_15   |         1|
-|19    |blk_mem_gen_16   |         1|
-+------+-----------------+----------+
-
-Report Cell Usage: 
-+------+-----------------+------+
-|      |Cell             |Count |
-+------+-----------------+------+
-|1     |big_bram         |    32|
-|33    |blk_mem_gen      |    16|
-|49    |clk_wiz          |     1|
-|50    |fifo_generator   |     1|
-|51    |fifo_generator_0 |     1|
-|52    |BUFG             |     3|
-|53    |CARRY4           |   523|
-|54    |LUT1             |   116|
-|55    |LUT2             |   226|
-|56    |LUT3             |   797|
-|57    |LUT4             |   678|
-|58    |LUT5             |   714|
-|59    |LUT6             |  3559|
-|60    |MUXF7            |     1|
-|61    |RAM64M           |    12|
-|62    |FDCE             |   195|
-|63    |FDPE             |    10|
-|64    |FDRE             |  2385|
-|65    |FDSE             |     8|
-|66    |IBUF             |     9|
-|67    |OBUF             |    14|
-|68    |OBUFT            |     1|
-+------+-----------------+------+
----------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:06 ; elapsed = 00:01:06 . Memory (MB): peak = 1722.129 ; gain = 707.285
----------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:58 ; elapsed = 00:01:04 . Memory (MB): peak = 1722.129 ; gain = 605.160
-Synthesis Optimization Complete : Time (s): cpu = 00:01:06 ; elapsed = 00:01:07 . Memory (MB): peak = 1722.129 ; gain = 707.285
-INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.105 . Memory (MB): peak = 1722.129 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 536 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1722.129 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 12 instances were transformed.
-  RAM64M => RAM64M (RAMD64E(x4)): 12 instances
-
-Synth Design complete | Checksum: 184f9082
-INFO: [Common 17-83] Releasing license: Synthesis
-96 Infos, 81 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:10 ; elapsed = 00:01:11 . Memory (MB): peak = 1722.129 ; gain = 1113.508
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1722.129 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/simple_io.dcp' has been generated.
-INFO: [Vivado 12-24828] Executing command : report_utilization -file simple_io_utilization_synth.rpt -pb simple_io_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Feb 23 11:58:20 2025...
+Abnormal program termination (EXCEPTION_ACCESS_VIOLATION)
+Please check 'C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/hs_err_pid33640.log' for details

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Checkpoint Version="22" Minor="0">
+	<BUILD_NUMBER Name="5076996"/>
+	<FULL_BUILD Name="SW Build 5076996 on Wed May 22 18:37:14 MDT 2024"/>
+	<PRODUCT Name="Vivado v2024.1 (64-bit)"/>
+	<Part Name="xc7a35tcpg236-1"/>
+	<FeatureSet Name="FeatureSet_Classic"/>
+	<NEXTGEN_VERSAL Name="0"/>
+	<BoardPart Name="digilentinc.com:basys3:part0:1.2"/>
+	<Top Name="simple_io"/>
+	<DisableAutoIOBuffers Name="0"/>
+	<OutOfContext Name="0"/>
+	<MacroLevel Name="1"/>
+	<RunGenerated Name="1"/>
+	<HDPlatform Name="0"/>
+	<XPMLIBRARY Name="XPM_CDC"/>
+	<XPMLIBRARY Name="XPM_MEMORY"/>
+	<File Type="VERILOG_STUB" Name="simple_io_stub.v" ModTime="1740383999"/>
+	<File Type="VHDL_STUB" Name="simple_io_stub.vhdl" ModTime="1740383999"/>
+	<File Type="PARAMXML" Name="simple_io_param.xml" ModTime="1740383999"/>
+	<File Type="PARAMXML" Name="simple_io_param.xml" ModTime="1740383999"/>
+	<File Type="SHAPE" Name="simple_io.shape" ModTime="1740383999"/>
+	<File Type="XN" Name="simple_io.xn" ModTime="1740383999"/>
+	<File Type="EDIF" Name="simple_io.edf" ModTime="1740383999"/>
+	<File Type="INCR" Name="simple_io.incr" ModTime="1740383999"/>
+	<File Type="RDA" Name="simple_io.rda" ModTime="1740383999"/>
+	<File Type="JSON_RDA" Name="simple_io_rda.json" ModTime="1740383999"/>
+	<File Type="WDF" Name="simple_io.wdf" ModTime="1740383999"/>
+	<File Type="SYNTH" Name="simple_io.synth" ModTime="1740383999"/>
+</Checkpoint>
+

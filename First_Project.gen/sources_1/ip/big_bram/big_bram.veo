@@ -59,12 +59,12 @@ big_bram your_instance_name (
   .wea(wea),      // input wire [0 : 0] wea
   .addra(addra),  // input wire [14 : 0] addra
   .dina(dina),    // input wire [0 : 0] dina
-  .douta(douta),  // output wire [31 : 0] douta
+  .douta(douta),  // output wire [0 : 0] douta
   .clkb(clkb),    // input wire clkb
   .web(web),      // input wire [0 : 0] web
   .addrb(addrb),  // input wire [14 : 0] addrb
   .dinb(dinb),    // input wire [0 : 0] dinb
-  .doutb(doutb)  // output wire [31 : 0] doutb
+  .doutb(doutb)  // output wire [0 : 0] doutb
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

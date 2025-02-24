@@ -81,7 +81,7 @@ module frame_buffer (
             end
             prev_addr <= addr;
             
-            if (tick && !busy && flip) begin
+            if (tick && !busy) begin
                 if (preamble_count < 4) begin
                     // Send four bytes of 0x58 as the start signal
                     data_to_send <= 8'h58;

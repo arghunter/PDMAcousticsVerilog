@@ -27,24 +27,24 @@ module managed_stream_ram(
     input wire [11:0] read_offset_b,
     input wire rd_en,
     input wire wr_en,//always true
-    output reg [31:0] word_data,
+    output wire word_data,
     output reg done,
     output reg full
     );
     
     reg [14:0] addra=0;
-    reg [9:0] addrb=1;
-    reg [9:0] start_addr=0;
-    wire [4:0] bit_offset_b;
-    wire [9:0] word_offset_b;
+    reg [14:0] addrb=1;
+    reg [14:0] start_addr=0;
+//    wire [4:0] bit_offset_b;
+//    wire [9:0] word_offset_b;
     wire douta;
     wire web=0;
     reg dinb=0;
-    wire [31:0] curr_word_data;
-    reg [31:0] prev_word_data=0;
+//    wire [31:0] curr_word_data;
+//    reg [31:0] prev_word_data=0;
     reg [14:0] restart_addr=32767; //need rst pin
-    assign word_offset_b=read_offset_b>>5;
-    assign bit_offset_b=read_offset_b[4:0];
+//    assign word_offset_b=read_offset_b>>5;
+//    assign bit_offset_b=read_offset_b[4:0];
 //    assign start_addr = ((addra+1)>>5);// note i'm ignoring the bit offset which meansd the first one could be wonky but thats fine
     
     
@@ -61,7 +61,7 @@ module managed_stream_ram(
             end
             if(!freeze) begin
                 addra <= addra+1;
-                start_addr <= ((addra)>>5);
+                start_addr <= ((addra));
             end
         end
         if(wr_en) begin
@@ -76,17 +76,17 @@ module managed_stream_ram(
                     done<=0;
                 end
                 
-                prev_word_data<=curr_word_data;
+//                prev_word_data<=curr_word_data;
             end
         end
     end
     
     
-    always @(*) begin
-        word_data = (curr_word_data >> bit_offset_b) | (prev_word_data << (32 - bit_offset_b));// check if this orks
-    end
-    wire [9:0] mem_addr=start_addr+word_offset_b+addrb;
-    wire [14:0] ext_mem_addr={{5{mem_addr[9]}},mem_addr};
+//    always @(*) begin
+//        word_data = (curr_word_data >> bit_offset_b) | (prev_word_data << (32 - bit_offset_b));// check if this orks
+//    end
+    wire [14:0] mem_addr=start_addr+read_offset_b+addrb;
+    wire [14:0] ext_mem_addr=mem_addr;
      big_bram bram(
         .addra(addra),
         .clka(clk),
@@ -96,7 +96,7 @@ module managed_stream_ram(
         .addrb(ext_mem_addr),
         .clkb(clk),
         .dinb(dinb),
-        .doutb(curr_word_data),
+        .doutb(word_data),
         .web(web)
     );
     

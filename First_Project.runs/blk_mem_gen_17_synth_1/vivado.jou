@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Feb 24 01:34:29 2025
+# Process ID: 44104
+# Current directory: C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/blk_mem_gen_17_synth_1
+# Command line: vivado.exe -log blk_mem_gen_17.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_gen_17.tcl
+# Log file: C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/blk_mem_gen_17_synth_1/blk_mem_gen_17.vds
+# Journal file: C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/blk_mem_gen_17_synth_1\vivado.jou
+# Running On        :DEKTOP-MOV670
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :AMD Ryzen 9 7950X 16-Core Processor            
+# CPU Frequency     :4491 MHz
+# CPU Physical cores:16
+# CPU Logical cores :32
+# Host memory       :67804 MB
+# Swap memory       :81604 MB
+# Total Virtual     :149408 MB
+# Available Virtual :106762 MB
+#-----------------------------------------------------------
+source blk_mem_gen_17.tcl -notrace

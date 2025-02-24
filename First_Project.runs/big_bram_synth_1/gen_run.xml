@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="big_bram_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1740177361">
+<GenRun Id="big_bram_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1740341480">
   <File Type="PA-TCL" Name="big_bram.tcl"/>
   <File Type="REPORTS-TCL" Name="big_bram_reports.tcl"/>
   <File Type="RDS-RDS" Name="big_bram.vds"/>

@@ -11,15 +11,18 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="696,273.400 ns"></ZoomStartTime>
-      <ZoomEndTime time="696,419.901 ns"></ZoomEndTime>
-      <Cursor1Time time="696,319.700 ns"></Cursor1Time>
+      <ZoomStartTime time="2,372.884166 us"></ZoomStartTime>
+      <ZoomEndTime time="9,837.884167 us"></ZoomEndTime>
+      <Cursor1Time time="8,001.636250 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="144"></NameColumnWidth>
-      <ValueColumnWidth column_width="62"></ValueColumnWidth>
+      <NameColumnWidth column_width="120"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="228" />
+   <WVObjectSize size="347" />
+   <wave_markers>
+      <marker time="7994582917" label="" />
+   </wave_markers>
    <wvobject fp_name="/testbench_top_level/CLK100MHZ" type="logic">
       <obj_property name="ElementShortName">CLK100MHZ</obj_property>
       <obj_property name="ObjectShortName">CLK100MHZ</obj_property>
@@ -56,13 +59,17 @@
       <obj_property name="ElementShortName">vauxp15</obj_property>
       <obj_property name="ObjectShortName">vauxp15</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/ddr_clk" type="logic">
-      <obj_property name="ElementShortName">ddr_clk</obj_property>
-      <obj_property name="ObjectShortName">ddr_clk</obj_property>
+   <wvobject fp_name="/testbench_top_level/dut/CLK400MHZ" type="logic">
+      <obj_property name="ElementShortName">CLK400MHZ</obj_property>
+      <obj_property name="ObjectShortName">CLK400MHZ</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/clock" type="logic">
       <obj_property name="ElementShortName">clock</obj_property>
       <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/ddr_clk" type="logic">
+      <obj_property name="ElementShortName">ddr_clk</obj_property>
+      <obj_property name="ObjectShortName">ddr_clk</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/mic_clk" type="logic">
       <obj_property name="ElementShortName">mic_clk</obj_property>
@@ -108,164 +115,9 @@
       <obj_property name="ElementShortName">wr_data_count[7:0]</obj_property>
       <obj_property name="ObjectShortName">wr_data_count[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/rom/rom_out0" type="array">
-      <obj_property name="ElementShortName">rom_out0[11:0]</obj_property>
-      <obj_property name="ObjectShortName">rom_out0[11:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/mic_out" type="array">
-      <obj_property name="ElementShortName">mic_out[15:0][31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out[15:0][31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/mic_out2" type="array">
-      <obj_property name="ElementShortName">mic_out2[15:0][31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out2[15:0][31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/full" type="logic">
-      <obj_property name="ElementShortName">full</obj_property>
-      <obj_property name="ObjectShortName">full</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/flip" type="logic">
-      <obj_property name="ElementShortName">flip</obj_property>
-      <obj_property name="ObjectShortName">flip</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/restart_addr" type="array">
-      <obj_property name="ElementShortName">restart_addr[14:0]</obj_property>
-      <obj_property name="ObjectShortName">restart_addr[14:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/addra" type="array">
-      <obj_property name="ElementShortName">addra[14:0]</obj_property>
-      <obj_property name="ObjectShortName">addra[14:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/done1" type="logic">
-      <obj_property name="ElementShortName">done1</obj_property>
-      <obj_property name="ObjectShortName">done1</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/done2" type="logic">
-      <obj_property name="ElementShortName">done2</obj_property>
-      <obj_property name="ObjectShortName">done2</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/addrb" type="array">
-      <obj_property name="ElementShortName">addrb[9:0]</obj_property>
-      <obj_property name="ObjectShortName">addrb[9:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/done_out" type="logic">
-      <obj_property name="ElementShortName">done_out</obj_property>
-      <obj_property name="ObjectShortName">done_out</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/done" type="logic">
-      <obj_property name="ElementShortName">done</obj_property>
-      <obj_property name="ObjectShortName">done</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/full" type="logic">
-      <obj_property name="ElementShortName">full</obj_property>
-      <obj_property name="ObjectShortName">full</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/freeze" type="logic">
-      <obj_property name="ElementShortName">freeze</obj_property>
-      <obj_property name="ObjectShortName">freeze</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/full" type="logic">
-      <obj_property name="ElementShortName">full</obj_property>
-      <obj_property name="ObjectShortName">full</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/freeze2" type="logic">
-      <obj_property name="ElementShortName">freeze2</obj_property>
-      <obj_property name="ObjectShortName">freeze2</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/freeze1" type="logic">
-      <obj_property name="ElementShortName">freeze1</obj_property>
-      <obj_property name="ObjectShortName">freeze1</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/freeze" type="logic">
-      <obj_property name="ElementShortName">freeze</obj_property>
-      <obj_property name="ObjectShortName">freeze</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/mic_data" type="logic">
-      <obj_property name="ElementShortName">mic_data</obj_property>
-      <obj_property name="ObjectShortName">mic_data</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/read_offset_b" type="array">
-      <obj_property name="ElementShortName">read_offset_b[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/rd_en" type="logic">
-      <obj_property name="ElementShortName">rd_en</obj_property>
-      <obj_property name="ObjectShortName">rd_en</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/wr_en" type="logic">
-      <obj_property name="ElementShortName">wr_en</obj_property>
-      <obj_property name="ObjectShortName">wr_en</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/word_data" type="array">
-      <obj_property name="ElementShortName">word_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">word_data[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/done" type="logic">
-      <obj_property name="ElementShortName">done</obj_property>
-      <obj_property name="ObjectShortName">done</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/full" type="logic">
-      <obj_property name="ElementShortName">full</obj_property>
-      <obj_property name="ObjectShortName">full</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/rom_addr" type="array">
-      <obj_property name="ElementShortName">rom_addr[7:0]</obj_property>
-      <obj_property name="ObjectShortName">rom_addr[7:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/addra" type="array">
-      <obj_property name="ElementShortName">addra[14:0]</obj_property>
-      <obj_property name="ObjectShortName">addra[14:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/addrb" type="array">
-      <obj_property name="ElementShortName">addrb[9:0]</obj_property>
-      <obj_property name="ObjectShortName">addrb[9:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/start_addr" type="array">
-      <obj_property name="ElementShortName">start_addr[9:0]</obj_property>
-      <obj_property name="ObjectShortName">start_addr[9:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/bit_offset_b" type="array">
-      <obj_property name="ElementShortName">bit_offset_b[4:0]</obj_property>
-      <obj_property name="ObjectShortName">bit_offset_b[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/word_offset_b" type="array">
-      <obj_property name="ElementShortName">word_offset_b[9:0]</obj_property>
-      <obj_property name="ObjectShortName">word_offset_b[9:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/douta" type="logic">
-      <obj_property name="ElementShortName">douta</obj_property>
-      <obj_property name="ObjectShortName">douta</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/web" type="logic">
-      <obj_property name="ElementShortName">web</obj_property>
-      <obj_property name="ObjectShortName">web</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/dinb" type="logic">
-      <obj_property name="ElementShortName">dinb</obj_property>
-      <obj_property name="ObjectShortName">dinb</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/curr_word_data" type="array">
-      <obj_property name="ElementShortName">curr_word_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">curr_word_data[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/prev_word_data" type="array">
-      <obj_property name="ElementShortName">prev_word_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">prev_word_data[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/restart_addr" type="array">
-      <obj_property name="ElementShortName">restart_addr[14:0]</obj_property>
-      <obj_property name="ObjectShortName">restart_addr[14:0]</obj_property>
+   <wvobject fp_name="/testbench_top_level/dut/btnC" type="logic">
+      <obj_property name="ElementShortName">btnC</obj_property>
+      <obj_property name="ObjectShortName">btnC</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/btnC" type="logic">
       <obj_property name="ElementShortName">btnC</obj_property>
@@ -275,675 +127,1294 @@
       <obj_property name="ElementShortName">btnC</obj_property>
       <obj_property name="ObjectShortName">btnC</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/mic_in" type="array">
-      <obj_property name="ElementShortName">mic_in[15:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_in[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/freeze" type="logic">
-      <obj_property name="ElementShortName">freeze</obj_property>
-      <obj_property name="ObjectShortName">freeze</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/read_offset_b_0" type="array">
-      <obj_property name="ElementShortName">read_offset_b_0[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_0[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/read_offset_b_1" type="array">
-      <obj_property name="ElementShortName">read_offset_b_1[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_1[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/read_offset_b_2" type="array">
-      <obj_property name="ElementShortName">read_offset_b_2[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_2[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/read_offset_b_3" type="array">
-      <obj_property name="ElementShortName">read_offset_b_3[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_3[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/read_offset_b_4" type="array">
-      <obj_property name="ElementShortName">read_offset_b_4[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_4[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/read_offset_b_5" type="array">
-      <obj_property name="ElementShortName">read_offset_b_5[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_5[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/read_offset_b_6" type="array">
-      <obj_property name="ElementShortName">read_offset_b_6[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_6[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/read_offset_b_7" type="array">
-      <obj_property name="ElementShortName">read_offset_b_7[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_7[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/read_offset_b_8" type="array">
-      <obj_property name="ElementShortName">read_offset_b_8[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_8[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/read_offset_b_9" type="array">
-      <obj_property name="ElementShortName">read_offset_b_9[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_9[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/read_offset_b_10" type="array">
-      <obj_property name="ElementShortName">read_offset_b_10[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_10[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/read_offset_b_11" type="array">
-      <obj_property name="ElementShortName">read_offset_b_11[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_11[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/read_offset_b_12" type="array">
-      <obj_property name="ElementShortName">read_offset_b_12[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_12[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/read_offset_b_13" type="array">
-      <obj_property name="ElementShortName">read_offset_b_13[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_13[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/read_offset_b_14" type="array">
-      <obj_property name="ElementShortName">read_offset_b_14[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_14[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/read_offset_b_15" type="array">
-      <obj_property name="ElementShortName">read_offset_b_15[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_15[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/rd_en" type="logic">
-      <obj_property name="ElementShortName">rd_en</obj_property>
-      <obj_property name="ObjectShortName">rd_en</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/wr_en" type="logic">
-      <obj_property name="ElementShortName">wr_en</obj_property>
-      <obj_property name="ObjectShortName">wr_en</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/mic_out_0" type="array">
-      <obj_property name="ElementShortName">mic_out_0[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_0[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/mic_out_1" type="array">
-      <obj_property name="ElementShortName">mic_out_1[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_1[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/mic_out_2" type="array">
-      <obj_property name="ElementShortName">mic_out_2[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_2[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/mic_out_3" type="array">
-      <obj_property name="ElementShortName">mic_out_3[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_3[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/mic_out_4" type="array">
-      <obj_property name="ElementShortName">mic_out_4[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_4[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/mic_out_5" type="array">
-      <obj_property name="ElementShortName">mic_out_5[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_5[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/mic_out_6" type="array">
-      <obj_property name="ElementShortName">mic_out_6[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_6[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/mic_out_7" type="array">
-      <obj_property name="ElementShortName">mic_out_7[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_7[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/mic_out_8" type="array">
-      <obj_property name="ElementShortName">mic_out_8[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_8[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/mic_out_9" type="array">
-      <obj_property name="ElementShortName">mic_out_9[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_9[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/mic_out_10" type="array">
-      <obj_property name="ElementShortName">mic_out_10[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_10[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/mic_out_11" type="array">
-      <obj_property name="ElementShortName">mic_out_11[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_11[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/mic_out_12" type="array">
-      <obj_property name="ElementShortName">mic_out_12[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_12[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/mic_out_13" type="array">
-      <obj_property name="ElementShortName">mic_out_13[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_13[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/mic_out_14" type="array">
-      <obj_property name="ElementShortName">mic_out_14[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_14[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/mic_out_15" type="array">
-      <obj_property name="ElementShortName">mic_out_15[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_15[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/done_out" type="logic">
-      <obj_property name="ElementShortName">done_out</obj_property>
-      <obj_property name="ObjectShortName">done_out</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/full" type="logic">
-      <obj_property name="ElementShortName">full</obj_property>
-      <obj_property name="ObjectShortName">full</obj_property>
-   </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/btnC" type="logic">
       <obj_property name="ElementShortName">btnC</obj_property>
       <obj_property name="ObjectShortName">btnC</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/btnC" type="logic">
-      <obj_property name="ElementShortName">btnC</obj_property>
-      <obj_property name="ObjectShortName">btnC</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/mic_in" type="array">
-      <obj_property name="ElementShortName">mic_in[15:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_in[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/freeze" type="logic">
-      <obj_property name="ElementShortName">freeze</obj_property>
-      <obj_property name="ObjectShortName">freeze</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/read_offset_b_0" type="array">
-      <obj_property name="ElementShortName">read_offset_b_0[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_0[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/read_offset_b_1" type="array">
-      <obj_property name="ElementShortName">read_offset_b_1[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_1[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/read_offset_b_2" type="array">
-      <obj_property name="ElementShortName">read_offset_b_2[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_2[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/read_offset_b_3" type="array">
-      <obj_property name="ElementShortName">read_offset_b_3[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_3[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/read_offset_b_4" type="array">
-      <obj_property name="ElementShortName">read_offset_b_4[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_4[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/read_offset_b_5" type="array">
-      <obj_property name="ElementShortName">read_offset_b_5[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_5[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/read_offset_b_6" type="array">
-      <obj_property name="ElementShortName">read_offset_b_6[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_6[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/read_offset_b_7" type="array">
-      <obj_property name="ElementShortName">read_offset_b_7[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_7[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/read_offset_b_8" type="array">
-      <obj_property name="ElementShortName">read_offset_b_8[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_8[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/read_offset_b_9" type="array">
-      <obj_property name="ElementShortName">read_offset_b_9[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_9[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/read_offset_b_10" type="array">
-      <obj_property name="ElementShortName">read_offset_b_10[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_10[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/read_offset_b_11" type="array">
-      <obj_property name="ElementShortName">read_offset_b_11[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_11[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/read_offset_b_12" type="array">
-      <obj_property name="ElementShortName">read_offset_b_12[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_12[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/read_offset_b_13" type="array">
-      <obj_property name="ElementShortName">read_offset_b_13[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_13[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/read_offset_b_14" type="array">
-      <obj_property name="ElementShortName">read_offset_b_14[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_14[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/read_offset_b_15" type="array">
-      <obj_property name="ElementShortName">read_offset_b_15[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b_15[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/rd_en" type="logic">
-      <obj_property name="ElementShortName">rd_en</obj_property>
-      <obj_property name="ObjectShortName">rd_en</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/wr_en" type="logic">
-      <obj_property name="ElementShortName">wr_en</obj_property>
-      <obj_property name="ObjectShortName">wr_en</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/mic_out_0" type="array">
-      <obj_property name="ElementShortName">mic_out_0[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_0[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/mic_out_1" type="array">
-      <obj_property name="ElementShortName">mic_out_1[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_1[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/mic_out_2" type="array">
-      <obj_property name="ElementShortName">mic_out_2[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_2[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/mic_out_3" type="array">
-      <obj_property name="ElementShortName">mic_out_3[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_3[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/mic_out_4" type="array">
-      <obj_property name="ElementShortName">mic_out_4[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_4[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/mic_out_5" type="array">
-      <obj_property name="ElementShortName">mic_out_5[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_5[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/mic_out_6" type="array">
-      <obj_property name="ElementShortName">mic_out_6[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_6[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/mic_out_7" type="array">
-      <obj_property name="ElementShortName">mic_out_7[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_7[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/mic_out_8" type="array">
-      <obj_property name="ElementShortName">mic_out_8[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_8[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/mic_out_9" type="array">
-      <obj_property name="ElementShortName">mic_out_9[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_9[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/mic_out_10" type="array">
-      <obj_property name="ElementShortName">mic_out_10[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_10[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/mic_out_11" type="array">
-      <obj_property name="ElementShortName">mic_out_11[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_11[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/mic_out_12" type="array">
-      <obj_property name="ElementShortName">mic_out_12[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_12[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/mic_out_13" type="array">
-      <obj_property name="ElementShortName">mic_out_13[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_13[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/mic_out_14" type="array">
-      <obj_property name="ElementShortName">mic_out_14[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_14[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/mic_out_15" type="array">
-      <obj_property name="ElementShortName">mic_out_15[31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out_15[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/done_out" type="logic">
-      <obj_property name="ElementShortName">done_out</obj_property>
-      <obj_property name="ObjectShortName">done_out</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/full" type="logic">
-      <obj_property name="ElementShortName">full</obj_property>
-      <obj_property name="ObjectShortName">full</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/start_addr" type="array">
-      <obj_property name="ElementShortName">start_addr[9:0]</obj_property>
-      <obj_property name="ObjectShortName">start_addr[9:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/word_offset_b" type="array">
-      <obj_property name="ElementShortName">word_offset_b[9:0]</obj_property>
-      <obj_property name="ObjectShortName">word_offset_b[9:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_2/msram_0/addrb" type="array">
-      <obj_property name="ElementShortName">addrb[9:0]</obj_property>
-      <obj_property name="ObjectShortName">addrb[9:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/adder/out" type="array">
-      <obj_property name="ElementShortName">out[10:0]</obj_property>
-      <obj_property name="ObjectShortName">out[10:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/mic_out2" type="array">
-      <obj_property name="ElementShortName">mic_out2[15:0][31:0]</obj_property>
-      <obj_property name="ObjectShortName">mic_out2[15:0][31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/ram_out" type="array">
-      <obj_property name="ElementShortName">ram_out[15:0][31:0]</obj_property>
-      <obj_property name="ObjectShortName">ram_out[15:0][31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/rst" type="logic">
-      <obj_property name="ElementShortName">rst</obj_property>
-      <obj_property name="ObjectShortName">rst</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/in" type="array">
-      <obj_property name="ElementShortName">in[10:0]</obj_property>
-      <obj_property name="ObjectShortName">in[10:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/ena" type="logic">
-      <obj_property name="ElementShortName">ena</obj_property>
-      <obj_property name="ObjectShortName">ena</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/out" type="array">
-      <obj_property name="ElementShortName">out[23:0]</obj_property>
-      <obj_property name="ObjectShortName">out[23:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/inc_out" type="array">
-      <obj_property name="ElementShortName">inc_out[23:0]</obj_property>
-      <obj_property name="ObjectShortName">inc_out[23:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/int_1_out" type="array">
-      <obj_property name="ElementShortName">int_1_out[23:0]</obj_property>
-      <obj_property name="ObjectShortName">int_1_out[23:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/int_2_out" type="array">
-      <obj_property name="ElementShortName">int_2_out[23:0]</obj_property>
-      <obj_property name="ObjectShortName">int_2_out[23:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/extended_in" type="array">
-      <obj_property name="ElementShortName">extended_in[23:0]</obj_property>
-      <obj_property name="ObjectShortName">extended_in[23:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/diff_0_out" type="array">
-      <obj_property name="ElementShortName">diff_0_out[23:0]</obj_property>
-      <obj_property name="ObjectShortName">diff_0_out[23:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/diff_1_out" type="array">
-      <obj_property name="ElementShortName">diff_1_out[23:0]</obj_property>
-      <obj_property name="ObjectShortName">diff_1_out[23:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/counter" type="logic">
-      <obj_property name="ElementShortName">counter</obj_property>
-      <obj_property name="ObjectShortName">counter</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/lr_clk" type="logic">
-      <obj_property name="ElementShortName">lr_clk</obj_property>
-      <obj_property name="ObjectShortName">lr_clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/freeze" type="logic">
-      <obj_property name="ElementShortName">freeze</obj_property>
-      <obj_property name="ObjectShortName">freeze</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/mic_data" type="logic">
-      <obj_property name="ElementShortName">mic_data</obj_property>
-      <obj_property name="ObjectShortName">mic_data</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/read_offset_b" type="array">
-      <obj_property name="ElementShortName">read_offset_b[11:0]</obj_property>
-      <obj_property name="ObjectShortName">read_offset_b[11:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/rd_en" type="logic">
-      <obj_property name="ElementShortName">rd_en</obj_property>
-      <obj_property name="ObjectShortName">rd_en</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/wr_en" type="logic">
-      <obj_property name="ElementShortName">wr_en</obj_property>
-      <obj_property name="ObjectShortName">wr_en</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/word_data" type="array">
-      <obj_property name="ElementShortName">word_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">word_data[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/done" type="logic">
-      <obj_property name="ElementShortName">done</obj_property>
-      <obj_property name="ObjectShortName">done</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/full" type="logic">
-      <obj_property name="ElementShortName">full</obj_property>
-      <obj_property name="ObjectShortName">full</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/addra" type="array">
-      <obj_property name="ElementShortName">addra[14:0]</obj_property>
-      <obj_property name="ObjectShortName">addra[14:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/addrb" type="array">
-      <obj_property name="ElementShortName">addrb[9:0]</obj_property>
-      <obj_property name="ObjectShortName">addrb[9:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/start_addr" type="array">
-      <obj_property name="ElementShortName">start_addr[9:0]</obj_property>
-      <obj_property name="ObjectShortName">start_addr[9:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/bit_offset_b" type="array">
-      <obj_property name="ElementShortName">bit_offset_b[4:0]</obj_property>
-      <obj_property name="ObjectShortName">bit_offset_b[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/word_offset_b" type="array">
-      <obj_property name="ElementShortName">word_offset_b[9:0]</obj_property>
-      <obj_property name="ObjectShortName">word_offset_b[9:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/douta" type="logic">
-      <obj_property name="ElementShortName">douta</obj_property>
-      <obj_property name="ObjectShortName">douta</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/web" type="logic">
-      <obj_property name="ElementShortName">web</obj_property>
-      <obj_property name="ObjectShortName">web</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/dinb" type="logic">
-      <obj_property name="ElementShortName">dinb</obj_property>
-      <obj_property name="ObjectShortName">dinb</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/curr_word_data" type="array">
-      <obj_property name="ElementShortName">curr_word_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">curr_word_data[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/prev_word_data" type="array">
-      <obj_property name="ElementShortName">prev_word_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">prev_word_data[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/restart_addr" type="array">
-      <obj_property name="ElementShortName">restart_addr[14:0]</obj_property>
-      <obj_property name="ObjectShortName">restart_addr[14:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/mem_addr" type="array">
-      <obj_property name="ElementShortName">mem_addr[9:0]</obj_property>
-      <obj_property name="ObjectShortName">mem_addr[9:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/big_ram_1/msram_0/ext_mem_addr" type="array">
-      <obj_property name="ElementShortName">ext_mem_addr[14:0]</obj_property>
-      <obj_property name="ObjectShortName">ext_mem_addr[14:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/rst" type="logic">
-      <obj_property name="ElementShortName">rst</obj_property>
-      <obj_property name="ObjectShortName">rst</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/in" type="array">
-      <obj_property name="ElementShortName">in[10:0]</obj_property>
-      <obj_property name="ObjectShortName">in[10:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/ena" type="logic">
-      <obj_property name="ElementShortName">ena</obj_property>
-      <obj_property name="ObjectShortName">ena</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/out" type="array">
-      <obj_property name="ElementShortName">out[23:0]</obj_property>
-      <obj_property name="ObjectShortName">out[23:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/dec_clk" type="logic">
-      <obj_property name="ElementShortName">dec_clk</obj_property>
-      <obj_property name="ObjectShortName">dec_clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/inc_out" type="array">
-      <obj_property name="ElementShortName">inc_out[23:0]</obj_property>
-      <obj_property name="ObjectShortName">inc_out[23:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/int_1_out" type="array">
-      <obj_property name="ElementShortName">int_1_out[23:0]</obj_property>
-      <obj_property name="ObjectShortName">int_1_out[23:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/int_2_out" type="array">
-      <obj_property name="ElementShortName">int_2_out[23:0]</obj_property>
-      <obj_property name="ObjectShortName">int_2_out[23:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/extended_in" type="array">
-      <obj_property name="ElementShortName">extended_in[23:0]</obj_property>
-      <obj_property name="ObjectShortName">extended_in[23:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/diff_0_out" type="array">
-      <obj_property name="ElementShortName">diff_0_out[23:0]</obj_property>
-      <obj_property name="ObjectShortName">diff_0_out[23:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/diff_1_out" type="array">
-      <obj_property name="ElementShortName">diff_1_out[23:0]</obj_property>
-      <obj_property name="ObjectShortName">diff_1_out[23:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/counter" type="logic">
-      <obj_property name="ElementShortName">counter</obj_property>
-      <obj_property name="ObjectShortName">counter</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/cic32b/lr_clk" type="logic">
-      <obj_property name="ElementShortName">lr_clk</obj_property>
-      <obj_property name="ObjectShortName">lr_clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/averager/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/averager/rst" type="logic">
-      <obj_property name="ElementShortName">rst</obj_property>
-      <obj_property name="ObjectShortName">rst</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/averager/rom_addr" type="array">
-      <obj_property name="ElementShortName">rom_addr[7:0]</obj_property>
-      <obj_property name="ObjectShortName">rom_addr[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/averager/data_in" type="array">
-      <obj_property name="ElementShortName">data_in[23:0]</obj_property>
-      <obj_property name="ObjectShortName">data_in[23:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/averager/out_addr" type="array">
-      <obj_property name="ElementShortName">out_addr[7:0]</obj_property>
-      <obj_property name="ObjectShortName">out_addr[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/averager/out_val" type="array">
-      <obj_property name="ElementShortName">out_val[7:0]</obj_property>
-      <obj_property name="ObjectShortName">out_val[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/averager/prev_rom_addr" type="array">
-      <obj_property name="ElementShortName">prev_rom_addr[7:0]</obj_property>
-      <obj_property name="ObjectShortName">prev_rom_addr[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/averager/curr_data" type="array">
-      <obj_property name="ElementShortName">curr_data[33:0]</obj_property>
-      <obj_property name="ObjectShortName">curr_data[33:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/averager/data" type="array">
-      <obj_property name="ElementShortName">data[23:0]</obj_property>
-      <obj_property name="ObjectShortName">data[23:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/rst" type="logic">
-      <obj_property name="ElementShortName">rst</obj_property>
-      <obj_property name="ObjectShortName">rst</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/data_in" type="array">
-      <obj_property name="ElementShortName">data_in[7:0]</obj_property>
-      <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/addr" type="array">
-      <obj_property name="ElementShortName">addr[7:0]</obj_property>
-      <obj_property name="ObjectShortName">addr[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/tx" type="logic">
-      <obj_property name="ElementShortName">tx</obj_property>
-      <obj_property name="ObjectShortName">tx</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/data_array" type="array">
-      <obj_property name="ElementShortName">data_array[0:255][7:0]</obj_property>
-      <obj_property name="ObjectShortName">data_array[0:255][7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/i" type="array">
-      <obj_property name="ElementShortName">i[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/data_to_send" type="array">
-      <obj_property name="ElementShortName">data_to_send[7:0]</obj_property>
-      <obj_property name="ObjectShortName">data_to_send[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/send" type="logic">
-      <obj_property name="ElementShortName">send</obj_property>
-      <obj_property name="ObjectShortName">send</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/busy" type="logic">
-      <obj_property name="ElementShortName">busy</obj_property>
-      <obj_property name="ObjectShortName">busy</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/index" type="array">
-      <obj_property name="ElementShortName">index[8:0]</obj_property>
-      <obj_property name="ObjectShortName">index[8:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/preamble_count" type="array">
-      <obj_property name="ElementShortName">preamble_count[2:0]</obj_property>
-      <obj_property name="ObjectShortName">preamble_count[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/clk_div" type="array">
-      <obj_property name="ElementShortName">clk_div[19:0]</obj_property>
-      <obj_property name="ObjectShortName">clk_div[19:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/frame_buffer/tick" type="logic">
-      <obj_property name="ElementShortName">tick</obj_property>
-      <obj_property name="ObjectShortName">tick</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/freeze1" type="logic">
-      <obj_property name="ElementShortName">freeze1</obj_property>
-      <obj_property name="ObjectShortName">freeze1</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/freeze2" type="logic">
-      <obj_property name="ElementShortName">freeze2</obj_property>
-      <obj_property name="ObjectShortName">freeze2</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/rom_chg" type="logic">
-      <obj_property name="ElementShortName">rom_chg</obj_property>
-      <obj_property name="ObjectShortName">rom_chg</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/flip" type="logic">
-      <obj_property name="ElementShortName">flip</obj_property>
-      <obj_property name="ObjectShortName">flip</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/done1" type="logic">
-      <obj_property name="ElementShortName">done1</obj_property>
-      <obj_property name="ObjectShortName">done1</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/done2" type="logic">
-      <obj_property name="ElementShortName">done2</obj_property>
-      <obj_property name="ObjectShortName">done2</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/rom_addr" type="array">
-      <obj_property name="ElementShortName">rom_addr[7:0]</obj_property>
-      <obj_property name="ObjectShortName">rom_addr[7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/CLK100MHZ" type="logic">
       <obj_property name="ElementShortName">CLK100MHZ</obj_property>
       <obj_property name="ObjectShortName">CLK100MHZ</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/ena" type="logic">
+      <obj_property name="ElementShortName">ena</obj_property>
+      <obj_property name="ObjectShortName">ena</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/bit_data" type="array">
+      <obj_property name="ElementShortName">bit_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_data[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/core_dout" type="logic">
+      <obj_property name="ElementShortName">core_dout</obj_property>
+      <obj_property name="ObjectShortName">core_dout</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/core_cout" type="logic">
+      <obj_property name="ElementShortName">core_cout</obj_property>
+      <obj_property name="ObjectShortName">core_cout</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/lr_clk" type="logic">
+      <obj_property name="ElementShortName">lr_clk</obj_property>
+      <obj_property name="ObjectShortName">lr_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/pixel_addr" type="array">
+      <obj_property name="ElementShortName">pixel_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_en" type="logic">
+      <obj_property name="ElementShortName">cic_en</obj_property>
+      <obj_property name="ObjectShortName">cic_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/start_task" type="logic">
+      <obj_property name="ElementShortName">start_task</obj_property>
+      <obj_property name="ObjectShortName">start_task</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/read_addr" type="array">
+      <obj_property name="ElementShortName">read_addr[13:0]</obj_property>
+      <obj_property name="ObjectShortName">read_addr[13:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/write_addr" type="array">
+      <obj_property name="ElementShortName">write_addr[13:0]</obj_property>
+      <obj_property name="ObjectShortName">write_addr[13:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out0" type="array">
+      <obj_property name="ElementShortName">rom_out0[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out0[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out1" type="array">
+      <obj_property name="ElementShortName">rom_out1[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out1[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out2" type="array">
+      <obj_property name="ElementShortName">rom_out2[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out2[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out3" type="array">
+      <obj_property name="ElementShortName">rom_out3[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out3[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out4" type="array">
+      <obj_property name="ElementShortName">rom_out4[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out4[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out5" type="array">
+      <obj_property name="ElementShortName">rom_out5[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out5[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out6" type="array">
+      <obj_property name="ElementShortName">rom_out6[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out6[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out7" type="array">
+      <obj_property name="ElementShortName">rom_out7[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out7[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out8" type="array">
+      <obj_property name="ElementShortName">rom_out8[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out8[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out9" type="array">
+      <obj_property name="ElementShortName">rom_out9[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out9[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out10" type="array">
+      <obj_property name="ElementShortName">rom_out10[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out10[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out11" type="array">
+      <obj_property name="ElementShortName">rom_out11[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out11[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out12" type="array">
+      <obj_property name="ElementShortName">rom_out12[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out12[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out13" type="array">
+      <obj_property name="ElementShortName">rom_out13[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out13[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out14" type="array">
+      <obj_property name="ElementShortName">rom_out14[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out14[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out15" type="array">
+      <obj_property name="ElementShortName">rom_out15[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out15[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/ram_out" type="array">
+      <obj_property name="ElementShortName">ram_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/adder16_out" type="array">
+      <obj_property name="ElementShortName">adder16_out[5:0]</obj_property>
+      <obj_property name="ObjectShortName">adder16_out[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_out" type="array">
+      <obj_property name="ElementShortName">cic_out[23:0]</obj_property>
+      <obj_property name="ObjectShortName">cic_out[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/extended_cic_out" type="array">
+      <obj_property name="ElementShortName">extended_cic_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">extended_cic_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/lr_clk2" type="logic">
+      <obj_property name="ElementShortName">lr_clk2</obj_property>
+      <obj_property name="ObjectShortName">lr_clk2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/extended_counter_out" type="array">
+      <obj_property name="ElementShortName">extended_counter_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">extended_counter_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/state_machine_inst/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/state_machine_inst/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/state_machine_inst/write_addr" type="array">
+      <obj_property name="ElementShortName">write_addr[13:0]</obj_property>
+      <obj_property name="ObjectShortName">write_addr[13:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/state_machine_inst/read_addr" type="array">
+      <obj_property name="ElementShortName">read_addr[13:0]</obj_property>
+      <obj_property name="ObjectShortName">read_addr[13:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/state_machine_inst/start_task" type="logic">
+      <obj_property name="ElementShortName">start_task</obj_property>
+      <obj_property name="ObjectShortName">start_task</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/state_machine_inst/cic_en" type="logic">
+      <obj_property name="ElementShortName">cic_en</obj_property>
+      <obj_property name="ObjectShortName">cic_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/state_machine_inst/pixel_counter" type="array">
+      <obj_property name="ElementShortName">pixel_counter[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_counter[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/state_machine_inst/state" type="array">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/state_machine_inst/task_started" type="logic">
+      <obj_property name="ElementShortName">task_started</obj_property>
+      <obj_property name="ObjectShortName">task_started</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/state_machine_inst/cic_counter" type="array">
+      <obj_property name="ElementShortName">cic_counter[11:0]</obj_property>
+      <obj_property name="ObjectShortName">cic_counter[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/state_machine_inst/read_start" type="array">
+      <obj_property name="ElementShortName">read_start[13:0]</obj_property>
+      <obj_property name="ObjectShortName">read_start[13:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/state_machine_inst/idle" type="array">
+      <obj_property name="ElementShortName">idle[31:0]</obj_property>
+      <obj_property name="ObjectShortName">idle[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/state_machine_inst/pixel_load" type="array">
+      <obj_property name="ElementShortName">pixel_load[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_load[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/state_machine_inst/run_cic" type="array">
+      <obj_property name="ElementShortName">run_cic[31:0]</obj_property>
+      <obj_property name="ObjectShortName">run_cic[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/state_machine_inst/pix_inc" type="array">
+      <obj_property name="ElementShortName">pix_inc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pix_inc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/state_machine_inst/task_cmp" type="array">
+      <obj_property name="ElementShortName">task_cmp[31:0]</obj_property>
+      <obj_property name="ObjectShortName">task_cmp[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/adder16/in" type="array">
+      <obj_property name="ElementShortName">in[15:0]</obj_property>
+      <obj_property name="ObjectShortName">in[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/adder16/out" type="array">
+      <obj_property name="ElementShortName">out[4:0]</obj_property>
+      <obj_property name="ObjectShortName">out[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/output_fifo_wr_en" type="logic">
+      <obj_property name="ElementShortName">output_fifo_wr_en</obj_property>
+      <obj_property name="ObjectShortName">output_fifo_wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/addr" type="array">
+      <obj_property name="ElementShortName">addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/in" type="array">
+      <obj_property name="ElementShortName">in[4:0]</obj_property>
+      <obj_property name="ObjectShortName">in[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/ena" type="logic">
+      <obj_property name="ElementShortName">ena</obj_property>
+      <obj_property name="ObjectShortName">ena</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/out" type="array">
+      <obj_property name="ElementShortName">out[23:0]</obj_property>
+      <obj_property name="ObjectShortName">out[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/hpout" type="array">
+      <obj_property name="ElementShortName">hpout[23:0]</obj_property>
+      <obj_property name="ObjectShortName">hpout[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/lr_clk" type="logic">
+      <obj_property name="ElementShortName">lr_clk</obj_property>
+      <obj_property name="ObjectShortName">lr_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/out_wires" type="array">
+      <obj_property name="ElementShortName">out_wires[255:0][23:0]</obj_property>
+      <obj_property name="ObjectShortName">out_wires[255:0][23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/hpout_wires" type="array">
+      <obj_property name="ElementShortName">hpout_wires[255:0][23:0]</obj_property>
+      <obj_property name="ObjectShortName">hpout_wires[255:0][23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[0].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[0].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[0].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[1].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[1].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[1].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[2].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[2].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[2].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[3].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[3].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[3].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[4].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[4].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[4].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[5].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[5].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[5].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[6].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[6].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[6].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[7].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[7].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[7].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[8].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[8].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[8].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[9].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[9].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[9].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[10].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[10].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[10].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[11].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[11].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[11].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[12].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[12].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[12].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[13].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[13].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[13].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[14].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[14].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[14].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[15].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[15].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[15].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[16].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[16].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[16].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[17].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[17].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[17].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[18].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[18].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[18].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[19].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[19].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[19].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[20].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[20].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[20].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[21].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[21].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[21].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[22].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[22].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[22].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[23].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[23].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[23].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[24].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[24].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[24].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[25].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[25].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[25].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[26].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[26].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[26].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[27].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[27].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[27].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[28].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[28].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[28].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[29].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[29].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[29].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[30].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[30].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[30].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[31].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[31].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[31].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[32].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[32].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[32].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[33].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[33].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[33].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[34].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[34].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[34].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[35].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[35].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[35].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[36].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[36].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[36].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[37].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[37].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[37].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[38].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[38].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[38].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[39].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[39].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[39].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[40].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[40].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[40].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[41].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[41].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[41].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[42].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[42].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[42].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[43].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[43].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[43].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[44].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[44].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[44].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[45].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[45].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[45].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[46].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[46].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[46].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[47].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[47].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[47].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[48].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[48].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[48].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[49].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[49].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[49].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[50].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[50].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[50].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[51].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[51].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[51].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[52].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[52].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[52].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[53].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[53].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[53].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[54].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[54].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[54].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[55].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[55].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[55].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[56].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[56].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[56].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[57].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[57].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[57].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[58].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[58].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[58].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[59].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[59].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[59].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[60].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[60].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[60].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[61].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[61].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[61].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[62].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[62].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[62].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[63].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[63].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[63].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[64].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[64].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[64].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[65].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[65].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[65].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[66].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[66].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[66].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[67].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[67].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[67].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[68].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[68].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[68].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[69].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[69].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[69].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[70].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[70].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[70].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[71].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[71].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[71].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[72].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[72].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[72].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[73].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[73].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[73].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[74].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[74].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[74].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[75].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[75].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[75].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[76].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[76].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[76].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[77].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[77].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[77].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[78].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[78].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[78].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[79].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[79].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[79].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[80].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[80].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[80].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[81].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[81].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[81].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[82].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[82].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[82].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[83].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[83].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[83].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[84].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[84].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[84].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[85].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[85].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[85].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[86].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[86].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[86].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[87].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[87].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[87].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[88].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[88].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[88].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[89].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[89].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[89].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[90].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[90].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[90].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[91].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[91].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[91].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[92].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[92].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[92].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[93].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[93].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[93].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[94].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[94].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[94].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[95].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[95].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[95].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[96].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[96].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[96].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[97].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[97].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[97].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[98].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[98].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[98].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[99].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[99].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[99].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[100].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[100].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[100].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[101].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[101].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[101].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[102].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[102].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[102].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[103].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[103].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[103].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[104].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[104].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[104].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[105].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[105].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[105].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[106].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[106].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[106].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[107].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[107].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[107].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[108].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[108].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[108].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[109].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[109].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[109].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[110].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[110].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[110].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[111].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[111].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[111].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[112].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[112].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[112].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[113].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[113].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[113].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[114].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[114].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[114].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[115].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[115].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[115].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[116].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[116].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[116].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[117].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[117].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[117].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[118].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[118].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[118].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[119].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[119].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[119].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[120].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[120].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[120].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[121].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[121].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[121].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[122].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[122].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[122].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[123].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[123].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[123].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[124].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[124].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[124].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[125].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[125].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[125].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[126].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[126].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[126].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[127].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[127].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[127].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[128].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[128].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[128].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[129].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[129].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[129].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[130].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[130].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[130].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[131].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[131].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[131].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[132].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[132].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[132].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[133].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[133].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[133].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[134].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[134].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[134].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[135].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[135].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[135].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[136].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[136].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[136].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[137].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[137].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[137].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[138].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[138].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[138].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[139].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[139].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[139].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[140].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[140].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[140].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[141].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[141].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[141].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[142].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[142].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[142].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[143].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[143].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[143].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[144].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[144].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[144].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[145].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[145].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[145].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[146].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[146].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[146].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[147].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[147].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[147].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[148].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[148].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[148].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[149].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[149].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[149].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[150].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[150].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[150].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[151].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[151].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[151].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[152].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[152].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[152].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[153].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[153].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[153].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[154].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[154].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[154].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[155].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[155].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[155].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[156].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[156].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[156].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[157].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[157].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[157].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[158].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[158].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[158].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[159].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[159].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[159].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[160].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[160].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[160].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[161].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[161].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[161].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[162].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[162].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[162].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[163].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[163].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[163].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[164].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[164].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[164].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[165].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[165].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[165].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[166].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[166].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[166].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[167].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[167].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[167].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[168].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[168].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[168].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[169].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[169].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[169].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[170].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[170].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[170].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[171].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[171].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[171].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[172].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[172].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[172].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[173].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[173].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[173].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[174].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[174].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[174].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[175].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[175].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[175].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[176].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[176].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[176].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[177].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[177].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[177].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[178].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[178].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[178].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[179].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[179].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[179].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[180].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[180].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[180].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[181].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[181].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[181].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[182].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[182].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[182].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[183].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[183].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[183].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[184].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[184].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[184].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[185].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[185].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[185].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[186].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[186].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[186].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[187].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[187].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[187].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[188].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[188].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[188].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[189].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[189].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[189].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[190].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[190].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[190].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[191].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[191].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[191].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[192].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[192].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[192].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[193].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[193].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[193].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[194].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[194].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[194].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[195].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[195].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[195].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[196].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[196].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[196].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[197].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[197].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[197].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[198].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[198].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[198].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[199].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[199].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[199].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[200].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[200].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[200].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[201].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[201].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[201].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[202].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[202].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[202].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[203].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[203].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[203].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[204].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[204].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[204].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[205].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[205].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[205].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[206].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[206].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[206].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[207].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[207].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[207].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[208].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[208].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[208].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[209].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[209].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[209].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[210].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[210].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[210].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[211].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[211].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[211].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[212].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[212].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[212].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[213].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[213].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[213].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[214].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[214].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[214].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[215].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[215].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[215].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[216].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[216].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[216].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[217].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[217].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[217].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[218].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[218].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[218].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[219].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[219].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[219].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[220].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[220].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[220].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[221].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[221].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[221].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[222].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[222].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[222].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[223].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[223].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[223].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[224].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[224].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[224].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[225].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[225].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[225].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[226].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[226].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[226].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[227].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[227].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[227].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[228].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[228].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[228].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[229].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[229].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[229].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[230].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[230].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[230].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[231].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[231].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[231].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[232].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[232].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[232].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[233].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[233].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[233].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[234].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[234].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[234].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[235].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[235].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[235].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[236].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[236].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[236].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[237].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[237].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[237].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[238].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[238].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[238].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[239].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[239].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[239].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[240].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[240].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[240].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[241].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[241].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[241].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[242].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[242].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[242].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[243].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[243].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[243].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[244].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[244].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[244].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[245].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[245].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[245].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[246].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[246].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[246].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[247].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[247].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[247].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[248].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[248].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[248].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[249].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[249].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[249].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[250].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[250].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[250].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[251].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[251].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[251].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[252].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[252].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[252].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[253].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[253].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[253].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[254].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[254].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[254].enable_filter </obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_array_inst/\cic_filters[255].enable_filter " type="logic">
+      <obj_property name="ElementShortName">\cic_filters[255].enable_filter </obj_property>
+      <obj_property name="ObjectShortName">\cic_filters[255].enable_filter </obj_property>
    </wvobject>
 </wave_config>

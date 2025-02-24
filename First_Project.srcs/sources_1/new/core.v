@@ -23,8 +23,6 @@
 module core(
     input wire clk,
     input wire rst,
-    input wire [9:0] counter,
-    input wire [7:0] rom_addr,
     input wire ena,
     input wire [15:0] bit_data,
     output wire core_dout,
@@ -34,6 +32,20 @@ module core(
     
 //addr
     );
+    
+    
+    
+    wire [7:0] pixel_addr;
+    wire cic_en;
+    wire start_task;
+    wire [13:0] read_addr;
+    wire [13:0] write_addr;
+    wire load_cic;
+    wire store_cic;
+    
+    
+    
+    
     wire [11:0] rom_out0;
     wire [11:0] rom_out1;
     wire [11:0] rom_out2;
@@ -76,36 +88,25 @@ module core(
     );
 
     wire [15:0] ram_out;
-//    assign ram_out=ram_in;
+        
+    state_machine state_machine_inst(
+    .clk(clk),
+    .rst(rst),
+    .write_addr(write_addr),
+    .read_addr(read_addr),
+    .start_task(start_task),
+    .cic_en(cic_en),
+    .load_cic(load_cic),
+    .store_cic(store_cic),
+    .pixel_counter(pixel_addr)
+    );
 
-//    ram ram1(
-//    .mic_in(dmic_fifo_out),
-//    .mic_clk(clk),
-//    .read_clk(clk),
-//    .read_addr0(rom_out0),
-//    .read_addr1(rom_out1),// the offset need to do addrb+read addr
-//    .read_addr2(rom_out2),
-//    .read_addr3(rom_out3),
-//    .read_addr4(rom_out4),
-//    .read_addr5(rom_out5),
-//    .read_addr6(rom_out6),
-//    .read_addr7(rom_out7),
-//    .read_addr8(rom_out8),
-//    .read_addr9(rom_out9),
-//    .read_addr10(rom_out10),
-//    .read_addr11(rom_out11),
-//    .read_addr12(rom_out12),
-//    .read_addr13(rom_out13),
-//    .read_addr14(rom_out14),
-//    .read_addr15(rom_out15),
-//    .rd_en(output_fifo_wr_en),
-//    .wr_en(output_fifo_wr_en),    
-//    .mic_out(ram_out));
+
+    
     wire [5:0] adder16_out;
     ram ram1(
     .mic_in(bit_data),
-    .mic_clk(clk),
-    .read_clk(clk),
+    .clk(clk),
     .read_addr0(rom_out0),
     .read_addr1(rom_out1),// the offset need to do addrb+read addr
     .read_addr2(rom_out2),
@@ -122,8 +123,9 @@ module core(
     .read_addr13(rom_out13),
     .read_addr14(rom_out14),
     .read_addr15(rom_out15),
-    .rd_en(ena),
-    .wr_en(ena),    
+    .fifo_rd_en(ena),
+    .write_addr(write_addr),
+    .read_addr(read_addr),    
     .mic_out(ram_out));
    
     adder5bit16way adder16(
@@ -131,12 +133,17 @@ module core(
     .out(adder16_out)
     );
     wire [23:0] cic_out;
-    cic cic(
+    wire [23:0] hpout;
+    cic cic_inst(
     .clk(clk),
-    .rst(rst ),// || counter==0
+    .rst(rst),// || counter==0
+    .pixel_addr(pixel_addr),
+    .load(load_cic),
+    .store(store_cic),
     .in(adder16_out),
-    .ena(ena),
-    .out(cic_out)
+    .ena(cic_en),
+    .out(cic_out),
+    .hpout(hpout)
     
     );
     wire [31:0] extended_cic_out  = {{8{cic_out[23]}}, cic_out}; // this is messed up in some way nvnmmd fixed that
@@ -154,7 +161,7 @@ module core(
 //    .out(dc_elim_out)
 //    );
 //    wire [31:0] extended_dc_elim_out  = {{8{dc_elim_out[23]}}, dc_elim_out};
-    wire [31:0] extended_counter_out  = {{24{rom_addr[7]}}, rom_addr};
+    wire [31:0] extended_counter_out  = {{24{pixel_addr[7]}}, pixel_addr};
     i2s_bus i2s(
     .clk(clk),
     .rst(rst),
