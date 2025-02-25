@@ -29,11 +29,12 @@ module state_machine(
     output reg cic_en,
     output reg load_cic,
     output reg store_cic,
-    output reg [7:0] pixel_counter
+    output reg [7:0] pixel_counter,
+    output reg [2:0] cic_sub_addr
     
 //    output
     );
-    parameter idle=0, pixel_load=1, run_cic=2, pix_inc=3,task_cmp=4,cic_load=5,dummy=6;
+    parameter idle=0, pixel_load=1, run_cic=2, pix_inc=3,task_cmp=4,cic_load=5,cic_store=6;
    
     reg [3:0] state=0;
     reg task_started=0;
@@ -70,6 +71,7 @@ module state_machine(
             pixel_counter<=0;
             load_cic<=0;
             store_cic<=0;
+            cic_sub_addr<=0;
         end else begin 
             case (state)
                     idle: begin
@@ -85,32 +87,53 @@ module state_machine(
                         store_cic<=0;
                         cic_counter<=0;
                         state<=cic_load;
-                        
+                        cic_sub_addr<=0;
                         
                         end
                         
                     cic_load: begin 
                         load_cic<=1;
-                        state<=run_cic;
+                        if(store_cic) begin 
+                            if(cic_sub_addr<7) begin 
+                                cic_sub_addr<=cic_sub_addr+1;
+                            end else begin 
+                                load_cic<=1;
+                                cic_sub_addr<=0;
+                                state<=run_cic;
+                            end
+                        
+                        end
+                        
                     end
                     
                     run_cic: begin
                         cic_en<=1;
-                        load_cic<=0;
+//                        load_cic<=0;
                         if(cic_counter<4095) begin
                             cic_counter<=cic_counter+1;
                         end else begin 
                             cic_counter<=0;
-                            state<=dummy;
+                            state<=cic_store;
                         end
                     
                     
 //                         state = three;
                     end
-                    dummy: begin 
+                    cic_store: begin 
                         cic_en<=0;
-                        store_cic<=1; //check if picxel count is off
-                        state<=pix_inc;
+                        store_cic<=1;
+                        if(store_cic) begin 
+                            if(cic_sub_addr<7) begin 
+                                cic_sub_addr<=cic_sub_addr+1;
+                            end else begin 
+                                store_cic<=0;
+                                cic_sub_addr<=0;
+                                state<=pix_inc;
+                            end
+                        
+                        end
+                        
+                        
                     end
                     pix_inc: begin
                          

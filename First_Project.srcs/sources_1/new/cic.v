@@ -33,6 +33,7 @@ module cic (
     input wire [7:0] pixel_addr,
     input wire load,
     input wire store,
+    input wire [2:0] sub_addr,
     output [23:0] out,
     output wire [23:0] hpout,
     output reg lr_clk 
@@ -47,24 +48,25 @@ module cic (
 	wire [23:0] delta_out;
 	reg [23:0] outhp=0;
 	wire wea;
-	wire [183:0] dina;
-	wire [183:0] douta;
+	wire [23:0] dina;
+	wire [23:0] douta;
 	assign hpout=outhp;
 	reg [5:0] counter=0;
 	assign extended_in = {{19{in[4]}}, in}; 
 	reg dif_ena;
+	wire [10:0] mem_addr;
 	wire [23:0] data_out_3;
 	wire [23:0] data_out_4;
 	wire [23:0] data_out_5;
 	wire [23:0] data_out_6;
-	wire [23:0] int_state_0;
-	wire [23:0] int_state_1;
-	wire [23:0] int_state_2;
-	wire [23:0] int_state_3;
-	wire [23:0] int_state_4;
-	wire [23:0] int_state_5;
-	wire [23:0] int_state_6;
-	wire [15:0] hp_state;
+	reg [23:0] int_state_0;
+	reg [23:0] int_state_1;
+	reg [23:0] int_state_2;
+	reg [23:0] int_state_3;
+	reg [23:0] int_state_4;
+	reg [23:0] int_state_5;
+	reg [23:0] int_state_6;
+	reg [15:0] hp_state;
 	
 	
     always @(posedge clk or posedge rst) begin
@@ -83,23 +85,61 @@ module cic (
             dif_ena <= (counter == 0) ? 1 : 0;
     end
     
-    assign int_state_0 = douta[23:0];
-    assign int_state_1 = douta[47:24];
-    assign int_state_2 = douta[71:48];
-    assign int_state_3 = douta[95:72];
-    assign int_state_4 = douta[119:96];
-    assign int_state_5 = douta[143:120];
-    assign int_state_6 = douta[167:144];
-    assign hp_state = douta[183:168];
-    
-    assign dina = {outhp,data_out_6,data_out_5,data_out_4,data_out_3,int_2_out,int_1_out,inc_out};
+//    assign int_state_0 = douta[23:0];
+//    assign int_state_1 = douta[47:24];
+//    assign int_state_2 = douta[71:48];
+//    assign int_state_3 = douta[95:72];
+//    assign int_state_4 = douta[119:96];
+//    assign int_state_5 = douta[143:120];
+//    assign int_state_6 = douta[167:144];
+//    assign hp_state = douta[183:168];
+
+    assign dina = sub_addr==0?inc_out: sub_addr==1?int_1_out:sub_addr==2?int_2_out:sub_addr==3?data_out_3:sub_addr==4?data_out_4:sub_addr==5?data_out_5:sub_addr==6?data_out_6:sub_addr==7?outhp:0;
+//    assign dina = {outhp,data_out_6,data_out_5,data_out_4,data_out_3,int_2_out,int_1_out,inc_out};
+    assign mem_addr={pixel_addr,sub_addr};
     blk_mem_gen_17 cic_states (
       .clka(clk),    // input wire clka
       .wea(store),      // input wire [0 : 0] wea
-      .addra(pixel_addr),  // input wire [7 : 0] addra
-      .dina(dina),    // input wire [183 : 0] dina
-      .douta(douta)  // output wire [183 : 0] douta
+      .addra(mem_addr),  // input wire [10 : 0] addra
+      .dina(dina),    // input wire [23 : 0] dina
+      .douta(douta)  // output wire [23 : 0] douta
     );
+    
+    always @(posedge clk) begin
+    
+        if(rst) begin
+            int_state_0<=0;
+            int_state_1<=0;
+            int_state_2<=0;
+            int_state_3<=0;
+            int_state_4<=0;
+            int_state_5<=0;
+            int_state_6<=0;
+            hp_state<=0;
+        end else if(load) begin 
+            if(sub_addr==0) begin
+                int_state_0<=douta;
+            end else if(sub_addr==1) begin 
+                int_state_1<=douta;
+            end else if(sub_addr==2) begin 
+                int_state_2<=douta;
+            end else if(sub_addr==3) begin 
+                int_state_3<=douta;
+            end else if(sub_addr==4) begin 
+                int_state_4<=douta;
+            end else if(sub_addr==5) begin 
+                int_state_5<=douta;
+            end else if(sub_addr==6) begin 
+                int_state_6<=douta;
+            end else if(sub_addr==7) begin 
+                hp_state<=douta;
+            end
+    
+        end
+       
+    
+    end
+    
     
     generate 
     
