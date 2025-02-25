@@ -219,6 +219,7 @@ module simple_io(
     .clk(CLK400MHZ),
     .rst(btnC),
     .ena(output_fifo_wr_en),
+    .core_num(0),
     .bit_data(dmic_fifo_out),
     .core_dout(i2s_out),
     .core_cout(counter_out),

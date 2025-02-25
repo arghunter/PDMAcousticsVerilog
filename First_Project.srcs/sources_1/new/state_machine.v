@@ -21,15 +21,16 @@
 
 
 module state_machine(
-    input clk,
-    input rst,
+    input wire clk,
+    input wire rst,
     input wire [13:0] write_addr,
+    input wire core_num,
     output wire[13:0] read_addr,
     output reg start_task,//read
     output reg cic_en,
     output reg load_cic,
     output reg store_cic,
-    output reg [7:0] pixel_counter,
+    output wire [7:0] pixel_addr,
     output reg [2:0] cic_sub_addr
     
 //    output
@@ -40,6 +41,10 @@ module state_machine(
     reg task_started=0;
     reg [11:0] cic_counter=0;
     reg[13:0] read_start=0;
+    wire [7:0] pixel_offset;
+    reg [7:0] pixel_counter=0;
+    assign pixel_offset=core_num?128:0;
+    assign pixel_addr = pixel_offset+pixel_counter;
     
     
     assign read_addr=cic_counter+read_start;
@@ -62,7 +67,7 @@ module state_machine(
     
     end
     
-    always @(posedge clk) begin
+    always @(posedge clk or posedge rst) begin
         if(rst) begin
             state<=idle;
             cic_counter<=0;
@@ -136,8 +141,7 @@ module state_machine(
                         
                     end
                     pix_inc: begin
-                         
-                         
+                                                
                          if(pixel_counter<127) begin //switch pixels
                              pixel_counter<=pixel_counter+1;                         
                              state<= pixel_load;

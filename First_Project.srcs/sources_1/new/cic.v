@@ -52,21 +52,22 @@ module cic (
 	wire [23:0] douta;
 	assign hpout=outhp;
 	reg [5:0] counter=0;
-	assign extended_in = {{19{in[4]}}, in}; 
+//	assign extended_in = {{19{in[4]}}, in};
+    assign extended_in = {{23{0}}, 1}; 
 	reg dif_ena;
 	wire [10:0] mem_addr;
 	wire [23:0] data_out_3;
 	wire [23:0] data_out_4;
 	wire [23:0] data_out_5;
 	wire [23:0] data_out_6;
-	reg [23:0] int_state_0;
-	reg [23:0] int_state_1;
-	reg [23:0] int_state_2;
-	reg [23:0] int_state_3;
-	reg [23:0] int_state_4;
-	reg [23:0] int_state_5;
-	reg [23:0] int_state_6;
-	reg [15:0] hp_state;
+//	reg [23:0] int_state_0;
+//	reg [23:0] int_state_1;
+//	reg [23:0] int_state_2;
+//	reg [23:0] int_state_3;
+//	reg [23:0] int_state_4;
+//	reg [23:0] int_state_5;
+//	reg [23:0] int_state_6;
+//	reg [15:0] hp_state;
 	
 	
     always @(posedge clk or posedge rst) begin
@@ -105,40 +106,26 @@ module cic (
       .douta(douta)  // output wire [23 : 0] douta
     );
     
-    always @(posedge clk) begin
     
-        if(rst) begin
-            int_state_0<=0;
-            int_state_1<=0;
-            int_state_2<=0;
-            int_state_3<=0;
-            int_state_4<=0;
-            int_state_5<=0;
-            int_state_6<=0;
-            hp_state<=0;
-        end else if(load) begin 
-            if(sub_addr==0) begin
-                int_state_0<=douta;
-            end else if(sub_addr==1) begin 
-                int_state_1<=douta;
-            end else if(sub_addr==2) begin 
-                int_state_2<=douta;
-            end else if(sub_addr==3) begin 
-                int_state_3<=douta;
-            end else if(sub_addr==4) begin 
-                int_state_4<=douta;
-            end else if(sub_addr==5) begin 
-                int_state_5<=douta;
-            end else if(sub_addr==6) begin 
-                int_state_6<=douta;
-            end else if(sub_addr==7) begin 
-                hp_state<=douta;
-            end
+    wire load0;
+    wire load1;
+    wire load2;
+    wire load3;
+    wire load4;
+    wire load5;
+    wire load6;
+    wire load7;
+    assign load0=load&&(sub_addr==0);
+    assign load1=load&&(sub_addr==1);
+    assign load2=load&&(sub_addr==2);
+    assign load3=load&&(sub_addr==3);
+    assign load4=load&&(sub_addr==4);
+    assign load5=load&&(sub_addr==5);
+    assign load6=load&&(sub_addr==6);
+    assign load7=load&&(sub_addr==7);
     
-        end
-       
     
-    end
+
     
     
     generate 
@@ -147,36 +134,36 @@ module cic (
 		integrator u_integrator_0(
 			.clk(clk),
 			.rst(rst),
-		    .load(load),
+		    .load(load0),
 		    .ena(ena),
-		    .int_state(int_state_0),
+		    .int_state(douta),
 			.in(extended_in),  // Pass the sign-extended input
 			.out(inc_out)
 		);
 		integrator u_integrator_1(
 			.clk(clk),
 			.rst(rst),
-			.load(load),
+			.load(load1),
 		    .ena(ena),
-		    .int_state(int_state_1),
+		    .int_state(douta),
 			.in(inc_out),
 			.out(int_1_out)
 		);
 		integrator u_integrator_2(
 			.clk(clk),
 			.rst(rst),
-			.load(load),
+			.load(load2),
 		    .ena(ena),
-		    .int_state(int_state_2),
+		    .int_state(douta),
 			.in(int_1_out),
 			.out(int_2_out)
 		);
 		differentiator differentiator_0(
 		.clk(clk),
 		.rst(rst),
-		.load(load),
+		.load(load3),
 		.ena(dif_ena),
-		.int_state(int_state_3),
+		.int_state(douta),
 		.in(int_2_out),
 		.out(diff_0_out),
 		.data_out(data_out_3)
@@ -184,9 +171,9 @@ module cic (
 		differentiator differentiator_1(
 		.clk(clk),
 		.rst(rst),
-		.load(load),
+		.load(load4),
 		.ena(dif_ena),
-		.int_state(int_state_4),
+		.int_state(douta),
 		.in(diff_0_out),
 		.out(diff_1_out),
 		.data_out(data_out_4)
@@ -194,9 +181,9 @@ module cic (
 		differentiator differentiator_2(
 		.clk(clk),
 		.rst(rst),
-		.load(load),
+		.load(load5),
 		.ena(dif_ena),
-		.int_state(int_state_5),
+		.int_state(douta),
 		.in(diff_1_out),
 		.out(out),
 		.data_out(data_out_5)
@@ -205,9 +192,9 @@ module cic (
 		differentiator differentiator_3(
 		.clk(clk),
 		.rst(rst),
-		.load(load),
+		.load(load6),
 		.ena(dif_ena),
-		.int_state(int_state_6),
+		.int_state(douta),
 		.in(out),
 		.out(delta_out),
 		.data_out(data_out_6)
@@ -226,8 +213,8 @@ module cic (
     		always @(posedge clk) begin 
 		  if (rst) begin 
 		      outhp<=0;
-		  end else if(load) begin 
-		      outhp<=hp_state;
+		  end else if(load7) begin 
+		      outhp<=douta;
 		  end else if(dif_ena) begin
 		      outhp<=delta_out+outhp-(outhp>>1);
 		   end

@@ -123,7 +123,6 @@ OPTRACE "set parameters" START { }
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/simple_io.dcp
-  read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_10/blk_mem_gen_10.xci
   read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
   read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci
   read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
@@ -143,6 +142,7 @@ OPTRACE "add files" START { }
   read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_9/blk_mem_gen_9.xci
   read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
   read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_17/blk_mem_gen_17.xci
+  read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_10/blk_mem_gen_10.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc
 OPTRACE "read constraints: implementation" END { }

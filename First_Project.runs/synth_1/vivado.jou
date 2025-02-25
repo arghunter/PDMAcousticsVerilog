@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Mon Feb 24 23:02:15 2025
-# Process ID: 35820
+# Start of session at: Mon Feb 24 23:47:02 2025
+# Process ID: 26296
 # Current directory: C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1
 # Command line: vivado.exe -log simple_io.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source simple_io.tcl
 # Log file: C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/simple_io.vds
@@ -19,6 +19,6 @@
 # Host memory       :67804 MB
 # Swap memory       :81604 MB
 # Total Virtual     :149408 MB
-# Available Virtual :123747 MB
+# Available Virtual :121808 MB
 #-----------------------------------------------------------
 source simple_io.tcl -notrace

@@ -24,6 +24,7 @@ module core(
     input wire clk,
     input wire rst,
     input wire ena,
+    input wire core_num,
     input wire [15:0] bit_data,
     output wire core_dout,
     output wire core_cout,
@@ -93,12 +94,13 @@ module core(
     .clk(clk),
     .rst(rst),
     .write_addr(write_addr),
+    .core_num(core_num),
     .read_addr(read_addr),
     .start_task(start_task),
     .cic_en(cic_en),
     .load_cic(load_cic),
     .store_cic(store_cic),
-    .pixel_counter(pixel_addr),
+    .pixel_addr(pixel_addr),
     .cic_sub_addr(cic_sub_addr)
     );
 
