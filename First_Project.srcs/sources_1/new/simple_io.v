@@ -173,13 +173,13 @@ module simple_io(
     assign dmic_fifo_in[6] = 1;
     assign dmic_fifo_in[7] = 1;
     assign dmic_fifo_in[8] = 1;
-    assign dmic_fifo_in[9] = 0;
-    assign dmic_fifo_in[10] = 0;
-    assign dmic_fifo_in[11] = 0;
-    assign dmic_fifo_in[12] = 0;
-    assign dmic_fifo_in[13] = 0;
-    assign dmic_fifo_in[14] = 0;
-    assign dmic_fifo_in[15] = 0;
+    assign dmic_fifo_in[9] = 1;
+    assign dmic_fifo_in[10] = 1;
+    assign dmic_fifo_in[11] = 1;
+    assign dmic_fifo_in[12] = 1;
+    assign dmic_fifo_in[13] = 1;
+    assign dmic_fifo_in[14] = 1;
+    assign dmic_fifo_in[15] = 1;
     assign dmic_fifo_rd_en =  (!dmic_fifo_empty) & (!output_fifo_full);
     
 

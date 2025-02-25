@@ -135,19 +135,19 @@ module core(
     );
     wire [23:0] cic_out;
     wire [23:0] hpout;
-//    cic cic_inst(
-//    .clk(clk),
-//    .rst(rst),// || counter==0
-//    .pixel_addr(pixel_addr),
-//    .load(load_cic),
-//    .store(store_cic),
-//    .in(adder16_out),
-//    .ena(cic_en),
-//    .out(cic_out),
-//    .hpout(hpout),
-//    .sub_addr(cic_sub_addr)
+    cic cic_inst(
+    .clk(clk),
+    .rst(rst),// || counter==0
+    .pixel_addr(pixel_addr),
+    .load(load_cic),
+    .store(store_cic),
+    .in(adder16_out),
+    .ena(cic_en),
+    .out(cic_out),
+    .hpout(hpout),
+    .sub_addr(cic_sub_addr)
     
-//    );
+    );
     wire [31:0] extended_cic_out  = {{8{cic_out[23]}}, cic_out}; // this is messed up in some way nvnmmd fixed that
 //    wire [31:0] extended_cic_out = 42;
 //      wire [31:0] extended_cic_out = 32'b00000010000000000000000000000001;

@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Sun Feb 23 19:41:36 2025
-# Process ID: 5936
+# Start of session at: Mon Feb 24 22:02:09 2025
+# Process ID: 26908
 # Current directory: C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/clk_wiz_0_synth_1
 # Command line: vivado.exe -log clk_wiz_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_wiz_0.tcl
 # Log file: C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/clk_wiz_0_synth_1/clk_wiz_0.vds
@@ -19,6 +19,6 @@
 # Host memory       :67804 MB
 # Swap memory       :81604 MB
 # Total Virtual     :149408 MB
-# Available Virtual :107891 MB
+# Available Virtual :130298 MB
 #-----------------------------------------------------------
 source clk_wiz_0.tcl -notrace

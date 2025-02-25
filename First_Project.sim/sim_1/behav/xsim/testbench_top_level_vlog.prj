@@ -1,6 +1,7 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  --include "../../../../First_Project.ip_user_files/ipstatic" \
 "../../../../First_Project.gen/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v" \
+"../../../../First_Project.gen/sources_1/ip/blk_mem_gen_17/sim/blk_mem_gen_17.v" \
 "../../../../First_Project.gen/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
 "../../../../First_Project.gen/sources_1/ip/blk_mem_gen_16/sim/blk_mem_gen_16.v" \
 "../../../../First_Project.gen/sources_1/ip/blk_mem_gen_15/sim/blk_mem_gen_15.v" \
@@ -22,7 +23,6 @@ verilog xil_defaultlib  --include "../../../../First_Project.ip_user_files/ipsta
 "../../../../First_Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v" \
 "../../../../First_Project.srcs/sources_1/new/adder5bit16way.v" \
 "../../../../First_Project.srcs/sources_1/new/cic.v" \
-"../../../../First_Project.srcs/sources_1/new/cic_array.v" \
 "../../../../First_Project.srcs/sources_1/new/core.v" \
 "../../../../First_Project.srcs/sources_1/new/ddr_to_sdr.v" \
 "../../../../First_Project.srcs/sources_1/new/differentiator.v" \

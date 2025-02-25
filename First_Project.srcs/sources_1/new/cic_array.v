@@ -31,29 +31,29 @@ module cic_array (
     output reg lr_clk
 );
 
-    // 256 CIC filter instances
-    wire [23:0] out_wires [127:0];
-    wire [23:0] hpout_wires [127:0];
-    genvar i;
-    generate
-        for (i = 0; i < 127; i = i + 1) begin : cic_filters
-            wire enable_filter = (addr == i) ? ena : 1'b0;
-            cic cic_inst (
-                .clk(clk),
-                .rst(rst),
-                .in(in),
-                .ena(enable_filter),
-                .out(out_wires[i]),
-                .hpout(hpout_wires[i]),
-                .lr_clk()
-            );
-        end
-    endgenerate
+//    // 256 CIC filter instances
+//    wire [23:0] out_wires [127:0];
+//    wire [23:0] hpout_wires [127:0];
+//    genvar i;
+//    generate
+//        for (i = 0; i < 127; i = i + 1) begin : cic_filters
+//            wire enable_filter = (addr == i) ? ena : 1'b0;
+//            cic cic_inst (
+//                .clk(clk),
+//                .rst(rst),
+//                .in(in),
+//                .ena(enable_filter),
+//                .out(out_wires[i]),
+//                .hpout(hpout_wires[i]),
+//                .lr_clk()
+//            );
+//        end
+//    endgenerate
     
-    always @(posedge clk) begin
-        out <= out_wires[addr];
-        hpout <= hpout_wires[addr];
-    end
+//    always @(posedge clk) begin
+//        out <= out_wires[addr];
+//        hpout <= hpout_wires[addr];
+//    end
 
 endmodule
 

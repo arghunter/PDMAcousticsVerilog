@@ -56,6 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 8
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -93,9 +94,12 @@ add_files C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/so
 add_files C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/shifts15.coe
 read_verilog -library xil_defaultlib {
   C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/adder5bit16way.v
+  C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/cic.v
   C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/core.v
   C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ddr_to_sdr.v
+  C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/differentiator.v
   C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/i2s_bus.v
+  C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/integrator.v
   C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/multi_ddr_to_sdr.v
   C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/mux_shift.v
   C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ram.v
@@ -164,6 +168,9 @@ set_property used_in_implementation false [get_files -all c:/Users/arg/Documents
 read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
 
+read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_17/blk_mem_gen_17.xci
+set_property used_in_implementation false [get_files -all c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_17/blk_mem_gen_17_ooc.xdc]
+
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -173,18 +180,16 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/arg/Downloads/Basys3_Master.xdc
-set_property used_in_implementation false [get_files C:/Users/arg/Downloads/Basys3_Master.xdc]
+read_xdc C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc
+set_property used_in_implementation false [get_files C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
-
-read_checkpoint -auto_incremental -incremental C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/utils_1/imports/synth_1/simple_io.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top simple_io -part xc7a35tcpg236-1
+synth_design -top simple_io -part xc7a35tcpg236-1 -incremental_mode off
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"

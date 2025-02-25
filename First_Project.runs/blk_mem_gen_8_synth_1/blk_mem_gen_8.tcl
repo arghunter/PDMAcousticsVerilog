@@ -77,7 +77,7 @@ set_property ip_output_repo c:/Users/arg/Documents/GitHub/FPGA/First_Project/Fir
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_8/blk_mem_gen_8.xci
+read_ip -quiet C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/ip/blk_mem_gen_8/blk_mem_gen_8.xci
 set_property used_in_implementation false [get_files -all c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_8/blk_mem_gen_8_ooc.xdc]
 
 OPTRACE "Adding files" END { }

@@ -2,10 +2,10 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-// Date        : Mon Feb 17 16:49:40 2025
+// Date        : Mon Feb 24 22:02:59 2025
 // Host        : DEKTOP-MOV670 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top blk_mem_gen_7 -prefix
-//               blk_mem_gen_7_ blk_mem_gen_7_stub.v
+// Command     : write_verilog -force -mode synth_stub
+//               c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_7/blk_mem_gen_7_stub.v
 // Design      : blk_mem_gen_7
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tcpg236-1

@@ -93,11 +93,11 @@ module state_machine(
                         
                     cic_load: begin 
                         load_cic<=1;
-                        if(store_cic) begin 
+                        if(load_cic) begin 
                             if(cic_sub_addr<7) begin 
                                 cic_sub_addr<=cic_sub_addr+1;
                             end else begin 
-                                load_cic<=1;
+                                load_cic<=0;
                                 cic_sub_addr<=0;
                                 state<=run_cic;
                             end
@@ -141,12 +141,13 @@ module state_machine(
                          if(pixel_counter<127) begin //switch pixels
                              pixel_counter<=pixel_counter+1;                         
                              state<= pixel_load;
-                             read_start<=read_start+4096;
+                             
                              
                          end else begin 
                             pixel_counter<=0;
                             task_started<=0;
                             state<=task_cmp;
+                            read_start<=read_start+4096;
                          end
                          
                      end
