@@ -26,11 +26,8 @@ module core(
     input wire ena,
     input wire core_num,
     input wire [15:0] bit_data,
-    output wire core_dout,
-    output wire core_cout,
-    output wire lr_clk
-    
-    
+    output wire [31:0] e_data,
+    output wire store_e_data    
 //addr
     );
     
@@ -101,7 +98,8 @@ module core(
     .load_cic(load_cic),
     .store_cic(store_cic),
     .pixel_addr(pixel_addr),
-    .cic_sub_addr(cic_sub_addr)
+    .cic_sub_addr(cic_sub_addr),
+    .store_e_data(store_e_data)
     );
 
 
@@ -137,6 +135,7 @@ module core(
     );
     wire [23:0] cic_out;
     wire [23:0] hpout;
+    
     cic cic_inst(
     .clk(clk),
     .rst(rst),// || counter==0
@@ -147,40 +146,9 @@ module core(
     .ena(cic_en),
     .out(cic_out),
     .hpout(hpout),
-    .sub_addr(cic_sub_addr)
+    .sub_addr(cic_sub_addr),
+    .e_data(e_data)
     
     );
-    wire [31:0] extended_cic_out  = {{8{cic_out[23]}}, cic_out}; // this is messed up in some way nvnmmd fixed that
-//    wire [31:0] extended_cic_out = 42;
-//      wire [31:0] extended_cic_out = 32'b00000010000000000000000000000001;
 
-
-    
-    wire lr_clk2;
-//    wire [23:0] dc_elim_out;
-//    dc_elim dc_elim(
-//    .lr_clk(lr_clk),
-//    .rst(rst),
-//    .in(cic_out),
-//    .out(dc_elim_out)
-//    );
-//    wire [31:0] extended_dc_elim_out  = {{8{dc_elim_out[23]}}, dc_elim_out};
-    wire [31:0] extended_counter_out  = {{24{pixel_addr[7]}}, pixel_addr};
-    i2s_bus i2s(
-    .clk(clk),
-    .rst(rst),
-    .bit_data(extended_cic_out),
-    .out(core_dout),
-    .ena(ena),
-    .lr_clk(lr_clk)
-    );
-    
-    i2s_bus i2s2(
-    .clk(clk),
-    .rst(rst),
-    .bit_data(extended_counter_out),
-    .out(core_cout),
-    .ena(ena),
-    .lr_clk(lr_clk2)
-    );
 endmodule

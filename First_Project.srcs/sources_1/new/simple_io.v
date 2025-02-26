@@ -212,20 +212,72 @@ module simple_io(
     
     
     
-    wire i2s_out;
-    wire lr_clk;
-    wire counter_out;
+    wire [31:0] e_data0;
+    wire [31:0] e_data1;
+    wire store_e_data0;
+    wire store_e_data1;
     core core_0(
     .clk(CLK400MHZ),
     .rst(btnC),
     .ena(output_fifo_wr_en),
     .core_num(0),
     .bit_data(dmic_fifo_out),
-    .core_dout(i2s_out),
-    .core_cout(counter_out),
-    .lr_clk(lr_clk)
+    .e_data(e_data0),
+    .store_e_data(store_e_data0)
     );
     
+    core core_1(
+    .clk(CLK400MHZ),
+    .rst(btnC),
+    .ena(output_fifo_wr_en),
+    .core_num(1),
+    .bit_data(dmic_fifo_out),
+    .e_data(e_data1),
+    .store_e_data(store_e_data1)
+    );
+    wire full0;
+    wire full1;
+    wire empty0;
+    wire empty1;
+    wire [31:0] fifo_0_out;
+    wire [31:0] fifo_1_out;
+    wire fifo_0_rd_en;
+    wire fifo_1_rd_en;
+    
+    fifo_generator_1 core0_fifo (
+      .clk(CLK400MHZ),      // input wire clk
+      .srst(btnC),    // input wire srst
+      .din(e_data0),      // input wire [31 : 0] din
+      .wr_en(store_e_data0&&full0),  // input wire wr_en
+      .rd_en(fifo_0_rd_en),  // input wire rd_en
+      .dout(fifo_0_out),    // output wire [31 : 0] dout
+      .full(full0),    // output wire full
+      .empty(empty0)  // output wire empty
+    );
+    fifo_generator_1 core1_fifo (
+      .clk(CLK400MHZ),      // input wire clk
+      .srst(btnC),    // input wire srst
+      .din(e_data1),      // input wire [31 : 0] din
+      .wr_en(store_e_data1&&full1),  // input wire wr_en
+      .rd_en(fifo_1_rd_en),  // input wire rd_en
+      .dout(fifo_1_out),    // output wire [31 : 0] dout
+      .full(full1),    // output wire full
+      .empty(empty1)  // output wire empty
+    );
+    wire busy;
+    
+    uart_fifo_tx uart_fifo_tx_inst (
+        .clk(CLK400MHZ),                  // System clock
+        .rst(btnC),                  // Reset signal
+        .fifo1_not_empty(!empty0),  // FIFO 1 has data
+        .fifo2_not_empty(!empty1),  // FIFO 2 has data
+        .fifo1_data(fifo_0_out),    // 32-bit data from FIFO 1
+        .fifo2_data(fifo_1_out),    // 32-bit data from FIFO 2
+        .fifo1_rd_en(fifo_0_rd_en),  // Read enable for FIFO 1
+        .fifo2_rd_en(fifo_1_rd_en),  // Read enable for FIFO 2
+        .tx(RsTx),                    // UART TX output
+        .busy(busy)                 // UART busy signal
+    );
     
 //    reg  [7:0] rom_addr=0;
 //    wire  mic_out[15:0];
@@ -551,7 +603,7 @@ module simple_io(
     assign JB[7]=output_fifo_out[6];
     assign vauxp6=output_fifo_out[7];
     assign JA[3]=mic_clk;
-    assign vauxp14 = i2s_out;// pin 1
+    assign vauxp14 = mic_clk;// pin 1
     assign vauxp7 = ddr_clk;//pin 2 la
     assign vauxp15 = mic_clk;// pin 3
     assign vauxn6 =  dmic_fifo_out[0];//pin 4

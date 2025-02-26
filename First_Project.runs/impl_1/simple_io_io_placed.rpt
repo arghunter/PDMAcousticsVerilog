@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date                      : Mon Feb 24 23:48:31 2025
+| Date                      : Wed Feb 26 01:36:48 2025
 | Host                      : DEKTOP-MOV670 running 64-bit major release  (build 9200)
 | Command                   : report_io -file simple_io_io_placed.rpt
 | Design                    : simple_io
@@ -52,7 +52,7 @@ Table of Contents
 | A15        | JB[4]       | High Range | IO_L6N_T0_VREF_16            | BIDIR         | LVCMOS33    |      16 |         16 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | A16        | JB[1]       | High Range | IO_L12P_T1_MRCC_16           | BIDIR         | LVCMOS33    |      16 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | A17        | JB[5]       | High Range | IO_L12N_T1_MRCC_16           | BIDIR         | LVCMOS33    |      16 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
-| A18        | RsTx        | High Range | IO_L19N_T3_VREF_16           | TRISTATE      | LVCMOS33    |      16 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| A18        | RsTx        | High Range | IO_L19N_T3_VREF_16           | OUTPUT        | LVCMOS33    |      16 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | A19        |             |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | B1         |             |            | MGTAVTT                      | Gigabit Power |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | B2         |             |            | MGTPTXP1_216                 | Gigabit       |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

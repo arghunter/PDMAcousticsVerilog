@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="5,339,275.435 ns"></ZoomStartTime>
-      <ZoomEndTime time="5,339,357.413 ns"></ZoomEndTime>
-      <Cursor1Time time="5,339,288.750 ns"></Cursor1Time>
+      <ZoomStartTime time="7,991,360.590 ns"></ZoomStartTime>
+      <ZoomEndTime time="7,991,454.382 ns"></ZoomEndTime>
+      <Cursor1Time time="7,991,422.836 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="152"></NameColumnWidth>
-      <ValueColumnWidth column_width="78"></ValueColumnWidth>
+      <ValueColumnWidth column_width="74"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="112" />
    <wave_markers>
@@ -410,10 +410,12 @@
    <wvobject fp_name="/testbench_top_level/dut/core_0/cic_inst/int_1_out" type="array">
       <obj_property name="ElementShortName">int_1_out[23:0]</obj_property>
       <obj_property name="ObjectShortName">int_1_out[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/core_0/cic_inst/int_2_out" type="array">
       <obj_property name="ElementShortName">int_2_out[23:0]</obj_property>
       <obj_property name="ObjectShortName">int_2_out[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/core_0/cic_inst/extended_in" type="array">
       <obj_property name="ElementShortName">extended_in[23:0]</obj_property>
@@ -426,6 +428,7 @@
    <wvobject fp_name="/testbench_top_level/dut/core_0/cic_inst/diff_1_out" type="array">
       <obj_property name="ElementShortName">diff_1_out[23:0]</obj_property>
       <obj_property name="ObjectShortName">diff_1_out[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/core_0/cic_inst/delta_out" type="array">
       <obj_property name="ElementShortName">delta_out[23:0]</obj_property>

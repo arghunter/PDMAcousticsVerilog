@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Mon Feb 24 23:47:32 2025
+| Date         : Wed Feb 26 01:35:28 2025
 | Host         : DEKTOP-MOV670 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file simple_io_utilization_synth.rpt -pb simple_io_utilization_synth.pb
 | Design       : simple_io
@@ -28,18 +28,20 @@ Table of Contents
 1. Slice Logic
 --------------
 
-+-------------------------+------+-------+------------+-----------+-------+
-|        Site Type        | Used | Fixed | Prohibited | Available | Util% |
-+-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |  691 |     0 |          0 |     20800 |  3.32 |
-|   LUT as Logic          |  691 |     0 |          0 |     20800 |  3.32 |
-|   LUT as Memory         |    0 |     0 |          0 |      9600 |  0.00 |
-| Slice Registers         |  607 |     0 |          0 |     41600 |  1.46 |
-|   Register as Flip Flop |  607 |     0 |          0 |     41600 |  1.46 |
-|   Register as Latch     |    0 |     0 |          0 |     41600 |  0.00 |
-| F7 Muxes                |   24 |     0 |          0 |     16300 |  0.15 |
-| F8 Muxes                |    0 |     0 |          0 |      8150 |  0.00 |
-+-------------------------+------+-------+------------+-----------+-------+
++----------------------------+------+-------+------------+-----------+-------+
+|          Site Type         | Used | Fixed | Prohibited | Available | Util% |
++----------------------------+------+-------+------------+-----------+-------+
+| Slice LUTs*                | 1821 |     0 |          0 |     20800 |  8.75 |
+|   LUT as Logic             | 1693 |     0 |          0 |     20800 |  8.14 |
+|   LUT as Memory            |  128 |     0 |          0 |      9600 |  1.33 |
+|     LUT as Distributed RAM |  128 |     0 |            |           |       |
+|     LUT as Shift Register  |    0 |     0 |            |           |       |
+| Slice Registers            |  857 |     0 |          0 |     41600 |  2.06 |
+|   Register as Flip Flop    |  857 |     0 |          0 |     41600 |  2.06 |
+|   Register as Latch        |    0 |     0 |          0 |     41600 |  0.00 |
+| F7 Muxes                   |   48 |     0 |          0 |     16300 |  0.29 |
+| F8 Muxes                   |    0 |     0 |          0 |      8150 |  0.00 |
++----------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 Warning! LUT value is adjusted to account for LUT combining.
 Warning! For any ECO changes, please run place_design if there are unplaced instances
@@ -57,10 +59,10 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 0     |          Yes |           - |          Set |
-| 277   |          Yes |           - |        Reset |
-| 10    |          Yes |         Set |            - |
-| 320   |          Yes |       Reset |            - |
+| 12    |          Yes |           - |          Set |
+| 645   |          Yes |           - |        Reset |
+| 0     |          Yes |         Set |            - |
+| 200   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -118,7 +120,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| BUFGCTRL   |    1 |     0 |          0 |        32 |  3.13 |
+| BUFGCTRL   |    0 |     0 |          0 |        32 |  0.00 |
 | BUFIO      |    0 |     0 |          0 |        20 |  0.00 |
 | MMCME2_ADV |    0 |     0 |          0 |         5 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |          0 |         5 |  0.00 |
@@ -152,21 +154,20 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT2     |  350 |                 LUT |
-| FDRE     |  320 |        Flop & Latch |
-| FDCE     |  277 |        Flop & Latch |
-| LUT3     |  173 |                 LUT |
-| CARRY4   |  124 |          CarryLogic |
-| LUT4     |   97 |                 LUT |
-| LUT6     |   69 |                 LUT |
-| LUT5     |   60 |                 LUT |
-| MUXF7    |   24 |               MuxFx |
-| LUT1     |   21 |                 LUT |
-| OBUF     |   15 |                  IO |
-| FDSE     |   10 |        Flop & Latch |
-| OBUFT    |    1 |                  IO |
+| FDCE     |  645 |        Flop & Latch |
+| LUT2     |  614 |                 LUT |
+| LUT6     |  499 |                 LUT |
+| CARRY4   |  272 |          CarryLogic |
+| LUT5     |  232 |                 LUT |
+| FDRE     |  200 |        Flop & Latch |
+| LUT3     |  197 |                 LUT |
+| LUT4     |  164 |                 LUT |
+| RAMD64E  |  128 |  Distributed Memory |
+| LUT1     |   87 |                 LUT |
+| MUXF7    |   48 |               MuxFx |
+| OBUF     |   16 |                  IO |
+| FDPE     |   12 |        Flop & Latch |
 | IBUF     |    1 |                  IO |
-| BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
 
@@ -176,26 +177,27 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------------+------+
 |     Ref Name     | Used |
 +------------------+------+
-| blk_mem_gen_0    |   16 |
+| blk_mem_gen_0    |   32 |
+| fifo_generator_1 |    2 |
 | fifo_generator_0 |    2 |
+| blk_mem_gen_9    |    2 |
+| blk_mem_gen_8    |    2 |
+| blk_mem_gen_7    |    2 |
+| blk_mem_gen_6    |    2 |
+| blk_mem_gen_5    |    2 |
+| blk_mem_gen_4    |    2 |
+| blk_mem_gen_3    |    2 |
+| blk_mem_gen_2    |    2 |
+| blk_mem_gen_17   |    2 |
+| blk_mem_gen_16   |    2 |
+| blk_mem_gen_15   |    2 |
+| blk_mem_gen_14   |    2 |
+| blk_mem_gen_13   |    2 |
+| blk_mem_gen_12   |    2 |
+| blk_mem_gen_11   |    2 |
+| blk_mem_gen_10   |    2 |
+| blk_mem_gen_1    |    2 |
 | clk_wiz_0        |    1 |
-| blk_mem_gen_9    |    1 |
-| blk_mem_gen_8    |    1 |
-| blk_mem_gen_7    |    1 |
-| blk_mem_gen_6    |    1 |
-| blk_mem_gen_5    |    1 |
-| blk_mem_gen_4    |    1 |
-| blk_mem_gen_3    |    1 |
-| blk_mem_gen_2    |    1 |
-| blk_mem_gen_17   |    1 |
-| blk_mem_gen_16   |    1 |
-| blk_mem_gen_15   |    1 |
-| blk_mem_gen_14   |    1 |
-| blk_mem_gen_13   |    1 |
-| blk_mem_gen_12   |    1 |
-| blk_mem_gen_11   |    1 |
-| blk_mem_gen_10   |    1 |
-| blk_mem_gen_1    |    1 |
 +------------------+------+
 
 

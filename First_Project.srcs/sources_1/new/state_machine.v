@@ -31,7 +31,8 @@ module state_machine(
     output reg load_cic,
     output reg store_cic,
     output wire [7:0] pixel_addr,
-    output reg [2:0] cic_sub_addr
+    output reg [2:0] cic_sub_addr,
+    output reg store_e_data
     
 //    output
     );
@@ -43,6 +44,8 @@ module state_machine(
     reg[13:0] read_start=0;
     wire [7:0] pixel_offset;
     reg [7:0] pixel_counter=0;
+    reg [3:0] block_counter=0;
+    
     assign pixel_offset=core_num?128:0;
     assign pixel_addr = pixel_offset+pixel_counter;
     
@@ -77,6 +80,8 @@ module state_machine(
             load_cic<=0;
             store_cic<=0;
             cic_sub_addr<=0;
+            block_counter<=0;
+            store_e_data<=0;
         end else begin 
             case (state)
                     idle: begin
@@ -117,6 +122,9 @@ module state_machine(
                         if(cic_counter<4095) begin
                             cic_counter<=cic_counter+1;
                         end else begin 
+                            if(block_counter==15) begin 
+                                store_e_data<=1;
+                            end
                             cic_counter<=0;
                             state<=cic_store;
                         end
@@ -127,6 +135,7 @@ module state_machine(
                     cic_store: begin 
                         cic_en<=0;
                         store_cic<=1;
+                        store_e_data<=0;
                         if(store_cic) begin 
                             if(cic_sub_addr<7) begin 
                                 cic_sub_addr<=cic_sub_addr+1;
@@ -158,7 +167,8 @@ module state_machine(
                      
                      task_cmp: begin 
                      
-                        
+                        block_counter<=block_counter+1;
+
                         state<=idle;
                      
                      end

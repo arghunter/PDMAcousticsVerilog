@@ -36,7 +36,7 @@ module cic (
     input wire [2:0] sub_addr,
     output [23:0] out,
     output wire [23:0] hpout,
-    output reg lr_clk 
+    output reg [31:0] e_data
 );
 
     wire [23:0] inc_out;
@@ -52,8 +52,8 @@ module cic (
 	wire [23:0] douta;
 	assign hpout=outhp;
 	reg [5:0] counter=0;
-//	assign extended_in = {{19{in[4]}}, in};
-    assign extended_in = {{23{0}}, 1}; 
+	assign extended_in = {{19{in[4]}}, in};
+//    assign extended_in = {{23{0}}, 1}; 
 	reg dif_ena;
 	wire [10:0] mem_addr;
 	wire [23:0] data_out_3;
@@ -86,17 +86,9 @@ module cic (
             dif_ena <= (counter == 0) ? 1 : 0;
     end
     
-//    assign int_state_0 = douta[23:0];
-//    assign int_state_1 = douta[47:24];
-//    assign int_state_2 = douta[71:48];
-//    assign int_state_3 = douta[95:72];
-//    assign int_state_4 = douta[119:96];
-//    assign int_state_5 = douta[143:120];
-//    assign int_state_6 = douta[167:144];
-//    assign hp_state = douta[183:168];
 
     assign dina = sub_addr==0?inc_out: sub_addr==1?int_1_out:sub_addr==2?int_2_out:sub_addr==3?data_out_3:sub_addr==4?data_out_4:sub_addr==5?data_out_5:sub_addr==6?data_out_6:sub_addr==7?outhp:0;
-//    assign dina = {outhp,data_out_6,data_out_5,data_out_4,data_out_3,int_2_out,int_1_out,inc_out};
+
     assign mem_addr={pixel_addr,sub_addr};
     blk_mem_gen_17 cic_states (
       .clka(clk),    // input wire clka
@@ -210,7 +202,7 @@ module cic (
 //			.out(out)
 //		);
     endgenerate
-    		always @(posedge clk) begin 
+		always @(posedge clk) begin 
 		  if (rst) begin 
 		      outhp<=0;
 		  end else if(load7) begin 
@@ -220,5 +212,25 @@ module cic (
 		   end
 		  
 		end
+
+        wire [23:0] eabs;//energy abs
+        assign eabs = ((outhp[23]) ? -outhp : outhp);
+        reg [23:0] mean_avg_power[0:255];
+        reg [7:0] reset_index=0;
+		always @(posedge clk) begin 
+            if (rst && reset_index < 256) begin
+                mean_avg_power[reset_index] <= 0;
+                reset_index <= reset_index + 1;
+            end else if(dif_ena) begin
+              mean_avg_power[pixel_addr]<=(mean_avg_power[pixel_addr]>>2)+(eabs>>2);
+              e_data<= {pixel_addr,(mean_avg_power[pixel_addr]>>2)+(eabs>>2)};
+            end
+		  
+		end
+//        assign e_data= {pixel_addr,mean_avg_power[pixel_addr]};
+
+
+
+
 
 endmodule
