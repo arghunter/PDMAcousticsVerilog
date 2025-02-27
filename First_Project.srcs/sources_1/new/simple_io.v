@@ -132,22 +132,22 @@ module simple_io(
 
     );
 
-//    assign dmic_fifo_in[0] = sdr_data_0[0];
-//    assign dmic_fifo_in[1] = sdr_data_1[0];
-//    assign dmic_fifo_in[2] = sdr_data_0[1];
-//    assign dmic_fifo_in[3] = sdr_data_1[1];
-//    assign dmic_fifo_in[4] = sdr_data_0[2];
-//    assign dmic_fifo_in[5] = sdr_data_1[2];
-//    assign dmic_fifo_in[6] = sdr_data_0[3];
-//    assign dmic_fifo_in[7] = sdr_data_1[3];
-//    assign dmic_fifo_in[8] = sdr_data_0[4];
-//    assign dmic_fifo_in[9] = sdr_data_1[4];
-//    assign dmic_fifo_in[10] = sdr_data_0[5];
-//    assign dmic_fifo_in[11] = sdr_data_1[5];
-//    assign dmic_fifo_in[12] = sdr_data_0[6];
-//    assign dmic_fifo_in[13] = sdr_data_1[6];
-//    assign dmic_fifo_in[14] = sdr_data_0[7];
-//    assign dmic_fifo_in[15] = sdr_data_1[7];
+    assign dmic_fifo_in[0] = sdr_data_0[0];
+    assign dmic_fifo_in[1] = sdr_data_1[0];
+    assign dmic_fifo_in[2] = sdr_data_0[1];
+    assign dmic_fifo_in[3] = sdr_data_1[1];
+    assign dmic_fifo_in[4] = sdr_data_0[2];
+    assign dmic_fifo_in[5] = sdr_data_1[2];
+    assign dmic_fifo_in[6] = sdr_data_0[3];
+    assign dmic_fifo_in[7] = sdr_data_1[3];
+    assign dmic_fifo_in[8] = sdr_data_0[4];
+    assign dmic_fifo_in[9] = sdr_data_1[4];
+    assign dmic_fifo_in[10] = sdr_data_0[5];
+    assign dmic_fifo_in[11] = sdr_data_1[5];
+    assign dmic_fifo_in[12] = sdr_data_0[6];
+    assign dmic_fifo_in[13] = sdr_data_1[6];
+    assign dmic_fifo_in[14] = sdr_data_0[7];
+    assign dmic_fifo_in[15] = sdr_data_1[7];
 //    assign dmic_fifo_in[0] = sdr_data_0[0];
 //    assign dmic_fifo_in[1] = sdr_data_0[0];
 //    assign dmic_fifo_in[2] = sdr_data_0[0];
@@ -164,22 +164,22 @@ module simple_io(
 //    assign dmic_fifo_in[13] = sdr_data_0[0];
 //    assign dmic_fifo_in[14] = sdr_data_0[0];
 //    assign dmic_fifo_in[15] = sdr_data_0[0];
-    assign dmic_fifo_in[0] = 1;
-    assign dmic_fifo_in[1] = 1;
-    assign dmic_fifo_in[2] = 1;
-    assign dmic_fifo_in[3] = 1;
-    assign dmic_fifo_in[4] = 1;
-    assign dmic_fifo_in[5] = 1;
-    assign dmic_fifo_in[6] = 1;
-    assign dmic_fifo_in[7] = 1;
-    assign dmic_fifo_in[8] = 1;
-    assign dmic_fifo_in[9] = 1;
-    assign dmic_fifo_in[10] = 1;
-    assign dmic_fifo_in[11] = 1;
-    assign dmic_fifo_in[12] = 1;
-    assign dmic_fifo_in[13] = 1;
-    assign dmic_fifo_in[14] = 1;
-    assign dmic_fifo_in[15] = 1;
+//    assign dmic_fifo_in[0] = 1;
+//    assign dmic_fifo_in[1] = 1;
+//    assign dmic_fifo_in[2] = 1;
+//    assign dmic_fifo_in[3] = 1;
+//    assign dmic_fifo_in[4] = 1;
+//    assign dmic_fifo_in[5] = 1;
+//    assign dmic_fifo_in[6] = 1;
+//    assign dmic_fifo_in[7] = 1;
+//    assign dmic_fifo_in[8] = 1;
+//    assign dmic_fifo_in[9] = 1;
+//    assign dmic_fifo_in[10] = 1;
+//    assign dmic_fifo_in[11] = 1;
+//    assign dmic_fifo_in[12] = 1;
+//    assign dmic_fifo_in[13] = 1;
+//    assign dmic_fifo_in[14] = 1;
+//    assign dmic_fifo_in[15] = 1;
     assign dmic_fifo_rd_en =  (!dmic_fifo_empty) & (!output_fifo_full);
     
 
@@ -248,7 +248,7 @@ module simple_io(
       .clk(CLK400MHZ),      // input wire clk
       .srst(btnC),    // input wire srst
       .din(e_data0),      // input wire [31 : 0] din
-      .wr_en(store_e_data0&&full0),  // input wire wr_en
+      .wr_en(store_e_data0&&!full0),  // input wire wr_en
       .rd_en(fifo_0_rd_en),  // input wire rd_en
       .dout(fifo_0_out),    // output wire [31 : 0] dout
       .full(full0),    // output wire full
@@ -258,7 +258,7 @@ module simple_io(
       .clk(CLK400MHZ),      // input wire clk
       .srst(btnC),    // input wire srst
       .din(e_data1),      // input wire [31 : 0] din
-      .wr_en(store_e_data1&&full1),  // input wire wr_en
+      .wr_en(store_e_data1&&!full1),  // input wire wr_en
       .rd_en(fifo_1_rd_en),  // input wire rd_en
       .dout(fifo_1_out),    // output wire [31 : 0] dout
       .full(full1),    // output wire full
@@ -315,7 +315,7 @@ module simple_io(
 //        end
 //    end
 
-    genvar i;
+//    genvar i;
 //    generate
 //        for (i = 0; i < 16; i = i + 1) begin
 //            assign ram_out[i] = freeze1 ? mic_out[i] : mic_out2[i];

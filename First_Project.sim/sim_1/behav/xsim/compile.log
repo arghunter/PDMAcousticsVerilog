@@ -70,5 +70,3 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/arg/Documents/GitHub/FPGA/
 INFO: [VRFC 10-311] analyzing module uart_tx
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sim_1/new/testbench_top_level.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module testbench_top_level
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
