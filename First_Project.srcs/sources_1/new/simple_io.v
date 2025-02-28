@@ -226,6 +226,7 @@ module simple_io(
     .store_e_data(store_e_data0)
     );
     
+    
     core core_1(
     .clk(CLK400MHZ),
     .rst(btnC),
@@ -243,10 +244,14 @@ module simple_io(
     wire [31:0] fifo_1_out;
     wire fifo_0_rd_en;
     wire fifo_1_rd_en;
-    reg [6:0] c2=0;
+    reg [7:0] c2=0;
+    reg s02=0;
+    reg s12=0;
     always @(posedge CLK400MHZ) begin
         if(store_e_data0) begin 
             c2<=c2+1;
+            s02<=store_e_data0;
+            s12<=store_e_data1;
         end
         
     end 
