@@ -164,22 +164,22 @@ module simple_io(
 //    assign dmic_fifo_in[13] = sdr_data_0[0];
 //    assign dmic_fifo_in[14] = sdr_data_0[0];
 //    assign dmic_fifo_in[15] = sdr_data_0[0];
-//    assign dmic_fifo_in[0] = 1;
-//    assign dmic_fifo_in[1] = 1;
-//    assign dmic_fifo_in[2] = 1;
-//    assign dmic_fifo_in[3] = 1;
-//    assign dmic_fifo_in[4] = 1;
-//    assign dmic_fifo_in[5] = 1;
-//    assign dmic_fifo_in[6] = 1;
-//    assign dmic_fifo_in[7] = 1;
-//    assign dmic_fifo_in[8] = 1;
-//    assign dmic_fifo_in[9] = 1;
-//    assign dmic_fifo_in[10] = 1;
-//    assign dmic_fifo_in[11] = 1;
-//    assign dmic_fifo_in[12] = 1;
-//    assign dmic_fifo_in[13] = 1;
-//    assign dmic_fifo_in[14] = 1;
-//    assign dmic_fifo_in[15] = 1;
+    assign dmic_fifo_in[0] = 1;
+    assign dmic_fifo_in[1] = 1;
+    assign dmic_fifo_in[2] = 1;
+    assign dmic_fifo_in[3] = 1;
+    assign dmic_fifo_in[4] = 1;
+    assign dmic_fifo_in[5] = 1;
+    assign dmic_fifo_in[6] = 1;
+    assign dmic_fifo_in[7] = 1;
+    assign dmic_fifo_in[8] = 1;
+    assign dmic_fifo_in[9] = 0;
+    assign dmic_fifo_in[10] = 0;
+    assign dmic_fifo_in[11] = 0;
+    assign dmic_fifo_in[12] = 0;
+    assign dmic_fifo_in[13] = 0;
+    assign dmic_fifo_in[14] = 0;
+    assign dmic_fifo_in[15] = 0;
     assign dmic_fifo_rd_en =  (!dmic_fifo_empty) & (!output_fifo_full);
     
 
@@ -243,7 +243,13 @@ module simple_io(
     wire [31:0] fifo_1_out;
     wire fifo_0_rd_en;
     wire fifo_1_rd_en;
-    
+    reg [6:0] c2=0;
+    always @(posedge CLK400MHZ) begin
+        if(store_e_data0) begin 
+            c2<=c2+1;
+        end
+        
+    end 
     fifo_generator_1 core0_fifo (
       .clk(CLK400MHZ),      // input wire clk
       .srst(btnC),    // input wire srst

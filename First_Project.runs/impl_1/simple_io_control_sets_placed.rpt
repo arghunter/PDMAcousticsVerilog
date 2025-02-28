@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Thu Feb 27 00:00:29 2025
+| Date         : Thu Feb 27 23:56:45 2025
 | Host         : DEKTOP-MOV670 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file simple_io_control_sets_placed.rpt
 | Design       : simple_io
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    66 |
-|    Minimum number of control sets                        |    65 |
+| Total control sets                                       |    67 |
+|    Minimum number of control sets                        |    66 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     1 |
-| Unused register locations in slices containing registers |   103 |
+| Unused register locations in slices containing registers |    98 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    66 |
+| Total control sets |    67 |
 | >= 0 to < 4        |     6 |
-| >= 4 to < 6        |     3 |
-| >= 6 to < 8        |     5 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     6 |
 | >= 8 to < 10       |     2 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     3 |
 | >= 14 to < 16      |     0 |
-| >= 16              |    47 |
+| >= 16              |    46 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             294 |          118 |
-| No           | No                    | Yes                    |              73 |           42 |
+| No           | No                    | No                     |             302 |          145 |
+| No           | No                    | Yes                    |              53 |           37 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |             184 |           57 |
-| Yes          | No                    | Yes                    |             754 |          249 |
-| Yes          | Yes                   | No                     |             112 |           39 |
+| Yes          | No                    | No                     |             172 |           51 |
+| Yes          | No                    | Yes                    |             751 |          256 |
+| Yes          | Yes                   | No                     |             112 |           46 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -77,68 +77,69 @@ Table of Contents
 |  clock_wiz_0/inst/clk_out2 | uart_fifo_tx_inst/uart/tx_i_1_n_0                                                        | btnC_IBUF        |                1 |              1 |         1.00 |
 |  vauxp7_OBUF               |                                                                                          |                  |                1 |              1 |         1.00 |
 |  clock_wiz_0/inst/clk_out1 |                                                                                          |                  |                1 |              1 |         1.00 |
-|  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/FSM_onehot_state[6]_i_2__0_n_0                                 | btnC_IBUF        |                1 |              2 |         2.00 |
 |  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/FSM_onehot_state[6]_i_2_n_0                                    | btnC_IBUF        |                1 |              2 |         2.00 |
+|  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/FSM_onehot_state[6]_i_2__0_n_0                                 | btnC_IBUF        |                1 |              2 |         2.00 |
+|  clock_wiz_0/inst/clk_out2 | uart_fifo_tx_inst/uart/E[0]                                                              | btnC_IBUF        |                1 |              4 |         4.00 |
 |  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/block_counter                                                  | btnC_IBUF        |                1 |              4 |         4.00 |
 |  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/block_counter                                                  | btnC_IBUF        |                1 |              4 |         4.00 |
-| ~clock_wiz_0/inst/clk_out2 |                                                                                          |                  |                5 |              5 |         1.00 |
-|  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/pixel_counter[6]_i_1_n_0                                       | btnC_IBUF        |                4 |              7 |         1.75 |
-|  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/FSM_onehot_state[6]_i_1_n_0                                    | btnC_IBUF        |                1 |              7 |         7.00 |
+|  JC_IBUF_BUFG[3]           |                                                                                          | btnC_IBUF        |                3 |              5 |         1.67 |
+| ~clock_wiz_0/inst/clk_out2 |                                                                                          |                  |                6 |              6 |         1.00 |
+|  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/FSM_onehot_state[6]_i_1_n_0                                    | btnC_IBUF        |                5 |              7 |         1.40 |
 |  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/cic_en                                                         | btnC_IBUF        |                3 |              7 |         2.33 |
-|  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/FSM_onehot_state[6]_i_1__0_n_0                                 | btnC_IBUF        |                2 |              7 |         3.50 |
-|  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/cic_en                                                         | btnC_IBUF        |                5 |              7 |         1.40 |
-|  clock_wiz_0/inst/clk_out2 | uart_fifo_tx_inst/uart/busy_reg_0[0]                                                     |                  |                3 |              8 |         2.67 |
-|  clock_wiz_0/inst/clk_out2 | uart_fifo_tx_inst/uart/baud_counter[8]_i_1_n_0                                           | btnC_IBUF        |                4 |              9 |         2.25 |
-|  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/cic_counter[11]_i_1__0_n_0                                     | btnC_IBUF        |                5 |             12 |         2.40 |
-|  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/cic_counter[11]_i_1_n_0                                        | btnC_IBUF        |                7 |             12 |         1.71 |
-|  clock_wiz_0/inst/clk_out2 | uart_fifo_tx_inst/uart/shift_reg                                                         | btnC_IBUF        |                3 |             13 |         4.33 |
-|  clock_wiz_0/inst/clk_out2 | core1_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/E[0]  | btnC_IBUF        |                5 |             16 |         3.20 |
-|  clock_wiz_0/inst/clk_out2 | core1_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]  | btnC_IBUF        |                3 |             16 |         5.33 |
-|  clock_wiz_0/inst/clk_out2 | btnC_IBUF                                                                                |                  |               11 |             16 |         1.45 |
-|  clock_wiz_0/inst/clk_out2 | core0_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]  | btnC_IBUF        |                3 |             16 |         5.33 |
-|  clock_wiz_0/inst/clk_out2 | core0_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/E[0]  | btnC_IBUF        |                6 |             16 |         2.67 |
-|  JC_IBUF__0_BUFG[3]        |                                                                                          | btnC_IBUF        |               10 |             21 |         2.10 |
-|  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/dif_ena_reg[0]                                                 | btnC_IBUF        |               11 |             24 |         2.18 |
+|  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/cic_en                                                         | btnC_IBUF        |                3 |              7 |         2.33 |
+|  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/FSM_onehot_state[6]_i_1__0_n_0                                 | btnC_IBUF        |                3 |              7 |         2.33 |
+|  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/pixel_counter[6]_i_1_n_0                                       | btnC_IBUF        |                4 |              7 |         1.75 |
+|  clock_wiz_0/inst/clk_out2 | uart_fifo_tx_inst/data_byte                                                              |                  |                3 |              8 |         2.67 |
+|  clock_wiz_0/inst/clk_out2 | uart_fifo_tx_inst/uart/baud_counter[8]_i_1_n_0                                           | btnC_IBUF        |                3 |              9 |         3.00 |
+|  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/cic_counter[11]_i_1_n_0                                        | btnC_IBUF        |                4 |             12 |         3.00 |
+|  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/cic_counter[11]_i_1__0_n_0                                     | btnC_IBUF        |                6 |             12 |         2.00 |
+|  clock_wiz_0/inst/clk_out2 | uart_fifo_tx_inst/uart/shift_reg                                                         | btnC_IBUF        |                4 |             13 |         3.25 |
+|  clock_wiz_0/inst/clk_out2 | btnC_IBUF                                                                                |                  |                9 |             16 |         1.78 |
+|  clock_wiz_0/inst/clk_out2 | core0_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/E[0]  | btnC_IBUF        |                7 |             16 |         2.29 |
+|  clock_wiz_0/inst/clk_out2 | core0_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]  | btnC_IBUF        |                5 |             16 |         3.20 |
+|  clock_wiz_0/inst/clk_out2 | core1_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0]  | btnC_IBUF        |                5 |             16 |         3.20 |
+|  clock_wiz_0/inst/clk_out2 | core1_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/E[0]  | btnC_IBUF        |                4 |             16 |         4.00 |
 |  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/dif_ena_reg_6[0]                                               | btnC_IBUF        |                6 |             24 |         4.00 |
-|  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/dif_ena_reg_5[0]                                               | btnC_IBUF        |               10 |             24 |         2.40 |
 |  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/dif_ena_reg_0[0]                                               | btnC_IBUF        |                6 |             24 |         4.00 |
-|  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/dif_ena_reg_1[0]                                               | btnC_IBUF        |               13 |             24 |         1.85 |
+|  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/dif_ena_reg_2[0]                                               | btnC_IBUF        |                6 |             24 |         4.00 |
+|  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/dif_ena_reg_5[0]                                               | btnC_IBUF        |               10 |             24 |         2.40 |
 |  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/dif_ena_reg_4[0]                                               | btnC_IBUF        |                6 |             24 |         4.00 |
 |  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/dif_ena_reg_3[0]                                               | btnC_IBUF        |               10 |             24 |         2.40 |
-|  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/dif_ena_reg_2[0]                                               | btnC_IBUF        |                6 |             24 |         4.00 |
-|  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/cic_en_reg_1                                                   | btnC_IBUF        |                6 |             24 |         4.00 |
-|  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/cic_en_reg_1                                                   | btnC_IBUF        |                6 |             24 |         4.00 |
-|  JC_IBUF__0_BUFG[3]        | output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/E[0] | btnC_IBUF        |                7 |             24 |         3.43 |
-|  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/cic_en_reg_2                                                   | btnC_IBUF        |                7 |             24 |         3.43 |
+|  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/dif_ena_reg[0]                                                 | btnC_IBUF        |               13 |             24 |         1.85 |
+|  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/dif_ena_reg_1[0]                                               | btnC_IBUF        |               11 |             24 |         2.18 |
 |  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/cic_en_reg_0                                                   | btnC_IBUF        |                6 |             24 |         4.00 |
-|  JC_IBUF__0_BUFG[3]        | dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/E[0]   | btnC_IBUF        |                6 |             24 |         4.00 |
-|  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/cic_en_reg_2                                                   | btnC_IBUF        |                7 |             24 |         3.43 |
-|  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/E[0]                                                           | btnC_IBUF        |               14 |             24 |         1.71 |
-|  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/dif_ena_reg_2[0]                                               | btnC_IBUF        |                6 |             24 |         4.00 |
-|  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/dif_ena_reg_1[0]                                               | btnC_IBUF        |                8 |             24 |         3.00 |
+|  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/cic_en_reg_2                                                   | btnC_IBUF        |                7 |             24 |         3.43 |
+|  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/cic_en_reg_1                                                   | btnC_IBUF        |                6 |             24 |         4.00 |
+|  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/E[0]                                                           | btnC_IBUF        |               12 |             24 |         2.00 |
 |  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/dif_ena_reg_4[0]                                               | btnC_IBUF        |                6 |             24 |         4.00 |
-|  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/dif_ena_reg_3[0]                                               | btnC_IBUF        |               10 |             24 |         2.40 |
+|  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/dif_ena_reg_5[0]                                               | btnC_IBUF        |                9 |             24 |         2.67 |
 |  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/dif_ena_reg_6[0]                                               | btnC_IBUF        |                6 |             24 |         4.00 |
-|  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/dif_ena_reg[0]                                                 | btnC_IBUF        |               11 |             24 |         2.18 |
+|  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/dif_ena_reg[0]                                                 | btnC_IBUF        |               12 |             24 |         2.00 |
+|  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/dif_ena_reg_3[0]                                               | btnC_IBUF        |               14 |             24 |         1.71 |
 |  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/dif_ena_reg_0[0]                                               | btnC_IBUF        |                6 |             24 |         4.00 |
+|  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/dif_ena_reg_1[0]                                               | btnC_IBUF        |               11 |             24 |         2.18 |
+|  JC_IBUF_BUFG[3]           | output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/E[0] | btnC_IBUF        |                7 |             24 |         3.43 |
+|  JC_IBUF_BUFG[3]           | dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/E[0]   | btnC_IBUF        |                5 |             24 |         4.80 |
+|  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/dif_ena_reg_2[0]                                               | btnC_IBUF        |                6 |             24 |         4.00 |
+|  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/cic_en_reg_1                                                   | btnC_IBUF        |                6 |             24 |         4.00 |
 |  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/cic_en_reg_0                                                   | btnC_IBUF        |                6 |             24 |         4.00 |
-|  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/E[0]                                                           | btnC_IBUF        |               12 |             24 |         2.00 |
+|  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/cic_en_reg_2                                                   | btnC_IBUF        |                7 |             24 |         3.43 |
+|  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/E[0]                                                           | btnC_IBUF        |               15 |             24 |         1.60 |
 |  clock_wiz_0/inst/clk_out2 | output_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/E[0] | btnC_IBUF        |                6 |             24 |         4.00 |
-|  clock_wiz_0/inst/clk_out2 | dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/E[0]   | btnC_IBUF        |                4 |             24 |         6.00 |
-|  clock_wiz_0/inst/clk_out2 | core_0/state_machine_inst/dif_ena_reg_5[0]                                               | btnC_IBUF        |               10 |             24 |         2.40 |
-|  clock_wiz_0/inst/clk_out2 | core_1/cic_inst/e_data[30]_i_1__0_n_0                                                    |                  |                9 |             30 |         3.33 |
-|  clock_wiz_0/inst/clk_out2 | core_0/cic_inst/e_data[30]_i_1_n_0                                                       |                  |                9 |             30 |         3.33 |
-|  clock_wiz_0/inst/clk_out2 | core_1/cic_inst/__1/mean_avg_power_reg_192_255_0_2_i_1_n_0                               |                  |                8 |             32 |         4.00 |
-|  clock_wiz_0/inst/clk_out2 | core_1/cic_inst/mean_avg_power_reg_128_191_0_2_i_4_n_0                                   |                  |                8 |             32 |         4.00 |
-|  clock_wiz_0/inst/clk_out2 | uart_fifo_tx_inst/uart/E[0]                                                              |                  |                4 |             32 |         8.00 |
-|  clock_wiz_0/inst/clk_out2 | core_0/cic_inst/__1/mean_avg_power_reg_0_63_0_2_i_4_n_0                                  |                  |                8 |             32 |         4.00 |
+|  clock_wiz_0/inst/clk_out2 | dmic_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/E[0]   | btnC_IBUF        |                5 |             24 |         4.80 |
+|  clock_wiz_0/inst/clk_out2 | output_fifo_wr_en_repN_2                                                                 |                  |                8 |             28 |         3.50 |
+|  clock_wiz_0/inst/clk_out2 | output_fifo_wr_en                                                                        |                  |               10 |             28 |         2.80 |
+|  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/pixel_counter[6]_i_1__0_n_0                                    | btnC_IBUF        |               14 |             29 |         2.07 |
+|  clock_wiz_0/inst/clk_out2 | core_0/cic_inst/e_data[30]_i_1_n_0                                                       |                  |                8 |             30 |         3.75 |
+|  clock_wiz_0/inst/clk_out2 | core_1/cic_inst/e_data[30]_i_1__0_n_0                                                    |                  |                8 |             30 |         3.75 |
+|  clock_wiz_0/inst/clk_out2 | uart_fifo_tx_inst/current_word[31]_i_1_n_0                                               |                  |                5 |             32 |         6.40 |
 |  clock_wiz_0/inst/clk_out2 | core_0/cic_inst/mean_avg_power_reg_64_127_0_2_i_1_n_0                                    |                  |                8 |             32 |         4.00 |
-|  clock_wiz_0/inst/clk_out2 | output_fifo_wr_en_repN_2                                                                 |                  |               10 |             33 |         3.30 |
-|  clock_wiz_0/inst/clk_out2 | output_fifo_wr_en                                                                        |                  |               11 |             35 |         3.18 |
-|  clock_wiz_0/inst/clk_out2 | core_1/state_machine_inst/pixel_counter[6]_i_1__0_n_0                                    | btnC_IBUF        |               14 |             36 |         2.57 |
-|  clock_wiz_0/inst/clk_out2 |                                                                                          | btnC_IBUF        |               32 |             52 |         1.62 |
-|  JC_IBUF__0_BUFG[3]        |                                                                                          |                  |               17 |             64 |         3.76 |
-|  clock_wiz_0/inst/clk_out2 |                                                                                          |                  |               93 |            222 |         2.39 |
+|  clock_wiz_0/inst/clk_out2 | core_0/cic_inst/__1/mean_avg_power_reg_0_63_0_2_i_4_n_0                                  |                  |                8 |             32 |         4.00 |
+|  clock_wiz_0/inst/clk_out2 | core_1/cic_inst/mean_avg_power_reg_128_191_0_2_i_4_n_0                                   |                  |                8 |             32 |         4.00 |
+|  clock_wiz_0/inst/clk_out2 | core_1/cic_inst/__1/mean_avg_power_reg_192_255_0_2_i_1_n_0                               |                  |                8 |             32 |         4.00 |
+|  clock_wiz_0/inst/clk_out2 |                                                                                          | btnC_IBUF        |               34 |             48 |         1.41 |
+|  JC_IBUF_BUFG[3]           |                                                                                          |                  |               22 |             64 |         2.91 |
+|  clock_wiz_0/inst/clk_out2 |                                                                                          |                  |              114 |            229 |         2.01 |
 +----------------------------+------------------------------------------------------------------------------------------+------------------+------------------+----------------+--------------+
 
 

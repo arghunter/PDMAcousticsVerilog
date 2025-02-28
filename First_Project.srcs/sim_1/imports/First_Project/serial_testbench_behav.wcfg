@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="17,730,719.545 ns"></ZoomStartTime>
-      <ZoomEndTime time="17,732,059.592 ns"></ZoomEndTime>
-      <Cursor1Time time="17,731,836.250 ns"></Cursor1Time>
+      <ZoomStartTime time="4,206.095 ns"></ZoomStartTime>
+      <ZoomEndTime time="5,758.782 ns"></ZoomEndTime>
+      <Cursor1Time time="5,500.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="142"></NameColumnWidth>
+      <NameColumnWidth column_width="138"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="366" />
+   <WVObjectSize size="467" />
    <wvobject fp_name="/testbench_top_level/dut/JB" type="array">
       <obj_property name="ElementShortName">JB[7:0]</obj_property>
       <obj_property name="ObjectShortName">JB[7:0]</obj_property>
@@ -1484,5 +1484,409 @@
    <wvobject fp_name="/testbench_top_level/dut/uart_fifo_tx_inst/using_fifo1" type="logic">
       <obj_property name="ElementShortName">using_fifo1</obj_property>
       <obj_property name="ObjectShortName">using_fifo1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core0_fifo/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core0_fifo/srst" type="logic">
+      <obj_property name="ElementShortName">srst</obj_property>
+      <obj_property name="ObjectShortName">srst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core0_fifo/din" type="array">
+      <obj_property name="ElementShortName">din[31:0]</obj_property>
+      <obj_property name="ObjectShortName">din[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core0_fifo/wr_en" type="logic">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core0_fifo/rd_en" type="logic">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core0_fifo/dout" type="array">
+      <obj_property name="ElementShortName">dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core0_fifo/full" type="logic">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core0_fifo/empty" type="logic">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core1_fifo/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core1_fifo/srst" type="logic">
+      <obj_property name="ElementShortName">srst</obj_property>
+      <obj_property name="ObjectShortName">srst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core1_fifo/din" type="array">
+      <obj_property name="ElementShortName">din[31:0]</obj_property>
+      <obj_property name="ObjectShortName">din[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core1_fifo/wr_en" type="logic">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core1_fifo/rd_en" type="logic">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core1_fifo/dout" type="array">
+      <obj_property name="ElementShortName">dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core1_fifo/full" type="logic">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core1_fifo/empty" type="logic">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/uart_fifo_tx_inst/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/uart_fifo_tx_inst/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/uart_fifo_tx_inst/fifo1_not_empty" type="logic">
+      <obj_property name="ElementShortName">fifo1_not_empty</obj_property>
+      <obj_property name="ObjectShortName">fifo1_not_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/uart_fifo_tx_inst/fifo2_not_empty" type="logic">
+      <obj_property name="ElementShortName">fifo2_not_empty</obj_property>
+      <obj_property name="ObjectShortName">fifo2_not_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/uart_fifo_tx_inst/fifo1_data" type="array">
+      <obj_property name="ElementShortName">fifo1_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo1_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/uart_fifo_tx_inst/fifo2_data" type="array">
+      <obj_property name="ElementShortName">fifo2_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo2_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/uart_fifo_tx_inst/fifo1_rd_en" type="logic">
+      <obj_property name="ElementShortName">fifo1_rd_en</obj_property>
+      <obj_property name="ObjectShortName">fifo1_rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/uart_fifo_tx_inst/fifo2_rd_en" type="logic">
+      <obj_property name="ElementShortName">fifo2_rd_en</obj_property>
+      <obj_property name="ObjectShortName">fifo2_rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/uart_fifo_tx_inst/tx" type="logic">
+      <obj_property name="ElementShortName">tx</obj_property>
+      <obj_property name="ObjectShortName">tx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/uart_fifo_tx_inst/busy" type="logic">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/uart_fifo_tx_inst/byte_index" type="array">
+      <obj_property name="ElementShortName">byte_index[1:0]</obj_property>
+      <obj_property name="ObjectShortName">byte_index[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/uart_fifo_tx_inst/data_byte" type="array">
+      <obj_property name="ElementShortName">data_byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_byte[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/uart_fifo_tx_inst/send" type="logic">
+      <obj_property name="ElementShortName">send</obj_property>
+      <obj_property name="ObjectShortName">send</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/uart_fifo_tx_inst/current_word" type="array">
+      <obj_property name="ElementShortName">current_word[31:0]</obj_property>
+      <obj_property name="ObjectShortName">current_word[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/uart_fifo_tx_inst/using_fifo1" type="logic">
+      <obj_property name="ElementShortName">using_fifo1</obj_property>
+      <obj_property name="ObjectShortName">using_fifo1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/ena" type="logic">
+      <obj_property name="ElementShortName">ena</obj_property>
+      <obj_property name="ObjectShortName">ena</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/core_num" type="logic">
+      <obj_property name="ElementShortName">core_num</obj_property>
+      <obj_property name="ObjectShortName">core_num</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/bit_data" type="array">
+      <obj_property name="ElementShortName">bit_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_data[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/e_data" type="array">
+      <obj_property name="ElementShortName">e_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">e_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/store_e_data" type="logic">
+      <obj_property name="ElementShortName">store_e_data</obj_property>
+      <obj_property name="ObjectShortName">store_e_data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/pixel_addr" type="array">
+      <obj_property name="ElementShortName">pixel_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/cic_en" type="logic">
+      <obj_property name="ElementShortName">cic_en</obj_property>
+      <obj_property name="ObjectShortName">cic_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/start_task" type="logic">
+      <obj_property name="ElementShortName">start_task</obj_property>
+      <obj_property name="ObjectShortName">start_task</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/read_addr" type="array">
+      <obj_property name="ElementShortName">read_addr[13:0]</obj_property>
+      <obj_property name="ObjectShortName">read_addr[13:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/write_addr" type="array">
+      <obj_property name="ElementShortName">write_addr[13:0]</obj_property>
+      <obj_property name="ObjectShortName">write_addr[13:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/load_cic" type="logic">
+      <obj_property name="ElementShortName">load_cic</obj_property>
+      <obj_property name="ObjectShortName">load_cic</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/store_cic" type="logic">
+      <obj_property name="ElementShortName">store_cic</obj_property>
+      <obj_property name="ObjectShortName">store_cic</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/cic_sub_addr" type="array">
+      <obj_property name="ElementShortName">cic_sub_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">cic_sub_addr[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/rom_out0" type="array">
+      <obj_property name="ElementShortName">rom_out0[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out0[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/rom_out1" type="array">
+      <obj_property name="ElementShortName">rom_out1[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out1[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/rom_out2" type="array">
+      <obj_property name="ElementShortName">rom_out2[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out2[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/rom_out3" type="array">
+      <obj_property name="ElementShortName">rom_out3[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out3[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/rom_out4" type="array">
+      <obj_property name="ElementShortName">rom_out4[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out4[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/rom_out5" type="array">
+      <obj_property name="ElementShortName">rom_out5[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out5[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/rom_out6" type="array">
+      <obj_property name="ElementShortName">rom_out6[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out6[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/rom_out7" type="array">
+      <obj_property name="ElementShortName">rom_out7[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out7[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/rom_out8" type="array">
+      <obj_property name="ElementShortName">rom_out8[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out8[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/rom_out9" type="array">
+      <obj_property name="ElementShortName">rom_out9[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out9[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/rom_out10" type="array">
+      <obj_property name="ElementShortName">rom_out10[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out10[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/rom_out11" type="array">
+      <obj_property name="ElementShortName">rom_out11[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out11[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/rom_out12" type="array">
+      <obj_property name="ElementShortName">rom_out12[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out12[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/rom_out13" type="array">
+      <obj_property name="ElementShortName">rom_out13[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out13[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/rom_out14" type="array">
+      <obj_property name="ElementShortName">rom_out14[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out14[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/rom_out15" type="array">
+      <obj_property name="ElementShortName">rom_out15[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out15[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/ram_out" type="array">
+      <obj_property name="ElementShortName">ram_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/adder16_out" type="array">
+      <obj_property name="ElementShortName">adder16_out[5:0]</obj_property>
+      <obj_property name="ObjectShortName">adder16_out[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/cic_out" type="array">
+      <obj_property name="ElementShortName">cic_out[23:0]</obj_property>
+      <obj_property name="ObjectShortName">cic_out[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_1/hpout" type="array">
+      <obj_property name="ElementShortName">hpout[23:0]</obj_property>
+      <obj_property name="ObjectShortName">hpout[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/ena" type="logic">
+      <obj_property name="ElementShortName">ena</obj_property>
+      <obj_property name="ObjectShortName">ena</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/core_num" type="logic">
+      <obj_property name="ElementShortName">core_num</obj_property>
+      <obj_property name="ObjectShortName">core_num</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/bit_data" type="array">
+      <obj_property name="ElementShortName">bit_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_data[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/e_data" type="array">
+      <obj_property name="ElementShortName">e_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">e_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/store_e_data" type="logic">
+      <obj_property name="ElementShortName">store_e_data</obj_property>
+      <obj_property name="ObjectShortName">store_e_data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/pixel_addr" type="array">
+      <obj_property name="ElementShortName">pixel_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_en" type="logic">
+      <obj_property name="ElementShortName">cic_en</obj_property>
+      <obj_property name="ObjectShortName">cic_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/start_task" type="logic">
+      <obj_property name="ElementShortName">start_task</obj_property>
+      <obj_property name="ObjectShortName">start_task</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/read_addr" type="array">
+      <obj_property name="ElementShortName">read_addr[13:0]</obj_property>
+      <obj_property name="ObjectShortName">read_addr[13:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/write_addr" type="array">
+      <obj_property name="ElementShortName">write_addr[13:0]</obj_property>
+      <obj_property name="ObjectShortName">write_addr[13:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/load_cic" type="logic">
+      <obj_property name="ElementShortName">load_cic</obj_property>
+      <obj_property name="ObjectShortName">load_cic</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/store_cic" type="logic">
+      <obj_property name="ElementShortName">store_cic</obj_property>
+      <obj_property name="ObjectShortName">store_cic</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_sub_addr" type="array">
+      <obj_property name="ElementShortName">cic_sub_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">cic_sub_addr[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out0" type="array">
+      <obj_property name="ElementShortName">rom_out0[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out0[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out1" type="array">
+      <obj_property name="ElementShortName">rom_out1[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out1[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out2" type="array">
+      <obj_property name="ElementShortName">rom_out2[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out2[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out3" type="array">
+      <obj_property name="ElementShortName">rom_out3[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out3[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out4" type="array">
+      <obj_property name="ElementShortName">rom_out4[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out4[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out5" type="array">
+      <obj_property name="ElementShortName">rom_out5[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out5[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out6" type="array">
+      <obj_property name="ElementShortName">rom_out6[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out6[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out7" type="array">
+      <obj_property name="ElementShortName">rom_out7[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out7[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out8" type="array">
+      <obj_property name="ElementShortName">rom_out8[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out8[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out9" type="array">
+      <obj_property name="ElementShortName">rom_out9[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out9[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out10" type="array">
+      <obj_property name="ElementShortName">rom_out10[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out10[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out11" type="array">
+      <obj_property name="ElementShortName">rom_out11[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out11[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out12" type="array">
+      <obj_property name="ElementShortName">rom_out12[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out12[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out13" type="array">
+      <obj_property name="ElementShortName">rom_out13[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out13[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out14" type="array">
+      <obj_property name="ElementShortName">rom_out14[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out14[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom_out15" type="array">
+      <obj_property name="ElementShortName">rom_out15[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out15[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/ram_out" type="array">
+      <obj_property name="ElementShortName">ram_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/adder16_out" type="array">
+      <obj_property name="ElementShortName">adder16_out[5:0]</obj_property>
+      <obj_property name="ObjectShortName">adder16_out[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_out" type="array">
+      <obj_property name="ElementShortName">cic_out[23:0]</obj_property>
+      <obj_property name="ObjectShortName">cic_out[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/hpout" type="array">
+      <obj_property name="ElementShortName">hpout[23:0]</obj_property>
+      <obj_property name="ObjectShortName">hpout[23:0]</obj_property>
    </wvobject>
 </wave_config>
