@@ -8,7 +8,7 @@ module uart_tx (
 );
     
     parameter CLK_FREQ = 400000000; // 100MHz clock
-    parameter BAUD_RATE = 921600;     
+    parameter BAUD_RATE = 3000000;     
     localparam BAUD_TICK = CLK_FREQ / BAUD_RATE; 
 
     reg [15:0] baud_counter = 0;

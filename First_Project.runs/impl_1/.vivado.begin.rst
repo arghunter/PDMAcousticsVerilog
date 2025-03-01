@@ -1,30 +1,45 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="arg" Host="DEKTOP-MOV670" Pid="62152" HostCore="32" HostMemory="067804262400">
+    <Process Command="vivado.bat" Owner="arg" Host="DEKTOP-MOV670" Pid="75580" HostCore="32" HostMemory="067804262400">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="arg" Host="DEKTOP-MOV670" Pid="60324" HostCore="32" HostMemory="067804262400">
+    <Process Command="vivado.bat" Owner="arg" Host="DEKTOP-MOV670" Pid="37936" HostCore="32" HostMemory="067804262400">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="arg" Host="DEKTOP-MOV670" Pid="42772" HostCore="32" HostMemory="067804262400">
+    <Process Command="vivado.bat" Owner="arg" Host="DEKTOP-MOV670" Pid="27292" HostCore="32" HostMemory="067804262400">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="arg" Host="DEKTOP-MOV670" Pid="64452" HostCore="32" HostMemory="067804262400">
+    <Process Command="vivado.bat" Owner="arg" Host="DEKTOP-MOV670" Pid="28552" HostCore="32" HostMemory="067804262400">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="arg" Host="DEKTOP-MOV670" Pid="63328" HostCore="32" HostMemory="067804262400">
+    <Process Command="vivado.bat" Owner="arg" Host="DEKTOP-MOV670" Pid="77128" HostCore="32" HostMemory="067804262400">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="arg" Host="DEKTOP-MOV670" Pid="29404" HostCore="32" HostMemory="067804262400">
+    <Process Command="vivado.bat" Owner="arg" Host="DEKTOP-MOV670" Pid="68268" HostCore="32" HostMemory="067804262400">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="arg" Host="DEKTOP-MOV670" Pid="62380" HostCore="32" HostMemory="067804262400">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="arg" Host="DEKTOP-MOV670" Pid="60636" HostCore="32" HostMemory="067804262400">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="arg" Host="DEKTOP-MOV670" Pid="74632" HostCore="32" HostMemory="067804262400">
     </Process>
 </ProcessHandle>

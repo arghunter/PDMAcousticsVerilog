@@ -8,7 +8,7 @@
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Fri Feb 28 00:53:13 2025
+  **** Start of session at: Sat Mar  1 14:44:29 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -25,67 +25,75 @@ INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Device 21-9227] Part: xc7a35tcpg236-1 does not have CEAM library.
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 53068
+INFO: [Synth 8-7075] Helper process launched with PID 70284
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1461.883 ; gain = 446.324
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1463.719 ; gain = 448.562
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-11065] parameter 's_IDLE' becomes localparam in 'uart_tx_r2' with formal parameter declaration list [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/uart_tx_r2.v:47]
+WARNING: [Synth 8-11065] parameter 's_TX_START_BIT' becomes localparam in 'uart_tx_r2' with formal parameter declaration list [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/uart_tx_r2.v:48]
+WARNING: [Synth 8-11065] parameter 's_TX_DATA_BITS' becomes localparam in 'uart_tx_r2' with formal parameter declaration list [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/uart_tx_r2.v:49]
+WARNING: [Synth 8-11065] parameter 's_TX_STOP_BIT' becomes localparam in 'uart_tx_r2' with formal parameter declaration list [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/uart_tx_r2.v:50]
+WARNING: [Synth 8-11065] parameter 's_CLEANUP' becomes localparam in 'uart_tx_r2' with formal parameter declaration list [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/uart_tx_r2.v:51]
+INFO: [Synth 8-11241] undeclared symbol 'out_term_full', assumed default net type 'wire' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:302]
 INFO: [Synth 8-6157] synthesizing module 'simple_io' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:23]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/clk_wiz_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'dmic_clockgen' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/dmic_clockgen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'dmic_clockgen' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/dmic_clockgen.v:23]
 INFO: [Synth 8-6157] synthesizing module 'multi_ddr_to_sdr' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/multi_ddr_to_sdr.v:24]
 INFO: [Synth 8-6157] synthesizing module 'ddr_to_sdr' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ddr_to_sdr.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'ddr_to_sdr' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ddr_to_sdr.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'multi_ddr_to_sdr' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/multi_ddr_to_sdr.v:24]
-INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/fifo_generator_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/fifo_generator_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'core' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/core.v:23]
 INFO: [Synth 8-6157] synthesizing module 'rom' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/rom.v:23]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_2' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_2' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_3' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_3' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_4' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_4' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_4_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_5' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_5_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_5' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_5_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_6' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_6_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_6' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_6_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_7' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_7_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_7' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_7_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_8' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_8_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_8' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_8_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_9' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_9_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_9' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_9_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_10' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_10_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_10' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_10_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_11' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_11_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_11' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_11_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_12' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_12_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_12' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_12_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_13' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_13_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_13' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_13_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_14' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_14_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_14' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_14_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_15' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_15_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_15' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_15_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_16' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_16_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_16' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_16_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_2' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_2' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_3' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_3' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_4' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_4' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_5' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_5' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_5_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_6' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_6_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_6' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_6_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_7' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_7_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_7' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_7_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_8' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_8_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_8' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_8_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_9' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_9_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_9' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_9_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_10' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_10_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_10' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_10_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_11' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_11_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_11' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_11_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_12' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_12_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_12' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_12_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_13' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_13_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_13' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_13_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_14' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_14_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_14' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_14_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_15' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_15_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_15' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_15_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_16' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_16_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_16' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_16_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'rom' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/rom.v:23]
 INFO: [Synth 8-6157] synthesizing module 'state_machine' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/state_machine.v:23]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/state_machine.v:86]
 INFO: [Synth 8-6155] done synthesizing module 'state_machine' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/state_machine.v:23]
 INFO: [Synth 8-6157] synthesizing module 'ram' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ram.v:23]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'ram' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ram.v:23]
 INFO: [Synth 8-6157] synthesizing module 'adder5bit16way' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/adder5bit16way.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'adder5bit16way' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/adder5bit16way.v:23]
 WARNING: [Synth 8-689] width (6) of port connection 'out' does not match port width (5) of module 'adder5bit16way' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/core.v:134]
 INFO: [Synth 8-6157] synthesizing module 'cic' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/cic.v:28]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_17' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_17_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_17' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/blk_mem_gen_17_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_17' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_17_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_17' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_17_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'integrator' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/integrator.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'integrator' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/integrator.v:23]
 INFO: [Synth 8-6157] synthesizing module 'differentiator' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/differentiator.v:23]
@@ -93,43 +101,55 @@ INFO: [Synth 8-6155] done synthesizing module 'differentiator' (0#1) [C:/Users/a
 INFO: [Synth 8-6155] done synthesizing module 'cic' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/cic.v:28]
 WARNING: [Synth 8-689] width (6) of port connection 'in' does not match port width (5) of module 'cic' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/core.v:145]
 INFO: [Synth 8-6155] done synthesizing module 'core' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/core.v:23]
-INFO: [Synth 8-6157] synthesizing module 'fifo_generator_1' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/fifo_generator_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_1' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-14324-DEKTOP-MOV670/realtime/fifo_generator_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'uart_fifo_tx' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/uart_fifo_tx.v:23]
-INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/uart_tx.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/uart_tx.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'uart_fifo_tx' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/uart_fifo_tx.v:23]
+INFO: [Synth 8-6157] synthesizing module 'output_terminal' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/output_terminal.v:23]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_2' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/fifo_generator_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_2' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/fifo_generator_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx_r2' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/uart_tx_r2.v:36]
+	Parameter CLKS_PER_BIT bound to: 133 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx_r2' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/uart_tx_r2.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'output_terminal' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/output_terminal.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'simple_io' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:23]
 WARNING: [Synth 8-7137] Register task_started_reg in module state_machine has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/state_machine.v:91]
 WARNING: [Synth 8-3848] Net web in module/entity ram does not have driver. [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ram.v:56]
 WARNING: [Synth 8-3848] Net dinb in module/entity ram does not have driver. [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ram.v:54]
-WARNING: [Synth 8-6014] Unused sequential element using_fifo1_reg was removed.  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/uart_fifo_tx.v:66]
-WARNING: [Synth 8-6014] Unused sequential element word_loaded_reg was removed.  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/uart_fifo_tx.v:67]
-WARNING: [Synth 8-7137] Register current_word_reg in module uart_fifo_tx has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/uart_fifo_tx.v:86]
-WARNING: [Synth 8-7137] Register data_byte_reg in module uart_fifo_tx has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/uart_fifo_tx.v:54]
-WARNING: [Synth 8-6014] Unused sequential element c2_reg was removed.  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:252]
-WARNING: [Synth 8-6014] Unused sequential element s02_reg was removed.  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:253]
-WARNING: [Synth 8-6014] Unused sequential element s12_reg was removed.  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:254]
+WARNING: [Synth 8-6014] Unused sequential element c2_reg was removed.  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:236]
+WARNING: [Synth 8-6014] Unused sequential element s02_reg was removed.  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:237]
+WARNING: [Synth 8-6014] Unused sequential element s12_reg was removed.  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:238]
+WARNING: [Synth 8-3848] Net full in module/entity simple_io does not have driver. [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:264]
+WARNING: [Synth 8-7129] Port LED[15] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[14] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[13] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[12] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[11] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[10] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[9] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[8] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[7] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[6] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[5] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[4] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[3] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[2] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[1] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port JA[7] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port JA[6] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port JA[2] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port JC[7] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port JC[6] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port JC[2] in module simple_io is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sw[0] in module simple_io is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1582.082 ; gain = 566.523
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1582.309 ; gain = 567.152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1582.082 ; gain = 566.523
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1582.309 ; gain = 567.152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1582.082 ; gain = 566.523
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1582.309 ; gain = 567.152
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1582.082 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1582.309 ; gain = 0.000
 WARNING: [Netlist 29-1115] Found multi-term driver net: JC[3].
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -273,13 +293,9 @@ Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project
 Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_10/blk_mem_gen_10/blk_mem_gen_10_in_context.xdc] for cell 'core_0/rom/channel_9'
 Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_10/blk_mem_gen_10/blk_mem_gen_10_in_context.xdc] for cell 'core_1/rom/channel_9'
 Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_10/blk_mem_gen_10/blk_mem_gen_10_in_context.xdc] for cell 'core_1/rom/channel_9'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/fifo_generator_1/fifo_generator_1/fifo_generator_1_in_context.xdc] for cell 'core0_fifo'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/fifo_generator_1/fifo_generator_1/fifo_generator_1_in_context.xdc] for cell 'core0_fifo'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/fifo_generator_1/fifo_generator_1/fifo_generator_1_in_context.xdc] for cell 'core1_fifo'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/fifo_generator_1/fifo_generator_1/fifo_generator_1_in_context.xdc] for cell 'core1_fifo'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/fifo_generator_2/fifo_generator_2/fifo_generator_2_in_context.xdc] for cell 'output_terminal_inst/uart_fifo_inst'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/fifo_generator_2/fifo_generator_2/fifo_generator_2_in_context.xdc] for cell 'output_terminal_inst/uart_fifo_inst'
 Parsing XDC File [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:14]
-WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:15]
 WARNING: [Vivado 12-584] No ports matched 'RsRx'. [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:273]
 WARNING: [Vivado 12-584] No ports matched 'RsRx'. [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:274]
 Finished Parsing XDC File [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc]
@@ -288,13 +304,11 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/simple_io_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1598.422 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1681.992 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1598.422 ; gain = 0.000
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'core0_fifo' at clock pin 'clk' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'core1_fifo' at clock pin 'clk' is different from the actual clock period '2.500', this can lead to different synthesis results.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1681.992 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'dmic_fifo' at clock pin 'rd_clk' is different from the actual clock period '2.500', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'output_fifo' at clock pin 'wr_clk' is different from the actual clock period '2.500', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/cic_inst/cic_states' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
@@ -363,16 +377,17 @@ WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context s
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/rom/channel_7' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/rom/channel_8' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/rom/channel_9' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'output_terminal_inst/uart_fifo_inst' at clock pin 'clk' is different from the actual clock period '2.500', this can lead to different synthesis results.
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1604.273 ; gain = 588.715
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1682.180 ; gain = 667.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1604.273 ; gain = 588.715
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1682.180 ; gain = 667.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -448,13 +463,12 @@ Applied set_property KEEP_HIERARCHY = SOFT for core_0/cic_inst/cic_states. (cons
 Applied set_property KEEP_HIERARCHY = SOFT for core_1/cic_inst/cic_states. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_9. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for core_1/rom/channel_9. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core0_fifo. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core1_fifo. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for output_terminal_inst/uart_fifo_inst. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1604.273 ; gain = 588.715
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1682.180 ; gain = 667.023
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'state_machine'
-INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_fifo_tx'
+INFO: [Synth 8-802] inferred FSM for state register 'r_SM_Main_reg' in module 'uart_tx_r2'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -470,14 +484,15 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                    IDLE |                             0001 |                               00
-               LOAD_WORD |                             0010 |                               01
-               SEND_BYTE |                             0100 |                               10
-           WAIT_COMPLETE |                             1000 |                               11
+                  s_IDLE |                              000 |                              000
+          s_TX_START_BIT |                              001 |                              001
+          s_TX_DATA_BITS |                              010 |                              010
+           s_TX_STOP_BIT |                              011 |                              011
+               s_CLEANUP |                              100 |                              100
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'uart_fifo_tx'
+INFO: [Synth 8-3354] encoded FSM with state register 'r_SM_Main_reg' using encoding 'sequential' in module 'uart_tx_r2'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1604.273 ; gain = 588.715
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1682.180 ; gain = 667.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -492,45 +507,37 @@ Detailed RTL Component Info :
 	   3 Input   15 Bit       Adders := 2     
 	   2 Input   14 Bit       Adders := 34    
 	   2 Input   12 Bit       Adders := 2     
-	   2 Input    9 Bit       Adders := 1     
-	   2 Input    8 Bit       Adders := 4     
+	   2 Input    8 Bit       Adders := 6     
 	   2 Input    7 Bit       Adders := 2     
 	   2 Input    6 Bit       Adders := 2     
 	   2 Input    4 Bit       Adders := 3     
-	   2 Input    3 Bit       Adders := 2     
-	   2 Input    2 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 4     
 +---Registers : 
-	               32 Bit    Registers := 3     
+	               32 Bit    Registers := 2     
 	               24 Bit    Registers := 18    
-	               16 Bit    Registers := 1     
 	               12 Bit    Registers := 2     
-	               10 Bit    Registers := 1     
-	                8 Bit    Registers := 5     
+	                8 Bit    Registers := 7     
 	                6 Bit    Registers := 2     
 	                4 Bit    Registers := 3     
-	                3 Bit    Registers := 2     
-	                2 Bit    Registers := 1     
+	                3 Bit    Registers := 4     
 	                1 Bit    Registers := 55    
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 1     
 	   2 Input   24 Bit        Muxes := 14    
 	   2 Input   12 Bit        Muxes := 2     
 	   7 Input   12 Bit        Muxes := 2     
-	   2 Input   10 Bit        Muxes := 1     
-	   2 Input    9 Bit        Muxes := 2     
 	   7 Input    8 Bit        Muxes := 2     
-	   2 Input    8 Bit        Muxes := 2     
-	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 3     
 	   2 Input    7 Bit        Muxes := 4     
 	   7 Input    7 Bit        Muxes := 2     
-	   2 Input    4 Bit        Muxes := 2     
-	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 7     
 	   7 Input    3 Bit        Muxes := 2     
+	   5 Input    3 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 32    
-	   4 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 32    
+	   2 Input    1 Bit        Muxes := 29    
+	   3 Input    1 Bit        Muxes := 8     
 	   7 Input    1 Bit        Muxes := 22    
-	   4 Input    1 Bit        Muxes := 5     
+	   5 Input    1 Bit        Muxes := 9     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -547,64 +554,47 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port LED[15] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[14] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[13] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[12] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[11] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[10] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[9] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[8] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[7] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[6] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[5] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[4] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[3] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[2] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[1] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port JA[7] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port JA[6] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port JA[2] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port JC[7] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port JC[6] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port JC[2] in module simple_io is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sw[0] in module simple_io is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1604.273 ; gain = 588.715
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-Distributed RAM: Preliminary Mapping Report (see note below)
-+------------+------------------------------------+-----------+----------------------+--------------+
-|Module Name | RTL Object                         | Inference | Size (Depth x Width) | Primitives   | 
-+------------+------------------------------------+-----------+----------------------+--------------+
-|simple_io   | core_0/cic_inst/mean_avg_power_reg | Implied   | 256 x 24             | RAM64M x 32  | 
-|simple_io   | core_1/cic_inst/mean_avg_power_reg | Implied   | 256 x 24             | RAM64M x 32  | 
-+------------+------------------------------------+-----------+----------------------+--------------+
-
-Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1682.180 ; gain = 667.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1604.273 ; gain = 588.715
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1682.180 ; gain = 667.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1611.434 ; gain = 595.875
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-Distributed RAM: Final Mapping Report
-+------------+------------------------------------+-----------+----------------------+--------------+
-|Module Name | RTL Object                         | Inference | Size (Depth x Width) | Primitives   | 
-+------------+------------------------------------+-----------+----------------------+--------------+
-|simple_io   | core_0/cic_inst/mean_avg_power_reg | Implied   | 256 x 24             | RAM64M x 32  | 
-|simple_io   | core_1/cic_inst/mean_avg_power_reg | Implied   | 256 x 24             | RAM64M x 32  | 
-+------------+------------------------------------+-----------+----------------------+--------------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1682.180 ; gain = 667.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1629.527 ; gain = 613.969
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1682.180 ; gain = 667.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -623,38 +613,39 @@ Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 CRITICAL WARNING: [Synth 8-6030] Inout pin 'JA[3]' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:23]
 CRITICAL WARNING: [Synth 8-6030] Inout pin 'JC[3]' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:23]
+CRITICAL WARNING: [Synth 8-6030] Inout pin 'JC[1]' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:23]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1629.527 ; gain = 613.969
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1682.180 ; gain = 667.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1629.527 ; gain = 613.969
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1682.180 ; gain = 667.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1629.527 ; gain = 613.969
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1682.180 ; gain = 667.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1629.527 ; gain = 613.969
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1682.180 ; gain = 667.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1629.527 ; gain = 613.969
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1682.180 ; gain = 667.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1629.527 ; gain = 613.969
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1682.180 ; gain = 667.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -666,25 +657,25 @@ Report BlackBoxes:
 +------+-----------------+----------+
 |1     |clk_wiz_0        |         1|
 |2     |fifo_generator_0 |         2|
-|3     |fifo_generator_1 |         2|
-|4     |blk_mem_gen_17   |         2|
-|5     |blk_mem_gen_0    |        32|
-|6     |blk_mem_gen_1    |         2|
-|7     |blk_mem_gen_2    |         2|
-|8     |blk_mem_gen_3    |         2|
-|9     |blk_mem_gen_4    |         2|
-|10    |blk_mem_gen_5    |         2|
-|11    |blk_mem_gen_6    |         2|
-|12    |blk_mem_gen_7    |         2|
-|13    |blk_mem_gen_8    |         2|
-|14    |blk_mem_gen_9    |         2|
-|15    |blk_mem_gen_10   |         2|
-|16    |blk_mem_gen_11   |         2|
-|17    |blk_mem_gen_12   |         2|
-|18    |blk_mem_gen_13   |         2|
-|19    |blk_mem_gen_14   |         2|
-|20    |blk_mem_gen_15   |         2|
-|21    |blk_mem_gen_16   |         2|
+|3     |blk_mem_gen_17   |         2|
+|4     |blk_mem_gen_0    |        32|
+|5     |blk_mem_gen_1    |         2|
+|6     |blk_mem_gen_2    |         2|
+|7     |blk_mem_gen_3    |         2|
+|8     |blk_mem_gen_4    |         2|
+|9     |blk_mem_gen_5    |         2|
+|10    |blk_mem_gen_6    |         2|
+|11    |blk_mem_gen_7    |         2|
+|12    |blk_mem_gen_8    |         2|
+|13    |blk_mem_gen_9    |         2|
+|14    |blk_mem_gen_10   |         2|
+|15    |blk_mem_gen_11   |         2|
+|16    |blk_mem_gen_12   |         2|
+|17    |blk_mem_gen_13   |         2|
+|18    |blk_mem_gen_14   |         2|
+|19    |blk_mem_gen_15   |         2|
+|20    |blk_mem_gen_16   |         2|
+|21    |fifo_generator_2 |         1|
 +------+-----------------+----------+
 
 Report Cell Usage: 
@@ -730,47 +721,45 @@ Report Cell Usage:
 |68    |fifo_generator   |     1|
 |69    |fifo_generator_0 |     1|
 |70    |fifo_generator   |     1|
-|71    |fifo_generator_1 |     1|
-|72    |BUFG             |     1|
-|73    |CARRY4           |   272|
-|74    |LUT1             |    87|
-|75    |LUT2             |   614|
-|76    |LUT3             |   201|
-|77    |LUT4             |   163|
-|78    |LUT5             |   230|
-|79    |LUT6             |   500|
-|80    |MUXF7            |    48|
-|81    |RAM64M           |    32|
-|82    |FDCE             |   680|
-|83    |FDPE             |    13|
-|84    |FDRE             |   200|
-|85    |IBUF             |     9|
-|86    |OBUF             |    16|
+|71    |BUFG             |     1|
+|72    |CARRY4           |   268|
+|73    |LUT1             |    14|
+|74    |LUT2             |   664|
+|75    |LUT3             |   113|
+|76    |LUT4             |   184|
+|77    |LUT5             |   230|
+|78    |LUT6             |   410|
+|79    |MUXF7            |    48|
+|80    |FDCE             |   711|
+|81    |FDPE             |     2|
+|82    |FDRE             |   105|
+|83    |IBUF             |    25|
+|84    |OBUF             |    17|
+|85    |OBUFT            |    15|
 +------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1629.527 ; gain = 613.969
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1682.180 ; gain = 667.023
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 2 critical warnings and 8 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1629.527 ; gain = 591.777
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1629.527 ; gain = 613.969
+Synthesis finished with 0 errors, 3 critical warnings and 22 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1682.180 ; gain = 567.152
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1682.180 ; gain = 667.023
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 1629.527 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 352 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 1682.180 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 316 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1629.828 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1682.180 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 32 instances were transformed.
-  RAM64M => RAM64M (RAMD64E(x4)): 32 instances
+No Unisim elements were transformed.
 
-Synth Design complete | Checksum: f4ef2cd5
+Synth Design complete | Checksum: ab6811bc
 INFO: [Common 17-83] Releasing license: Synthesis
-93 Infos, 104 Warnings, 2 Critical Warnings and 0 Errors encountered.
+96 Infos, 131 Warnings, 3 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1629.828 ; gain = 1022.230
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1682.180 ; gain = 1073.926
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1629.828 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1682.180 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/simple_io.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file simple_io_utilization_synth.rpt -pb simple_io_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Feb 28 00:53:46 2025...
+INFO: [Common 17-206] Exiting Vivado at Sat Mar  1 14:45:02 2025...

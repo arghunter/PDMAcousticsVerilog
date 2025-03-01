@@ -1,25 +1,3 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 02/26/2025 12:31:16 AM
-// Design Name: 
-// Module Name: uart_fifo_tx
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-
 module uart_fifo_tx (
     input wire clk,
     input wire rst,
@@ -32,20 +10,18 @@ module uart_fifo_tx (
     output wire tx,              // UART TX output
     output wire busy             // UART busy signal
 );
-    reg [1:0] byte_index = 0;   // Tracks which byte is being sent
-    reg [7:0] data_byte;        // Current byte to send
-    reg send = 0;               // Send signal for UART
-    reg [31:0] current_word;    // Stores the current 32-bit word
-    reg using_fifo1 = 1;        // Tracks which FIFO is being used
-    reg word_loaded = 0;        // Flag to track if word is loaded
-    
-    // State machine states
-    localparam IDLE = 2'd0;
-    localparam LOAD_WORD = 2'd1;
-    localparam SEND_BYTE = 2'd2;
-    localparam WAIT_COMPLETE = 2'd3;
+    // Simplified state machine
+    localparam IDLE = 2'b00;
+    localparam LOAD = 2'b01;
+    localparam SEND = 2'b10;
+    localparam WAIT = 2'b11;
     
     reg [1:0] state = IDLE;
+    reg [1:0] byte_index = 0;
+    reg [31:0] current_word;
+    reg [7:0] data_byte;
+    reg send = 0;
+    reg busy_prev = 0;
     
     // Instantiate UART TX module
     uart_tx uart (
@@ -59,72 +35,70 @@ module uart_fifo_tx (
     
     always @(posedge clk or posedge rst) begin
         if (rst) begin
+            state <= IDLE;
             byte_index <= 0;
             send <= 0;
             fifo1_rd_en <= 0;
             fifo2_rd_en <= 0;
-            using_fifo1 <= 1;
-            word_loaded <= 0;
-            state <= IDLE;
+            busy_prev <= 0;
         end else begin
             // Default values
             send <= 0;
             fifo1_rd_en <= 0;
             fifo2_rd_en <= 0;
             
-            case(state)
+            // Track busy signal edge
+            busy_prev <= busy;
+            
+            case (state)
                 IDLE: begin
                     byte_index <= 0;
                     if (fifo1_not_empty || fifo2_not_empty) begin
-                        state <= LOAD_WORD;
+                        state <= LOAD;
                     end
                 end
                 
-                LOAD_WORD: begin
+                LOAD: begin
                     if (fifo1_not_empty) begin
                         fifo1_rd_en <= 1;
                         current_word <= fifo1_data;
-                        using_fifo1 <= 1;
                     end else if (fifo2_not_empty) begin
                         fifo2_rd_en <= 1;
                         current_word <= fifo2_data;
-                        using_fifo1 <= 0;
                     end
-                    state <= SEND_BYTE;
+                    state <= SEND;
                 end
                 
-                SEND_BYTE: begin
-                    // Extract the correct byte from the current word
-                    case (byte_index)
-//                        2'b00: data_byte <= 8'b00000001; // First byte
-//                        2'b01: data_byte <= 8'b00000010; // Second byte
-//                        2'b10: data_byte <= 8'b00000011; // Third byte
-//                        2'b11: data_byte <= 8'b00000100; // Fourth byte
-                        // Uncomment below to use actual FIFO data instead of test values
-                         2'b00: data_byte <= current_word[31:24];
-                         2'b01: data_byte <= current_word[23:16];
-                         2'b10: data_byte <= current_word[15:8];
-                         2'b11: data_byte <= current_word[7:0];
-                    endcase
-                    
-                    // Initiate send
-                    send <= 1;
-                    state <= WAIT_COMPLETE;
+                SEND: begin
+                    if (!busy) begin  // Only send when UART is not busy
+                        // Select byte to send based on byte_index
+                        case (byte_index)
+//                            2'b00: data_byte <= 8'b00000001; // First byte
+//                            2'b01: data_byte <= 8'b00000010; // Second byte
+//                            2'b10: data_byte <= 8'b00000011; // Third byte
+//                            2'b11: data_byte <= 8'b00000100; // Fourth byte
+                            // Uncomment for actual data
+                             2'b00: data_byte <= current_word[31:24];
+                             2'b01: data_byte <= current_word[23:16];
+                             2'b10: data_byte <= current_word[15:8];
+                             2'b11: data_byte <= current_word[7:0];
+                        endcase
+                        
+                        send <= 1;
+                        state <= WAIT;
+                    end
                 end
                 
-                WAIT_COMPLETE: begin
-                    if (busy) begin
-                        // Wait for UART to become busy (transmission started)
-                        send <= 0; // Clear send signal once UART is busy
-                    end else if (!busy && !send) begin
-                        // UART has finished transmitting this byte
+                WAIT: begin
+                    // Detect falling edge of busy (transmission complete)
+                    if (busy_prev && !busy) begin
                         if (byte_index == 2'b11) begin
                             // All bytes sent, go back to IDLE
                             state <= IDLE;
                         end else begin
                             // Send next byte
                             byte_index <= byte_index + 1;
-                            state <= SEND_BYTE;
+                            state <= SEND;
                         end
                     end
                 end
@@ -132,4 +106,3 @@ module uart_fifo_tx (
         end
     end
 endmodule
-

@@ -21,37 +21,39 @@
 
 
 module ddr_to_sdr(
-    input wire clk,          // System clock
+    input wire mic_clk,      // Mic clock
+    input wire ddr_clk,      // 2X of system clock - rising edge of ddr clock occurs in the quiet period
     input wire rst,          // Reset signal
     input wire ddr_data,     // DDR data input from microphones
     output reg sdr_data_0,   // SDR data output for microphone 0
     output reg sdr_data_1    // SDR data output for microphone 1
 );
 
-    reg ddr_data_rising;     // Data captured on the rising edge
-    reg ddr_data_falling;    // Data captured on the falling edge
+    reg ddr_data_high;      // Data captured on the rising edge of ddr clk when mic clk is high
+    reg ddr_data_low;       // Data captured on the rising edge of ddr clk when mic clk is low
 
 
 
     // Capture data on the falling edge of the clock
-    always @(negedge clk or posedge rst) begin
+    always @(posedge ddr_clk or posedge rst) begin
         if (rst) begin
-            ddr_data_falling <= 1'b0;
-        end else begin
-            ddr_data_falling <= ddr_data;
+            ddr_data_high <= 1'b0;
+            ddr_data_low <= 1'b0;
+        end else if(mic_clk == 1) begin
+            ddr_data_high <= ddr_data;    
+        end else if(mic_clk == 0) begin
+            ddr_data_low <= ddr_data;    
         end
     end
 
     // Assign SDR outputs
-    always @(posedge clk or posedge rst) begin
+    always @(posedge mic_clk or posedge rst) begin
         if (rst) begin
             sdr_data_0 <= 1'b0;
             sdr_data_1 <= 1'b0;
-            ddr_data_rising <= 1'b0;
         end else begin
-            ddr_data_rising <= ddr_data;
-            sdr_data_0 <= ddr_data_rising; // Output data for microphone 0 (rising edge data)
-            sdr_data_1 <= ddr_data_falling; // Output data for microphone 1 (falling edge data)
+            sdr_data_0 <= ddr_data_low; // Output data for microphone when mic clk = 0
+            sdr_data_1 <= ddr_data_high; // Output data for microphone when mic clk = 1
         end
     end
 
