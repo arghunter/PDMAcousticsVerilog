@@ -153,8 +153,8 @@ always @(posedge clk or posedge rst) begin
                 end
              end
             pix_inc: begin
-//                if(pixel_counter<255) begin
-                  if(pixel_counter<0) begin 
+                if(pixel_counter<255) begin
+//                  if(pixel_counter<0) begin 
                     pixel_counter<=pixel_counter+1;
                     state<=pixel_load;
                 end else begin 

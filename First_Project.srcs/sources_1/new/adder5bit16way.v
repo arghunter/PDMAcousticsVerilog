@@ -22,6 +22,7 @@
 
 module adder5bit16way(
     input wire [15:0] in,
+    input wire [15:0] sw,
   
     output wire [5:0] out // Changed to 5-bit and signed
 );
@@ -36,6 +37,9 @@ module adder5bit16way(
 //    ((in[12] ? 1 : -1)) + ((in[13] ? 1 : -1)) + 
 //    ((in[14] ? 1 : -1)) + ((in[15] ? 1 : -1));
 
-assign out=(in[0] ? 6'b000001 : 6'b111111 );
+//assign out= in[0];
+//assign out=(in[1] ? 1 : -1 );
+  assign out=((in[0] ? 1 : -1 )+(in[2] ? 1 : -1 )+(in[4] ? 1 : -1 )+(in[6] ? 1 : -1 ))+((in[8] ? 1 : -1 )+(in[10] ? 1 : -1 )+(in[12] ? 1 : -1 )+(in[14] ? 1 : -1 ));
+//  assign out=((in[2] ? 6'b000001 : 6'b111111 )+(in[3] ? 6'b000001 : 6'b111111 ))>>1;
              
 endmodule

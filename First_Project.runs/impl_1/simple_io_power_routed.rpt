@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Mon Mar  3 02:35:21 2025
+| Date             : Mon Mar  3 03:45:18 2025
 | Host             : DEKTOP-MOV670 running 64-bit major release  (build 9200)
 | Command          : report_power -file simple_io_power_routed.rpt -pb simple_io_power_summary_routed.pb -rpx simple_io_power_routed.rpx
 | Design           : simple_io
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.336        |
+| Total On-Chip Power (W)  | 0.403        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.264        |
+| Dynamic (W)              | 0.330        |
 | Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 83.3         |
-| Junction Temperature (C) | 26.7         |
+| Max Ambient (C)          | 83.0         |
+| Junction Temperature (C) | 27.0         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,19 +52,19 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.013 |       10 |       --- |             --- |
-| Slice Logic    |     0.014 |     1657 |       --- |             --- |
-|   LUT as Logic |     0.012 |      585 |     20800 |            2.81 |
+| Clocks         |     0.014 |       10 |       --- |             --- |
+| Slice Logic    |     0.015 |     1746 |       --- |             --- |
+|   LUT as Logic |     0.013 |      607 |     20800 |            2.92 |
 |   CARRY4       |     0.001 |       65 |      8150 |            0.80 |
-|   Register     |    <0.001 |      706 |     41600 |            1.70 |
+|   Register     |    <0.001 |      766 |     41600 |            1.84 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |       80 |       --- |             --- |
-| Signals        |     0.016 |     1122 |       --- |             --- |
-| Block RAM      |     0.050 |      5.5 |        50 |           11.00 |
+|   Others       |     0.000 |      106 |       --- |             --- |
+| Signals        |     0.020 |     1238 |       --- |             --- |
+| Block RAM      |     0.110 |        9 |        50 |           18.00 |
 | PLL            |     0.095 |        1 |         5 |           20.00 |
 | I/O            |     0.075 |       42 |       106 |           39.62 |
 | Static Power   |     0.073 |          |           |                 |
-| Total          |     0.336 |          |           |                 |
+| Total          |     0.403 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.108 |       0.098 |      0.010 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.171 |       0.161 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.064 |       0.051 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.022 |       0.021 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -83,7 +83,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.003 |       0.003 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.008 |       0.007 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
@@ -150,18 +150,25 @@ Table of Contents
 +-------------------------+-----------+
 | Name                    | Power (W) |
 +-------------------------+-----------+
-| simple_io               |     0.264 |
+| simple_io               |     0.330 |
 |   clock_wiz_0           |     0.096 |
 |     inst                |     0.096 |
-|   core_0                |     0.062 |
-|     alt_cic_filter_inst |     0.014 |
-|     cic_controller_inst |     0.037 |
+|   core_0                |     0.127 |
+|     alt_cic_filter_inst |     0.013 |
+|     cic_controller_inst |     0.042 |
 |       state_bram_inst   |     0.029 |
-|     ram_new             |     0.010 |
+|     ram_new             |     0.072 |
 |       bram0             |     0.009 |
-|   dmic_fifo             |     0.011 |
-|     U0                  |     0.011 |
-|       inst_fifo_gen     |     0.011 |
+|       bram10            |     0.009 |
+|       bram12            |     0.009 |
+|       bram14            |     0.009 |
+|       bram2             |     0.009 |
+|       bram4             |     0.009 |
+|       bram6             |     0.009 |
+|       bram8             |     0.009 |
+|   dmic_fifo             |     0.012 |
+|     U0                  |     0.012 |
+|       inst_fifo_gen     |     0.012 |
 |   out_controller_inst   |     0.002 |
 |   output_fifo           |     0.013 |
 |     U0                  |     0.013 |

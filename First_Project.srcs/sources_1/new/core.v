@@ -31,7 +31,8 @@ module core(
     output wire n_val,
     output wire [23:0] cic_data,
     output wire [23:0] debug_out,
-    output wire [7:0] pixel_addr_out    
+    output wire [7:0] pixel_addr_out,
+    input wire [15:0] sw     
 //addr
     );
     
@@ -156,6 +157,7 @@ module core(
 
     adder5bit16way adder162(
     .in(ram_out2),
+    .sw(sw),
     .out(adder16_out2)
     );
     
