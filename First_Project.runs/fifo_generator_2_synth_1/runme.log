@@ -8,7 +8,7 @@
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Sat Mar  1 13:09:54 2025
+  **** Start of session at: Sat Mar  1 17:20:24 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -26,15 +26,15 @@ INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Device 21-9227] Part: xc7a35tcpg236-1 does not have CEAM library.
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 60508
+INFO: [Synth 8-7075] Helper process launched with PID 50384
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1452.895 ; gain = 446.363
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1452.574 ; gain = 446.977
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'fifo_generator_2' [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/fifo_generator_2/synth/fifo_generator_2.vhd:72]
 	Parameter C_COMMON_CLOCK bound to: 1 - type: integer 
 	Parameter C_SELECT_XPM bound to: 0 - type: integer 
 	Parameter C_COUNT_TYPE bound to: 0 - type: integer 
-	Parameter C_DATA_COUNT_WIDTH bound to: 11 - type: integer 
+	Parameter C_DATA_COUNT_WIDTH bound to: 12 - type: integer 
 	Parameter C_DEFAULT_VALUE bound to: BlankString - type: string 
 	Parameter C_DIN_WIDTH bound to: 8 - type: integer 
 	Parameter C_DOUT_RST_VAL bound to: 0 - type: string 
@@ -66,17 +66,17 @@ INFO: [Synth 8-638] synthesizing module 'fifo_generator_2' [c:/Users/arg/Documen
 	Parameter C_OVERFLOW_LOW bound to: 0 - type: integer 
 	Parameter C_PRELOAD_LATENCY bound to: 1 - type: integer 
 	Parameter C_PRELOAD_REGS bound to: 0 - type: integer 
-	Parameter C_PRIM_FIFO_TYPE bound to: 2kx9 - type: string 
+	Parameter C_PRIM_FIFO_TYPE bound to: 4kx9 - type: string 
 	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL bound to: 2 - type: integer 
 	Parameter C_PROG_EMPTY_THRESH_NEGATE_VAL bound to: 3 - type: integer 
 	Parameter C_PROG_EMPTY_TYPE bound to: 0 - type: integer 
-	Parameter C_PROG_FULL_THRESH_ASSERT_VAL bound to: 2046 - type: integer 
-	Parameter C_PROG_FULL_THRESH_NEGATE_VAL bound to: 2045 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL bound to: 4094 - type: integer 
+	Parameter C_PROG_FULL_THRESH_NEGATE_VAL bound to: 4093 - type: integer 
 	Parameter C_PROG_FULL_TYPE bound to: 0 - type: integer 
-	Parameter C_RD_DATA_COUNT_WIDTH bound to: 11 - type: integer 
-	Parameter C_RD_DEPTH bound to: 2048 - type: integer 
+	Parameter C_RD_DATA_COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter C_RD_DEPTH bound to: 4096 - type: integer 
 	Parameter C_RD_FREQ bound to: 1 - type: integer 
-	Parameter C_RD_PNTR_WIDTH bound to: 11 - type: integer 
+	Parameter C_RD_PNTR_WIDTH bound to: 12 - type: integer 
 	Parameter C_UNDERFLOW_LOW bound to: 0 - type: integer 
 	Parameter C_USE_DOUT_RST bound to: 1 - type: integer 
 	Parameter C_USE_ECC bound to: 0 - type: integer 
@@ -87,10 +87,10 @@ INFO: [Synth 8-638] synthesizing module 'fifo_generator_2' [c:/Users/arg/Documen
 	Parameter C_USE_FWFT_DATA_COUNT bound to: 0 - type: integer 
 	Parameter C_VALID_LOW bound to: 0 - type: integer 
 	Parameter C_WR_ACK_LOW bound to: 0 - type: integer 
-	Parameter C_WR_DATA_COUNT_WIDTH bound to: 11 - type: integer 
-	Parameter C_WR_DEPTH bound to: 2048 - type: integer 
+	Parameter C_WR_DATA_COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter C_WR_DEPTH bound to: 4096 - type: integer 
 	Parameter C_WR_FREQ bound to: 1 - type: integer 
-	Parameter C_WR_PNTR_WIDTH bound to: 11 - type: integer 
+	Parameter C_WR_PNTR_WIDTH bound to: 12 - type: integer 
 	Parameter C_WR_RESPONSE_LATENCY bound to: 1 - type: integer 
 	Parameter C_MSGON_VAL bound to: 1 - type: integer 
 	Parameter C_ENABLE_RST_SYNC bound to: 1 - type: integer 
@@ -243,6 +243,7 @@ WARNING: [Synth 8-7129] Port WR_ACK_I in module output_blk is either unconnected
 WARNING: [Synth 8-7129] Port VALID_I in module output_blk is either unconnected or has no load
 WARNING: [Synth 8-7129] Port OVERFLOW_I in module output_blk is either unconnected or has no load
 WARNING: [Synth 8-7129] Port UNDERFLOW_I in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DATA_COUNT_I[12] in module output_blk is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DATA_COUNT_I[11] in module output_blk is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DATA_COUNT_I[10] in module output_blk is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DATA_COUNT_I[9] in module output_blk is either unconnected or has no load
@@ -255,6 +256,7 @@ WARNING: [Synth 8-7129] Port DATA_COUNT_I[3] in module output_blk is either unco
 WARNING: [Synth 8-7129] Port DATA_COUNT_I[2] in module output_blk is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DATA_COUNT_I[1] in module output_blk is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DATA_COUNT_I[0] in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[12] in module output_blk is either unconnected or has no load
 WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[11] in module output_blk is either unconnected or has no load
 WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[10] in module output_blk is either unconnected or has no load
 WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[9] in module output_blk is either unconnected or has no load
@@ -267,6 +269,7 @@ WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[3] in module output_blk is either u
 WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[2] in module output_blk is either unconnected or has no load
 WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[1] in module output_blk is either unconnected or has no load
 WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[0] in module output_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[12] in module output_blk is either unconnected or has no load
 WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[11] in module output_blk is either unconnected or has no load
 WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[10] in module output_blk is either unconnected or has no load
 WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[9] in module output_blk is either unconnected or has no load
@@ -285,6 +288,7 @@ WARNING: [Synth 8-7129] Port RST_FULL_FF in module wr_status_flags_ss is either 
 WARNING: [Synth 8-7129] Port WR_RST in module wr_status_flags_ss is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SRST in module wr_status_flags_ss is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SAFETY_CKT_WR_RST in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS2[11] in module wr_status_flags_ss is either unconnected or has no load
 WARNING: [Synth 8-7129] Port WR_PNTR_PLUS2[10] in module wr_status_flags_ss is either unconnected or has no load
 WARNING: [Synth 8-7129] Port WR_PNTR_PLUS2[9] in module wr_status_flags_ss is either unconnected or has no load
 WARNING: [Synth 8-7129] Port WR_PNTR_PLUS2[8] in module wr_status_flags_ss is either unconnected or has no load
@@ -296,6 +300,7 @@ WARNING: [Synth 8-7129] Port WR_PNTR_PLUS2[3] in module wr_status_flags_ss is ei
 WARNING: [Synth 8-7129] Port WR_PNTR_PLUS2[2] in module wr_status_flags_ss is either unconnected or has no load
 WARNING: [Synth 8-7129] Port WR_PNTR_PLUS2[1] in module wr_status_flags_ss is either unconnected or has no load
 WARNING: [Synth 8-7129] Port WR_PNTR_PLUS2[0] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS3[11] in module wr_status_flags_ss is either unconnected or has no load
 WARNING: [Synth 8-7129] Port WR_PNTR_PLUS3[10] in module wr_status_flags_ss is either unconnected or has no load
 WARNING: [Synth 8-7129] Port WR_PNTR_PLUS3[9] in module wr_status_flags_ss is either unconnected or has no load
 WARNING: [Synth 8-7129] Port WR_PNTR_PLUS3[8] in module wr_status_flags_ss is either unconnected or has no load
@@ -314,6 +319,7 @@ WARNING: [Synth 8-7129] Port RD_EN in module wr_logic is either unconnected or h
 WARNING: [Synth 8-7129] Port WR_RST_BUSY in module wr_logic is either unconnected or has no load
 WARNING: [Synth 8-7129] Port EMPTY in module wr_logic is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ALMOST_EMPTY in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[11] in module wr_logic is either unconnected or has no load
 WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[10] in module wr_logic is either unconnected or has no load
 WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[9] in module wr_logic is either unconnected or has no load
 WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[8] in module wr_logic is either unconnected or has no load
@@ -325,30 +331,24 @@ WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[3] in module wr_logic is either un
 WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[2] in module wr_logic is either unconnected or has no load
 WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[1] in module wr_logic is either unconnected or has no load
 WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[0] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[11] in module wr_logic is either unconnected or has no load
 WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[10] in module wr_logic is either unconnected or has no load
 WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[9] in module wr_logic is either unconnected or has no load
 WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[8] in module wr_logic is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[7] in module wr_logic is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[6] in module wr_logic is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[5] in module wr_logic is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[4] in module wr_logic is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[3] in module wr_logic is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[2] in module wr_logic is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[1] in module wr_logic is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1834.617 ; gain = 828.086
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1832.438 ; gain = 826.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1834.617 ; gain = 828.086
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1832.438 ; gain = 826.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1834.617 ; gain = 828.086
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1832.438 ; gain = 826.840
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1834.617 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1832.438 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 25 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -363,42 +363,40 @@ Parsing XDC File [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project
 Finished Parsing XDC File [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/fifo_generator_2_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1854.254 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1832.438 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1854.574 ; gain = 0.320
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1832.438 ; gain = 0.000
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1854.574 ; gain = 848.043
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1832.438 ; gain = 826.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1854.574 ; gain = 848.043
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1832.438 ; gain = 826.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/fifo_generator_2_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1854.574 ; gain = 848.043
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1832.438 ; gain = 826.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1854.574 ; gain = 848.043
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1832.438 ; gain = 826.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input   11 Bit       Adders := 2     
 +---XORs : 
-	   2 Input      1 Bit         XORs := 44    
+	   2 Input      1 Bit         XORs := 48    
 +---Registers : 
-	               11 Bit    Registers := 4     
+	               12 Bit    Registers := 2     
 	                1 Bit    Registers := 4     
 +---Muxes : 
 	   2 Input    1 Bit        Muxes := 1     
@@ -419,25 +417,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1854.574 ; gain = 848.043
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1832.438 ; gain = 826.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1854.574 ; gain = 848.043
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1832.438 ; gain = 826.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1854.574 ; gain = 848.043
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1832.438 ; gain = 826.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1854.574 ; gain = 848.043
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1832.438 ; gain = 826.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -455,37 +453,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1854.574 ; gain = 848.043
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1832.438 ; gain = 826.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1854.574 ; gain = 848.043
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1832.438 ; gain = 826.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1854.574 ; gain = 848.043
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1832.438 ; gain = 826.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1854.574 ; gain = 848.043
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1832.438 ; gain = 826.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1854.574 ; gain = 848.043
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1832.438 ; gain = 826.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1854.574 ; gain = 848.043
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1832.438 ; gain = 826.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -501,44 +499,44 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |LUT1     |     5|
-|2     |LUT2     |    10|
-|3     |LUT3     |     5|
-|4     |LUT4     |    24|
-|5     |LUT5     |     4|
-|6     |LUT6     |     8|
+|1     |CARRY4   |     6|
+|2     |LUT1     |     5|
+|3     |LUT2     |     2|
+|4     |LUT3     |     1|
+|5     |LUT4     |    24|
+|6     |LUT6     |     2|
 |7     |MUXCY    |    24|
-|8     |RAMB18E1 |     1|
-|9     |FDRE     |    44|
+|8     |RAMB36E1 |     1|
+|9     |FDRE     |    48|
 |10    |FDSE     |     4|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1854.574 ; gain = 848.043
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1832.438 ; gain = 826.840
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 482 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1854.574 ; gain = 828.086
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1854.574 ; gain = 848.043
+Synthesis finished with 0 errors, 0 critical warnings and 488 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1832.438 ; gain = 826.840
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1832.438 ; gain = 826.840
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1854.574 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 25 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1832.438 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 31 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1854.574 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1832.438 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 8 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 8 instances
 
-Synth Design complete | Checksum: 165c6ada
+Synth Design complete | Checksum: cebd8599
 INFO: [Common 17-83] Releasing license: Synthesis
 26 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1854.574 ; gain = 1247.391
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1854.574 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1832.438 ; gain = 1226.609
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1832.438 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/fifo_generator_2_synth_1/fifo_generator_2.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP fifo_generator_2, cache-ID = 07d437d218d3b2a0
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP fifo_generator_2, cache-ID = 7475abd3d3080f32
 INFO: [Coretcl 2-1174] Renamed 22 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1854.574 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1832.438 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/fifo_generator_2_synth_1/fifo_generator_2.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file fifo_generator_2_utilization_synth.rpt -pb fifo_generator_2_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Mar  1 13:10:28 2025...
+INFO: [Common 17-206] Exiting Vivado at Sat Mar  1 17:20:58 2025...

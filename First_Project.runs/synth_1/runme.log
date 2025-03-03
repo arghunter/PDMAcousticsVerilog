@@ -8,7 +8,7 @@
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Sat Mar  1 14:44:29 2025
+  **** Start of session at: Mon Mar  3 02:33:46 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -25,97 +25,118 @@ INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Device 21-9227] Part: xc7a35tcpg236-1 does not have CEAM library.
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 70284
+INFO: [Synth 8-7075] Helper process launched with PID 79956
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1463.719 ; gain = 448.562
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1457.793 ; gain = 448.434
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-11065] parameter 's_IDLE' becomes localparam in 'uart_tx_r2' with formal parameter declaration list [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/uart_tx_r2.v:47]
 WARNING: [Synth 8-11065] parameter 's_TX_START_BIT' becomes localparam in 'uart_tx_r2' with formal parameter declaration list [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/uart_tx_r2.v:48]
 WARNING: [Synth 8-11065] parameter 's_TX_DATA_BITS' becomes localparam in 'uart_tx_r2' with formal parameter declaration list [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/uart_tx_r2.v:49]
 WARNING: [Synth 8-11065] parameter 's_TX_STOP_BIT' becomes localparam in 'uart_tx_r2' with formal parameter declaration list [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/uart_tx_r2.v:50]
 WARNING: [Synth 8-11065] parameter 's_CLEANUP' becomes localparam in 'uart_tx_r2' with formal parameter declaration list [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/uart_tx_r2.v:51]
-INFO: [Synth 8-11241] undeclared symbol 'out_term_full', assumed default net type 'wire' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:302]
 INFO: [Synth 8-6157] synthesizing module 'simple_io' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:23]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/clk_wiz_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-46836-DEKTOP-MOV670/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-46836-DEKTOP-MOV670/realtime/clk_wiz_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'dmic_clockgen' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/dmic_clockgen.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'dmic_clockgen' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/dmic_clockgen.v:23]
 INFO: [Synth 8-6157] synthesizing module 'multi_ddr_to_sdr' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/multi_ddr_to_sdr.v:24]
 INFO: [Synth 8-6157] synthesizing module 'ddr_to_sdr' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ddr_to_sdr.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'ddr_to_sdr' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ddr_to_sdr.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'multi_ddr_to_sdr' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/multi_ddr_to_sdr.v:24]
-INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/fifo_generator_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-46836-DEKTOP-MOV670/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-46836-DEKTOP-MOV670/realtime/fifo_generator_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'core' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/core.v:23]
-INFO: [Synth 8-6157] synthesizing module 'rom' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/rom.v:23]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_2' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_2' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_3' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_3' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_4' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_4' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_4_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_5' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_5_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_5' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_5_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_6' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_6_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_6' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_6_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_7' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_7_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_7' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_7_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_8' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_8_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_8' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_8_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_9' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_9_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_9' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_9_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_10' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_10_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_10' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_10_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_11' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_11_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_11' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_11_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_12' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_12_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_12' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_12_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_13' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_13_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_13' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_13_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_14' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_14_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_14' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_14_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_15' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_15_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_15' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_15_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_16' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_16_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_16' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_16_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'rom' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/rom.v:23]
-INFO: [Synth 8-6157] synthesizing module 'state_machine' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/state_machine.v:23]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/state_machine.v:86]
-INFO: [Synth 8-6155] done synthesizing module 'state_machine' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/state_machine.v:23]
+INFO: [Synth 8-6157] synthesizing module 'cycle_starter' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/cycle_starter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'cycle_starter' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/cycle_starter.v:23]
 INFO: [Synth 8-6157] synthesizing module 'ram' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ram.v:23]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-46836-DEKTOP-MOV670/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-46836-DEKTOP-MOV670/realtime/blk_mem_gen_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'ram' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ram.v:23]
 INFO: [Synth 8-6157] synthesizing module 'adder5bit16way' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/adder5bit16way.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'adder5bit16way' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/adder5bit16way.v:23]
-WARNING: [Synth 8-689] width (6) of port connection 'out' does not match port width (5) of module 'adder5bit16way' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/core.v:134]
-INFO: [Synth 8-6157] synthesizing module 'cic' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/cic.v:28]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_17' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_17_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_17' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/blk_mem_gen_17_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'integrator' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/integrator.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'integrator' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/integrator.v:23]
-INFO: [Synth 8-6157] synthesizing module 'differentiator' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/differentiator.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'differentiator' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/differentiator.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'cic' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/cic.v:28]
-WARNING: [Synth 8-689] width (6) of port connection 'in' does not match port width (5) of module 'cic' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/core.v:145]
+INFO: [Synth 8-6157] synthesizing module 'cic_controller' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/cic_controller.v:23]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_18' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-46836-DEKTOP-MOV670/realtime/blk_mem_gen_18_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_18' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-46836-DEKTOP-MOV670/realtime/blk_mem_gen_18_stub.v:6]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/cic_controller.v:93]
+INFO: [Synth 8-6155] done synthesizing module 'cic_controller' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/cic_controller.v:23]
+INFO: [Synth 8-6157] synthesizing module 'alt_cic_filter' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/alt_cic_filter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'alt_cic_filter' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/alt_cic_filter.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'core' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/core.v:23]
+INFO: [Synth 8-6157] synthesizing module 'output_controller' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/output_controller.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/output_controller.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'output_controller' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/output_controller.v:23]
 INFO: [Synth 8-6157] synthesizing module 'output_terminal' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/output_terminal.v:23]
-INFO: [Synth 8-6157] synthesizing module 'fifo_generator_2' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/fifo_generator_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_2' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-72640-DEKTOP-MOV670/realtime/fifo_generator_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_2' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-46836-DEKTOP-MOV670/realtime/fifo_generator_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_2' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/.Xil/Vivado-46836-DEKTOP-MOV670/realtime/fifo_generator_2_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'uart_tx_r2' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/uart_tx_r2.v:36]
 	Parameter CLKS_PER_BIT bound to: 133 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'uart_tx_r2' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/uart_tx_r2.v:36]
 INFO: [Synth 8-6155] done synthesizing module 'output_terminal' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/output_terminal.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'simple_io' (0#1) [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:23]
-WARNING: [Synth 8-7137] Register task_started_reg in module state_machine has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/state_machine.v:91]
-WARNING: [Synth 8-3848] Net web in module/entity ram does not have driver. [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ram.v:56]
-WARNING: [Synth 8-3848] Net dinb in module/entity ram does not have driver. [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/ram.v:54]
-WARNING: [Synth 8-6014] Unused sequential element c2_reg was removed.  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:236]
-WARNING: [Synth 8-6014] Unused sequential element s02_reg was removed.  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:237]
-WARNING: [Synth 8-6014] Unused sequential element s12_reg was removed.  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:238]
-WARNING: [Synth 8-3848] Net full in module/entity simple_io does not have driver. [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:264]
+WARNING: [Synth 8-7137] Register reg_addr_ctr_reg in module cic_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/cic_controller.v:103]
+WARNING: [Synth 8-7137] Register mem_wr_en_reg in module cic_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/cic_controller.v:55]
+WARNING: [Synth 8-3848] Net e_data in module/entity core does not have driver. [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/core.v:29]
+WARNING: [Synth 8-3848] Net store_e_data in module/entity core does not have driver. [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/core.v:30]
+WARNING: [Synth 8-7137] Register out_wr_en_reg in module output_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/output_controller.v:50]
+WARNING: [Synth 8-6014] Unused sequential element dmic_data_ctr_reg was removed.  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:107]
+WARNING: [Synth 8-6014] Unused sequential element mc_d_reg was removed.  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:111]
+WARNING: [Synth 8-6014] Unused sequential element pdm_byte_reg was removed.  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:252]
+WARNING: [Synth 8-6014] Unused sequential element write_pdm_byte_reg was removed.  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:253]
+WARNING: [Synth 8-6014] Unused sequential element bit_counter_reg was removed.  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:254]
+WARNING: [Synth 8-6014] Unused sequential element c2_reg was removed.  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:320]
+WARNING: [Synth 8-6014] Unused sequential element s02_reg was removed.  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:321]
+WARNING: [Synth 8-6014] Unused sequential element s12_reg was removed.  [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:322]
+WARNING: [Synth 8-3917] design simple_io has port LED[7] driven by constant 1
+WARNING: [Synth 8-7129] Port fifo_full in module output_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[15] in module adder5bit16way is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[14] in module adder5bit16way is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[13] in module adder5bit16way is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[12] in module adder5bit16way is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[11] in module adder5bit16way is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[10] in module adder5bit16way is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[9] in module adder5bit16way is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[8] in module adder5bit16way is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[7] in module adder5bit16way is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[6] in module adder5bit16way is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[5] in module adder5bit16way is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[4] in module adder5bit16way is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[3] in module adder5bit16way is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[2] in module adder5bit16way is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[1] in module adder5bit16way is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[31] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[30] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[29] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[28] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[27] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[26] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[25] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[24] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[23] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[22] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[21] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[20] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[19] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[18] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[17] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[16] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[15] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[14] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[13] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[12] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[11] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[10] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[9] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[8] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[7] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[6] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[5] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[4] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[3] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[2] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[1] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port e_data[0] in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port store_e_data in module core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port core_num in module core is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED[15] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED[14] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED[13] in module simple_io is either unconnected or has no load
@@ -124,7 +145,6 @@ WARNING: [Synth 8-7129] Port LED[11] in module simple_io is either unconnected o
 WARNING: [Synth 8-7129] Port LED[10] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED[9] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED[8] in module simple_io is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[7] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED[6] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED[5] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED[4] in module simple_io is either unconnected or has no load
@@ -137,19 +157,35 @@ WARNING: [Synth 8-7129] Port JA[2] in module simple_io is either unconnected or 
 WARNING: [Synth 8-7129] Port JC[7] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port JC[6] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port JC[2] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[15] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[14] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[13] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[12] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[11] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[10] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[9] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[8] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[7] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[6] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[5] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[4] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[3] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[2] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[1] in module simple_io is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw[0] in module simple_io is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1582.309 ; gain = 567.152
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1575.727 ; gain = 566.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1582.309 ; gain = 567.152
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1575.727 ; gain = 566.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1582.309 ; gain = 567.152
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1575.727 ; gain = 566.367
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1582.309 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1575.727 ; gain = 0.000
 WARNING: [Netlist 29-1115] Found multi-term driver net: JC[3].
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -161,140 +197,42 @@ Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project
 Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'dmic_fifo'
 Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'output_fifo'
 Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'output_fifo'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'core_0/rom/channel_0'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'core_0/rom/channel_0'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'core_1/rom/channel_0'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'core_1/rom/channel_0'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'core_0/rom/channel_1'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'core_0/rom/channel_1'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'core_1/rom/channel_1'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'core_1/rom/channel_1'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3/blk_mem_gen_3_in_context.xdc] for cell 'core_0/rom/channel_2'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3/blk_mem_gen_3_in_context.xdc] for cell 'core_0/rom/channel_2'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3/blk_mem_gen_3_in_context.xdc] for cell 'core_1/rom/channel_2'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3/blk_mem_gen_3_in_context.xdc] for cell 'core_1/rom/channel_2'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_6/blk_mem_gen_6/blk_mem_gen_6_in_context.xdc] for cell 'core_0/rom/channel_5'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_6/blk_mem_gen_6/blk_mem_gen_6_in_context.xdc] for cell 'core_0/rom/channel_5'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_6/blk_mem_gen_6/blk_mem_gen_6_in_context.xdc] for cell 'core_1/rom/channel_5'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_6/blk_mem_gen_6/blk_mem_gen_6_in_context.xdc] for cell 'core_1/rom/channel_5'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_7/blk_mem_gen_7/blk_mem_gen_7_in_context.xdc] for cell 'core_0/rom/channel_6'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_7/blk_mem_gen_7/blk_mem_gen_7_in_context.xdc] for cell 'core_0/rom/channel_6'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_7/blk_mem_gen_7/blk_mem_gen_7_in_context.xdc] for cell 'core_1/rom/channel_6'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_7/blk_mem_gen_7/blk_mem_gen_7_in_context.xdc] for cell 'core_1/rom/channel_6'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_8/blk_mem_gen_8/blk_mem_gen_8_in_context.xdc] for cell 'core_0/rom/channel_7'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_8/blk_mem_gen_8/blk_mem_gen_8_in_context.xdc] for cell 'core_0/rom/channel_7'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_8/blk_mem_gen_8/blk_mem_gen_8_in_context.xdc] for cell 'core_1/rom/channel_7'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_8/blk_mem_gen_8/blk_mem_gen_8_in_context.xdc] for cell 'core_1/rom/channel_7'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_11/blk_mem_gen_11/blk_mem_gen_11_in_context.xdc] for cell 'core_0/rom/channel_10'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_11/blk_mem_gen_11/blk_mem_gen_11_in_context.xdc] for cell 'core_0/rom/channel_10'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_11/blk_mem_gen_11/blk_mem_gen_11_in_context.xdc] for cell 'core_1/rom/channel_10'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_11/blk_mem_gen_11/blk_mem_gen_11_in_context.xdc] for cell 'core_1/rom/channel_10'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_12/blk_mem_gen_12/blk_mem_gen_12_in_context.xdc] for cell 'core_0/rom/channel_11'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_12/blk_mem_gen_12/blk_mem_gen_12_in_context.xdc] for cell 'core_0/rom/channel_11'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_12/blk_mem_gen_12/blk_mem_gen_12_in_context.xdc] for cell 'core_1/rom/channel_11'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_12/blk_mem_gen_12/blk_mem_gen_12_in_context.xdc] for cell 'core_1/rom/channel_11'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_14/blk_mem_gen_14/blk_mem_gen_14_in_context.xdc] for cell 'core_0/rom/channel_13'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_14/blk_mem_gen_14/blk_mem_gen_14_in_context.xdc] for cell 'core_0/rom/channel_13'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_14/blk_mem_gen_14/blk_mem_gen_14_in_context.xdc] for cell 'core_1/rom/channel_13'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_14/blk_mem_gen_14/blk_mem_gen_14_in_context.xdc] for cell 'core_1/rom/channel_13'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_15/blk_mem_gen_15/blk_mem_gen_15_in_context.xdc] for cell 'core_0/rom/channel_14'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_15/blk_mem_gen_15/blk_mem_gen_15_in_context.xdc] for cell 'core_0/rom/channel_14'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_15/blk_mem_gen_15/blk_mem_gen_15_in_context.xdc] for cell 'core_1/rom/channel_14'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_15/blk_mem_gen_15/blk_mem_gen_15_in_context.xdc] for cell 'core_1/rom/channel_14'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_16/blk_mem_gen_16/blk_mem_gen_16_in_context.xdc] for cell 'core_0/rom/channel_15'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_16/blk_mem_gen_16/blk_mem_gen_16_in_context.xdc] for cell 'core_0/rom/channel_15'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_16/blk_mem_gen_16/blk_mem_gen_16_in_context.xdc] for cell 'core_1/rom/channel_15'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_16/blk_mem_gen_16/blk_mem_gen_16_in_context.xdc] for cell 'core_1/rom/channel_15'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4/blk_mem_gen_4_in_context.xdc] for cell 'core_0/rom/channel_3'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4/blk_mem_gen_4_in_context.xdc] for cell 'core_0/rom/channel_3'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4/blk_mem_gen_4_in_context.xdc] for cell 'core_1/rom/channel_3'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4/blk_mem_gen_4_in_context.xdc] for cell 'core_1/rom/channel_3'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_13/blk_mem_gen_13/blk_mem_gen_13_in_context.xdc] for cell 'core_0/rom/channel_12'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_13/blk_mem_gen_13/blk_mem_gen_13_in_context.xdc] for cell 'core_0/rom/channel_12'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_13/blk_mem_gen_13/blk_mem_gen_13_in_context.xdc] for cell 'core_1/rom/channel_12'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_13/blk_mem_gen_13/blk_mem_gen_13_in_context.xdc] for cell 'core_1/rom/channel_12'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_5/blk_mem_gen_5/blk_mem_gen_5_in_context.xdc] for cell 'core_0/rom/channel_4'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_5/blk_mem_gen_5/blk_mem_gen_5_in_context.xdc] for cell 'core_0/rom/channel_4'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_5/blk_mem_gen_5/blk_mem_gen_5_in_context.xdc] for cell 'core_1/rom/channel_4'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_5/blk_mem_gen_5/blk_mem_gen_5_in_context.xdc] for cell 'core_1/rom/channel_4'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_9/blk_mem_gen_9/blk_mem_gen_9_in_context.xdc] for cell 'core_0/rom/channel_8'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_9/blk_mem_gen_9/blk_mem_gen_9_in_context.xdc] for cell 'core_0/rom/channel_8'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_9/blk_mem_gen_9/blk_mem_gen_9_in_context.xdc] for cell 'core_1/rom/channel_8'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_9/blk_mem_gen_9/blk_mem_gen_9_in_context.xdc] for cell 'core_1/rom/channel_8'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram0'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram0'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram1'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram1'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram2'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram2'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram3'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram3'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram4'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram4'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram5'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram5'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram6'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram6'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram7'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram7'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram8'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram8'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram9'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram9'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram10'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram10'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram11'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram11'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram12'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram12'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram13'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram13'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram14'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram14'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram15'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram1/bram15'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram0'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram0'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram1'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram1'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram2'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram2'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram3'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram3'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram4'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram4'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram5'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram5'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram6'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram6'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram7'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram7'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram8'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram8'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram9'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram9'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram10'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram10'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram11'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram11'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram12'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram12'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram13'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram13'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram14'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram14'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram15'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_1/ram1/bram15'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_17/blk_mem_gen_17/blk_mem_gen_17_in_context.xdc] for cell 'core_0/cic_inst/cic_states'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_17/blk_mem_gen_17/blk_mem_gen_17_in_context.xdc] for cell 'core_0/cic_inst/cic_states'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_17/blk_mem_gen_17/blk_mem_gen_17_in_context.xdc] for cell 'core_1/cic_inst/cic_states'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_17/blk_mem_gen_17/blk_mem_gen_17_in_context.xdc] for cell 'core_1/cic_inst/cic_states'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_10/blk_mem_gen_10/blk_mem_gen_10_in_context.xdc] for cell 'core_0/rom/channel_9'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_10/blk_mem_gen_10/blk_mem_gen_10_in_context.xdc] for cell 'core_0/rom/channel_9'
-Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_10/blk_mem_gen_10/blk_mem_gen_10_in_context.xdc] for cell 'core_1/rom/channel_9'
-Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_10/blk_mem_gen_10/blk_mem_gen_10_in_context.xdc] for cell 'core_1/rom/channel_9'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram0'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram0'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram1'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram1'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram2'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram2'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram3'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram3'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram4'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram4'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram5'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram5'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram6'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram6'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram7'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram7'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram8'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram8'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram9'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram9'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram10'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram10'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram11'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram11'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram12'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram12'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram13'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram13'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram14'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram14'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram15'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'core_0/ram_new/bram15'
 Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/fifo_generator_2/fifo_generator_2/fifo_generator_2_in_context.xdc] for cell 'output_terminal_inst/uart_fifo_inst'
 Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/fifo_generator_2/fifo_generator_2/fifo_generator_2_in_context.xdc] for cell 'output_terminal_inst/uart_fifo_inst'
+Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_18/blk_mem_gen_18/blk_mem_gen_18_in_context.xdc] for cell 'core_0/cic_controller_inst/state_bram_inst'
+Finished Parsing XDC File [c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_18/blk_mem_gen_18/blk_mem_gen_18_in_context.xdc] for cell 'core_0/cic_controller_inst/state_bram_inst'
 Parsing XDC File [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc]
 WARNING: [Vivado 12-584] No ports matched 'RsRx'. [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:273]
 WARNING: [Vivado 12-584] No ports matched 'RsRx'. [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/constrs_1/imports/Downloads/Basys3_Master.xdc:274]
@@ -304,90 +242,41 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/simple_io_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1681.992 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1628.008 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1681.992 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1628.008 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'dmic_fifo' at clock pin 'rd_clk' is different from the actual clock period '2.500', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'output_fifo' at clock pin 'wr_clk' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/cic_inst/cic_states' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram0' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram1' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram10' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram11' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram12' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram13' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram14' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram15' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram2' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram3' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram4' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram5' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram6' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram7' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram8' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram1/bram9' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_0' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_1' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_10' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_11' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_12' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_13' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_14' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_15' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_2' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_3' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_4' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_5' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_6' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_7' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_8' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/rom/channel_9' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/cic_inst/cic_states' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/ram1/bram0' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/ram1/bram1' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/ram1/bram10' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/ram1/bram11' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/ram1/bram12' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/ram1/bram13' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/ram1/bram14' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/ram1/bram15' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/ram1/bram2' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/ram1/bram3' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/ram1/bram4' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/ram1/bram5' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/ram1/bram6' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/ram1/bram7' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/ram1/bram8' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/ram1/bram9' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/rom/channel_0' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/rom/channel_1' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/rom/channel_10' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/rom/channel_11' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/rom/channel_12' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/rom/channel_13' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/rom/channel_14' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/rom/channel_15' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/rom/channel_2' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/rom/channel_3' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/rom/channel_4' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/rom/channel_5' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/rom/channel_6' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/rom/channel_7' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/rom/channel_8' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_1/rom/channel_9' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/cic_controller_inst/state_bram_inst' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram_new/bram0' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram_new/bram1' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram_new/bram10' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram_new/bram11' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram_new/bram12' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram_new/bram13' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram_new/bram14' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram_new/bram15' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram_new/bram2' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram_new/bram3' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram_new/bram4' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram_new/bram5' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram_new/bram6' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram_new/bram7' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram_new/bram8' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'core_0/ram_new/bram9' at clock pin 'clka' is different from the actual clock period '2.500', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'output_terminal_inst/uart_fifo_inst' at clock pin 'clk' is different from the actual clock period '2.500', this can lead to different synthesis results.
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1682.180 ; gain = 667.023
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1630.762 ; gain = 621.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1682.180 ; gain = 667.023
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1630.762 ; gain = 621.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -397,90 +286,53 @@ Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  c
 Applied set_property KEEP_HIERARCHY = SOFT for clock_wiz_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for dmic_fifo. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for output_fifo. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/rom/channel_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_1. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/rom/channel_1. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_2. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/rom/channel_2. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_5. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/rom/channel_5. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_6. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/rom/channel_6. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_7. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/rom/channel_7. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_10. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/rom/channel_10. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_11. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/rom/channel_11. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_13. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/rom/channel_13. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_14. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/rom/channel_14. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_15. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/rom/channel_15. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_3. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/rom/channel_3. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_12. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/rom/channel_12. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_4. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/rom/channel_4. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_8. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/rom/channel_8. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/ram1/bram0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram1. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/ram1/bram1. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram10. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/ram1/bram10. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram11. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/ram1/bram11. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram12. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/ram1/bram12. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram13. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/ram1/bram13. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram14. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/ram1/bram14. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram15. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/ram1/bram15. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram2. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/ram1/bram2. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram3. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/ram1/bram3. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram4. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/ram1/bram4. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram5. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/ram1/bram5. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram6. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/ram1/bram6. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram7. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/ram1/bram7. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram8. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/ram1/bram8. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram1/bram9. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/ram1/bram9. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/cic_inst/cic_states. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/cic_inst/cic_states. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_0/rom/channel_9. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for core_1/rom/channel_9. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram_new/bram0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram_new/bram1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram_new/bram10. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram_new/bram11. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram_new/bram12. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram_new/bram13. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram_new/bram14. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram_new/bram15. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram_new/bram2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram_new/bram3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram_new/bram4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram_new/bram5. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram_new/bram6. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram_new/bram7. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram_new/bram8. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/ram_new/bram9. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for output_terminal_inst/uart_fifo_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for core_0/cic_controller_inst/state_bram_inst. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1682.180 ; gain = 667.023
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1630.762 ; gain = 621.402
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'state_machine'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'cic_controller'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'output_controller'
 INFO: [Synth 8-802] inferred FSM for state register 'r_SM_Main_reg' in module 'uart_tx_r2'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                    idle |                          0000001 |                             0000
-              pixel_load |                          0000010 |                             0001
-                cic_load |                          0000100 |                             0101
-                 run_cic |                          0001000 |                             0010
-               cic_store |                          0010000 |                             0110
-                 pix_inc |                          0100000 |                             0011
-                task_cmp |                          1000000 |                             0100
+                    idle |                              000 |                           000000
+              pixel_load |                              001 |                           000001
+                reg_load |                              010 |                           000010
+              cic_guard1 |                              011 |                           000100
+              cic_guard2 |                              100 |                           000101
+                 cic_run |                              101 |                           000011
+               reg_store |                              110 |                           000110
+                 pix_inc |                              111 |                           000111
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'state_machine'
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'cic_controller'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+                   wr_b3 |                              001 |                              001
+                   wr_b2 |                              010 |                              010
+                   wr_b1 |                              011 |                              011
+                   wr_b0 |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'output_controller'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -492,52 +344,42 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'r_SM_Main_reg' using encoding 'sequential' in module 'uart_tx_r2'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1682.180 ; gain = 667.023
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1630.762 ; gain = 621.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	  16 Input   32 Bit       Adders := 2     
-	   3 Input   24 Bit       Adders := 8     
-	   4 Input   24 Bit       Adders := 2     
-	   2 Input   24 Bit       Adders := 2     
-	   2 Input   23 Bit       Adders := 2     
-	   3 Input   15 Bit       Adders := 2     
-	   2 Input   14 Bit       Adders := 34    
-	   2 Input   12 Bit       Adders := 2     
-	   2 Input    8 Bit       Adders := 6     
-	   2 Input    7 Bit       Adders := 2     
-	   2 Input    6 Bit       Adders := 2     
-	   2 Input    4 Bit       Adders := 3     
-	   2 Input    3 Bit       Adders := 4     
+	   3 Input   15 Bit       Adders := 1     
+	   2 Input   14 Bit       Adders := 17    
+	   2 Input   12 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 2     
 +---Registers : 
-	               32 Bit    Registers := 2     
-	               24 Bit    Registers := 18    
-	               12 Bit    Registers := 2     
-	                8 Bit    Registers := 7     
-	                6 Bit    Registers := 2     
-	                4 Bit    Registers := 3     
-	                3 Bit    Registers := 4     
-	                1 Bit    Registers := 55    
+	               24 Bit    Registers := 8     
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 5     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 49    
 +---Muxes : 
-	   2 Input   24 Bit        Muxes := 14    
-	   2 Input   12 Bit        Muxes := 2     
-	   7 Input   12 Bit        Muxes := 2     
-	   7 Input    8 Bit        Muxes := 2     
-	   2 Input    8 Bit        Muxes := 3     
-	   2 Input    7 Bit        Muxes := 4     
-	   7 Input    7 Bit        Muxes := 2     
-	   2 Input    4 Bit        Muxes := 1     
+	   2 Input   24 Bit        Muxes := 4     
+	   8 Input   12 Bit        Muxes := 1     
+	   5 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
+	   8 Input    4 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 7     
-	   7 Input    3 Bit        Muxes := 2     
-	   5 Input    3 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 32    
-	   2 Input    1 Bit        Muxes := 29    
+	   8 Input    3 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 5     
 	   3 Input    1 Bit        Muxes := 8     
-	   7 Input    1 Bit        Muxes := 22    
-	   5 Input    1 Bit        Muxes := 9     
+	   8 Input    1 Bit        Muxes := 11    
+	  12 Input    1 Bit        Muxes := 10    
+	   5 Input    1 Bit        Muxes := 14    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -554,6 +396,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design simple_io has port LED[7] driven by constant 1
 WARNING: [Synth 8-7129] Port LED[15] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED[14] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED[13] in module simple_io is either unconnected or has no load
@@ -562,39 +405,33 @@ WARNING: [Synth 8-7129] Port LED[11] in module simple_io is either unconnected o
 WARNING: [Synth 8-7129] Port LED[10] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED[9] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED[8] in module simple_io is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED[7] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED[6] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED[5] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED[4] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED[3] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED[2] in module simple_io is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LED[1] in module simple_io is either unconnected or has no load
-WARNING: [Synth 8-7129] Port JA[7] in module simple_io is either unconnected or has no load
-WARNING: [Synth 8-7129] Port JA[6] in module simple_io is either unconnected or has no load
-WARNING: [Synth 8-7129] Port JA[2] in module simple_io is either unconnected or has no load
-WARNING: [Synth 8-7129] Port JC[7] in module simple_io is either unconnected or has no load
-WARNING: [Synth 8-7129] Port JC[6] in module simple_io is either unconnected or has no load
-WARNING: [Synth 8-7129] Port JC[2] in module simple_io is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1682.180 ; gain = 667.023
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1630.762 ; gain = 621.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1682.180 ; gain = 667.023
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1630.762 ; gain = 621.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1682.180 ; gain = 667.023
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1630.762 ; gain = 621.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1682.180 ; gain = 667.023
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1630.762 ; gain = 621.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -615,37 +452,37 @@ CRITICAL WARNING: [Synth 8-6030] Inout pin 'JA[3]' is read and/or written withou
 CRITICAL WARNING: [Synth 8-6030] Inout pin 'JC[3]' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:23]
 CRITICAL WARNING: [Synth 8-6030] Inout pin 'JC[1]' is read and/or written without using tristate logic. Proper direction of connection may be wrongly inferred. Please use specific direction to avoid any incorrect logic issue [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:23]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1682.180 ; gain = 667.023
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1630.762 ; gain = 621.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1682.180 ; gain = 667.023
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1630.762 ; gain = 621.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1682.180 ; gain = 667.023
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1630.762 ; gain = 621.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1682.180 ; gain = 667.023
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1630.762 ; gain = 621.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1682.180 ; gain = 667.023
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1630.762 ; gain = 621.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1682.180 ; gain = 667.023
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1630.762 ; gain = 621.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -657,25 +494,9 @@ Report BlackBoxes:
 +------+-----------------+----------+
 |1     |clk_wiz_0        |         1|
 |2     |fifo_generator_0 |         2|
-|3     |blk_mem_gen_17   |         2|
-|4     |blk_mem_gen_0    |        32|
-|5     |blk_mem_gen_1    |         2|
-|6     |blk_mem_gen_2    |         2|
-|7     |blk_mem_gen_3    |         2|
-|8     |blk_mem_gen_4    |         2|
-|9     |blk_mem_gen_5    |         2|
-|10    |blk_mem_gen_6    |         2|
-|11    |blk_mem_gen_7    |         2|
-|12    |blk_mem_gen_8    |         2|
-|13    |blk_mem_gen_9    |         2|
-|14    |blk_mem_gen_10   |         2|
-|15    |blk_mem_gen_11   |         2|
-|16    |blk_mem_gen_12   |         2|
-|17    |blk_mem_gen_13   |         2|
-|18    |blk_mem_gen_14   |         2|
-|19    |blk_mem_gen_15   |         2|
-|20    |blk_mem_gen_16   |         2|
-|21    |fifo_generator_2 |         1|
+|3     |blk_mem_gen_18   |         1|
+|4     |blk_mem_gen_0    |        16|
+|5     |fifo_generator_2 |         1|
 +------+-----------------+----------+
 
 Report Cell Usage: 
@@ -683,83 +504,50 @@ Report Cell Usage:
 |      |Cell             |Count |
 +------+-----------------+------+
 |1     |blk_mem_gen      |     1|
-|2     |blk_mem_gen_0    |    31|
-|33    |blk_mem_gen      |     2|
-|35    |blk_mem_gen_10   |     1|
-|36    |blk_mem_gen      |     1|
-|37    |blk_mem_gen_11   |     1|
-|38    |blk_mem_gen      |     1|
-|39    |blk_mem_gen_12   |     1|
-|40    |blk_mem_gen      |     1|
-|41    |blk_mem_gen_13   |     1|
-|42    |blk_mem_gen      |     1|
-|43    |blk_mem_gen_14   |     1|
-|44    |blk_mem_gen      |     1|
-|45    |blk_mem_gen_15   |     1|
-|46    |blk_mem_gen      |     1|
-|47    |blk_mem_gen_16   |     1|
-|48    |blk_mem_gen      |     1|
-|49    |blk_mem_gen_17   |     1|
-|50    |blk_mem_gen_1    |     1|
-|51    |blk_mem_gen      |     1|
-|52    |blk_mem_gen_2    |     1|
-|53    |blk_mem_gen      |     1|
-|54    |blk_mem_gen_3    |     1|
-|55    |blk_mem_gen      |     1|
-|56    |blk_mem_gen_4    |     1|
-|57    |blk_mem_gen      |     1|
-|58    |blk_mem_gen_5    |     1|
-|59    |blk_mem_gen      |     1|
-|60    |blk_mem_gen_6    |     1|
-|61    |blk_mem_gen      |     1|
-|62    |blk_mem_gen_7    |     1|
-|63    |blk_mem_gen      |     1|
-|64    |blk_mem_gen_8    |     1|
-|65    |blk_mem_gen      |     1|
-|66    |blk_mem_gen_9    |     1|
-|67    |clk_wiz          |     1|
-|68    |fifo_generator   |     1|
-|69    |fifo_generator_0 |     1|
-|70    |fifo_generator   |     1|
-|71    |BUFG             |     1|
-|72    |CARRY4           |   268|
-|73    |LUT1             |    14|
-|74    |LUT2             |   664|
-|75    |LUT3             |   113|
-|76    |LUT4             |   184|
-|77    |LUT5             |   230|
-|78    |LUT6             |   410|
-|79    |MUXF7            |    48|
-|80    |FDCE             |   711|
-|81    |FDPE             |     2|
-|82    |FDRE             |   105|
-|83    |IBUF             |    25|
-|84    |OBUF             |    17|
-|85    |OBUFT            |    15|
+|2     |blk_mem_gen_0    |    15|
+|17    |blk_mem_gen      |     1|
+|18    |clk_wiz          |     1|
+|19    |fifo_generator   |     1|
+|20    |fifo_generator_0 |     1|
+|21    |fifo_generator   |     1|
+|22    |BUFG             |     1|
+|23    |CARRY4           |    51|
+|24    |LUT1             |    23|
+|25    |LUT2             |   158|
+|26    |LUT3             |   135|
+|27    |LUT4             |   166|
+|28    |LUT5             |    38|
+|29    |LUT6             |   112|
+|30    |FDCE             |   369|
+|31    |FDRE             |    47|
+|32    |FDSE             |     1|
+|33    |IBUF             |     9|
+|34    |OBUF             |    18|
+|35    |OBUFT            |    14|
 +------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1682.180 ; gain = 667.023
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1630.762 ; gain = 621.402
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 3 critical warnings and 22 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1682.180 ; gain = 567.152
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1682.180 ; gain = 667.023
+Synthesis finished with 0 errors, 3 critical warnings and 38 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1630.762 ; gain = 566.367
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1630.762 ; gain = 621.402
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 1682.180 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 316 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1630.762 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 51 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1682.180 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1630.762 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: ab6811bc
+Synth Design complete | Checksum: a642f083
 INFO: [Common 17-83] Releasing license: Synthesis
-96 Infos, 131 Warnings, 3 Critical Warnings and 0 Errors encountered.
+65 Infos, 146 Warnings, 3 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1682.180 ; gain = 1073.926
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1630.762 ; gain = 1021.965
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1682.180 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1630.762 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/synth_1/simple_io.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file simple_io_utilization_synth.rpt -pb simple_io_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Mar  1 14:45:02 2025...
+INFO: [Common 17-206] Exiting Vivado at Mon Mar  3 02:34:15 2025...

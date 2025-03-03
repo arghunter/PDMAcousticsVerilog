@@ -54,6 +54,8 @@ module ram(
     wire [0:0] dinb;
     wire [0:0] doutb;
     wire [0:0] web;
+    assign web=0;
+    assign dinb=0;
     assign write_addr = addra;
     assign addrb=read_addr;
 

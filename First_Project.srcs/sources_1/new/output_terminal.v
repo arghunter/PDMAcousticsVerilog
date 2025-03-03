@@ -37,7 +37,7 @@ module output_terminal(
     assign rd_en = !empty && !busy;
     
     
-    always @(posedge clk or posedge rst) begin
+    always @(negedge clk or posedge rst) begin
         if(rst)
             send<=0;
         else
@@ -60,7 +60,7 @@ module output_terminal(
     wire w_Tx_Done;
     uart_tx_r2 #(.CLKS_PER_BIT(133)) UART_TX_INST
     (.i_Clock(clk),
-     .i_Tx_DV(send),
+     .i_Tx_DV(send&&!busy),
      .i_Tx_Byte(data_byte),
      .o_Tx_Active(busy),
      .o_Tx_Serial(tx),

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1740869067">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1740998023">
   <File Type="PA-TCL" Name="simple_io.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="simple_io_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="simple_io_reports.tcl"/>
@@ -18,7 +18,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/cic.v">
+    <File Path="$PSRCDIR/sources_1/new/alt_cic_filter.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/cic_controller.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -32,14 +39,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/ddr_to_sdr.v">
+    <File Path="$PSRCDIR/sources_1/new/cycle_starter.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/differentiator.v">
+    <File Path="$PSRCDIR/sources_1/new/ddr_to_sdr.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -53,14 +60,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/integrator.v">
+    <File Path="$PSRCDIR/sources_1/new/multi_ddr_to_sdr.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/multi_ddr_to_sdr.v">
+    <File Path="$PSRCDIR/sources_1/new/output_controller.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -81,20 +88,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/rom.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/state_machine.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/uart_tx_r2.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -104,6 +97,54 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/simple_io.v">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/cic.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/decimator.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/differentiator.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/integrator.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/state_machine.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/rom.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -445,6 +486,18 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/tempmem.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/tempmembig.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="simple_io"/>
@@ -477,25 +530,9 @@
       <Option Id="IncrementalMode">2</Option>
     </Step>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_16"/>
   <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_8"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo_generator_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_14"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_15"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_11"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_6"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_7"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_12"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_17"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_4"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_13"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_5"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_9"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_10"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_generator_0"/>
   <BlockFileSet Type="BlockSrcs" Name="fifo_generator_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_18"/>
 </GenRun>

@@ -57,7 +57,7 @@
 blk_mem_gen_17 your_instance_name (
   .clka(clka),    // input wire clka
   .wea(wea),      // input wire [0 : 0] wea
-  .addra(addra),  // input wire [10 : 0] addra
+  .addra(addra),  // input wire [11 : 0] addra
   .dina(dina),    // input wire [23 : 0] dina
   .douta(douta)  // output wire [23 : 0] douta
 );

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date                      : Sat Mar  1 14:46:06 2025
+| Date                      : Mon Mar  3 02:35:07 2025
 | Host                      : DEKTOP-MOV670 running 64-bit major release  (build 9200)
 | Command                   : report_io -file simple_io_io_placed.rpt
 | Design                    : simple_io
@@ -248,7 +248,7 @@ Table of Contents
 | V11        |             | Dedicated  | CFGBVS_0                     | Config        |             |       0 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | V12        |             | Dedicated  | M0_0                         | Config        |             |       0 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | V13        | LED[8]      | High Range | IO_L24P_T3_A01_D17_14        | TRISTATE      | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
-| V14        | LED[7]      | High Range | IO_L24N_T3_A00_D16_14        | TRISTATE      | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| V14        | LED[7]      | High Range | IO_L24N_T3_A00_D16_14        | OUTPUT        | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | V15        | sw[5]       | High Range | IO_L21P_T3_DQS_14            | INPUT         | LVCMOS33    |      14 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | V16        | sw[1]       | High Range | IO_L19P_T3_A10_D26_14        | INPUT         | LVCMOS33    |      14 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | V17        | sw[0]       | High Range | IO_L19N_T3_A09_D25_VREF_14   | INPUT         | LVCMOS33    |      14 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |

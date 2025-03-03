@@ -31,8 +31,9 @@ module state_machine(
     output reg load_cic,
     output reg store_cic,
     output wire [7:0] pixel_addr,
-    output reg [2:0] cic_sub_addr,
-    output reg store_e_data
+    output reg [3:0] cic_sub_addr,
+    output reg store_e_data,
+    output wire [13:0] temp_read_addr
     
 //    output
     );
@@ -48,7 +49,7 @@ module state_machine(
     
     assign pixel_offset=core_num?128:0;
     assign pixel_addr = pixel_offset+pixel_counter;
-    
+    assign temp_read_addr = read_start;
     
     assign read_addr=cic_counter+read_start;
     always @(posedge clk) begin
@@ -57,17 +58,13 @@ module state_machine(
             
         end else begin
                    
-            if((write_addr==0 ||write_addr==4096||write_addr==8192||write_addr==12288 )&& write_addr-read_start>4096) begin
+            if((write_addr==0 ||write_addr==4096||write_addr==8192||write_addr==12288 )&& write_addr-read_start>4096 && !task_started) begin
                 start_task<=1;
             end else if (task_started) begin
                 start_task<=0;
             end
-        
-        
-        
         end
-    
-    
+       
     end
     
     always @(posedge clk or posedge rst) begin
@@ -104,7 +101,7 @@ module state_machine(
                     cic_load: begin 
                         load_cic<=1;
                         if(load_cic) begin 
-                            if(cic_sub_addr<7) begin 
+                            if(cic_sub_addr<15) begin 
                                 cic_sub_addr<=cic_sub_addr+1;
                             end else begin 
                                 load_cic<=0;
@@ -137,7 +134,7 @@ module state_machine(
                         store_cic<=1;
                         store_e_data<=0;
                         if(store_cic) begin 
-                            if(cic_sub_addr<7) begin 
+                            if(cic_sub_addr<15) begin 
                                 cic_sub_addr<=cic_sub_addr+1;
                             end else begin 
                                 store_cic<=0;
@@ -151,7 +148,7 @@ module state_machine(
                     end
                     pix_inc: begin
                                                 
-                         if(pixel_counter<127) begin //switch pixels
+                         if(pixel_counter<255) begin //switch pixels
                              pixel_counter<=pixel_counter+1;                         
                              state<= pixel_load;
                              

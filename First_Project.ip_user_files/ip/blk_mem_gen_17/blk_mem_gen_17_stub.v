@@ -2,7 +2,7 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-// Date        : Mon Feb 24 22:24:05 2025
+// Date        : Sun Mar  2 16:15:44 2025
 // Host        : DEKTOP-MOV670 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.gen/sources_1/ip/blk_mem_gen_17/blk_mem_gen_17_stub.v
@@ -16,11 +16,11 @@
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "blk_mem_gen_v8_4_8,Vivado 2024.1" *)
 module blk_mem_gen_17(clka, wea, addra, dina, douta)
-/* synthesis syn_black_box black_box_pad_pin="wea[0:0],addra[10:0],dina[23:0],douta[23:0]" */
+/* synthesis syn_black_box black_box_pad_pin="wea[0:0],addra[11:0],dina[23:0],douta[23:0]" */
 /* synthesis syn_force_seq_prim="clka" */;
   input clka /* synthesis syn_isclock = 1 */;
   input [0:0]wea;
-  input [10:0]addra;
+  input [11:0]addra;
   input [23:0]dina;
   output [23:0]douta;
 endmodule

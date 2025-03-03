@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-`timescale 1ns / 1ps
+
 
 module testbench_top_level;
 
@@ -32,6 +32,9 @@ module testbench_top_level;
     wire [7:0] JC;
     wire vauxp6, vauxp14, vauxp7, vauxp15;
     wire tx;
+    
+    integer file; // File handle
+    wire CLK400MHZ;
     // Instantiate the DUT (Device Under Test)
     simple_io dut (
         .JB(JB),
@@ -44,12 +47,20 @@ module testbench_top_level;
         .CLK100MHZ(CLK100MHZ),
         .btnC(btnC),
         .RsTx(tx)
+        
     );
 
     // Clock generation (100MHz -> 10ns period)
     always #5 CLK100MHZ = ~CLK100MHZ;
-
+    
     initial begin
+        // Open file for writing
+        file = $fopen("output.txt", "w");
+        if (file == 0) begin
+            $display("Error: Could not open file!");
+            $finish;
+        end
+        
         // Initialize clock and reset
         CLK100MHZ = 0;
         btnC = 1;  // Reset active (assuming active-low)
@@ -57,17 +68,43 @@ module testbench_top_level;
         btnC = 0;  // Release reset
         #500;
 
+        #1000000; // Let the simulation run
 
-
-        #1000; // Let the simulation run
+        // Close file at the end
+        $fclose(file);
         $finish;
     end
 
-    // Monitor outputs
+    // Variables to track previous values
+    reg [7:0] prev_sig, prev_sig1, prev_sig2, prev_sig3;
+    
     initial begin
-        $monitor("Time=%0t, btnC=%b, JB=%b, JA=%b, JC=%b, vauxp6=%b, vauxp14=%b, vauxp7=%b, vauxp15=%b", 
-                 $time, btnC, JB, JA, JC, vauxp6, vauxp14, vauxp7, vauxp15, tx);
+        prev_sig  = 0;
+        prev_sig1 = 0;
+        prev_sig2 = 0;
+        prev_sig3 = 0;
+    end
+    
+    // Save only when signals change
+    always @(*) begin
+        if ((dut.dmic_data_ctr[9] !== prev_sig) || (dut.dmic_data_ctr[9] !== prev_sig1) || 
+            (dut.dmic_data_ctr[9] !== prev_sig2) || (dut.dmic_data_ctr[9] !== prev_sig3)) begin
+            $fdisplay(file, "Time=%0t, sig=%b, sig1=%b, sig2=%b, sig3=%b", 
+                      $time, dut.dmic_data_ctr[9], dut.dmic_data_ctr[9], dut.dmic_data_ctr[9], dut.dmic_data_ctr[9]);
+            prev_sig  = dut.dmic_data_ctr[9];
+            prev_sig1 = dut.dmic_data_ctr[9];
+            prev_sig2 = dut.dmic_data_ctr[9];
+            prev_sig3 = dut.dmic_data_ctr[9];
+        end
+    end
+
+    // Monitor console output
+    initial begin
+        $monitor("Time=%0t, btnC=%b, JB=%b, JA=%b, JC=%b, vauxp6=%b, vauxp14=%b, vauxp7=%b, vauxp15=%b, out=%d, s_data=%d", 
+                 $time, btnC, JB, JA, JC, vauxp6, vauxp14, vauxp7, vauxp15, $signed(dut.debug_out),$signed(dut.out_controller_inst.s_data));
     end
 
 endmodule
+
+
 
