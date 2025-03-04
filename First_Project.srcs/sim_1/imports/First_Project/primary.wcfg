@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="8,001,811.834 ns"></ZoomStartTime>
-      <ZoomEndTime time="8,002,498.335 ns"></ZoomEndTime>
-      <Cursor1Time time="8,002,083.334 ns"></Cursor1Time>
+      <ZoomStartTime time="7,992,434.916 ns"></ZoomStartTime>
+      <ZoomEndTime time="7,993,815.917 ns"></ZoomEndTime>
+      <Cursor1Time time="7,993,385.750 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="205"></NameColumnWidth>
-      <ValueColumnWidth column_width="93"></ValueColumnWidth>
+      <ValueColumnWidth column_width="85"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="197" />
+   <WVObjectSize size="202" />
    <wave_markers>
       <marker time="11995878750" label="" />
       <marker time="7910000000" label="" />
@@ -519,6 +519,29 @@
       <obj_property name="ObjectShortName">cic_counter[11:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/alt_cic_filter_inst/value_prev" type="array">
+      <obj_property name="ElementShortName">value_prev[23:0]</obj_property>
+      <obj_property name="ObjectShortName">value_prev[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/alt_cic_filter_inst/hpvalue_prev" type="array">
+      <obj_property name="ElementShortName">hpvalue_prev[23:0]</obj_property>
+      <obj_property name="ObjectShortName">hpvalue_prev[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/alt_cic_filter_inst/hp_dif" type="array">
+      <obj_property name="ElementShortName">hp_dif[23:0]</obj_property>
+      <obj_property name="ObjectShortName">hp_dif[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/alt_cic_filter_inst/evalue_prev" type="array">
+      <obj_property name="ElementShortName">evalue_prev[23:0]</obj_property>
+      <obj_property name="ObjectShortName">evalue_prev[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/alt_cic_filter_inst/zvalue_prev" type="array">
+      <obj_property name="ElementShortName">zvalue_prev[23:0]</obj_property>
+      <obj_property name="ObjectShortName">zvalue_prev[23:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/out_controller_inst/n_val" type="logic">
       <obj_property name="ElementShortName">n_val</obj_property>
       <obj_property name="ObjectShortName">n_val</obj_property>
@@ -706,12 +729,12 @@
       <obj_property name="ObjectShortName">reg_load_en</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/core_0/mem_datain" type="array">
-      <obj_property name="ElementShortName">mem_datain[23:0]</obj_property>
-      <obj_property name="ObjectShortName">mem_datain[23:0]</obj_property>
+      <obj_property name="ElementShortName">mem_datain[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_datain[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/core_0/mem_dataout" type="array">
-      <obj_property name="ElementShortName">mem_dataout[23:0]</obj_property>
-      <obj_property name="ObjectShortName">mem_dataout[23:0]</obj_property>
+      <obj_property name="ElementShortName">mem_dataout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_dataout[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/core_0/write_addr2" type="array">
       <obj_property name="ElementShortName">write_addr2[13:0]</obj_property>

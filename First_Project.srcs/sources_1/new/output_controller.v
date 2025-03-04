@@ -36,19 +36,21 @@ module output_controller(
     reg [2:0] state;
     reg [23:0] s_data;
     reg [7:0] ctr=0;
-    
+    reg [4:0] n_val_d=0;
     always @(posedge clk or posedge rst) begin
         if(rst) begin
             state<=idle;
             s_data<=0;
             ctr<=0;
             output_byte<=0;
+            n_val_d<=0;
         end else begin 
-            
+            n_val_d<={n_val_d[3:0],n_val};
             case (state)
                 idle: begin
                     out_wr_en<=0;
-                    if (pixel_address==0 && n_val) begin
+                    
+                    if (pixel_address==0 && n_val_d[4]) begin
                         state<=wr_b3;
                         s_data<=data_in;
                     

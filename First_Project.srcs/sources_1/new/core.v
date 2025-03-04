@@ -110,8 +110,8 @@ module core(
     wire cic_int_en;
     wire cic_dif_en;
     wire reg_load_en;
-    wire [23:0] mem_datain;
-    wire [23:0] mem_dataout;
+    wire [31:0] mem_datain;
+    wire [31:0] mem_dataout;
     assign n_val = cic_dif_en;
     
     wire [13:0] write_addr2;

@@ -6,6 +6,11 @@ Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'core_num' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:286]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'mem_datain' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/core.v:171]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'mem_dataout' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/core.v:172]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'memory_data_out' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/core.v:193]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'memory_data_in' [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/core.v:196]
+WARNING: [VRFC 10-5021] port 'sw' is not connected on this instance [C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.srcs/sources_1/new/simple_io.v:282]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis

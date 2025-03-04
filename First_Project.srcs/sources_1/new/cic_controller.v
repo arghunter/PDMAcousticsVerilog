@@ -128,7 +128,7 @@ always @(posedge clk or posedge rst) begin
                 if(cic_counter<4095) begin
                     cic_counter<=cic_counter+1;
                     data_addr_counter<=data_addr_counter+1;
-                    if(cic_counter[5:0] ==6'b000000) begin 
+                    if(cic_counter[5:0] ==6'b010000) begin 
                         cic_dif_en<=1;
                     end else begin 
                         cic_dif_en<=0;
