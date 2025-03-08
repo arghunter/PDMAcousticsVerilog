@@ -50,7 +50,7 @@ module output_controller(
                 idle: begin
                     out_wr_en<=0;
                     
-                    if (pixel_address==0 && n_val_d[4]) begin
+                    if (pixel_address==8 && n_val_d[4]) begin
                         state<=wr_b3;
                         s_data<=data_in;
                     

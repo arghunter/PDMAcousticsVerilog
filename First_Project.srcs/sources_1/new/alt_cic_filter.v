@@ -79,7 +79,6 @@ module alt_cic_filter(
     assign extended_in = {{18{in[5]}}, in};
     assign out=differentiator_out_9;
     assign debug_out=zvalue_prev;
-    
 
     
     always @(posedge clk or posedge rst) begin 

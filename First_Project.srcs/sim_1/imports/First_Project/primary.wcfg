@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="7,992,434.916 ns"></ZoomStartTime>
-      <ZoomEndTime time="7,993,815.917 ns"></ZoomEndTime>
-      <Cursor1Time time="7,993,385.750 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000000000 ms"></ZoomStartTime>
+      <ZoomEndTime time="17.004500001 ms"></ZoomEndTime>
+      <Cursor1Time time="8.002081250 ms"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="205"></NameColumnWidth>
-      <ValueColumnWidth column_width="85"></ValueColumnWidth>
+      <ValueColumnWidth column_width="81"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="202" />
+   <WVObjectSize size="208" />
    <wave_markers>
       <marker time="11995878750" label="" />
       <marker time="7910000000" label="" />
@@ -471,13 +471,40 @@
       <obj_property name="ElementShortName">cic_dif_en</obj_property>
       <obj_property name="ObjectShortName">cic_dif_en</obj_property>
    </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_controller_inst/data_addr_counter" type="array">
+      <obj_property name="ElementShortName">data_addr_counter[11:0]</obj_property>
+      <obj_property name="ObjectShortName">data_addr_counter[11:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/core_0/cic_controller_inst/pixel_counter" type="array">
       <obj_property name="ElementShortName">pixel_counter[7:0]</obj_property>
       <obj_property name="ObjectShortName">pixel_counter[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_top_level/dut/core_0/cic_controller_inst/data_addr_counter" type="array">
-      <obj_property name="ElementShortName">data_addr_counter[11:0]</obj_property>
-      <obj_property name="ObjectShortName">data_addr_counter[11:0]</obj_property>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom/addr" type="array">
+      <obj_property name="ElementShortName">addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/rom/rom_out0" type="array">
+      <obj_property name="ElementShortName">rom_out0[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rom_out0[11:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/ram_new/read_addr0" type="array">
+      <obj_property name="ElementShortName">read_addr0[11:0]</obj_property>
+      <obj_property name="ObjectShortName">read_addr0[11:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/ram_new/read_addr" type="array">
+      <obj_property name="ElementShortName">read_addr[13:0]</obj_property>
+      <obj_property name="ObjectShortName">read_addr[13:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/alt_cic_filter_inst/reg_load_en" type="logic">
+      <obj_property name="ElementShortName">reg_load_en</obj_property>
+      <obj_property name="ObjectShortName">reg_load_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_top_level/dut/core_0/alt_cic_filter_inst/int_ena" type="logic">
+      <obj_property name="ElementShortName">int_ena</obj_property>
+      <obj_property name="ObjectShortName">int_ena</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench_top_level/dut/core_0/alt_cic_filter_inst/in" type="array">
       <obj_property name="ElementShortName">in[5:0]</obj_property>

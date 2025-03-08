@@ -41,9 +41,6 @@ module core(
     wire [7:0] pixel_addr;
 
     
-    assign pixel_addr_out=pixel_addr;
-    
-    
     wire [11:0] rom_out0;
     wire [11:0] rom_out1;
     wire [11:0] rom_out2;
@@ -60,48 +57,73 @@ module core(
     wire [11:0] rom_out13;
     wire [11:0] rom_out14;
     wire [11:0] rom_out15;
-    assign rom_out0 = 0; 
-    assign rom_out1 = 0;  
-    assign rom_out2 = 0;  
-    assign rom_out3 = 0;                 
-    assign rom_out4 = 0; 
-    assign rom_out5 = 0;  
-    assign rom_out6 = 0;  
-    assign rom_out7 = 0;   
-    assign rom_out8 = 0; 
-    assign rom_out9 = 0;  
-    assign rom_out10 = 0;  
-    assign rom_out11 = 0;   
-    assign rom_out12 = 0; 
-    assign rom_out13 = 0;  
-    assign rom_out14 = 0;  
-    assign rom_out15 = 0;    
     
     
+    wire [11:0] arom_out0;
+    wire [11:0] arom_out1;
+    wire [11:0] arom_out2;
+    wire [11:0] arom_out3;
+    wire [11:0] arom_out4;
+    wire [11:0] arom_out5;
+    wire [11:0] arom_out6;
+    wire [11:0] arom_out7;
+    wire [11:0] arom_out8;
+    wire [11:0] arom_out9;
+    wire [11:0] arom_out10;
+    wire [11:0] arom_out11;
+    wire [11:0] arom_out12;
+    wire [11:0] arom_out13;
+    wire [11:0] arom_out14;
+    wire [11:0] arom_out15;
     
-//    rom rom(
-//    .clk(clk),
-//    .addr(0),
-//    .rom_out0(rom_out0),
-//    .rom_out1(rom_out1),
-//    .rom_out2(rom_out2),
-//    .rom_out3(rom_out3),
-//    .rom_out4(rom_out4),
-//    .rom_out5(rom_out5),
-//    .rom_out6(rom_out6),
-//    .rom_out7(rom_out7),
-//    .rom_out8(rom_out8),
-//    .rom_out9(rom_out9),
-//    .rom_out10(rom_out10),
-//    .rom_out11(rom_out11),
-//    .rom_out12(rom_out12),
-//    .rom_out13(rom_out13),
-//    .rom_out14(rom_out14),
-//    .rom_out15(rom_out15)
-//    );
+    
 
-    wire [15:0] ram_out;
-    wire [13:0] temp_read_addr;
+    
+    
+    
+    assign rom_out0 = arom_out0; 
+    assign rom_out1 = arom_out1;  
+    assign rom_out2 = arom_out2;  
+    assign rom_out3 = arom_out3;                 
+    assign rom_out4 = arom_out4; 
+    assign rom_out5 = arom_out5;  
+    assign rom_out6 = arom_out6;  
+    assign rom_out7 = arom_out7;   
+    assign rom_out8 = arom_out8; 
+    assign rom_out9 = arom_out9;  
+    assign rom_out10 = arom_out10;  
+    assign rom_out11 = arom_out11;   
+    assign rom_out12 = arom_out12; 
+    assign rom_out13 = arom_out13;  
+    assign rom_out14 = arom_out14;  
+    assign rom_out15 = arom_out15;
+        
+    assign pixel_addr_out=pixel_addr;
+    
+    
+    rom rom(
+    .clk(clk),
+    .addr(pixel_addr),
+    .rom_out0(arom_out0),
+    .rom_out1(arom_out1),
+    .rom_out2(arom_out2),
+    .rom_out3(arom_out3),
+    .rom_out4(arom_out4),
+    .rom_out5(arom_out5),
+    .rom_out6(arom_out6),
+    .rom_out7(arom_out7),
+    .rom_out8(arom_out8),
+    .rom_out9(arom_out9),
+    .rom_out10(arom_out10),
+    .rom_out11(arom_out11),
+    .rom_out12(arom_out12),
+    .rom_out13(arom_out13),
+    .rom_out14(arom_out14),
+    .rom_out15(arom_out15)
+    );
+
+    
+    
     wire start_cycle;
     
     
@@ -175,7 +197,8 @@ module core(
      .reg_load_en(reg_load_en),
      .pixel_addr(pixel_addr),
      .read_addr(read_addr2),
-     .read_start(read_start2)
+     .read_start(read_start2),
+     .store_e_data(store_e_data)
     
     
     

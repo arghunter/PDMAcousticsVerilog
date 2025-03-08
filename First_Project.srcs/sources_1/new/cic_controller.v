@@ -33,11 +33,12 @@ module cic_controller(
     output wire reg_load_en,
     output wire [7:0] pixel_addr,
     output wire [13:0] read_addr,
-    output reg [13:0] read_start
+    output reg [13:0] read_start,
+    output reg store_e_data
     
     );
     
-    parameter idle=0, pixel_load=1,reg_load=2,cic_run=3,cic_guard1=4,cic_guard2=5, reg_store=6, pix_inc=7;
+    parameter idle=0, pixel_load=1,reg_load=2,cic_run=3,cic_guard1=4,cic_guard2=5, reg_store=6, pix_inc=7,task_cmp=8;
     reg [7:0] pixel_counter=0;
     reg [5:0] state=0;
     reg [3:0] reg_addr_ctr=0;
@@ -49,6 +50,7 @@ module cic_controller(
     reg reg_load_en_d0=0;
     reg [11:0] cic_counter=0;
     reg [11:0] data_addr_counter=0;
+    reg [3:0] block_counter=0;
 //    reg [13:0] read_start=0;
     assign pixel_addr=pixel_counter;
     assign mem_address = {pixel_counter,reg_addr_ctr};
@@ -89,6 +91,8 @@ always @(posedge clk or posedge rst) begin
         data_addr_counter<=0;
         cic_counter<=0;
         read_start<=0;
+        block_counter<=0;
+        store_e_data<=0;
     end else begin 
         case (state)
             idle: begin
@@ -140,9 +144,13 @@ always @(posedge clk or posedge rst) begin
                     cic_dif_en<=0;  
                     reg_addr_ctr<=0;                 
                     mem_wr_en<=1;
+                    if(block_counter==8) begin 
+                        store_e_data<=1;
+                    end
                 end
             end        
             reg_store: begin
+                store_e_data<=0;
                 if(reg_addr_ctr<15) begin
                     mem_wr_en<=1;
                     reg_addr_ctr<=reg_addr_ctr+1;
@@ -161,9 +169,10 @@ always @(posedge clk or posedge rst) begin
                     pixel_counter<=0;
                     state<=idle;
                     read_start<=read_start+4096;
-                
+                    block_counter<=block_counter+1;
                 end
-             end             
+             end
+                       
 
 
         endcase

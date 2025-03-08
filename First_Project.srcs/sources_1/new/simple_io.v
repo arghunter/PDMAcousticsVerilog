@@ -77,7 +77,7 @@ module simple_io(
         .clk_1_024MHz(mic_clk)
     );   
     
-
+    parameter LED_TERMINAL_CNT=150000000;
     wire [15:0] dmic_fifo_in;
     wire [15:0] dmic_fifo_out;
     wire [15:0] output_fifo_out;
@@ -99,9 +99,13 @@ module simple_io(
     wire [7:0] sdr_data_0;
     wire [7:0] sdr_data_1;
     wire [5:0] adder16_out=0;
+    reg [31:0] led_counter=0;
+    reg led_state=0;
+    
+    
     
     reg [9:0] dmic_data_ctr = 0;
-    reg mc_d=0;
+    reg mc_d=1;
     always @(negedge mic_clk or posedge btnC) begin 
         if(btnC)
             dmic_data_ctr<=0;
@@ -114,6 +118,21 @@ module simple_io(
             end
             
     end 
+    
+    assign LED[1]=led_state;
+    always @ (posedge CLK400MHZ or posedge btnC) begin 
+        if(btnC) begin 
+            led_state<=0;
+            led_counter<=0;
+        end else if (led_counter==LED_TERMINAL_CNT) begin 
+            led_state=~led_state;
+            led_counter<=0;
+        end else begin 
+            led_counter<=led_counter+1;
+        end
+    
+    
+    end
 //    assign ddr_to_sdr_in= dmic_data_ctr;
     
     assign ddr_to_sdr_in[0]=JC[1];
@@ -274,7 +293,6 @@ module simple_io(
     wire [31:0] e_data0;
     wire [31:0] e_data1;
     wire store_e_data0;
-    wire store_e_data1;
     wire n_val;
     wire [23:0] debug_out;
     wire [23:0] t_cic_data;
@@ -315,14 +333,14 @@ module simple_io(
     reg [7:0] tdth=128;
     reg s02=0;
     reg s12=0;
-    always @(posedge CLK400MHZ) begin
-        if(store_e_data0) begin 
-            c2<=c2+1;
-            s02<=store_e_data0;
-            s12<=store_e_data1;
-        end
+//    always @(posedge CLK400MHZ) begin
+//        if(store_e_data0) begin 
+//            c2<=c2+1;
+//            s02<=store_e_data0;
+//            s12<=store_e_data1;
+//        end
         
-    end 
+//    end 
 //    fifo_generator_1 core0_fifo (
 //      .clk(CLK400MHZ),      // input wire clk
 //      .srst(btnC),    // input wire srst
@@ -353,6 +371,11 @@ module simple_io(
     
     wire [7:0] out_term_data_in2;
     wire out_wr_en2;
+
+
+    wire [7:0] out_term_data_in3;
+    wire out_wr_en3;
+
 
     wire out_term_full;
     
@@ -401,16 +424,16 @@ module simple_io(
         .out_wr_en(out_wr_en2),
         .output_byte(out_term_data_in2)
     );
-//    output_controller out_controller_inst(
-//        .clk(CLK400MHZ),
-//        .rst(btnC),
-//        .n_val(n_val),
-//        .pixel_address(e_data0[31:24]),
-//        .fifo_full(out_term_full),
-//        .data_in(t_cic_data),
-//        .out_wr_en(out_wr_en2),
-//        .output_byte(out_term_data_in2)
-//    );
+    output_controller_pixel out_controller_pixel_inst(
+        .clk(CLK400MHZ),
+        .rst(btnC),
+        .n_val(store_e_data0),
+        .pixel_address(pixel_addr_out),
+        .fifo_full(out_term_full),
+        .data_in(debug_out),
+        .out_wr_en(out_wr_en3),
+        .output_byte(out_term_data_in3)
+    );
     
     output_terminal output_terminal_inst(
    

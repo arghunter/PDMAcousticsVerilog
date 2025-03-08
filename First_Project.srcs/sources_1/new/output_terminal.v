@@ -58,7 +58,7 @@ module output_terminal(
 
     
     wire w_Tx_Done;
-    uart_tx_r2 #(.CLKS_PER_BIT(133)) UART_TX_INST
+    uart_tx_r2 #(.CLKS_PER_BIT(100)) UART_TX_INST
     (.i_Clock(clk),
      .i_Tx_DV(send&&!busy),
      .i_Tx_Byte(data_byte),

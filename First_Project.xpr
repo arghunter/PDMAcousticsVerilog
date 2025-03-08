@@ -60,20 +60,20 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="basys3"/>
-    <Option Name="WTXSimLaunchSim" Val="292"/>
+    <Option Name="WTXSimLaunchSim" Val="297"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="87"/>
-    <Option Name="WTModelSimExportSim" Val="87"/>
-    <Option Name="WTQuestaExportSim" Val="87"/>
+    <Option Name="WTXSimExportSim" Val="119"/>
+    <Option Name="WTModelSimExportSim" Val="119"/>
+    <Option Name="WTQuestaExportSim" Val="119"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="87"/>
-    <Option Name="WTRivieraExportSim" Val="87"/>
-    <Option Name="WTActivehdlExportSim" Val="87"/>
+    <Option Name="WTVcsExportSim" Val="119"/>
+    <Option Name="WTRivieraExportSim" Val="119"/>
+    <Option Name="WTActivehdlExportSim" Val="119"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -161,6 +161,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/output_controller_pixel.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/new/output_terminal.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -169,6 +176,13 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/ram.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/rom.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -222,14 +236,6 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/state_machine.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/rom.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -712,7 +718,6 @@
     <FileSet Name="blk_mem_gen_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blk_mem_gen_1" RelGenDir="$PGENDIR/blk_mem_gen_1">
       <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -726,7 +731,6 @@
     <FileSet Name="blk_mem_gen_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blk_mem_gen_2" RelGenDir="$PGENDIR/blk_mem_gen_2">
       <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.xci">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -740,7 +744,6 @@
     <FileSet Name="blk_mem_gen_3" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blk_mem_gen_3" RelGenDir="$PGENDIR/blk_mem_gen_3">
       <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3.xci">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -754,7 +757,6 @@
     <FileSet Name="blk_mem_gen_6" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blk_mem_gen_6" RelGenDir="$PGENDIR/blk_mem_gen_6">
       <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_6/blk_mem_gen_6.xci">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -768,7 +770,6 @@
     <FileSet Name="blk_mem_gen_7" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blk_mem_gen_7" RelGenDir="$PGENDIR/blk_mem_gen_7">
       <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_7/blk_mem_gen_7.xci">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -782,7 +783,6 @@
     <FileSet Name="blk_mem_gen_8" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blk_mem_gen_8" RelGenDir="$PGENDIR/blk_mem_gen_8">
       <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_8/blk_mem_gen_8.xci">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -796,7 +796,6 @@
     <FileSet Name="blk_mem_gen_11" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blk_mem_gen_11" RelGenDir="$PGENDIR/blk_mem_gen_11">
       <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_11/blk_mem_gen_11.xci">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -810,7 +809,6 @@
     <FileSet Name="blk_mem_gen_12" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blk_mem_gen_12" RelGenDir="$PGENDIR/blk_mem_gen_12">
       <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_12/blk_mem_gen_12.xci">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -824,7 +822,6 @@
     <FileSet Name="blk_mem_gen_14" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blk_mem_gen_14" RelGenDir="$PGENDIR/blk_mem_gen_14">
       <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_14/blk_mem_gen_14.xci">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -838,7 +835,6 @@
     <FileSet Name="blk_mem_gen_15" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blk_mem_gen_15" RelGenDir="$PGENDIR/blk_mem_gen_15">
       <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_15/blk_mem_gen_15.xci">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -852,7 +848,6 @@
     <FileSet Name="blk_mem_gen_16" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blk_mem_gen_16" RelGenDir="$PGENDIR/blk_mem_gen_16">
       <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_16/blk_mem_gen_16.xci">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -866,7 +861,6 @@
     <FileSet Name="blk_mem_gen_4" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blk_mem_gen_4" RelGenDir="$PGENDIR/blk_mem_gen_4">
       <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4.xci">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -880,7 +874,6 @@
     <FileSet Name="blk_mem_gen_13" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blk_mem_gen_13" RelGenDir="$PGENDIR/blk_mem_gen_13">
       <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_13/blk_mem_gen_13.xci">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -894,7 +887,6 @@
     <FileSet Name="blk_mem_gen_5" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blk_mem_gen_5" RelGenDir="$PGENDIR/blk_mem_gen_5">
       <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_5/blk_mem_gen_5.xci">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -908,7 +900,6 @@
     <FileSet Name="blk_mem_gen_9" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blk_mem_gen_9" RelGenDir="$PGENDIR/blk_mem_gen_9">
       <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_9/blk_mem_gen_9.xci">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -963,7 +954,6 @@
     <FileSet Name="blk_mem_gen_10" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blk_mem_gen_10" RelGenDir="$PGENDIR/blk_mem_gen_10">
       <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_10/blk_mem_gen_10.xci">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
