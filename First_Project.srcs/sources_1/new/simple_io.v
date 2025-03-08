@@ -439,8 +439,8 @@ module simple_io(
    
       .clk(CLK400MHZ),
       .rst(btnC),
-      .data_in(out_term_data_in2),
-      .wr_en(out_wr_en2),
+      .data_in(out_term_data_in3),
+      .wr_en(out_wr_en3),
       .tx(RsTx),
       .full(out_term_full)
     );

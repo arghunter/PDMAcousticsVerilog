@@ -130,6 +130,7 @@ module alt_cic_filter(
                 differentiator_stored_8 <= differentiator_out_7;
                             // High-pass filter: hp[n] = (hp[n-1] >> 1) + ((value - value_prev) >> 1)
                 hpvalue_prev <={hpvalue_prev[23],hpvalue_prev[23:1]} +   {hp_dif[23],hp_dif[23:1]};
+//                hpvalue_prev2 <={hpvalue_prev2[23],hpvalue_prev2[23:1]} +   {hpvalue_prev[23],hpvalue_prev[23:1]};
     
 //                // Envelope extraction: e[n] = (e[n-1] >> 1) + (|hp[n]| >> 1)
                 evalue_prev <= {1'b0,evalue_prev[23:1]} + {1'b0,abs_hpvalue_prev[23:1]};

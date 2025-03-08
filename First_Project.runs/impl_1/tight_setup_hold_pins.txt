@@ -1,13 +1,5 @@
-+======================+======================+===========================================================+
-| Launch Setup Clock   | Launch Hold Clock    | Pin                                                       |
-+======================+======================+===========================================================+
-| clk_out2_clk_wiz_0   | clk_out2_clk_wiz_0   | core_0/alt_cic_filter_inst/evalue_prev_reg[9]/D           |
-| clk_out2_clk_wiz_0   | clk_out2_clk_wiz_0   | core_0/alt_cic_filter_inst/evalue_prev_reg[10]/D          |
-| clk_out2_clk_wiz_0   | clk_out2_clk_wiz_0   | core_0/alt_cic_filter_inst/evalue_prev_reg[11]/D          |
-| clk_out2_clk_wiz_0   | clk_out2_clk_wiz_0   | core_0/alt_cic_filter_inst/evalue_prev_reg[7]/D           |
-| clk_out2_clk_wiz_0   | clk_out2_clk_wiz_0   | core_0/alt_cic_filter_inst/evalue_prev_reg[6]/D           |
-| clk_out2_clk_wiz_0   | clk_out2_clk_wiz_0   | core_0/alt_cic_filter_inst/evalue_prev_reg[5]/D           |
-| clk_out2_clk_wiz_0_1 | clk_out2_clk_wiz_0   | core_0/alt_cic_filter_inst/differentiator_out_7_reg[12]/D |
-| clk_out2_clk_wiz_0   | clk_out2_clk_wiz_0_1 | core_0/alt_cic_filter_inst/evalue_prev_reg[3]/D           |
-| clk_out2_clk_wiz_0_1 | clk_out2_clk_wiz_0_1 | core_0/alt_cic_filter_inst/differentiator_out_7_reg[3]/D  |
-+----------------------+----------------------+-----------------------------------------------------------+
++======================+======================+==============================================================+
+| Launch Setup Clock   | Launch Hold Clock    | Pin                                                          |
++======================+======================+==============================================================+
+| clk_out2_clk_wiz_0_1 | clk_out2_clk_wiz_0_1 | core_0/alt_cic_filter_inst/differentiator_stored_4_reg[18]/D |
++----------------------+----------------------+--------------------------------------------------------------+

@@ -8,17 +8,17 @@
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Fri Mar  7 00:04:44 2025
+  **** Start of session at: Sat Mar  8 11:38:45 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source blk_mem_gen_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 593.566 ; gain = 237.609
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 594.559 ; gain = 239.492
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/arg/Documents/GitHub/FPGA/First_Project'.
 WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/Users/arg/Documents/GitHub/FPGA/First_Project' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/blk_mem_gen_0_synth_1'.)
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
-update_ip_catalog: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 597.539 ; gain = 3.973
+update_ip_catalog: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 598.477 ; gain = 3.918
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: blk_mem_gen_0
 INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry ce63c3dfb6f696eb to dir: C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/blk_mem_gen_0_synth_1
 INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.cache/ip/2024.1/c/e/ce63c3dfb6f696eb/blk_mem_gen_0.dcp to C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.dcp.
@@ -27,4 +27,4 @@ INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/arg/Documents/GitHu
 INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.cache/ip/2024.1/c/e/ce63c3dfb6f696eb/blk_mem_gen_0_stub.v to C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0_stub.v.
 INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.cache/ip/2024.1/c/e/ce63c3dfb6f696eb/blk_mem_gen_0_stub.vhdl to C:/Users/arg/Documents/GitHub/FPGA/First_Project/First_Project.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0_stub.vhdl.
 INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP blk_mem_gen_0, cache-ID = ce63c3dfb6f696eb.
-INFO: [Common 17-206] Exiting Vivado at Fri Mar  7 00:05:01 2025...
+INFO: [Common 17-206] Exiting Vivado at Sat Mar  8 11:39:08 2025...

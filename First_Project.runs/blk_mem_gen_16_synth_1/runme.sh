@@ -41,4 +41,3 @@ EAStep()
      fi
 }
 
-EAStep vivado -log blk_mem_gen_16.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_gen_16.tcl
