@@ -48,14 +48,21 @@ module alt_cic_filter(
     reg [23:0] differentiator_out_9;
     reg [23:0] value_prev;
     reg [23:0] hpvalue_prev;
+    reg [23:0] hpvalue_prev2;
     reg [23:0] evalue_prev;
     reg [23:0] zvalue_prev;
     wire [23:0] extended_in;
     wire [23:0] data_array [15:0];
     wire signed [23:0] hp_dif;
     wire signed [23:0] abs_hpvalue_prev;
+    wire signed [23:0] abs_hpvalue_prev2;
+    wire [23:0] hpval_wire;
+    wire [23:0] hpval_dif;
     assign hp_dif=(differentiator_out_9 - value_prev);
     assign abs_hpvalue_prev=(hpvalue_prev[23] ? -hpvalue_prev : hpvalue_prev);
+    assign hpval_wire={hpvalue_prev[23],hpvalue_prev[23:1]} +   {hp_dif[23],hp_dif[23:1]};
+    assign hpval_dif=hpval_wire-hpvalue_prev;
+    assign abs_hpvalue_prev2=(hpvalue_prev2[23] ? -hpvalue_prev2 : hpvalue_prev2);
     
     assign data_array[0] = integrator_0;
     assign data_array[1] = integrator_1;
@@ -71,7 +78,7 @@ module alt_cic_filter(
     assign data_array[11] = hpvalue_prev;
     assign data_array[12] = evalue_prev;
     assign data_array[13] = zvalue_prev;
-    assign data_array[14] = 24'd0;
+    assign data_array[14] = hpvalue_prev2;
     assign data_array[15] = 24'd0;
     
     assign memory_data_in = data_array[reg_sel];
@@ -113,6 +120,7 @@ module alt_cic_filter(
                 4'd11:  hpvalue_prev           <= memory_data_out;
                 4'd12:  evalue_prev            <= memory_data_out;
                 4'd13:  zvalue_prev            <= memory_data_out;
+                4'd14:  hpvalue_prev2          <= memory_data_out;
                 default: ; // Do nothing for invalid select values
             endcase
         end else if (int_ena) begin 
@@ -129,11 +137,12 @@ module alt_cic_filter(
                 differentiator_out_9 <=  differentiator_out_7 - differentiator_stored_8;
                 differentiator_stored_8 <= differentiator_out_7;
                             // High-pass filter: hp[n] = (hp[n-1] >> 1) + ((value - value_prev) >> 1)
-                hpvalue_prev <={hpvalue_prev[23],hpvalue_prev[23:1]} +   {hp_dif[23],hp_dif[23:1]};
-//                hpvalue_prev2 <={hpvalue_prev2[23],hpvalue_prev2[23:1]} +   {hpvalue_prev[23],hpvalue_prev[23:1]};
+                hpvalue_prev <=hpval_wire;
+//                hpvalue_prev<={hpvalue_prev[23],hpvalue_prev[23:1]} +   {hp_dif[23],hp_dif[23:1]};                
+                hpvalue_prev2 <={hpvalue_prev2[23],hpvalue_prev2[23:1]} + {hpval_dif[23],hpval_dif[23:1]};
     
 //                // Envelope extraction: e[n] = (e[n-1] >> 1) + (|hp[n]| >> 1)
-                evalue_prev <= {1'b0,evalue_prev[23:1]} + {1'b0,abs_hpvalue_prev[23:1]};
+                evalue_prev <= {1'b0,evalue_prev[23:1]} + {1'b0,abs_hpvalue_prev2[23:1]};
     
 //                // Smoothing: z[n] = (z[n-1] - (z[n-1] >> 7)) + (|e[n]| >> 7)
                 zvalue_prev <= (zvalue_prev - (zvalue_prev >> 7)) + (evalue_prev >> 7);
